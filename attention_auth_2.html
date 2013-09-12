@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<!-- ============================= チェックボックス背景色用 ============================ -->
+<script type="text/javascript" src="/web2/jp/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/controls_common.js"></script>
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="print">
+</head>
+<body class="dialog-mdl dialog-mdl-popup">
+<div class="dialog-mdl-wrap">
+  <!--hdr Start-->
+  <div class="dialog-mdl-hdr">
+    <h1>権限について</h1>
+	
+    <div class="usernv clr">
+            <ul>
+              <li><a class="ic ic-close close-dialog-modal" href="#"><span class="icon-label">閉じる</span></a></li>
+            </ul>
+    </div>
+  </div>
+  <!--hdr End-->
+<div class="dialog-mdl-contents-wrapper h470">
+    <a name="modaltop" id="modaltop">&nbsp;</a>
+    <div class="dialog-mdl-contents">
+      <!--Contents Start-->
+    <p class="mb5"><span class="tx-att-ora">各権限によって、それぞれ以下のような機能になります。</span></p>
+    <!--<p class="eye-catch-s">「▲」はオプション機能です。</p>-->
+
+<div class="data-list">
+<table class="molist">
+    <thead>
+      <tr>
+        <th class="list-cell valign-m"><div>機能／権限</div></th>
+        <th class="list-cell valign-m"><div>管理者<br>権限</div></th>
+        <th class="list-cell valign-m"><div>担当者<br>全権限</div></th>
+        <th class="list-cell valign-m"><div>購買<br>権限</div></th>
+        <th class="list-cell valign-m"><div>品質管理<br>権限</div></th>
+        <th class="list-cell valign-m"><div>検索権限</div></th>
+        <th class="list-cell valign-m"><div>検索権限<br>（ベーシックのみ）</div></th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th class="list-cell"><div>提出依頼</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>一括提出促進メール</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>個別提出促進メール</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>承認</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>最終承認</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>仕様変更</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>取引終了</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>取引先マッチング</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>規格書検索</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>商品コード変更</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>規格書ダウンロード設定</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>社内ID管理</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>取引先管理</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>自社管理項目</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>会社情報編集</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr class="list-gry">
+      <th class="list-cell"><div>社内ID管理</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <th class="list-cell"><div>初期設定</div></th>
+      <td class="list-cell halign-c"><div>●</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+      <td class="list-cell halign-c"><div>&nbsp;</div></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+      <!--Contents End-->
+</div><!-- dialog-mdl-contents-wrapper End -->
+  </div>
+  <div class="pt10 halign-c"><a href="#" class="bt bt-close02"> <span class="bt-label">閉じる</span></a></div>
+
+</div>
+</body>
+</html>

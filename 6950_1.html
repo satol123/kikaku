@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.tbl-wide-eiyo th.tbl-w-eiyo-th {width:150px;}
+.tbl-wide-eiyo td.tbl-w-eiyo-td {width:100px;}
+
+.tbl-w-hyouji th.tbl-w-hyouji-1,.tbl-w-hyouji td.tbl-w-hyouji-1 {width:380px; :root *> width:370px;}
+.tbl-w-hyouji th.tbl-w-hyouji-3,.tbl-w-hyouji td.tbl-w-hyouji-2 {width:auto;}
+.tbl-w-hyouji th.tbl-w-hyouji-4,.tbl-w-hyouji td.tbl-w-hyouji-3 {width:80px; :root *> width:85px;}
+.tbl-w-hyouji th.tbl-w-hyouji-5,.tbl-w-hyouji td.tbl-w-hyouji-4 {width:60px; :root *> width:65px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck-b1,.tbl-kikaku-info01 .ck-b1{width:230px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b2,.tbl-kikaku-info01 .ck-b2{width:245px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b3,.tbl-kikaku-info01 .ck-b3{width:180px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b4,.tbl-kikaku-info01 .ck-b4{width:295px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck-c1,.tbl-kikaku-info01 .ck-c1{width:60px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-c2,.tbl-kikaku-info01 .ck-c2{width:400px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-c3,.tbl-kikaku-info01 .ck-c3{width:410px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-c4,.tbl-kikaku-info01 .ck-c4{width:80px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck-d1,.tbl-kikaku-info01 .ck-d1{width:60px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-d2,.tbl-kikaku-info01 .ck-d2{width:430px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-d3,.tbl-kikaku-info01 .ck-d3{width:auto;}
+.tbl-bd-wide-02-prod-reg-02 .ck-d4,.tbl-kikaku-info01 .ck-d4{width:80px;}
+
+.this-mt65 {margin-top:65px !important;}
+
+</style>
+</head>
+<body class="popup">
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w300"><a href="/"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"></a><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18" class="ml10"></a></div>
+
+        <div class="usrnv clr">
+            <ul>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+        </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+       <form id="" name="" method="post" action="../dummy">
+          <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>会社情報編集</h1></th><td class="desc"><div>会社情報の編集を行ってください。</div></td>
+			<td class="nav">
+					<a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+    <table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l valign-b"><div class="form-intro pt5 mb10">
+				  <p>
+					<img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"> の項目は必ず入力してください。</p>
+					</div></td>
+           <td class="justify-r valign-b"><div><a class="ic ic-caution02" href="#"> <span class="ic-label">入力時のご注意</span></a><a href="#" class="bt bt-org-large"><span class="bt-label">登録する</span></a></div></td>
+	         </tr>
+	       </tbody>
+    </table>
+	
+
+					<p class="sub-ti mb5">会社情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">ユーザ区分</label></div></th>
+						  <td><div class="w700">売り手<span class="cstm-radio ml30"><span><input type="radio" id="f1-01a" name="f1-01"><label for="f1-01a">買い手</label></span><span><input type="radio" id="f1-01b" name="f1-01"><label for="f1-01b">卸</label></span></span><a class="bt bt01 ml10" href="#"><span class="bt-label">ユーザ区分変更</span></a></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><label for="c1-64">会社名(1936)</label><br><span class="letter-control">(全角20文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class="w500 noticeTip" id="c1-4" name="c1-37" value="インフォ株式会社"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">会社名カナ</label><br><span class="letter-control">(全角100文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="200" rel="全角100文字以内" class="w500 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">代表者名</label><br><span class="letter-control">(全角50文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w500 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">郵便番号</label><br><span class="letter-control">(半角10文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="半角10文字以内" class="w150 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">住所</label><br><span class="letter-control">(全角200文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="400" rel="全角200文字以内" class="w500 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">電話番号</label><br><span class="letter-control">(半角20文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="20" rel="半角20文字以内" class="w150 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">FAX番号</label><br><span class="letter-control">(半角20文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="20" rel="半角20文字以内" class="w150 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">メールアドレス</label><br><span class="letter-control">(半角英数50文字以内)</span></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="50" rel="半角英数50文字以内" class="w500 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">主担当</label></div></th>
+						  <td><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="" class="w150 noticeTip" id="c1-4" name="c1-37"></span></span><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">メモ</label><br><span class="letter-control">(全角100文字以内)</span></div></th>
+						  <td><div class="cstm-txarea charcount w700"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl"><textarea rel="150文字以内" cols="200" rows="3" maxlength="200" class="w525 autogrow set-limit noticeTip" id="c1-3" name="c1-34"></textarea></span></span></span></span><p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p><!-- /.cstm-txarea --></div></td>
+						</tr>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">会社ロゴ画像</label></div></th>
+						  <td class="w760"><div class="w700">
+<div class="article_choice40"><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w400 interlock-trigger switch-trigger" id="c1-80" name="c1-80"></span></span><a class="bt ml5" href="#"><span class="bt-label">参照...</span></a><span class="ml5"><a class="ic ic-arr-blu" href="#"><span class="ic-label">解除</span></a></span>
+</div>
+<div class="article_img40"><img src="/web2/jp/images/noobject_50.gif" alt="images" width="40" height="40"></div>
+							</div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">申し込み情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">申し込み日</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w160"><div class="w150"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w110"><label for="c1-64">送付</label></div></th>
+						  <td class="w170" colspan="3"><div class="w160"><span class="cstm-checkbox"><span><input type="checkbox" id="c1-41" name="c1-19"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w150"><label for="c1-64">契約日</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w160"><div class="w130"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w100"><label for="c1-64">取引開始日</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w170"><div class="w140"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w100"><label for="c1-64">取引終了日</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w170"><div class="w140"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">料金体系</label></div></th>
+						  <td><div class="w150"><select class="cstm-select w110 mr5" id="c1-95" name="c1-95"><option>定額制</option><option>#1</option><option>#2</option></select></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w110"><label for="c1-64">無料会員</label></div></th>
+						  <td colspan="3"><div class="w400"><span class="cstm-checkbox"><span><input type="checkbox" id="c1-41" name="c1-19"></span></span><span class="eye-catch-s ml20">料金を徴収しない場合に選択してください。</span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">FIM会員コード</label><br><span class="letter-control">(半角10文字以内)</span></div></th>
+						  <td colspan="5"><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="半角10文字以内" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">FIM会員会員名</label></div></th>
+						  <td colspan="5"><div class="w700"><span class="tx-err">【未登録】 FIM会員は存在しません。</span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">FIM会員名1</label></div></th>
+						  <td colspan="5"><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="" class="w280 noticeTip" id="c1-4" name="c1-37"></span></span><a class="bt bt-reload ml20" href="#"><span class="bt-label">更新</span></a></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">提出依頼関連設定</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">社内承認機能の利用</label></div></th>
+						  <td colspan="3"><div class="w600"><span class="cstm-radio"><span class="checked"><input type="radio" checked="" id="f1-11a" name="f1-11"><label for="f1-11a">しない</label></span><span><input type="radio" id="f1-11b" name="f1-11"><label for="f1-11b">する</label></span></span><span class="eye-catch-s ml20">社内承認機能を利用する場合は「する」を選択してください。</span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">プレミアム提出依頼の自動提出</label></div></th>
+						  <td><div class="w700"><span class="cstm-radio"><span class="checked"><input type="radio" checked="" id="f1-08a" name="f1-08"><label for="f1-08a">しない</label></span><span><input type="radio" id="f1-08b" name="f1-08"><label for="f1-08b">する</label></span></span><span class="eye-catch-s ml20">プレミアムの提出依頼に対しプレミアム規格書を自動提出する場合は「する」を選択してください。</span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">ベーシック提出依頼の自動提出</label></div></th>
+						  <td><div class="w700"><span class="cstm-radio"><span class="checked"><input type="radio" checked="" id="f1-09a" name="f1-09"><label for="f1-09a">しない</label></span><span><input type="radio" id="f1-09b" name="f1-09"><label for="f1-09b">する</label></span></span><span class="eye-catch-s ml20">ベーシックの提出依頼に対しベーシック規格書を自動提出する場合は「する」を選択してください。</span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64"> 仮規格書自動提出</label></div></th>
+						  <td><div class="w700"><span class="cstm-radio"><span class="checked"><input type="radio" checked="" id="f1-10a" name="f1-10"><label for="f1-10a">しない</label></span><span><input type="radio" id="f1-10b" name="f1-10"><label for="f1-10b">する</label></span></span><div class="eye-catch-s">プレミアムの提出依頼に対しベーシック規格書のみ作成されていた場合、ベーシック規格書を自動的に提出する場合は「する」を選択してください。</div></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">規格書関連設定</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">自社管理用項目</label></div></th>
+						  <td class="w760" colspan="3"><div class="w600"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="20" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span><span class="eye-catch-s ml20">自社管理用項目は20項目まで登録できます。</span><a href="#" class="ic ic-arr-blu05 ml20"><span class="ic-label">自社管理用項目設定</span></a></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">無料ID関連設定</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">無料ID機能利用</label></div></th>
+						  <td class="w760" colspan="3"><div class="w600"><span class="cstm-radio"><span class="checked"><input type="radio" checked="" id="f1-12a" name="f1-12"><label for="f1-12a">する</label></span><span><input type="radio" id="f1-12b" name="f1-12"><label for="f1-12b">しない</label></span></span><span class="eye-catch-s ml20">無料ID機能を利用する場合は「する」を選択してください。</span></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">FDB関連設定</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">FDB連携機能</label></div></th>
+						  <td colspan="5"><div class="w600"><span class="cstm-radio"><span class="checked"><input type="radio" checked="" id="f1-13a" name="f1-13"><label for="f1-13a">しない</label></span><span><input type="radio" id="f1-13b" name="f1-13"><label for="f1-13b">する</label></span></span><span class="eye-catch-s ml20">FDB連携機能を利用する場合は「する」を選択してください。</span></div></td>
+						</tr>
+						</tr>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w150"><label for="c1-64">メーカーコード1</label><br><span class="letter-control">(数字9文字以内)</span></div></th>
+						  <td class="w160"><div class="w130"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="9" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w100"><label for="c1-64">メーカーコード2</label><br><span class="letter-control">(数字9文字以内)</span></div></th>
+						  <td class="w170"><div class="w140"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="9" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w100"><label for="c1-64">メーカーコード2</label><br><span class="letter-control">(数字9文字以内)</span></div></th>
+						  <td class="w170"><div class="w140"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="9" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">取引先マッチング関連設定</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">取引先マッチング除外</label></div></th>
+						  <td class="w760"><div class="w700"><select class="cstm-select" id="c1-73" name="c1-73"><option>無し</option></select></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">マッチング用メモ</label><br><span class="letter-control">(全角1000文字以内)</span></div></th>
+						  <td><div class="cstm-txarea charcount w700"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl"><textarea rel="全角1000文字以内" cols="200" rows="5" maxlength="2000" class="w600 autogrow set-limit noticeTip" id="c1-3" name="c1-34"></textarea></span></span></span></span><p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p><!-- /.cstm-txarea --></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+					<p class="sub-ti mb5">バナー関連情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">バナー変更設定</label></div></th>
+						  <td colspan="5" class="w760"><div class="w700"><select class="cstm-select" id="c1-73" name="c1-73"><option>インフォマートのみ</option></select></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">変更バナーファイル</label></div></th>
+						  <td colspan="5"><div class="w700"><div class="article_choice40"><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w400 interlock-trigger switch-trigger" id="c1-80" name="c1-80"></span></span><a class="bt ml5" href="#"><span class="bt-label">参照...</span></a><span class="ml5"><a class="ic ic-arr-blu" href="#"><span class="ic-label">解除</span></a></span>
+</div>
+<div class="article_img40"><img src="/web2/jp/images/noobject_50.gif" alt="images" width="40" height="40"></div>
+							</div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">バナーURL</label><br><span class="letter-control">(半角100文字以内)</span></div></th>
+						  <td colspan="5"><div class="w700"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="半角100文字以内" class="w500 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						</tr>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">バナーコメント</label><br><span class="letter-control">(全角100文字以内)</span></div></th>
+						  <td colspan="5"><div class="cstm-txarea charcount w700"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl"><textarea rel="全角100文字以内" cols="200" rows="3" maxlength="200" class="w500 autogrow set-limit noticeTip" id="c1-3" name="c1-34"></textarea></span></span></span></span><p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p><!-- /.cstm-txarea --></div></td>
+						</tr>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w150"><label for="c1-64">バナー開始日</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w160"><div class="w130"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w100"><label for="c1-64">バナー終了日</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w170"><div class="w140"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" rel="" class="w100 noticeTip" id="c1-4" name="c1-37"></span></span></div></td>
+						  <th class="w130 tbl-bd-wide-02-ic"><div class="w100"><label for="c1-64">バナー停止</label><br><span class="letter-control">(YYYY/MM/DD)</span></div></th>
+						  <td class="w170"><div class="w140"><span class="cstm-checkbox"><span><input type="checkbox" id="c1-41" name="c1-19"></span></span></div></td>
+						</tr>
+					  </tbody>
+					</table>
+
+<table class="justify">
+          <tbody>
+            <tr>
+              <td class="justify-l"><div><a href="#" class="bt bt-back" onclick="javascript:history.back();"><span class="bt-label">戻る</span></a></div></td>
+              <td class="justify-r"><div><a href="#" class="bt bt-org-large"><span class="bt-label">登録する</span></a></div></td>
+            </tr>
+          </tbody>
+        </table>
+
+         </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">
+<!--        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul> -->
+        <div class="small">
+            <p class="credits">Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.</p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

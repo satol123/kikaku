@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<!--header Start-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FOODS Info Mart Web Site</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="http://192.168.100.105:5055/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="http://192.168.100.105:5055/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="http://192.168.100.105:5055/css/parts_kikaku.css" media="all">
+
+<style type="text/css">
+<!--
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-15 a{background:url(/images/tab-slip04.gif) no-repeat -1000px 0 !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-15 a.active{background:url(/images/tab-slip04.gif) no-repeat -1000px -34px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-15 a.active:hover{background:url(/images/tab-slip04.gif) no-repeat -1000px -68px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-15 a.selected{background:url(/images/tab-slip04.gif) no-repeat -1000px -102px !important;}
+.tabs-nav-w100.tabs-nav-15{background-color:#ddbe12;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-16 a{background:url(/images/tab-slip04.gif) no-repeat -1100px 0 !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-16 a.active{background:url(/images/tab-slip04.gif) no-repeat -1100px -34px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-16 a.active:hover{background:url(/images/tab-slip04.gif) no-repeat -1100px -68px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-16 a.selected{background:url(/images/tab-slip04.gif) no-repeat -1100px -102px !important;}
+.tabs-nav-w100.tabs-nav-16{background-color:#e89321;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-17 a{background:url(/images/tab-slip04.gif) no-repeat -1200px 0 !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-17 a.active{background:url(/images/tab-slip04.gif) no-repeat -1200px -34px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-17 a.active:hover{background:url(/images/tab-slip04.gif) no-repeat -1200px -68px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-17 a.selected{background:url(/images/tab-slip04.gif) no-repeat -1200px -102px !important;}
+.tabs-nav-w100.tabs-nav-17{background-color:#e97f7f;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-18 a{background:url(/images/tab-slip04.gif) no-repeat -1300px 0 !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-18 a.active{background:url(/images/tab-slip04.gif) no-repeat -1300px -34px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-18 a.active:hover{background:url(/images/tab-slip04.gif) no-repeat -1300px -68px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-18 a.selected{background:url(/images/tab-slip04.gif) no-repeat -1300px -102px !important;}
+.tabs-nav-w100.tabs-nav-18{background-color:#e24d48;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-19 a{background:url(/images/tab-slip04.gif) no-repeat -1400px 0 !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-19 a.active{background:url(/images/tab-slip04.gif) no-repeat -1400px -34px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-19 a.active:hover{background:url(/images/tab-slip04.gif) no-repeat -1400px -68px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-19 a.selected{background:url(/images/tab-slip04.gif) no-repeat -1400px -102px !important;}
+.tabs-nav-w100.tabs-nav-19{background-color:#d04d90;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-20 a{background:url(/images/tab-slip04.gif) no-repeat -1500px 0 !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-20 a.active{background:url(/images/tab-slip04.gif) no-repeat -1500px -34px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-20 a.active:hover{background:url(/images/tab-slip04.gif) no-repeat -1500px -68px !important;}
+.tabs-nav-w100 li.tabs-nav-w100-li.item-w100-20 a.selected{background:url(/images/tab-slip04.gif) no-repeat -1500px -102px !important;}
+.tabs-nav-w100.tabs-nav-20{background-color:#4d4d4d;}
+
+.tabs-nav-w100 li.tabs-nav-w100-li a.active {
+    color: #999;
+}
+
+-->
+</style>
+</head>
+<!--header End-->
+<body class="page">
+    <div class="kaite">
+        <!--hdr Start-->
+        <div class="hdr">
+            <div class="logo"><a href="/"><img width="169" height="24" alt="FOODS Info Mart" src="/web/jp/images/logo-169x24.gif"></a></div>
+            <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="#" title="マイページ"><span>マイページ</span></a></li>
+            <li id="gnv-mstr"><a href="#" title="発注マスタ"><span>発注マスタ</span>)</a></li>
+            <li id="gnv-shdn"><a href="#" title="ASP商談システム"><span>ASP商談システム</span></a></li>
+            <li id="gnv-fiw"><a href="#" title="FOODS Info Web"><span>FOODS Info Web</span></a></li>
+            <li id="gnv-set"><a href="#" title="登録・設定"><span>登録・設定</span></a></li>
+            <li id="gnv-guid"><a href="#" title="ご利用ガイド"><span>ご利用ガイド</span></a></li>
+            <li id="gnv-cont"><a href="#" title="お問い合わせ"><span>お問い合わせ</span></a></li>
+            </ul>
+            <div class="usrnv clr">
+                <h2>
+                    株式会社インフォマート</h2>
+                <ul>
+                    <li><a href="#">グループ切替</a></li>
+                    <li><a href="#">再ログイン</a></li>
+                    <li><a href="#">ログアウト</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--hdr End-->
+        <!--Contents Start-->
+        <div class="contents">
+            <form id="" name="" method="post" action="dummy">
+            <div class="height-wrap">
+            <table class="hgrp">
+                <tbody>
+                    <tr>
+                        <th class="heading">状況タブ</th>
+                        <td class="desc">
+                            <div>新カラー作成</div>
+                        </td>
+                        <td class="nav">
+                            <div>
+                                <a href="#" class="ic ic-mail"><span class="ic-label">メール</span></a> <a href="#"
+                                    class="ic ic-cld"><span class="ic-label">カレンダー</span></a> <a href="#" class="bt bt-back">
+                                        <span class="bt-label">戻る</span></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+  <!--TTT Upper Structure Ends-->
+  
+
+<!--
+<div class="mt20 mb30">
+<div style="display:inline-block;*display:inline;*zoom:1;width: 100px;height: 40px;background-color: #ddbe12;border: 1px solid #999;color:#fff;margin-right:20px;padding:3px;font-weight: bold;">#ddbe12<br>未承認</div>
+<div style="display:inline-block;*display:inline;*zoom:1;width: 100px;height: 40px;background-color: #e89321;border: 1px solid #999;color:#fff;margin-right:20px;padding:3px;font-weight: bold;">#e89321<br>取引先承認完了</div>
+<div style="display:inline-block;*display:inline;*zoom:1;width: 100px;height: 40px;background-color: #e97f7f;border: 1px solid #999;color:#fff;margin-right:20px;padding:3px;font-weight: bold;">#e97f7f<br>提出依頼</div>
+<div style="display:inline-block;*display:inline;*zoom:1;width: 100px;height: 40px;background-color: #e24d48;border: 1px solid #999;color:#fff;margin-right:20px;padding:3px;font-weight: bold;">#e24d48<br>新規受付</div>
+<div style="display:inline-block;*display:inline;*zoom:1;width: 100px;height: 40px;background-color: #d04d90;border: 1px solid #999;color:#fff;margin-right:20px;padding:3px;font-weight: bold;">#d04d90<br>再受付</div>
+</div>
+-->
+
+<h2>●メーカー機能</h2>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<div class="tabs-nav-w100 tabs-nav-20">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="selected" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">再受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="active" href="#"><span class="tx-b">取引先承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-16"><a class="active" href="#"><span class="tx-b">取引先承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div class="tabs-nav-w100 tabs-nav-18">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="active" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="selected" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">再受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="active" href="#"><span class="tx-b">取引先承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-16"><a class="active" href="#"><span class="tx-b">取引先承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div class="tabs-nav-w100 tabs-nav-19">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="active" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="selected" href="#"><span class="tx-b">再受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="active" href="#"><span class="tx-b">取引先承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-16"><a class="active" href="#"><span class="tx-b">取引先承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div class="tabs-nav-w100 tabs-nav-15">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="active" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">再受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="selected" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="active" href="#"><span class="tx-b">取引先承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-16"><a class="active" href="#"><span class="tx-b">取引先承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div class="tabs-nav-w100 tabs-nav-01">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="active" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">再受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="selected" href="#"><span class="tx-b">取引先承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-16"><a class="active" href="#"><span class="tx-b">取引先承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div class="tabs-nav-w100 tabs-nav-16">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="active" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">再受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="active" href="#"><span class="tx-b">取引先承認待ち</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-16"><a class="selected" href="#"><span class="tx-b">取引先承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+
+<div class="tabs-nav-w100 tabs-nav-18">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-18"><a class="selected" href="#"><span class="tx-b">新規受付全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">新規受付</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">提出可能</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-18"><a class="active" href="#"><span class="tx-b">作成・提出</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<div class="tabs-nav-w100 tabs-nav-19">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-19"><a class="selected" href="#"><span class="tx-b">再受付全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">再提出依頼</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">仕様変更</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">アレルギー照合</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">社内承認待ち</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<h2>●買い手機能</h2>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<div class="tabs-nav-w100 tabs-nav-20">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-20"><a class="selected" href="#"><span class="tx-b">全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-03"><a class="active" href="#"><span class="tx-b">未回収全て</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">未承認全て</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-19"><a class="active" href="#"><span class="tx-b">承認完了</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<div class="tabs-nav-w100 tabs-nav-03">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-03"><a class="selected" href="#"><span class="tx-b">未回収全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-03"><a class="active" href="#"><span class="tx-b">新規回収</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-03"><a class="active" href="#"><span class="tx-b">再回収</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-03"><a class="active" href="#"><span class="tx-b">仕様変更</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-03"><a class="active" href="#"><span class="tx-b">アレルギー照合</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<div class="tabs-nav-w100 tabs-nav-15">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-15"><a class="selected" href="#"><span class="tx-b">未承認全て</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">承認依頼</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-15"><a class="active" href="#"><span class="tx-b">最終承認依頼</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+
+<div style="height: 10px;"><!-- スペース調整 --></div>
+
+<div class="tabs-nav-w100 tabs-nav-17">
+	<ul class="clr">
+		<li class="tabs-nav-w100-li item-w100-17"><a class="selected" href="#"><span class="tx-b">取引先設定</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-17"><a class="active" href="#"><span class="tx-b">提出依頼可能</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-17"><a class="active" href="#"><span class="tx-b">他社と利用中</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-17"><a class="active" href="#"><span class="tx-b">未利用企業</span> <span class="count">5件</span></a></li>
+		<li class="tabs-nav-w100-li"><a class="active" href="#"><span class="tx-b">依頼不要</span> <span class="count">5件</span></a></li>
+	</ul>
+</div>
+
+<div style="height: 30px;"><!-- スペース調整 --></div>
+
+<h2>【アイコン】</h2>
+<div style="height: 10px;"><!-- スペース調整 --></div>
+<span class="icbt-standard"><span class="bt-label">規Ｐ</span></span>
+<span class="icbt-klite"><span class="bt-label">規Ｂ</span></span>
+
+<div style="height: 30px;"><!-- スペース調整 --></div>
+
+<img src="new_list_table_2012.7.11.jpg" width="950" height="884" alt="ListTable"/>
+
+<!--TTT Lower Structure Starts-->
+            </div>
+<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>	
+<div class="ftr-hlp"><div class="inner">
+	<span class="tx-hlp"><label for="s">ヘルプ</label></span>
+	<a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a>
+</div></div>
+<!--Footer Help End-->
+            </form>
+        </div>
+        <!--Contents End-->
+	<!--Footer Start-->
+	<div class="ftr">
+		<ul class="ftr-nv clr">
+			<li><a href="#">マイページ</a></li>
+			<li><a href="#">ご利用ガイド</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		<ul class="usrnv clr">
+			<li><a href="#">グループ切替</a></li>
+			<li><a href="#">再ログイン</a></li>
+			<li><a href="#">ログアウト</a></li>
+		</ul>
+		<div class="small">
+			<p class="credits">
+			当サイトはJavaScriptおよびCookieを使用しています。<br>
+			Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.
+			</p>
+			<p class="number">S217739JP6EW17</p>
+		</div>
+	</div>
+	<!--Footer End-->
+    </div>
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.ui.all.js"></script>
+    <script type="text/javascript" src="../js/parts_html_render.js"></script>
+</body>
+</html>

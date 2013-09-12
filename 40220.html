@@ -1,0 +1,268 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<!-- ============================= 円グラフ描画 ============================ -->
+<!--[if IE]><script src="/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/js/imgcanvas.js"></script>
+<style type="text/css">
+#setting-commodity td h3{height:auto !important;}
+</style>
+</head>
+<body class="page">
+<div class="oroshi">
+  <!--hdr Start-->
+  <div class="hdr">
+    <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a><a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+    <ul class="gnv clr" id="gnv">      <li id="gnv-myp"><a href="40010.html"><span>マイページ</span></a></li>
+      <li id="gnv-ksrch"><a href="8504.html"><span>規格書検索・出力</span></a></li>
+      <li id="gnv-match"><a href="40210.html"><span>取引先マッチング</span></a></li>
+      <li id="gnv-cus"><a href="40030.html"><span>提出状況管理</span></a></li>
+      <li id="gnv-sup"><a href="40170.html"><span>回収状況管理</span></a></li>
+      <li id="gnv-set"><a href="40220.html"><span>自社管理</span></a></li>
+      <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+</ul>
+    <div class="usrnv clr">
+      <h2>インフォ物産株式会社 中山明日香 様</h2>
+      <ul>
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">ログアウト</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--hdr End-->
+  <!--Contents Start-->
+  <div class="contents">
+    <form id="" name="" method="post" action="../dummy">
+      <div class="height-wrap">
+        <table class="hgrp">
+          <tbody>
+            <tr>
+              <th class="heading"><h1>自社管理メニュー</h1></th><td class="desc"><div>規格書管理業務を強化・効率化するための機能一覧です。「登録」「活用」「設定」「管理」の各種機能をご活用ください。</div></td>
+              <td class="w480">
+               <div class="perfection-level-img-oroshi">
+                <div class="left w365">
+                  <span class="total-articles-oroshi">100</span>
+                  <span class="done-articles-oroshi">70</span>
+                </div>
+                <div class="right w110 pt3">
+                <canvas id="imgcanvas" width="47" height="47"><p>canvas非対応ブラウザかJavaScriptが無効になっています。</p></canvas>
+                <span class="percent-oroshi">100</span>
+                </div>
+              
+               </div>
+              </td>
+              <td class="nav"><a onclick="javascript:history.back()" href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <!--<div class="perfection-level-img">
+          <div class="perfection-level-txt-bg left"><span class="total-articles">200</span><span class="done-articles">140</span></div>
+          <div class="perfection-level-btn left"><a class="bt wide04" href="#"><span class="bt-label">詳細レポート</span></a></div>
+          <div class="graph-regist-box left">
+            <div class="graph-regist">
+              <canvas id="imgcanvas" width="86" height="86"><p>canvas非対応ブラウザかJavaScriptが無効になっています。</p></canvas>
+            </div>
+            <div class="regist-percent"><p>70%</p></div>
+          </div>
+        </div>-->
+        <div class="clr">
+          <table id="setting-commodity" class="m-menu-col4">
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-01"><div><a href="40225.html"><span>登　録</span></a></div></td>
+              <td class="control-no-line"></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td "><div>
+                <h3 class="no-ic"><a href="6580.html" class="ic_07"><span class="x-large">商品マスタ一括登録</span></a></h3>
+                <p>商品マスタを登録します。規格書マスタ管理・仕分が機能します</p>
+              </div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="8503.html" class="ic_07"><span class="x-large">規格書マスタ管理</span></a></h3>
+                <p>規格書マスタ、規格書の有無を管理します。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6580_001.html" class="ic_07" ><span class="x-large">規格書一括登録</span></a></h3>
+              <p>エクセルファイルより、規格書を一括登録します。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="0060.html" class="ic_04" ><span class="x-large">規格書新規登録</span></a></h3>
+              <p>ＷＥＢ画面より、規格書を登録します。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6620.html" class="ic_03"><span class="x-large">商品マスタ編集</span></a></h3>
+                 <p>商品マスタの変更設定を行います。</p></div></td>
+            <!--<td><h3 class="no-ic"><a href="#" class="ic_07" ><span class="x-large">取引終了一括設定</span></a></h3>
+                <p>承認完了規格書を対象に、取引終了を一括で設定することができます。</p></td>-->
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-01 ki-setting-commodity-tab-b"><div><a href="40225.html"><span>登　録</span></a></div></td>
+              <td class="control-no-line"></td>
+            </tr>
+          </table>
+          <table id="setting-commodity" class="m-menu-col4">
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-02"><div><a href="40225.html"><span>活　用</span></a></div></td>
+              <td class="control-no-line"></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div class="visible"><h3 class="no-ic elem-disable fixed-height-21"><a class="ic_03" ><span class="x-large">得意先無料ID管理</span></a></h3>
+              <p>得意先へ、指定商品が検索できる無料ＩＤを発行します。<br>2013年6月下旬リリース予定
+             
+              </p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6250.html" class="ic_03"><span class="x-large">規格書ダウンロード設定</span></a></h3>
+              <p>規格書ダウンロード項目の設定を行います。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6240.html" class="ic_03"><span class="x-large">規格書自動ダウンロード設定</span></a></h3>
+              <p>対象の規格書を選択し、ダウンロード依頼を行います。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6560.html" class="ic_03"><span class="x-large">規格書ダウンロード履歴</span></a></h3>
+               <p>規格書ダウンロード状況の確認、ダウンロードを行います。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div>&nbsp;</div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-02 ki-setting-commodity-tab-b"><div><a href="40230.html"><span>活　用</span></a></div></td>
+              <td class="control-no-line"></td>
+            </tr>
+          </table>
+          <table id="setting-commodity" class="m-menu-col4">
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-03"><div><a href="40220.html"><span>設　定</span></a></div></td>
+              <td class="control-no-line"></td>
+            </tr>
+            <tr>
+               <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="0017.html" class="ic_07"><span class="x-large">取引終了一括設定</span></a></h3>
+                <p>承認規格書を対象に、取引終了した商品を一括で設定します。</p></div></td>
+                <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="40160.html" class="ic_01" ><span class="x-large">提出促進一括メール</span></a></h3>
+                <p>仕入先に対し、未回収規格書の一括提出促進を行います。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="40170-8.html" class="ic_04" ><span class="x-large">仕様変更一括依頼</span></a></h3>
+                <p>仕入先に対し、承認規格書の一括仕様変更依頼を行います。</p></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6570.html" class="ic_03" ><span class="x-large">FIM受発注連携設定</span></a></h3>
+              <p>受発注・受注営業システムの商品カタログへの連携を設定します。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6930.html" class="ic_03" ><span class="x-large">初期設定</span></a></h3>
+              <p>サービスをご利用いただく際に、ご自身で変更いただきたい設定です。</p></div></td>
+              <td class="control-line"><img src="/web2/jp/images/spacer.gif" alt=""></td>
+            </tr>
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-03 ki-setting-commodity-tab-b"><div><a href="40220.html"><span>設　定</span></a></div></td>
+              <td class="control-no-line"></td>
+            </tr>
+          </table>
+        
+        <table id="setting-commodity" class="m-menu-col4">
+          <tbody>
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-04"><div><a href="40227.html"><span>管　理</span></a></div></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6600.html" class="ic_03"><span class="x-large">社内ID管理</span></a></h3>
+	              <p>担当者ＩＤの追加・変更・権限設定等、各種設定を行います。</p></div></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6630.html" class="ic_03" ><span class="x-large">得意先管理</span></a></h3>
+              <p>規格書非公開設定、担当者一括設定を行います。</p></div></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6700.html" class="ic_03" ><span class="x-large">仕入先管理</span></a></h3>
+              <p>仕入先別称の登録、担当者一括設定を行います。</p></div></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6610.html" class="ic_06"><span class="x-large">自社管理項目追加</span></a></h3>
+                <p>規格書に自社で追加管理する項目を設定します。</p></div></td>
+            </tr>
+            <tr>
+              <td class="m-menu-col4-td"><div><h3 class="no-ic"><a href="6590.html" class="ic_06"><span class="x-large">会社情報編集</span></a></h3>
+                <p>会社情報の変更ができます。</p></div></td>
+            </tr>
+<!--
+            <tr>
+              <td><h3 class="mb10"><a href="#" class="ic_07" ><img src="/web2/jp/images/ic-gre-detail.gif" alt="取引終了一括設定" width="50" height="50"><span>取引終了一括設定</span></a></h3>
+                <p>承認完了規格書を対象に、取引終了を一括で設定することができます。</p></td>
+              <td><h3 class="mb10"><a href="#" class="ic_01" ><img src="/web2/jp/images/ic-gre-inv-mail.gif" alt="提出促進一括メール" width="50" height="50"><span>提出促進一括メール</span></a></h3>
+                <p>提出依頼の期限日越えを対象に、提出促進の一括メールを送信することができます。</p></td>
+              <td><h3 class="mb10"><a href="#" class="ic_04" ><img src="/web2/jp/images/ic-gre-inv-mail.gif" alt="仕様変更依頼一括依頼" width="50" height="50"><span>仕様変更依頼一括依頼</span></a></h3>
+                <p>承認完了規格書を対象に、適用日を検索し、仕様変更依頼の一括メールを送信することができます。</p></td>
+            </tr>
+            <tr>
+              <td><h3 class="mb10"><a href="#" class="ic_05" ><img src="/web2/jp/images/ic-gre-list02.gif" alt="自社商品コード一括設定" width="50" height="50"><span class="x-large">自社商品コード一括設定</span></a></h3>
+                <p>提出依頼を対象に、自社商品管理コードの新規・変更設定ができます。</p></td>
+
+              <td><div></div></td>
+
+              <td><div></div></td>
+            </tr>
+-->
+            <tr class="ki-setting-commodity-tab">
+              <td class="setting-com-04 ki-setting-commodity-tab-b"><div><a href="40227.html"><span>管　理</span></a></div></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+        </div>
+      </div>
+    <!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+  </div>
+  <!--Contents End-->
+  <!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+    <ul class="usrnv clr">
+      <li><a href="#">ログアウト</a></li>
+    </ul>
+    <div class="small"><p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+        Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p><p class="number">S217739JP6EW17</p></div>
+  </div>
+  <!--ftr End-->
+</div>
+</body>
+</html>

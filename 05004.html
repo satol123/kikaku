@@ -1,0 +1,737 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/mypage.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.head-space.cell-01{width:30px;}
+.head-space.cell-02{width:90px;}
+.head-space.cell-03{width:288px;}
+.head-space.cell-04{width:160px;}
+.head-space.cell-05{width:160px;}
+</style>
+</head>
+<body class="page">
+<div class="kaite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w580"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a>&nbsp;&nbsp;<div class="especial_co">インフォ食品（株）&nbsp;提供</div></div>
+        <ul class="gnv clr" id="gnv">
+            <li id="gnv-ksrch"><a href="http://192.168.100.105:5055/05004.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-set-resist"><a href="http://192.168.100.105:5055/05022.html"><span>設定・登録</span></a></li>
+            <li id="gnv-c_update"><a href="http://192.168.100.105:5055/05005.html"><span>有償アップデート</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>(株)新潟フードサービス 新潟太郎 様</h2>
+            <ul>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+     <form id="" name="" method="post" action="../dummy">
+       <div class="height-wrap">
+     <table class="hgrp">
+	   <tbody>
+		<tr>
+			<th class="heading"><h1>規格書検索・出力</h1></th><td class="desc"><div>取引先の規格書がダウンロードできます。</div></td>
+			<td class="nav">
+				<a href="#" class="bt bt-back mb5"><span class="bt-label">戻る</span></a><br>
+<!--<a class="bt" href="#"><span class="bt-label">関連設定一覧</span></a><a class="bt bt-add02" href="#"><span class="bt-label">仕様変更</span></a>-->
+
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<!--	 <table class="hgrp-nv">
+	  <tbody>
+		<tr>
+		  <td>
+			<div class="tabs-link">
+			  <ul>
+				<li><a class="current" href="#"><span class="bg-tabs-link">作成した規格書を探す</span></a></li>
+			  </ul>
+			</div>
+		  </td>
+		</tr>
+	  </tbody>
+	</table> -->
+
+
+        <div class="myp-main-hdr">
+          <div class="bg-tl">
+            <div class="bg-tr">
+              <div class="bg-br">
+                <div class="bg-bl">
+                  <table class="justify">
+                    <tbody>
+                      <tr>
+                        <!--<td class="justify-l"><div> <span class="cstm-tx"><span class="cstm-tx-bg"><input name="s" type="text" class="has-placeholder w200 example" id="s" title="メニュー名・メニューコードを入力" value="メニュー名・メニューコードを入力"></span></span><span class="bt bt-blk"><input type="submit" value="検索" class="bt-label"></span> </div></td>-->
+                        <td class="justify-l"><div><span class="cstm-tx cstm-tx-box"><span class="cstm-tx-bg"><input type="text" class="has-placeholder w250" id="search-freeword" title="キーワードを入力" value="キーワードを入力"></span><a href="#" class="cancel"><img src="/web2/jp/images/srch-ic-clear.gif" alt="クリア" width="31" height="14"></a></span><a class="bt bt-srch03" href="#"><span class="bt-label">検索する</span></a><!--<span class="bt bt-blk ml5"><input type="submit" value="検索" class="bt-label"></span>-->&nbsp;&nbsp;&nbsp;&nbsp;登録規格書数：533件</div></td>
+                        <td class="justify-r"><div><a href="05007.html">ダウンロード履歴</a></div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--
+		<table class="justify">
+			<tr>
+				<td class="justify-r">
+				<div>
+					<a href="#" class="bt bt-gre-large"><span class="bt-label">規格書を新規作成する</span></a>
+				</div>
+				</td>
+			</tr>
+		</table>
+	 <table class="hgrp-nv">
+	  <tbody>
+		<tr>
+		  <td>
+			<div class="tabs-link">
+			  <ul>
+				<li><a class="current" href="#"><span class="bg-tabs-link">作成した規格書を探す</span></a></li>
+			  </ul>
+			</div>
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
+-->
+
+<!--<div class="srch-panel-order tbl-r mt10">
+<table>
+                            <tr class="row-01 first-row">
+                                <th class="first-cell">
+                                    <div>依頼商品名 </div>
+                                </th>
+                                <td>
+                                    <div ><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-02" id="f1-02" size="20" class="interlock-trigger w170 ime-actv"></span></span></div>
+                                </td>
+                                <th>
+                                    <div>取引先 </div>
+                                </th>
+                                <td class="last-cell nowrap">
+                                 <div><span class="checked">全て<a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="first-cell">
+                                  <div>アレルギー </div>
+                                </th>
+                                <td class="nowrap w320">
+                                    <div><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a>&nbsp;<span class="cstm-radio"><span><input type="radio" name="f1-21" id="f1-21a" checked="checked"><label for="f1-21a">含む</label></span><span><input type="radio" name="f1-21" id="f1-21b"><label for="f1-21b">含まない</label></span></span>
+                                    
+                                    </div>
+                                </td>
+                                <th>
+                                  <div>製造者名 </div>
+                                </th>
+                                <td class="last-cell nowrap">
+                                  <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-08_2" id="f1-08_2" size="10" class="interlock-trigger w140 ime-actv" value=""></span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="first-cell">
+                                  <div>原産国 </div>
+                                </th>
+                                <td>
+                                    <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-16" id="f1-16" size="20" class="interlock-trigger w170 ime-actv"></span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></div>
+                                </td>
+                                <th>
+                                  <div><p class="disp-ic mt0"><span class="icbt-gre04"><span class="bt-label">規Ｐ</span></span></p>工場名</div>
+                                </th>
+                                <td class="last-cell nowrap">
+                                  <div>
+				  
+				  <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-08_2" id="f1-08_2" size="10" class="interlock-trigger w140 ime-actv" value=""></span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="first-cell">
+                                  <div>原材料名 </div>
+                                </th>
+                                <td class="nowrap">
+                                    <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-14" id="f1-14" size="10" class="interlock-trigger w170" value="" ime-actv></span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></div>
+                                </td>
+                                <th>
+                                  <div>輸入者名 </div>
+                                </th>
+                                <td class="last-cell nowrap">
+                                  <div>
+				  
+				  <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-08_2" id="f1-08_2" size="10" class="interlock-trigger w140 ime-actv" value=""></span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="first-cell">
+                                  <div><p class="disp-ic mt0"><span class="icbt-gre04"><span class="bt-label">規Ｐ</span></span></p>原料原産国</div>
+                                </th>
+                                <td class="nowrap">
+                                    <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-14" id="f1-14" size="10" class="interlock-trigger w170" value="" ime-actv></span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></div>
+                                </td>
+                                <th>
+                                  <div>規格書区分 </div>
+                                </th>
+                                <td class="last-cell">
+                                    <div><span class="cstm-radio"><span><input type="radio" name="f1-22" id="f1-22a" checked="checked"><label for="f1-22a">全て</label></span><span><input type="radio" name="f1-22" id="f1-22b"><label for="f1-22b">ライト</label></span><span><input type="radio" name="f1-22" id="f1-22c"><label for="f1-22c">スタンダード</label></span></span></div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="first-cell">
+                                    <div><p class="disp-ic mt0"><span class="icbt-gre04"><span class="bt-label">規Ｐ</span></span></p>遺伝子組換え区分</div>
+                                </th>
+                                <td>
+                                    <div><span class="cstm-radio"><span><input type="radio" name="f1-03" id="f1-03a" checked="checked"><label for="f1-03a">全て</label></span><span><input type="radio" name="f1-03" id="f1-03b"><label for="f1-03b">含む</label></span><span><input type="radio" name="f1-03" id="f1-03c"><label for="f1-03c">含まない</label></span></span>
+                                </div>
+                                </td>
+                                <th>
+                                  <div>取引終了設定 </div>
+                                </th>
+                                <td class="last-cell"><div><span class="cstm-radio"><span><input type="radio" name="f1-16" id="f1-16c" checked="checked"><label for="f1-16c">含めない</label></span><span><input type="radio" name="f1-16" id="f1-16b"><label for="f1-16b">含める</label></span><span><input type="radio" name="f1-16" id="f1-16a"><label for="f1-16a">全て</label></span></span></div>
+                                </td>
+                            
+                            </tr>
+                            <tr>
+                                <th class="first-cell">
+                                    <div>承認日 </div>
+                                </th>
+                                <td class="nowrap">
+                                 <div><span class="cstm-radio"><span><input type="radio" name="f1-08" id="f1-08a" checked="checked"><label for="f1-08a">全て</label></span><span><input type="radio" name="f1-08" id="f1-08b"><label for="f1-08b">期間指定<span class="elem-disable"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-08_1" id="f1-08_1" size="10" value="2011/10/10" class="w80 ime-dis"></span></span><span>(火) ～</span><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-08_2" id="f1-08_2" size="10" value="2012/10/10" class="w80 ime-dis"></span></span><span>(水)</span></span></label></span></span></div>
+                                </td>
+                                <th>
+                                    <div>最終承認者名 </div>
+                                </th>
+                                <td class="last-cell">
+                                    <div><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></div>
+                                </td>
+                               </tr>
+							   <tr>
+                                <th class="first-cell">
+                                    <div>適用日 </div>
+                                </th>
+                                <td class="nowrap">
+                                 <div><span class="cstm-radio"><span><input type="radio" name="f1-07" id="f1-07a" checked="checked"><label for="f1-07a">全て</label></span><span><input type="radio" name="f1-07" id="f1-07b"><label for="f1-07b">期間指定<span class="elem-disable"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-07_1" id="f1-07_1" size="10" value="2011/10/10" class="w80 ime-dis"></span></span><span>(火) ～</span><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-07_2" id="f1-07_2" size="10" value="2012/10/10" class="w80 ime-dis"></span></span><span>(水)</span></span></label></span></span></div>
+                                </td>
+                                <th>
+                                    <div>状態 </div>
+                                </th>
+                                <td class="last-cell">
+                                  <div><span class="cstm-radio"><span class="checked"><span>承認完了</span></span>&nbsp;<a class="bt bt-list" href="#"><span class="bt-label">一覧から選択</span></a></span></div>
+                                </td>
+                            </tr>
+                            <tr class="last-row">
+                                <th class="first-cell">
+                                    <div>コード </div>
+                                </th>
+                                <td colspan="3" class="last-cell">                                    <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-03" id="f1-03" size="20" class="w170 ime-dis"></span></span>
+                                    <span class="cstm-radio"><span><input type="radio" name="f1-03_2" id="f1-03_2d" checked="checked"><label for="f1-03_2d">全て</label></span><span><input type="radio" name="f1-03_2" id="f1-03_2e"><label for="f1-03_2e">自社商品コード</label></span><span><input type="radio" name="f1-03_2" id="f1-03_2a"><label for="f1-03_2a">自社商品コード</label></span><span><input type="radio" name="f1-03_2" id="f1-03_2b"><label for="f1-03_2b">JANコード</label></span><span><input type="radio" name="f1-03_2" id="f1-03_2c"><label for="f1-03_2c">規格書コード</label></span></span>
+                                    </div>
+                                </td>
+                            </tr>
+  </table>
+            <div class="srch-panel-ftr">
+                <a href="#" class="bt bt-srch"><span class="bt-label">検索する</span></a>
+		<a class="ic ic-arr-blu04" href="1020_2.html"><span class="ic-label">詳細条件を非表示にする</span></a>
+            </div>
+</div>-->
+
+<div class="clr">
+
+<div class="myp-main">
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：100件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="num"><a href="#">2</a></span> <span class="num"><a href="#">3</a></span> <span class="num"><a href="#">4</a></span> <span class="num"><a href="#">5</a></span> <span class="next"><a href="#">次へ &#8250;</a></span></div></td>
+	            <td class="justify-r"><div class="serach-results-filter"><label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option selected="selected">新着順</option>
+	                <option>承認日（降順）</option>
+	                <option>承認日（昇順）</option>
+	                <option>適用日（降順）</option>
+	                <option>適用日（昇順）</option>
+	                <option>自社商品コード（降順）</option>
+	                <option>自社商品コード（昇順）</option>
+                  </select><label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option selected="selected">20</option>
+	                <option>40</option>
+	                <option>80</option>
+	                <option>100</option>
+                  </select>
+	             </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+<table class="tbl_k_search">
+      <tr class="tool-first">
+        <td colspan="2" class="first-cell"><div> </div></td>
+        <td colspan="3" class="last-cell"><div><a class="ic ic-blu-dl mr5" href="05026.html"><span class="ic-label">ダウンロード</span></a></div></td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="first-cell nowrap"><div class="unit02-l01">No.</div></td>
+        <td rowspan="2"><div class="unit02-l01">商品画像</div></td>
+        <td><div><span class="no-bd-top">商品名</span></div></td>
+        <td><div class="no-bd-top">規格入数／単位</div></td>
+        <td><div>取引先</div></td>
+      </tr>
+      <tr class="last-row">
+        <td><div class="first-line">自社商品コード</div></td>
+        <td><div class="last-line">アレルギー物質</div></td>
+        <td><div>原産国</div></td>
+    </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div></div></td>
+      <td class="head-space cell-02"><div></div></td>
+      <td class="head-space cell-03"><div></div></td>
+      <td class="head-space cell-04"><div></div></td>
+      <td class="head-space cell-05 head-space-last"><div></div></td>
+    </tr>
+    <tr>
+    <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">1</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_13.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="05008.html" class="no-line">業務用冷凍ハンバーグ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100100</div></td>
+	<td class="list-cell"><div>小麦、乳、牛肉、豚肉、ゼラチン、米</div></td>
+	<td class="list-cell"><div>タイ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">2</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_02.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍シューマイ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100200</div></td>
+	<td class="list-cell"><div>えび、かに</div></td>
+	<td class="list-cell"><div>タイ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">3</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_03.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍たこ焼き</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100199</div></td>
+	<td class="list-cell"><div>小麦、そば</div></td>
+	<td class="list-cell"><div>中国</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">4</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_04.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍パイ生地</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100201</div></td>
+	<td class="list-cell"><div>卵、乳</div></td>
+	<td class="list-cell"><div>日本</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">5</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_05.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍ブロッコリー</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100202</div></td>
+	<td class="list-cell"><div>大豆、くるみ</div></td>
+	<td class="list-cell"><div>中国</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">6</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_06.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍ミートボール</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100204</div></td>
+	<td class="list-cell"><div>落花生、えび、かに</div></td>
+	<td class="list-cell"><div>インドネシア</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">7</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_07.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍鶏唐揚げ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100205</div></td>
+	<td class="list-cell"><div>小麦、卵、鶏肉</div></td>
+	<td class="list-cell"><div>中国</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">8</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_08.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍枝豆</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100206</div></td>
+	<td class="list-cell"><div>大豆</div></td>
+	<td class="list-cell"><div>アメリカ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">9</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_09.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍春巻</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100207</div></td>
+	<td class="list-cell"><div>小麦、えび</div></td>
+	<td class="list-cell"><div>インド</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">10</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_10.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍餃子</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100208</div></td>
+	<td class="list-cell"><div>小麦、豚肉、ゼラチン</div></td>
+	<td class="list-cell"><div>中国</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">11</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_11.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍イカリング</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100209</div></td>
+	<td class="list-cell"><div>小麦、卵、いか</div></td>
+	<td class="list-cell"><div>ブラジル</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">12</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_12.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍たこ唐揚げ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100210</div></td>
+	<td class="list-cell"><div>小麦、卵、乳</div></td>
+	<td class="list-cell"><div>中国</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">13</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_13.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍ハンバーグ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100211</div></td>
+	<td class="list-cell"><div>小麦、卵</div></td>
+	<td class="list-cell"><div>アメリカ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">14</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_14.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍ポテト</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100212</div></td>
+	<td class="list-cell"><div>小麦</div></td>
+	<td class="list-cell"><div>アメリカ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">15</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_15.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍メンチカツ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100213</div></td>
+	<td class="list-cell"><div>小麦、卵、豚肉</div></td>
+	<td class="list-cell"><div>オーストラリア</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">16</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_16.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍焼おにぎり</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100214</div></td>
+	<td class="list-cell"><div>大豆、米、ごま</div></td>
+	<td class="list-cell"><div>新潟県</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">17</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_17.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍白身魚フライ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100215</div></td>
+	<td class="list-cell"><div>小麦、卵、魚介類</div></td>
+	<td class="list-cell"><div>青森県</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">18</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_18.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍炒飯</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100215</div></td>
+	<td class="list-cell"><div>卵、えび、米、魚介類</div></td>
+	<td class="list-cell"><div>アメリカ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">19</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_19.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍お好み焼き</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100216</div></td>
+	<td class="list-cell"><div>小麦、卵、えび、やまいも、米、魚介類</div></td>
+	<td class="list-cell"><div>アメリカ</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+    <tr>
+        <td class="list-cell valign-m nowrap" rowspan="2"><div class="center">20</div></td>
+	<td rowspan="2" class="list-cell"><div class="center"><img src="/web2/jp/images/food-sample_l_20.jpg" width="60" height="60" alt="商品写真"></div></td>
+	<td class="list-cell"><div><a href="#" class="no-line">業務用冷凍ゲソ唐揚げ</a></div></td>
+	<td class="list-cell"><div>10kg /PC</div></td>
+	<td class="list-cell"><div>インフォ食品(株)</div></td>
+    </tr>
+    <tr>
+	<td class="list-cell"><div>100217</div></td>
+	<td class="list-cell"><div>小麦、卵、魚介類</div></td>
+	<td class="list-cell"><div>中国</div></td>
+    </tr>
+    <tr>
+     <td colspan="5" class="list-space"><div> </div></td>
+    </tr>
+
+</table>
+</div>
+
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：100件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="num"><a href="#">2</a></span> <span class="num"><a href="#">3</a></span> <span class="num"><a href="#">4</a></span> <span class="num"><a href="#">5</a></span> <span class="next"><a href="#">次へ &#8250;</a></span></div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<!--
+		<table class="justify">
+			<tr>
+				<td class="justify-r">
+				<div>
+					<a href="#" class="bt bt-gre-large"><span class="bt-label">規格書を新規作成する</span></a>
+				</div>
+				</td>
+			</tr>
+		</table>
+-->
+</div>
+
+        <div class="myp-sub">
+			<div class="myp-my">
+                <div class="myp-my-hdr">
+                    <img width="60" height="14" class="title" alt="検索する" src="/web2/jp/images/kis-ti-search.gif">
+                </div>
+              <div class="kis-search">
+								<p class="serch-sum-btn">この条件で <a class="bt bt-srch03" href="#"><span class="bt-label">検索する</span></a></p>
+	              <div class="kis-search-ti-b mt10">
+	                <p>管理項目で検索する</p>
+	              </div>
+              <ul>
+                <li>
+                  <p class="title">各種コード:</p>
+                  <span class="cstm-radio"><span class="checked"><input type="radio" name="41k-01-2" id="41k-01-2a" checked="checked"><label for="41k-01-2a">全て</label></span>
+<span class="mt5 pl0"><span><input type="radio" name="41k-01-2" id="41k-01-2b"><label for="41k-01-2b">商品</label></span><span><input type="radio" name="41k-01-2" id="41k-01-2c"><label for="41k-01-2c">JAN</label></span><span><input type="radio" name="41k-01-2" id="41k-01-2d"><label for="41k-01-2d">規格書</label></span></span></span>
+<span class="cstm-tx mt5"><span class="cstm-tx-bg"><input type="text" name="f2-01-01" id="f2-01-01" class="w160"></span></span>
+								</li>
+              </ul>
+
+	              <div class="kis-search-ti-b mt10">
+	                <p>商品情報で検索する</p>
+	              </div>
+              <ul>
+                <li>
+                  <p class="title">アレルギー物質:</p>
+                  <span class="cstm-radio"><span class="checked"><input type="radio" name="41k-01-3" id="41k-01-3a" checked="checked"><label for="41k-01-3a">含む</label></span><span><input type="radio" name="41k-01-3" id="41k-01-3b"><label for="41k-01-3b">含まない</label></span></span>
+<div class="mt5"><span class="cstm-tx mr5"><span class="cstm-tx-bg"><input type="text" class="field-code w130" id="f01-rec01-01" name="f01-rec01-01"></span></span><a href="#"><img width="18" height="19" src="/web2/jp/images/ic-list.gif" alt="一覧から選択する"></a><!--<span class="checked">全て<a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span>--></div>
+								</li>
+                <li>
+                  <p class="title">遺伝子組み換え:</p>
+                  <span class="cstm-radio"><span class="checked"><input type="radio" name="41k-01-4" id="41k-01-4a" checked="checked"><label for="41k-01-4a">含む</label></span><span><input type="radio" name="41k-01-4" id="41k-01-4b"><label for="41k-01-4b">含まない</label></span></span>
+<div class="mt5"><span class="cstm-tx mr5"><span class="cstm-tx-bg"><input type="text" class="field-code w130" id="f01-rec01-02" name="f01-rec01-02"></span></span><a href="#"><img width="18" height="19" src="/web2/jp/images/ic-list.gif" alt="一覧から選択する"></a><!--<span class="checked">全て<a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span>--></div>
+								</li>
+                <li>
+                  <p class="title">原産国</p>
+                  <span class="cstm-tx mr5"><span class="cstm-tx-bg"><input type="text" class="field-code w130" id="f01-rec02-01" name="f01-rec02-01"></span></span></li>
+                <li>
+                  <p class="title">原材料</p>
+                  <span class="cstm-tx mr5"><span class="cstm-tx-bg"><input type="text" class="field-code w130" id="f01-rec02-02" name="f01-rec02-02"></span></span><a href="#"><img width="18" height="19" src="/web2/jp/images/ic-list.gif" alt="一覧から選択する"></a></li>
+                <li>
+                  <p class="title">原材原産国</p>
+                  <span class="cstm-tx mr5"><span class="cstm-tx-bg"><input type="text" class="field-code w130" id="f01-rec02-03" name="f01-rec02-03"></span></span><a href="#"><img width="18" height="19" src="/web2/jp/images/ic-list.gif" alt="一覧から選択する"></a></li>
+              </ul>
+								<p class="serch-sum-btn-b mt10">この条件で <a class="bt bt-srch03" href="#"><span class="bt-label">検索する</span></a></p>
+              </div>
+<img width="190" height="2" alt="" src="/web2/jp/images/mym-bg-ftr.gif">
+
+            </div>
+
+		</div>
+
+</div>
+
+        <table class="justify">
+          <tbody>
+            <tr>
+              <td class="justify-l"><div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+            </tr>
+          </tbody>
+        </table>
+
+         </div>
+
+            </form>
+
+	</div>
+
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">
+
+        <ul class="ftr-nv clr">
+            <!--<li><a href="05003.html">マイページ</a></li>-->
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+       </div>
+   </div>
+	<!--ftr End-->
+</div>
+    <script type="text/javascript" src="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/web2/jp/js/parts_html_render.js"></script>
+</body>
+</html>

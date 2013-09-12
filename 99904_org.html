@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<style type="text/css">
+.data-list table.tbl_99904 td.head-space.cell-01{width:30px;}
+.data-list table.tbl_99904 td.head-space.cell-02{width:100px;}
+.data-list table.tbl_99904 td.head-space.cell-03{width:auto;}
+.data-list table.tbl_99904 td.head-space.cell-04{width:100px;}
+.data-list table.tbl_99904 td.head-space.cell-05{width:80px;}
+.data-list table.tbl_99904 td.head-space.cell-06{width:210px;}
+.data-list table.tbl_99904 td.head-space.cell-07{width:60px;}
+.data-list table.tbl_99904 td.head-space.cell-08{width:80px;}
+</style>
+</head>
+<body class="page">
+
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+                <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form id="" name="" method="post" action="../dummy">
+         <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>規格書マスタ管理</h1></th><td class="desc"><div>規格書マスタに紐づく規格書状態を管理することができます。<br>
+		          マスタ規格書が無ければ新規作成ボタンより規格書を作成してください。</div></td>
+			<td class="nav">
+					<a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+<table class="justify">
+ <tbody>
+  <tr><td class="justify-r"><div><a href="0210.html" class="bt"><span class="bt-label">アップロード</span></a></div></td></tr>
+ </tbody>
+</table>
+
+<div class="srch-panel-order tbl-r">
+<table class="target-detail">
+                            <tr class="row-01 first-row">
+                                <th class="cell-01 first-cell">
+                                    <div><label for="f1-01">自社商品コード</label></div>
+                                </th>
+                                <td class="cell-02">
+                                  <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-01" id="f1-01" size="20" class="interlock-trigger w150 ime-dis"></span></span></div>
+                                </td>
+                                <th class="cell-03">
+                                    <div>規格</div>
+                                </th>
+                                <td class="cell-04 last-cell"><div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-02" id="f1-02" size="20" class="interlock-trigger w280 ime-actv"></span></span></div></td>
+                            </tr>
+                            <tr class="row-02">
+                                <th class="cell-01 first-cell">
+                                    <div>商品名</div>
+                                </th>
+                                <td class="cell-02 nowrap">
+                                    <div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-03" id="f1-03" size="20" class="interlock-trigger w280 ime-actv"></span></span></div>
+                                </td>
+                                <th class="cell-03 ">
+                                    <div>マスタ規格書</div>
+                                </th>
+                                <td class="cell-04 last-cell">
+    <div><span class="cstm-radio"><span><input type="radio" name="f1-04" id="f1-04a" checked="checked"><label for="f1-04a">全て</label></span><span><input type="radio" name="f1-04" id="f1-04b"><label for="f1-04b">有</label></span><span><input type="radio" name="f1-04" id="f1-04c"><label for="f1-04c">無</label></span></span></div>
+                                </td>
+                            </tr>
+  </table>
+            <div class="srch-panel-ftr">
+                <a href="#" class="bt bt-srch"><span class="bt-label">検索する</span></a>
+            </div>
+</div>
+
+
+
+<table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：5件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div class="serach-results-filter"><label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>自社商品コード</option>
+	                <option>-</option>
+                  </select><label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option>10</option>
+	                <option selected="selected">20</option>
+	                <option>40</option>
+	                <option>80</option>
+	                <option>100</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+<table class="tbl_99904">
+      <tr class="tool-first">
+        <td class="first-cell"><div> </div></td>
+        <td colspan="7" class="last-cell"><div>
+				<a class="ic ic-blu-dl" href="#"><span class="ic-label">ダウンロード</span></a>
+        </div></td>
+      </tr>
+      <tr class="last-row">
+      <td class="cell-01 first-cell">
+          <div class="unit02-l01">No.</div>
+      </td>
+      <td class="cell-02">
+          <div class="unit02-l01">自社商品コード</div>
+      </td>
+      <td class="cell-03">
+          <div class="unit02-l01">商品名</div>
+      </td>
+      <td class="cell-04">
+          <div class="unit02-l01">規格</div>
+      </td>
+      <td class="cell-05">
+          <div class="unit02-l02">マスタ規格書<br>
+          の有無</div>
+      </td>
+      <td class="cell-06">
+          <div class="unit02-l01">規格書コード</div>
+      </td>
+      <td class="cell-06">
+          <div class="unit02-l01">規格書数</div>
+      </td>
+      <td class="cell-07 last-cell">
+          <div class="unit02-l01">&nbsp;</div>
+      </td>
+</tr>
+          <tr>
+            <td class="head-space cell-01 head-space-first"><div> </div></td>
+            <td class="head-space cell-02"><div> </div></td>
+            <td class="head-space cell-03"><div> </div></td>
+            <td class="head-space cell-04"><div> </div></td>
+            <td class="head-space cell-05"><div> </div></td>
+            <td class="head-space cell-06"><div> </div></td>
+            <td class="head-space cell-07"><div> </div></td>
+            <td class="head-space cell-08 head-space-last"><div> </div></td>
+          </tr>
+          <tr>
+            <td class="list-cell">
+  <div class="center">1</div></td>
+            <td class="list-cell">
+          <div>1023233</div></td>
+            <td class="list-cell"><div>中華春巻</div></td>
+            <td class="list-cell"><div>16g×10個入</div></td>
+            <td class="list-cell"><div>有</div></td>
+            <td class="list-cell"><div>G099971-33028E0D-17380c01</div></td>
+            <td class="list-cell"><div class="right">6</div></td>
+            <td class="list-cell">
+  <div class="center"><a href="/0060.html" class="bt"><span class="bt-label">仕様変更</span></a></div></td>
+          </tr>
+          <tr>
+            <td colspan="8" class="list-space"><div> </div></td>
+          </tr>
+          <tr>
+            <td class="list-cell">
+  <div class="center">2</div></td>
+            <td class="list-cell">
+          <div>1023234</div></td>
+            <td class="list-cell"><div>シューマイ</div></td>
+            <td class="list-cell"><div>10g×10個入</div></td>
+            <td class="list-cell"><div>無</div></td>
+            <td class="list-cell"><div> </div></td>
+            <td class="list-cell"><div> </div></td>
+            <td class="list-cell">
+  <div class="center"><a href="/0290.html" class="bt"><span class="bt-label">新規登録</span></a></div></td>
+          </tr>
+          <tr>
+            <td colspan="8" class="list-space"><div> </div></td>
+          </tr>
+          <tr>
+            <td class="list-cell">
+  <div class="center">3</div></td>
+            <td class="list-cell">
+          <div>1023235</div></td>
+            <td class="list-cell"><div>ギョーザ</div></td>
+            <td class="list-cell"><div>10g×10個入</div></td>
+            <td class="list-cell"><div>無</div></td>
+            <td class="list-cell"><div> </div></td>
+            <td class="list-cell"><div> </div></td>
+            <td class="list-cell">
+  <div class="center"><a href="/0290.html" class="bt"><span class="bt-label">新規登録</span></a></div></td>
+          </tr>
+          <tr>
+            <td colspan="8" class="list-space"><div> </div></td>
+          </tr>
+  </table>
+</div>
+
+
+<table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：5件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div> </div></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+							<td class="justify-r valign-b"><div> </div>
+							</td>
+              </tr>
+            </tbody>
+          </table>
+
+		 </div>
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

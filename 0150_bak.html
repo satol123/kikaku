@@ -1,0 +1,983 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.slip-detail-hdr-tbl-02 th.cell-01,.slip-detail-hdr-tbl-02 th.cell-01 div{width:120px !important;_width:90px !important;}
+/*.slip-detail-hdr-tbl-02 th.cell-02,.slip-detail-hdr-tbl-02 th.cell-02 div{width:auto !important;}*/
+
+.slip-detail-hdr-tbl-02 th.cell-k01,.slip-detail-hdr-tbl-02 th.cell-k01 div{width:120px !important;_width:90px !important;}
+.slip-detail-hdr-tbl-02 th.cell-k02,.slip-detail-hdr-tbl-02 th.cell-k02 div{width:170px;}
+.slip-detail-hdr-tbl-02 .h-5{height:5px;border-left:none;border-right:none;}
+
+.ki-s-eiyou td div{width:auto;}
+
+</style>
+</head>
+<body class="popup">
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w300"><a href="/"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"></a><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18" class="ml10"></a></div>
+
+
+        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#" class="ic ic-close"><span class="ic-label">閉じる</span></a></li>
+            </ul>
+        </div>
+    </div>
+	<!--hdr End-->
+        <div class="height-wrap">
+	  <form id="" name="" method="post" action="../dummy">
+	<!--Contents Start-->
+	<div class="contents">
+			<table class="hgrp">
+				<tbody>
+					<tr>
+						<th class="heading"><h1>商品規格書（プレミアム）</h1></th><td class="desc"><div>商品規格書（プレミアム版）を表示します。</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+<!--<p class="mb10">101010　レンジでチン！冷凍ハンバーグ　250g×15個入</p>-->
+			<div class="utilnav clr">
+				<div class="utilnav-first">
+					<a class="bt bt02" href="#"><span class="bt-label">原材料を見る</span></a><a class="bt bt02" href="#"><span class="bt-label">印刷する</span></a><a class="bt bt02" href="#"><span class="bt-label">規格書ベーシックを見る</span></a><a class="bt bt02" href="#"><span class="bt-label">変更履歴を見る</span></a>
+				</div>
+			</div>
+<table class="tbl-bd-wide-03 red">
+<tbody>
+<tr>
+<td>
+<div><span class="tx-attention">
+<span class="tx-b"><img height="17" width="17" src="/web2/jp/images/ic-caution.gif" alt="" class="mr5">この規格書は、適用日時点の情報です。ご確認ください。</span></span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+            
+      <div class="clr">
+		<div class="related-items left">
+		  <h3>仕様変更履歴</h3>
+			<span class="item backward-rv-current">最新の規格書</span>
+			<span class="item backward-rv"><a href=""><span class="ic-label">2011/01/20</span></a></span>
+			<span class="item backward-rv"><a href=""><span class="ic-label">2011/01/15</span></a></span>
+			<span class="item backward-rv"><a href=""><span class="ic-label">2011/01/10</span></a></span>
+            
+<!--			<span class="item forward">受領伝票</span>-->
+		</div>
+           <!--<div class="left ki-tbl-difference-wrapper">
+            <a class="ic ic-caution02" href="#"><span class="ic-label">差分表記</span></a>
+            <div class="ki-tbl-difference">
+                <p class="tx-b">【差分表記】</p>
+                <table>
+                  <tr>
+                    <td><div>黒字</div></td><td><div>提出時の情報です。</div></td>
+                    <td class="edited"><div class="data-frm"></div><div class="data-add">赤字</div></td><td><div>提出時と比較して、<br>
+                      追加された情報です。</div></td>
+                  </tr>
+                  <tr>
+                    <td class="edited"><div class="data-frm tx-del">グレー字</div><div class="data-chg">赤字</div></td><td><div>提出時と比較して、<br>
+                      変更された情報です。</div></td>
+                    <td class="edited"><div class="data-frm tx-del">グレー字</div><div class="data-del">[削]</div></td><td><div>提出時と比較して、<br>
+                      入力行が削除された情報です。</div></td>
+                  </tr>
+                </table>
+              </div>
+            </div>-->
+          </div>
+	</div>
+	<!--Contents End-->
+			<div class="slip-wrap">
+				<div class="section-slip-detail">
+						<div class="section-slip-detail-bg">
+							<div class="slip-detail-bg-tl">
+							<div class="slip-detail-bg-tr">
+							<div class="slip-detail-bg-br">
+							<div class="slip-detail-bg-bl">
+
+<div class="ki-prevew-std">
+<table class="justify">
+ <tbody>
+  <tr>
+  	<td class="justify-l">101010　業務用冷凍ハンバーグ　1kg/10袋</td>
+  	<td class="justify-r">規格書コード G0000756-32DFC0B-13392464　適用日 2011/12/28<br>インフォ食品</td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="slip-detail-hdr-tbl-02 slip-detail-hdr-tbl-01 pop-slip01 mb5">
+  <tbody>
+    <tr>
+     <th class="w100"><div class="w100">規格書商品名</div></th>
+     <td class="w430 nowrap"><div><h2 class="left pr40">レンジでチン！冷凍ハンバーグ</h2></div></td>
+     <th class="w100"><div class="w100">規格</div></th>
+     <td><div>1kg/10袋</div></td>
+    </tr>
+    <tr>
+    <th class="w100"><div class="w100">フリガナ</div></th>
+     <td><div>レンジデチン！レイトウハンバーグ</div></td>
+     <th class="w100"><div class="w100">ブランド名</div></th>
+     <td><div>食の安全シリーズ</div></td>
+    </tr>
+   </tbody>
+</table>
+
+								<div class="bar_st mb10"><span>&nbsp;基本情報</span></div>
+
+					<p class="sub-ti mb5">商品情報</p>
+
+					<div class="prodinfo clr mb0">
+            <div class="prodinfo-image">
+              <img height="200" width="200" alt="" src="/web2/jp/images/dummy_product02.jpg">
+            </div>
+						<div class="prodinfo-data-2">
+			<table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-kikaku-info01 mb0">
+                <tbody>
+                  <tr>
+                    <th class="cell-01 nowrap"><div>規格</div></th>
+                    <td class="cell-02"><div>1kg/10袋</div></td>
+                    <th class="cell-03 nowrap"><div>ブランド区分</div></th>
+                    <td class="cell-04"><div>NB</div></td>
+                  </tr>
+                  <tr>
+                    <th class="cell-01 nowrap1"><div>規格半角</div></th>
+                    <td class="cell-02"><div>ｲﾁｷﾛ/ｼﾞｭｳﾌｸﾛ</div></td>
+                    <th class="cell-03 nowrap"><div>規格単位</div></th>
+                    <td class="cell-04"><div>C/S</div></td>
+                  </tr>
+                  <tr>
+                    <th class="cell-01 nowrap"><div>賞味・消費期限</div></th>
+                    <td class="cell-02"><div>賞味期限</div></td>
+                    <th class="cell-03 nowrap"><div>製造日含め</div></th>
+                    <td class="cell-04"><div>120日</div></td>
+                  </tr>
+                  <tr>
+                    <th class="cell-05 nowrap"><div>期限表示有無</div></th>
+                    <td class="cell-06"><div>有</div></td>
+                    <th class="cell-01 nowrap"><div>期限表示例</div></th>
+                    <td class="cell-02"><div>賞味期限　2012.11.11</div></td>
+                  </tr>
+                  <tr>
+                    <th class="cell-03 nowrap"><div>製造日表示有無</div></th>
+                    <td class="cell-04"><div>有</div></td>
+                    <th class="cell-05 nowrap"><div>製造日表示例</div></th>
+                    <td class="cell-06"><div>製造日　2011.11.11</div></td>
+                  </tr>
+                  <tr>
+                    <td class="col-space" colspan="4">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th class="cell-01 nowrap"><div>保存温度帯</div></th>
+                    <td class="cell-02"><div>冷凍（-18℃以下）</div></td>
+                    <th class="cell-03 nowrap"><div>発注単位</div></th>
+                    <td class="cell-04"><div>ケース</div></td>
+                  </tr>
+                  <tr>
+                    <th class="cell-01 nowrap"><div>例外日付管理期間</div></th>
+                    <td class="cell-02"><div>2012/06/01～2012/08/30</div></td>
+                    <th class="cell-03 nowrap"><div>製造日含め</div></th>
+                    <td class="cell-04"><div>60日</div></td>
+                  </tr>
+                </tbody>
+							</table>
+						</div>
+					</div>
+
+					  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-kikaku-info01 ki-s-keitai mb5">
+ 								<tbody>
+								  <tr>
+										<th class="ki-s-keitai-head nowrap" colspan="9"><div>商品形態（風袋込み）(mm、g)</div></th>
+								  </tr>
+								  <tr>
+										<th class="cell-01"><div></div></th>
+										<th class="cell-02"><div>縦/長辺(mm)</div></th>
+										<th class="cell-03"><div>奥/短辺(mm)</div></th>
+										<th class="cell-04"><div>高さ(mm)</div></th>
+										<th class="cell-05"><div>重量(g)</div></th>
+										<th class="cell-06 nowrap"><div>入数</div></th>
+										<th class="cell-07"><div>JANコード</div></th>
+										<th class="cell-08"><div>ITFコード</div></th>
+										<th class="cell-09"><div>GTINコード</div></th>
+								  </tr>
+								  <tr>
+										<th class="cell-01 nowrap"><div>ピース</div></th>
+										<td class="cell-02"><div class="right">&nbsp;</div></td>
+										<td class="cell-03"><div class="right">&nbsp;</div></td>
+										<td class="cell-04"><div class="right">&nbsp;</div></td>
+										<td class="cell-05"><div class="right">1000</div></td>
+										<td class="cell-06"><div class="right">1</div></td>
+										<td class="cell-07"><div>12345678910123</div></td>
+										<td class="cell-08 disabled-gry"><div></div></td>
+										<td class="cell-09"><div>123456789123458</div></td>
+								  </tr>
+								  <tr>
+										<th class="cell-01 nowrap"><div>パック</div></th>
+										<td class="cell-02"><div class="right">&nbsp;</div></td>
+										<td class="cell-03"><div class="right">&nbsp;</div></td>
+										<td class="cell-04"><div class="right">&nbsp;</div></td>
+										<td class="cell-05"><div class="right">&nbsp;</div></td>
+										<td class="cell-06"><div class="right">&nbsp;</div></td>
+										<td class="cell-07"><div>&nbsp;</div></td>
+										<td class="cell-08 disabled-gry"><div></div></td>
+										<td class="cell-09"><div>&nbsp;</div></td>
+								  </tr>
+								  <tr>
+										<th class="cell-01 nowrap"><div>ボール</div></th>
+										<td class="cell-02"><div class="right">&nbsp;</div></td>
+										<td class="cell-03"><div class="right">&nbsp;</div></td>
+										<td class="cell-04"><div class="right">&nbsp;</div></td>
+										<td class="cell-05"><div class="right">&nbsp;</div></td>
+										<td class="cell-06"><div class="right">&nbsp;</div></td>
+										<td class="cell-07"><div>&nbsp;</div></td>
+										<td class="cell-08"><div>&nbsp;</div></td>
+										<td class="cell-09"><div>&nbsp;</div></td>
+								  </tr>
+								  <tr>
+										<th class="cell-01 nowrap"><div>ケース</div></th>
+										<td class="cell-02"><div class="right">380</div></td>
+										<td class="cell-03"><div class="right">248</div></td>
+										<td class="cell-04"><div class="right">179</div></td>
+										<td class="cell-05"><div class="right">10500</div></td>
+										<td class="cell-06"><div class="right">10</div></td>
+										<td class="cell-07"><div>&nbsp;</div></td>
+										<td class="cell-08"><div>1234567890123456</div></td>
+										<td class="cell-09"><div>&nbsp;</div></td>
+								  </tr>
+								  <tr>
+										<th class="cell-01 nowrap"><div>甲</div></th>
+										<td class="cell-02"><div class="right">&nbsp;</div></td>
+										<td class="cell-03"><div class="right">&nbsp;</div></td>
+										<td class="cell-04"><div class="right">&nbsp;</div></td>
+										<td class="cell-05"><div class="right">&nbsp;</div></td>
+										<td class="cell-06"><div class="right">&nbsp;</div></td>
+										<td class="cell-07"><div>&nbsp;</div></td>
+										<td class="cell-08"><div>&nbsp;</div></td>
+										<td class="cell-09"><div>&nbsp;</div></td>
+								  </tr>
+								</tbody>
+							  </table>
+
+							<div class="prodinfo-data-3 mb5">
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 mb0">
+								<tbody>
+								  <tr>
+										<th class="cell-01"><div>商品特徴</div></th>
+										<td><div>国産牛肉を使用し、豚脂を使ったハンバーグに、ソースを入れて食べやすくしてあります。</div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="2">&nbsp;</td>
+                  </tr>
+								  <tr>
+										<th><div>召し上がり方・利用方法</div></th>
+										<td><div>凍ったままの商品を沸騰したお湯に入れて約10分間温めてください。</div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="2">&nbsp;</td>
+                  </tr>
+								  <tr>
+										<th><div>使用・保管廃棄上の注意</div></th>
+										<td><div>※いったん解けたものを再び凍らせると品質が変わることがありますのでご注意ください。<br>
+										  ※袋が鍋のふちにふれたりはみ出すと袋が溶けることがありますのでご注意ください。<br>
+										  ※温めすぎると調理不良の原因になりますのでご注意ください。<br>
+								    ※調理の際、火傷には十分ご注意ください。</div></td>
+								  </tr>
+								</tbody>
+							  </table>
+							</div>
+
+					<p class="sub-ti mb5">企業情報</p>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+										<th class="cell-01"><div>販売者名</div></th>
+										<td colspan="7"><div>株式会社インフォマート販売</div></td>
+								  </tr>
+								  <tr>
+										<th><div>担当者名</div></th>
+										<td colspan="7"><div>和田美咲</div></td>
+								  </tr>
+								  <tr>
+										<th><div>住所</div></th>
+										<td colspan="7"><div>東京都港区浜松町1-1-1</div></td>
+								  </tr>
+								  <tr>
+										<th><div>TEL</div></th>
+										<td colspan="2"><div>03-0000-0000</div></td>
+										<th><div>FAX</div></th>
+										<td colspan="2"><div>03-0000-0000</div></td>
+										<th><div>PL加入有無</div></th>
+										<td><div>有</div></td>
+								  </tr>
+								  <tr>
+										<th><div>備考</div></th>
+										<td colspan="7"><div> </div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="8">&nbsp;</td>
+                  </tr>
+								  <tr>
+										<th><div>製造者名</div></th>
+										<td colspan="7"><div>株式会社インフォマート</div></td>
+								  </tr>
+								  <tr>
+								    <th><div>担当者名</div></th>
+								    <td colspan="7"><div>和田美咲</div></td>
+							      </tr>
+								  <tr>
+								    <th><div>住所</div></th>
+								    <td colspan="7"><div>東京都港区浜松町1-1-1</div></td>
+							      </tr>
+								  <tr>
+								    <th><div>TEL</div></th>
+								    <td colspan="2"><div>03-0000-0000</div></td>
+								    <th><div>FAX</div></th>
+								    <td colspan="2"><div>03-0000-0000</div></td>
+								    <th><div>PL加入有無</div></th>
+								    <td><div>有</div></td>
+							      </tr>
+								  <tr>
+								    <th><div>備考</div></th>
+								    <td colspan="7"><div> </div></td>
+							      </tr>
+								  <tr>
+								    <td class="col-space" colspan="8">&nbsp;</td>
+							      </tr>
+								  <tr>
+										<th><div>工場名</div></th>
+										<td colspan="7"><div>株式会社インフォマート　東京工場</div></td>
+								  </tr>
+								  <tr>
+										<th><div>担当者名</div></th>
+										<td colspan="7"><div>和田美咲</div></td>
+								  </tr>
+								  <tr>
+										<th><div>住所</div></th>
+										<td colspan="7"><div>東京都港区浜松町1-1-1</div></td>
+								  </tr>
+								  <tr>
+										<th><div>TEL</div></th>
+										<td colspan="2"><div>03-0000-0000</div></td>
+										<th><div>FAX</div></th>
+										<td colspan="4"><div>03-0000-0000</div></td>
+								  </tr>
+								  <tr>
+										<th><div>備考</div></th>
+										<td colspan="7"><div> </div></td>
+								  </tr>
+								  <tr>
+										<th class="valign-m"><div>原料仕込から製品仕上げまでの所有日数・時間</div></th>
+										<td class="valign-m"><div>1日2時間</div></td>
+										<th class="valign-m"><div>製造ロット(CS)</div></th>
+										<td class="valign-m"><div class="halign-r">10000</div></td>
+										<th class="valign-m"><div>1日(8時間)稼動生産量(CS)</div></th>
+										<td class="valign-m"><div class="halign-r">10000</div></td>
+										<th class="valign-m"><div>受注可能最小生産量(CS)</div></th>
+										<td class="valign-m"><div class="halign-r">100</div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="8">&nbsp;</td>
+                  </tr>
+								  <tr>
+										<th><div>輸入者名</div></th>
+										<td colspan="7"><div>株式会社インフォマート商事</div></td>
+								  </tr>
+								  <tr>
+										<th><div>担当者名</div></th>
+										<td colspan="7"><div>和田美咲</div></td>
+								  </tr>
+								  <tr>
+										<th><div>住所</div></th>
+										<td colspan="7"><div>東京都港区浜松町1-1-1</div></td>
+								  </tr>
+								  <tr>
+										<th><div>TEL</div></th>
+										<td colspan="2"><div>03-0000-0000</div></td>
+										<th><div>FAX</div></th>
+										<td colspan="2"><div>03-0000-0000</div></td>
+										<th><div>PL加入有無</div></th>
+										<td><div>有</div></td>
+								  </tr>
+								  <tr>
+										<th><div>備考</div></th>
+										<td colspan="7"><div> </div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="8">&nbsp;</td>
+                  </tr>
+								</tbody>
+							  </table>
+
+								<div class="bar_st mb5"><span>&nbsp;包材情報</span></div>
+
+					<p class="sub-ti mb5">一括表示情報</p>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+										<th class="cell-01"><div>包材画像</div></th>
+										<td colspan="3"><div><img height="200" width="200" alt="" src="/web2/jp/images/houzai-box.jpg" class="mr5"><img height="200" width="200" alt="" src="/web2/jp/images/houzai-ikkatsu.jpg" class="mr5"><!--<img height="200" width="200" alt="" src="/web2/jp/images/houzai-photo.gif" class="mr5">--></div></td>
+								  </tr>
+								  <tr>
+										<th><div>名称</div></th>
+										<td><div>ハンバーグ（ソース入り）</div></td>
+
+										<th><div>表示区分</div></th>
+										<td><div>冷凍食品</div></td>								  </tr>
+								  <tr>
+										<th><div>原材料名</div></th>
+										<td colspan="3"><div>牛肉、たまねぎ、豚脂、鶏皮、つなぎ（パン粉、鶏卵）、粒状大豆たん白、食塩、砂糖、香辛料、加工でん粉、リン酸塩（Na）、調味料（アミノ酸）、pH調整剤、カラメル色素、グリシン、ソース（ぶどう糖果糖液糖、しょうゆ、醸造酢、でん粉、増粘剤（加工でん粉）、カラメル色素、調味料（アミノ酸）、甘味料（ステビア））、揚げ油（なたね油、パーム油）、（原材料の一部に乳成分を含む）</div></td>
+								  </tr>
+								  <tr>
+										<th><div>内容量</div></th>
+										<td colspan="3"><div>720グラム（固形量600グラム）</div></td>
+								  </tr>
+								  <tr>
+										<th><div>賞味期限</div></th>
+										<td colspan="3"><div>枠外上部に記載してあります</div></td>
+								  </tr>
+								  <tr>
+										<th><div>保存方法</div></th>
+										<td colspan="3"><div>-18℃以下で保存してください</div></td>
+								  </tr>
+								  <tr>
+										<th><div>販売者</div></th>
+										<td colspan="3"><div>インフォ食品株式会社　東京都港区大門1-1-1</div></td>
+								  </tr>
+								  <tr>
+										<th><div>製造者</div></th>
+										<td colspan="3"><div>―</div></td>
+								  </tr>
+								  <tr>
+										<th><div>輸入者</div></th>
+										<td colspan="3"><div>―</div></td>
+								  </tr>
+								  <tr>
+										<th><div>加工者</div></th>
+										<td colspan="3"><div>―</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div>原産国</div></th>
+										<td><div>日本、アメリカ</div></td>
+										<th><div>でん粉含有量</div></th>
+										<td><div>―</div></td>
+								  </tr>
+								  <tr>
+										<th><div>調理方法</div></th>
+										<td colspan="3"><div>-18℃以下で保存してください</div></td>
+								  </tr>
+								  <tr>
+										<th><div>使用上の注意</div></th>
+										<td colspan="3"><div>食肉配合割合：20%（仕込み時）※植物油脂で揚げてあります。※ソースを加えてあります。※いったん解けたものを再び凍らせると品質が変わることがありますのでご注意ください。※袋が鍋のふちにふれたりはみ出すと袋が溶けることがありますのでご注意ください。※温めすぎると調理不良の原因になりますのでご注意ください。※調理の際、火傷には十分ご注意ください。</div></td>
+								  </tr>
+								  <tr>
+										<th><div>使用方法</div></th>
+										<td colspan="3"><div>凍ったままの商品を沸騰したお湯に入れて約10分間温めてください。</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div>殺菌方法</div></th>
+										<td><div>―</div></td>
+										<th><div>固形量</div></th>
+										<td><div>―</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div>内容総量</div></th>
+										<td><div>―</div></td>
+										<th><div>原料原産地</div></th>
+										<td><div>※原料原産地の問合せ先ホームページ<br>
+										  http://info-syokuhin.co.jp/gensan</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div>無脂乳固形分</div></th>
+										<td><div>―</div></td>
+										<th><div>乳脂肪分</div></th>
+										<td><div>―</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div>凍結前加熱の有無</div></th>
+										<td><div>加熱してありません</div></td>
+										<th><div>加熱調理の必要性</div></th>
+										<td><div>加熱してお召し上がりください</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div>アルコール分</div></th>
+										<td><div>―</div></td>
+										<th><div>アレルギー物質</div></th>
+										<td><div>鶏肉,豚肉,小麦,乳,大豆,卵</div></td>
+								  </tr>
+								  <tr>
+										<th><div>その他の表示項目</div></th>
+										<td colspan="3"><div>原材料名(原産地) 鶏肉(日本),たまねぎ(日本),豚脂(日本),鶏皮(日本),パン(非開示),小麦(非開示),牛乳(非開示),大豆(非開示),とうもろこし(非開示),なたね(非開示),じゃがいも(非開示),てんさい(非開示),鶏卵(非開示),粒状大豆たんぱく,(非開示),食塩(非開示),砂糖(非開示),香辛料(非開示),水(非開示),卵白(非開示),とうもろこし(非開示),じゃがいも(非開示),てんさい(非開示),ぶどう糖果糖液糖(非開示),しょうゆ(非開示),大豆(非開示),小麦(非開示),醸造酢(非開示),でんぷん(非食品添加物名(用途名) 酢酸デンプン(製造用剤),ポリリン酸Na(製造用剤),メタリン酸Na(製造用剤),L-グルタミン酸ナトリウム(調味料),酢酸Na(pH調整剤),フマル酸(pH調整剤),アジピン酸(pH調整剤),カラメル色素(着色料),グリシン(日持向上剤),リン酸架橋デンプン(増粘剤),カラメル色素(着色料),L-グルタミン酸ナトリウム(調味料),ステビア抽出物(甘味料)遺伝子組換え区分 遺伝子組み換え区分にて「不分別/使用」が含まれています。</div></td>
+								  </tr>
+                                 </tbody>
+                               </table>
+
+					<p class="sub-ti mb5">アレルギー情報</p>
+
+                               <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data ki-s-allergy mb5">
+                                 <tbody>
+								  <tr>
+										<th rowspan="5" class="cell-k01 nowrap"><div>アレルギー物質<!--<br>
+（含有アレルギーは<br>
+反転表示しています） --></div></th>
+<td class="cell-k02 allergy-7"><div>小麦</div></td>
+<td class="cell-k02"><div>そば</div></td><td><div>卵</div></td>
+<td class="cell-k02 allergy-7"><div>乳</div></td>
+<td class="cell-k02"><div>落花生</div></td><td><div>えび</div></td>
+<td class="cell-k02"><div>かに</div></td>
+</tr> 
+
+<tr>
+<td><div>あわび</div></td>
+<td><div>いか</div></td>
+<td><div>いくら</div></td>
+<td><div>オレンジ</div></td>
+<td class="nowrap"><div>キウイフルーツ</div></td>
+<td class="allergy-18"><div>牛肉</div></td>
+<td><div>くるみ</div></td>
+</tr>
+
+<tr>
+<td><div>さけ</div></td>
+<td><div>さば</div></td>
+<td><div>大豆</div></td>
+<td class="allergy-18"><div>鶏肉</div></td>
+<td class="allergy-18"><div>豚肉</div></td>
+<td><div>まつたけ</div></td>
+<td><div>もも</div></td>
+</tr>
+
+<tr>
+<td><div>やまいも</div></td>
+<td><div>りんご</div></td>
+<td class="allergy-18"><div>ゼラチン</div></td>
+<td><div>バナナ</div></td>
+<td><div>&nbsp;</div></td>
+<td><div>&nbsp;</div></td>
+<td><div>&nbsp;</div></td>
+</tr>
+
+<tr>
+<td class="allergy-3"><div>米</div></td>
+<td><div>ごま</div></td>
+<td><div>魚介類</div></td>
+<td><div>&nbsp;</div></td><td><div>&nbsp;</div></td>
+<td><div>&nbsp;</div></td><td><div>&nbsp;</div></td>
+</tr>
+                                </tbody>
+                              </table>
+                             
+					<p class="sub-ti mb5">栄養成分情報</p>
+
+<table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data tbl-kikaku-info01 ki-s-eiyou mb5">
+<!--                              <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">-->
+								<tbody>
+								  <tr>
+										<th class="w135"><div>対象名</div></th>
+										<td colspan="4" class="w370"><div>ハンバーグ</div></td>										
+										<th colspan="2" class="w185 nowrap"><div>栄養成分表示の有無</div></th>
+										<td colspan="3" class="w235"><div>無</div></td>
+								  </tr>	
+								  <tr>												
+										<th><div>分析単位</div></th>
+										<td colspan="4"><div>100gあたり</div></td>					
+										<th colspan="2"><div>備考</div></th>
+										<td colspan="3"><div>　</div></td>
+								  </tr>
+				        <tr>
+										<td colspan="10" class="h-5"><div></div></td>
+								  </tr>
+				        <tr>
+<!--L1-->
+				          <th class="eiyou-th"><div>熱量(kcal)</div></th>
+				          <td class="eiyou-num"><div>16</div></td>
+				          <th class="eiyou-th"><div>リン(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>レチノール当量(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンB6(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>不溶性食物繊維(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				        </tr>
+<!--L2-->
+				        <tr>
+				          <th class="eiyou-th"><div>水分(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>鉄(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンD(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンB12<br>(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>食物繊維(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				        </tr>
+<!--L3-->
+				        <tr>
+				          <th class="eiyou-th"><div>たんぱく質(g)</div></th>
+				          <td class="eiyou-num"><div>0.5</div></td>
+				          <th class="eiyou-th"><div>亜鉛(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>αトコフェロール(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>葉酸(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>食塩相当量(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				        </tr>
+<!--L4-->
+				        <tr>
+				          <th class="eiyou-th"><div>脂質(g)</div></th>
+				          <td class="eiyou-num"><div>0</div></td>
+				          <th class="eiyou-th"><div>銅(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>βトコフェロール(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>パントテン酸(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>カロテン(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				        </tr>
+<!--L5-->
+				        <tr>
+				          <th class="eiyou-th"><div>炭水化物(g)</div></th>
+				          <td class="eiyou-num"><div>3.3</div></td>
+				          <th class="eiyou-th"><div>マンガン(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>γトコフェロール(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンC(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンE(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				        </tr>
+<!--L6-->
+				        <tr>
+				          <th class="eiyou-th"><div>灰分(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>レチノール(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>δトコフェロール(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>飽和脂肪酸(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>トランス脂肪酸(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				        </tr>
+<!--L7-->
+				        <tr>
+				          <th class="eiyou-th"><div>ナトリウム(mg)</div></th>
+				          <td class="eiyou-num"><div>515</div></td>
+				          <th class="eiyou-th"><div>αカロテン(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンK(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>不飽和脂肪酸（一価）(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>&nbsp;</div></th>
+				          <td class="eiyou-num">&nbsp;</td>
+				        </tr>
+<!--L8-->
+				        <tr>
+				          <th class="eiyou-th"><div>カリウム(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>βカロテン(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンB1(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>不飽和脂肪酸（多価）(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>&nbsp;</div></th>
+				          <td class="eiyou-num">&nbsp;</td>
+				        </tr>
+<!--L9-->
+				        <tr>
+				          <th class="eiyou-th"><div>カルシウム(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>クリプトキサンチン</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ビタミンB2(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>コレステロール(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>&nbsp;</div></th>
+				          <td class="eiyou-num">&nbsp;</td>
+				        </tr>
+<!--L10-->
+				        <tr>
+				          <th class="eiyou-th"><div>マグネシウム(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>βカロテン当量(μg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>ナイアシン(mg)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>水溶性食物繊維(g)</div></th>
+				          <td class="eiyou-num"><div>―</div></td>
+				          <th class="eiyou-th"><div>&nbsp;</div></th>
+				          <td class="eiyou-num">&nbsp;</td>
+				        </tr>
+				        <tr>
+				          <th class="nowrap w110"><div>その他の栄養成分</div></th>
+                          <td colspan="9"><div class="w720">【廃棄率（%）】89、【トリアシルグリセロール当量（g）】8.1、【アミノ酸組成によるたんぱく質（g）】2.1</div></td>
+                         </tr>
+			          </tbody>
+			        </table>
+
+					<p class="sub-ti mb5">マーク・表示情報</p>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+										<th class="cell-01"><div>マーク表示</div></th>
+										<td colspan="3"><div>プラスチック製容器包装マーク：プラスチック製容器包装リサイクル推進協議会、アルミ缶材質表示マーク ：アルミ缶リサイクル協会 、エコマーク：日本環境協会 、PETボトル表示マーク：PETボトルリサイクル推進協議会、プラスチック製容器包装マーク：プラスチック容器包装リサイクル推進協議会、飲料用紙製容器マーク：飲料用紙容器リサイクル協議会、段ボールの国際的シンボルマーク：段ボールリサイクル協議会   </div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div class="w110">遺伝子組換え表示<br>有無</div></th>
+										<td><div>有</div></td>
+										<th class="w110"><div class="w110">原料原産地表示有無</div></th>
+										<td><div>有</div></td>
+								  </tr>
+								  <tr class="kikaku-col-4">
+										<th><div class="w110">トレーサビリティ<br>
+米トレサ法対象区分</div></th>
+										<td><div>対象</div></td>
+										<th class="w110"><div class="w110">産地情報伝達方法</div></th>
+										<td><div>包材に産地名を表示,その他</div></td>
+								  </tr>
+								  <tr>
+										<th class="w110"><div class="w110">強調訴求注意<br>
+コンタミ表示種別</div></th>
+										<td colspan="3"><div>強調   そばを含む製造ラインを使用しているため、コンタミの可能性があります。<br>
+										  注意（警告的）   開封時、やけどに注意してください <br>
+										  アレルギー物質に関する注意喚起情報   小麦を含みます <br>
+										  遺伝子組換え   遺伝子組み換えでない食材を使用しています。</div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="4">&nbsp;</td>
+                  </tr>
+                                </tbody>
+                              </table>
+
+					<p class="sub-ti mb5">製造品質情報</p>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+                                  <tr>
+                                    <th class="cell-01"><div>製造工程</div></th>
+									<td><div>豚肉カット→野菜カット→加熱混合→（調味長、香辛料）→成型→焼成→小麦粉、卵白、食塩→重量検査→凍結→金属探知→包装→品質
+検査→金属検査→出荷豚肉カット→野菜カット→加熱混合→（調味長、香辛料）→成型→焼成→小麦粉、卵白、食塩→重量検査→凍結→
+金属探知→包装→品質検査→金属検査→出荷豚肉カット→野菜カット→加熱混合→（調味長、香辛料）→成型→焼成→小麦粉、卵白、食
+塩→重量検査→凍結→金属探知→包装→品質検査→金属検査→出荷豚肉カット→野菜カット→加熱混合→（調味長、香辛料）→成型→
+焼成→小麦粉、卵白、食塩→重量検査→凍結→金属探知→包装→品質検査→金属検査→出荷豚肉カット→野菜カット→加熱混合→（調
+味長、香辛料）→成型→焼成→小麦粉、卵白、食塩→重量検査→凍結→金属探知→包装→品質検査→金属検査→出荷豚肉カット→野
+菜カット→加熱混合→（調味長、香辛料）→成型→焼成→小麦粉、卵白、食塩→重量検査→凍結→金属探知→包装→品質検査→金属検
+査→出荷</div></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+                                   <th class="cell-01"><div class="w110">金属探知機</div></th>
+                                   <th><div>使用有無</div></th>
+                                   <td><div>有</div></td>
+                                   <th><div>Fe(mm)</div></th>
+                                   <td><div>1</div></td>
+                                   <th><div>Sus(mm)</div></th>
+                                   <td><div>1</div></td>
+                                  </tr>
+								  <tr>
+                                   <th class="w110"><div class="w110">ウエイトチェッカー</div></th>
+                                   <th><div>使用有無</div></th>
+                                   <td><div>有</div></td>
+                                   <th><div>範囲（g）</div></th>
+                                   <td colspan="3"><div>123～234</div></td>
+                                  </tr>
+								  <tr>
+                                   <th class="w110"><div class="w110">アレルギー物質の<br>
+                                     コンタミの可能性</div></th>
+                                   <th><div>有無</div></th>
+                                   <td><div>有</div></td>
+                                   <th><div>備考</div></th>
+                                   <td colspan="3"><div>そばの可能性あり</div></td>
+                                  </tr>
+								  <tr>
+                                   <th colspan="2" class="nowrap"><div>金属探知器の作動確認と頻度</div></th>
+                                   <td colspan="5"><div>テストピース確認を午前午後の作業開始時に行う。</div></td>
+                                  </tr>
+								  <tr>
+                                   <th colspan="2" class="nowrap"><div>その他異物除去方法</div></th>
+                                   <td colspan="5"><div>目視検査 </div></td>
+                                  </tr>
+								  <tr>
+                                   <th colspan="2" class="nowrap"><div>包装前後の最終殺菌方法</div></th>
+                                   <td colspan="5"><div>湯煎(100℃)で1分</div></td>
+                                  </tr>
+								  <tr>
+                                   <th colspan="2" class="nowrap"><div>最終殺菌後の冷却方法</div></th>
+                                   <td colspan="5"><div>最終殺菌の冷却方法１ </div></td>
+                                  </tr>
+                               </tbody>
+                             </table>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+										<th colspan="6"><div>包材材質確認</div></th>
+                                  </tr>
+								  <tr>
+										<th><div>包材部位名</div></th><th class="nowrap"><div>包材の材質記号／規格</div></th><th><div>重量 (g) </div></th><th><div>包材部位名</div></th><th class="nowrap"><div>包材の材質記号／規格</div></th><th><div>重量 (g) </div></th>
+								  </tr>
+                                  <tr>
+                                   <td><div>内袋</div></td>
+                                   <td><div>ポリエチレン(PE)</div></td>
+                                   <td><div class="halign-r">12</div></td>
+                                   <td><div>外箱</div></td>
+                                   <td><div>ダンボール</div></td>
+                                   <td><div class="halign-r">&nbsp;100</div></td>
+                                  </tr>
+																  <tr>
+																		<td class="h-5" colspan="6"><div></div></td>
+                                  </tr>
+								  <tr>
+										<th colspan="4" class="nowrap"><div>品質規格と管理基準</div></th>
+										<th class="nowrap"><div>自社検査室の有無</div></th>
+                                        <td class="w30"><div>有</div></td>
+                                  </tr>
+                                  <tr>
+									<th><div>検査項目</div></th><th><div>測定方法</div></th><th><div>検査頻度</div></th><th><div>管理基準</div></th><th colspan="2"><div>検査機関 </div></th>
+								  </tr>
+                                  <tr>
+                                   <td><div>一般生菌数</div></td>
+                                   <td><div>標準寒天培地平板法</div></td>
+                                   <td><div>毎月</div></td>
+                                   <td><div>1.0×103個/g未満</div></td>
+                                   <td colspan="2"><div>自社検査室</div></td>
+                                  </tr>
+                                  <tr>
+                                   <td><div>大腸菌群</div></td>
+                                   <td><div>デスオキシコレート培地平板法</div></td>
+                                   <td><div>毎月</div></td>
+                                   <td><div>陰性</div></td>
+                                   <td colspan="2"><div>自社検査室</div></td>
+                                  </tr>
+                                  <tr>
+                                   <td><div>糖度</div></td>
+                                   <td><div>食品衛生法検査指針にもとづく</div></td>
+                                   <td><div>2ヶ月に1回</div></td>
+                                   <td><div>1×1000000以下</div></td>
+                                   <td colspan="2"><div>自社検査室</div></td>
+                                  </tr>
+                               </tbody>
+                             </table>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+										<th class="cell-01"><div>品質保持材ガス<br>置換封入</div></th>
+										<td colspan="3" class="w650"><div class="w650">封入の有無：<br>
+										  品質保持剤の種類 品質保持剤の名称 品質保持剤の種類 品質保持剤の名称 </div></td>
+								  </tr>
+                  <tr>
+                    <td class="col-space" colspan="4">&nbsp;</td>
+                  </tr>
+                                </tbody>
+                              </table>
+
+								<div class="bar_st mb10"><span>&nbsp;添付ファイル</span></div>
+
+							  <table class="slip-detail-hdr-tbl-02 pop-slip01 tbl-prodinfo-data mb5">
+								<tbody>
+								  <tr>
+                    <td><div><img src="/web2/jp/images/sample-photo.gif" width="50" height="50" alt="画像"><br><a href="#">衛生監視票</a></div></td>
+                  </tr>
+                                </tbody>
+                              </table>
+                              
+<table class="justify">
+ <tbody>
+  <tr>
+  	<td class="justify-r">登録日 2011/7/8(金)　　更新日 2011/9/8(木)　　101010　　レンジでチン！冷凍ハンバーグ　　250g×15個入　　インフォ食品<td>
+  </tr>
+ </tbody>
+</table>
+                  
+</div>
+<!--ki-prevew-std End-->
+
+
+				</div></div></div></div>
+				</div>
+				</div>
+               
+
+	<!--Contents Start-->
+	<div class="contents">
+		<div class="related-items">
+		  <h3>仕様変更履歴</h3>
+			<span class="item backward-rv-current">最新の規格書</span>
+			<span class="item backward-rv"><a href=""><span class="ic-label">2011/01/20</span></a></span>
+			<span class="item backward-rv"><a href=""><span class="ic-label">2011/01/15</span></a></span>
+			<span class="item backward-rv"><a href=""><span class="ic-label">2011/01/10</span></a></span>
+<!--			<span class="item forward">受領伝票</span>-->
+		</div>
+
+          </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a href="#" class="ic ic-arr-blu04"><span class="ic-label">ページトップへ</span></a></p>
+<!--Footer Help End-->
+	</div>
+	<!--Contents End-->
+            </form>
+</div>
+	<!--ftr Start-->
+    <div class="ftr">
+<!--        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul> -->
+        <div class="small">
+            <p class="credits">Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. <a class="bt bt-close" href="#"><span class="bt-label">閉じる</span></a></p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

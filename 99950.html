@@ -1,0 +1,637 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/sample/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/sample/js/jhc-sample-customcheck.js"></script>
+</head>
+<body class="page">
+
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+                <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+     <form id="" name="" method="post" action="../dummy">
+       <div class="height-wrap">
+     <table class="hgrp">
+	  <tbody>
+		<tr>
+			<th class="heading"><h1>企業情報入力</h1></th>
+			<td class="desc">自社の企業情報を登録することができます。</td>
+			<td class="nav">
+				<a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="justify">
+ <tbody>
+  <tr>
+    <td class="justify-l"><div> </div></td>
+    <td class="justify-r">
+        <div><a href="#" class="bt"><span class="bt-label">クリア</span></a><a href="#" class="bt"><span class="bt-label">ログイン拒否</span></a><a href="#" class="bt bt-org-large"><span class="bt-label">更新する</span></a></div>
+    </td>
+   </tr>
+ </tbody>
+</table>
+			<div class="grid-row">
+			  <!--Right Column Start-->		
+			  <div class="grid-unit right w160  mt30">
+				 <div class="bd-grybg-lt"><div class="bd-grybg-rt"><div class="bd-grybg-rb"><div class="bd-grybg-lb">
+				  <div class="form-notes">
+					<ul>
+					  <li class="elem-first"><a href="#" class="ic ic-caution02"> <span class="ic-label">薬事法のご注意</span></a></li>
+					  <li><a href="#" class="ic ic-caution02"> <span class="ic-label">入力時のご注意</span></a></li>
+					</ul>
+				  </div>
+				</div></div></div></div>
+			 </div>
+			<!--Right Column End-->
+			
+					
+			
+			  <!--Left Column Start-->
+			  <div class="grid-unit w780 left">
+				<div class="form-intro pt5">
+				  <p>
+					<img src="/web2/jp/images/ic-must.gif" width="23" height="13" alt="必須" class="ic-required"> の項目は必ず入力してください。
+				  </p>
+				</div>
+				<!--<table id="system-category" class="tbl-bd-wide-01 mt10">
+				  <colgroup>
+				    <col class="c1">
+				    <col class="c2">
+			      </colgroup>
+				  <tbody>
+				    <tr>
+				      <th> <p class="disp-ic"><img src="/web2/jp/images/ic-must.gif" class="ic-required" alt="必須"></p>
+				        商品利用区分 </th>
+				      <td class="sec-eye-catch"><p class="img-wrap"> <span class="cstm-radio"><span><input type="radio" name="radio-1" id="radio-1-1" value="kbn-sys-01"><label for="radio-1-1"><img src="/web2/jp/images/im-system.gif" width="470" height="16" alt="受発注システム"></label></span><br />
+				        <span><input type="radio" name="radio-1" id="radio-1-2" value="kbn-sys-02"><label for="radio-1-2"><img src="/web2/jp/images/im-system03.gif" width="470" height="16" alt="商談システム 受発注システム"></label></span><br />
+				        <span><input type="radio" name="radio-1" id="radio-1-3" value="kbn-sys-03"><label for="radio-1-3"><img src="/web2/jp/images/im-system05.gif" width="470" height="16" alt="商談システム 受発注システム 即決！Mart"></label></span><br />
+				        <span><input type="radio" name="radio-1" id="radio-1-4" value="kbn-sys-04"><label for="radio-1-4"><img src="/web2/jp/images/im-system07.gif" width="470" height="16" alt="商談システム 受発注システム 即決！Mart 受注・営業システム"></label></span></span> </p>
+				        <div class="eye-catch text-attention-gre">「商談システム用」は、受発注システムの商品マスタとしてもご利用できます。</div></td>
+			        </tr>
+			      </tbody>
+			    </table>
+				<a href="#" class="bt bt-check-checked"><span class="bt-label">伝票の詳細を表示する</span></a> -->
+			  </div>
+			  <div class="grid-unit left w780">
+				<div class="grid-row  mt10">
+ <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2">
+				        <col class="c3 w170">
+				        <col class="c4">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th> <p class="disp-ic"><img src="/web2/jp/images/ic-must.gif" width="23" height="13" alt="必須" class="ic-required"></p>
+				          会社名<div class="letter-control">100文字以内</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-01" id="f1-01" size="10" maxlength="200" class="interlock-trigger w230 ime-actv" value=""></span></span></td>
+				          <th>管理区分</th>
+				          <td>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>ユーザ</option>
+	                <option>-</option>
+                  </select></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th> 会社名カナ<div class="letter-control">100文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-02" id="f1-02" size="10" maxlength="200" class="interlock-trigger w230 ime-actv" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>ユーザ区分</th>
+				          <td>
+	              <select class="custom-select" name="f1-03" id="f1-03">
+	                <option>メーカー</option>
+	                <option>-</option>
+                  </select></td>
+				          <th>無料会員</th>
+				          <td class="edit-checkbox"><span class="cstm-checkbox"><span><input type="checkbox" name="f1-04" id="f1-04"></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic-02">FIM会員コード<div class="letter-control">10文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-06" id="f1-06" size="10" maxlength="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic-02"><p class="disp-ic"><img src="/web2/jp/images/ic-must.gif" width="23" height="13" alt="必須" class="ic-required"></p>公開先コード<div class="letter-control">10文字以内</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-05" id="f1-05" size="10" maxlength="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+                          <td colspan="2" rowspan="2" class="valign-m"><span class="small">既に受発注会員の場合は受発注側のコードを入力してください。未入力時は自動採番します。</span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic-02"><p class="disp-ic"><img src="/web2/jp/images/ic-must.gif" width="23" height="13" alt="必須" class="ic-required"></p>登録企業コード<div class="letter-control">10文字以内</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-06" id="f1-06" size="10" maxlength="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>申込日</th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-06" id="f1-06" size="10" class="interlock-trigger w80 ime-dis" value="2012/10/10">(水)</span></span></td>
+				          <th>送付</th>
+				          <td class="edit-checkbox"><span class="cstm-checkbox"><span><input type="checkbox" name="f1-07" id="f1-07"></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>料金体系</th>
+				          <td>
+	              <select class="custom-select" name="f1-08" id="f1-08">
+	                <option>定額</option>
+	                <option>-</option>
+                  </select></td>
+				          <th>従量時の最大規格書数</th>
+				          <td>
+	              <select class="custom-select" name="f1-09" id="f1-09">
+	                <option>定額制</option>
+	                <option>-</option>
+                  </select></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>代表者名<div class="letter-control">50文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-09" id="f1-09" size="10" maxlength="100" class="interlock-trigger w230 ime-actv" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>郵便番号<div class="letter-control">10文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-10" id="f1-10" size="10" maxlength="10" class="interlock-trigger w100 ime-dis" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>住所<div class="letter-control">200文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-11" id="f1-11" size="10" maxlength="400" class="interlock-trigger w500 ime-actv" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>電話番号<div class="letter-control">20文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-12" id="f1-12" size="10" maxlength="20" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>FAX番号<div class="letter-control">20文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-13" id="f1-13" maxlength="20" size="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メールアドレス１<div class="letter-control">50文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx mb5"><span class="cstm-tx-bg"><input type="text" name="f1-14" id="f1-14" size="10" maxlength="50" class="interlock-trigger w400 ime-dis" value=""></span></span><br>
+<span class="small">売り手がステータス変更を行った時に送信されるメールアドレスです。&nbsp;<span class="cstm-checkbox"><span><input type="checkbox" name="f1-19" id="f1-19"> 送信しない場合、チェックして下さい。</span></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メールアドレス２<div class="letter-control">50文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx mb5"><span class="cstm-tx-bg"><input type="text" name="f1-16" id="f1-16" size="10" maxlength="50" class="interlock-trigger w400" value=""></span></span><br>
+<span class="small">売り手がステータス変更を行った時に送信されるメールアドレスです。&nbsp;<span class="cstm-checkbox"><span><input type="checkbox" name="f1-19" id="f1-19"> 送信しない場合、チェックして下さい。</span></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メールアドレス３<div class="letter-control">50文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx mb5"><span class="cstm-tx-bg"><input type="text" name="f1-18" id="f1-18" size="10" maxlength="50" class="interlock-trigger w400 ime-dis" value=""></span></span><br>
+<span class="small">売り手がステータス変更を行った時に送信されるメールアドレスです。&nbsp;<span class="cstm-checkbox"><span><input type="checkbox" name="f1-19" id="f1-19"> 送信しない場合、チェックして下さい。</span></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>主担当者<div class="letter-control">30文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-20" id="f1-20" maxlength="60" size="10" class="interlock-trigger w150 ime-actv" value=""></span></span>
+                          <a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>契約日</th>
+				          <td colspan="3"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-21" id="f1-21" size="10" class="ime-dis w80" value="2012/10/10"></span></span>(水)</td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>取引開始日</th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-22" id="f1-22" size="10" class="ime-dis w80" value="2012/10/10"></span></span>(水)</td>
+				          <th>取引終了日</th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-23" id="f1-23" size="10" class="ime-dis w80" value="2012/10/10"></span></span>(水)</td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="nowrap">取引先マッチング除外</th>
+				          <td colspan="3">
+	              <select class="custom-select" name="f1-24" id="f1-24">
+	                <option>無し</option>
+	                <option>有り</option>
+                  </select></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メモ<div class="letter-control">1000文字以内</div></th>
+				         <td colspan="3"><div class="cstm-txarea charcount">
+								 <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								   <textarea rel="1000文字以内" cols="60" rows="5" maxlength="200" class="w550 autogrow set-limit noticeTip ime-actv" id="f1-25" name="f1-25"></textarea>
+								 </span></span></span></span>
+								 <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p>
+							  </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>移行用テキスト<div class="letter-control">60文字以内</div></th>
+				          <td colspan="3"><span class="cstm-tx mb5"><span class="cstm-tx-bg"><input type="text" name="f1-26" id="f1-26" size="10" maxlength="120" class="interlock-trigger w500 ime-actv" value=""></span></span><br>
+<span class="small">テキスト入力を行うと、提出状況での取引ができなくなります。</span></td>
+			            </tr>
+			          </tbody>
+			        </table>
+ <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2">
+				        <col class="c3 w170">
+				        <col class="c4">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="4">
+                          <div class="mb5"><span class="tx-b">ここから下の情報はオプション項目になります。表示の切替えを変更すると、各区分毎の有効な項目が絞り込めます。</span> <img src="/web2/jp/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover"></div>
+                          <div>表示の切替え：
+                           <span class="cstm-radio"><span><input type="radio" name="f2-01" id="f2-01" checked="checked"><label for="f2-01">全表示</label></span>
+            <span><input type="radio" name="f2-01" id="f2-01a"><label for="f2-01a">メーカー</label></span>
+            <span><input type="radio" name="f2-01" id="f2-01b"><label for="f2-01b">買い手</label></span>
+            <span><input type="radio" name="f2-01" id="f2-01c"><label for="f2-01c">卸（売）</label></span>
+            <span><input type="radio" name="f2-01" id="f2-01d"><label for="f2-01d">卸（買）</label></span>
+            <span><input type="radio" name="f2-01" id="f2-01e"><label for="f2-01e">アレルギー照合サービス</label></span></span>
+                          </div>
+				          </th>
+                         </tr>
+                       </tbody>
+                      </table>
+ 
+ <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2">
+				        <col class="c3 w170">
+				        <col class="c4">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>規格書チェック</th>
+				          <td><a href="#">チェックパターン設定</a></td>
+				          <th>規格書項目</th>
+				          <td><a href="#">規格書項目追加設定</a></td>
+			            </tr> 
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>自社管理用項目数</th>
+				          <td colspan="3"><span class="cstm-tx mr10"><span class="cstm-tx-bg"><input type="text" name="f3-01" id="f3-01" size="10" maxlength="2" class="interlock-trigger w30 ime-dis" value=""></span></span>  <span class="small">20項目まで登録できます。</span> <a href="#">自社管理用項目設定</a></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>WEB規格書入力</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-02" id="f3-02" checked="checked"> 規格書入力を利用する</span></span><span class="cstm-checkbox ml10"><span><input type="checkbox" name="f3-03" id="f3-03"> 規格書のマスタ化を推進させる</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>アレルギー照合サービス</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-04" id="f3-04" checked="checked"> アレルギー照合サービスを利用する</span></span><br>
+<span class="cstm-checkbox"><span><input type="checkbox" name="f3-05" id="f3-05"> アレルギー照合サービスを利用しない場合、照合マークを表示しない</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>デフォルト<br>
+アレルギー照合サービス</th>
+				          <td colspan="3"><span class="cstm-radio mr5"><span class="checked"><label for="f1-03b"><span class="tx-b">(株)デリコ</span></label><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a><span><a class="ic ic-arr-blu" href="#"><span class="ic-label">絞込解除</span></a></span></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>買い手オプション<br>
+定額売り手オプション</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-06" id="f3-06" checked="checked"> CSVアップロードまたはエクセル帳票出力を利用する</span></span> <span class="small">（買い手はエクセル帳票出力のみ有効）</span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>提出状況新規作成<br>
+不可設定</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-07" id="f3-07"> 売り手に提出状況の新規登録をさせない場合はチェックして下さい。</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>自社商品コード<br>
+重複アラート表示</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-08" id="f3-08"> 重複している自社商品コードにアラートを表示する場合はチェックして下さい。</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>規格書利用区分<br>
+スタンダード/ライト</th>
+				          <td colspan="3">
+	              <select class="custom-select mr10" name="f3-09" id="f3-09">
+	                <option>ライトのみ</option>
+	                <option>スタンダードのみ</option>
+	                <option>全て</option>
+                  </select>
+                  新規作成時の初期値：
+                           <span class="cstm-radio"><span><input type="radio" name="f3-09" id="f3-09"><label for="f3-09">スタンダード版</label></span>
+            <span><input type="radio" name="f3-09" id="f3-09a" checked="checked"><label for="f3-09a">ライト版</label></span>
+            </span>
+                  </td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>承認回数（スタンダード）</th>
+				          <td colspan="3">
+	              <select class="custom-select mr10" name="f3-10" id="f3-10">
+	                <option>2回（一次承認→一次承認済→承認済）</option>
+	                <option>-</option>
+                  </select> </td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>承認回数（ライト）</th>
+				          <td colspan="3">
+	              <select class="custom-select mr10" name="f3-11" id="f3-11">
+	                <option>2回（一次承認→一次承認済→承認済）</option>
+	                <option>-</option>
+                  </select> </td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>ライト版オプション</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-12" id="f3-12" checked="checked"> 規格書公開機能を利用する</span></span><span class="cstm-checkbox ml10"><span><input type="checkbox" name="f3-13" id="f3-13"> 公開規格書を取得する</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>eBASE仕様変更</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-13" id="f3-13"> eBASEの仕様変更を規格書システムの世代管理に上乗せするする場合はチェックして下さい。</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>規格書コピー会社</th>
+				          <td colspan="3"><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>規格書コピーオプション</th>
+				          <td colspan="3"><span class="cstm-checkbox"><span><input type="checkbox" name="f3-15" id="f3-15"> 自社商品コード</span></span><span class="cstm-checkbox ml10"><span><input type="checkbox" name="f3-16" id="f3-16"> ライトアレルギー生成</span></span></td>
+                        </tr>
+                  
+
+                       </tbody>
+                      </table>
+                
+  <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2 w170">
+				        <col class="c3">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>卸機能</th>
+				          <td colspan="2"><span class="cstm-checkbox"><span><input type="checkbox" name="f4-01" id="f4-01"> 卸機能を利用する</span></span><span class="cstm-checkbox ml10"><span><input type="checkbox" name="f4-02" id="f4-02"> 提出状況の初期値は「自動転送」とする</span></span><br>
+<span class="cstm-checkbox"><span><input type="checkbox" name="f4-03" id="f4-03"> 規格書一括連携機能を利用する</span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th rowspan="7">卸時、規格書設定</th>
+				          <th>販売者名<div class="letter-control">20文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f4-04" id="f4-04" size="10" maxlength="40" class="interlock-trigger w230 ime-actv" value=""></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>担当者名<div class="letter-control">20文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f4-05" id="f4-05" size="10" maxlength="40" class="interlock-trigger w230 ime-actv" value=""></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>住所<div class="letter-control">40文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f4-06" id="f4-06" size="10" maxlength="80" class="interlock-trigger w410 ime-actv" value=""></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>電話番号<div class="letter-control">17文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f4-07" id="f4-07" maxlength="17" size="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>FAX番号<div class="letter-control">17文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f4-08" id="f4-08" maxlength="17" size="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>PL加入有無</th>
+                          <td>
+	              <select class="custom-select mr10" name="f4-09" id="f4-09">
+	                <option>有</option>
+	                <option>無</option>
+                  </select></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>備考<div class="letter-control">50文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f4-10" id="f4-10" maxlength="100" size="10" class="interlock-trigger w410 ime-actv" value=""></span></span></td>
+                        </tr>
+
+                       </tbody>
+                      </table>
+                
+  <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2">
+				        <col class="c3 w170">
+				        <col class="c4">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>バナー変更設定</th>
+				          <td colspan="3">
+	              <select class="custom-select mr10" name="f5-01" id="f5-01">
+	                <option>インフォマートのみ</option>
+	                <option>-</option>
+                  </select></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>変更バナーファイル</th>
+				          <td colspan="3">
+	              <span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f5-02" id="f5-02" size="10" class="interlock-trigger w350" value=""></span></span><a class="bt ml5" href="#"><span class="bt-label">参照...</span></a></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>バナーURL<div class="letter-control">100文字以内</div></th>
+				          <td colspan="3">
+	              <span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f5-03" id="f5-03" size="10" maxlength="100" class="interlock-trigger w350 ime-dis" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>バナーコメント<div class="letter-control">100文字以内</div></th>
+				          <td colspan="3">
+	              <span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f5-04" id="f5-04" size="10" maxlength="200" class="interlock-trigger w350 ime-actv" value=""></span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>バナー開始日</th>
+				          <td>
+	              <span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f5-05" id="f5-05" size="10" class="ime-dis w80" value="2012/10/10">(水)</span></span></td>
+				          <th>バナー終了日</th>
+				          <td>
+	              <span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f5-06" id="f5-06" size="10" class="ime-dis w80" value="2012/10/10"></span></span>(水)</td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>バナー停止</th>
+				          <td colspan="3" class="edit-checkbox"><span class="cstm-checkbox mr30"><span><input type="checkbox" name="f5-07" id="f5-07"></span></span></td>
+			            </tr>
+
+                       </tbody>
+                      </table>
+                
+  <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2 w170">
+				        <col class="c3 w440">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th rowspan="4">FDB連携設定</th>
+				          <th>FDB連携</th>
+                          <td><span class="cstm-checkbox mr30"><span><input type="checkbox" name="f6-01" id="f6-01" checked="checked"> FDB連携機能を利用する</span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メーカーコード１<div class="letter-control">数字8文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f6-05" id="f6-05" size="10" class="interlock-trigger w150 ime-dis" value="999999901"></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メーカーコード２<div class="letter-control">数字8文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f6-06" id="f6-06" size="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>メーカーコード３<div class="letter-control">数字8文字以内</div></th>
+                          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+                <input type="text" name="f6-07" id="f6-07" size="10" class="interlock-trigger w150 ime-dis" value=""></span></span></td>
+                        </tr>
+                       </tbody>
+                      </table>
+                
+  <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2 w170">
+				        <col class="c3 w440">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th rowspan="7">アレルギー照合サービス時、料金設定</th>
+				          <th>基本料金<div class="letter-control">数字5文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-01" id="f7-01" size="10" maxlength="5" class="interlock-trigger w50 ime-dis" value="0"></span></span>円</td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>アレルギー照合サービスへ支払い金額<div class="letter-control">数字5文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-02" id="f7-02" size="10" maxlength="5" class="interlock-trigger w50 ime-dis" value="0"></span></span>円</td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>インフォマートの手数料<div class="letter-control">数字5文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-03" id="f7-03" size="10" maxlength="5" class="interlock-trigger w50 ime-dis" value="0"></span></span>円</td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>承認有効期間<div class="letter-control">数字2文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-04" id="f7-04" maxlength="2" size="10" class="interlock-trigger w50 ime-dis" value="0"></span></span>ヶ月</td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>課金カウント回数<div class="letter-control">数字2文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-05" id="f7-05" maxlength="2" size="10" class="interlock-trigger w50 ime-dis" value="0"></span></span>回</td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>課金カウント有効期間<div class="letter-control">数字2文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-06" id="f6-06" size="10" maxlength="2" class="interlock-trigger w50" value="0"></span></span>ヶ月</td>
+                        </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>有効期限事前判定月数<div class="letter-control">数字2文字以内</div></th>
+                          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+                <input type="text" name="f7-07" id="f7-07" size="10" maxlength="2" class="interlock-trigger w50 ime-dis" value="0"></span></span>ヶ月</td>
+                        </tr>
+                       </tbody>
+                      </table>
+                
+  <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1 w170">
+				        <col class="c2 w610">
+			          </colgroup>
+                      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th>マッチング用メモ<div class="letter-control">100文字以内</div></th>
+				         <td><div class="cstm-txarea charcount">
+								 <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								   <textarea rel="1000文字以内" cols="60" rows="5" maxlength="200" class="w550 autogrow set-limit noticeTip ime-actv" id="f8-01" name="f8-01"></textarea>
+								 </span></span></span></span>
+								 <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p>
+							  </div></td>
+			            </tr>
+                        </tbody> 
+                      </table>            
+                
+                </div>
+               </div>
+              </div>
+
+
+<table class="justify-row">
+ <tbody>
+ <tr>
+  <td class="justify-l">
+		<div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div>
+
+  </td>
+   <td class="justify-r">
+								<div><a href="#" class="bt"><span class="bt-label">クリア</span></a><a href="#" class="bt"><span class="bt-label">ログイン拒否</span></a><a href="#" class="bt bt-org-large"><span class="bt-label">更新する</span></a></div>
+							</td>
+              </tr>
+            </tbody>
+      </table>
+      
+         </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+               
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+       </div>
+   </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

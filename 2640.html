@@ -1,0 +1,586 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/mypage.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/mypage_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/mypage.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.data-list .ki-shougou-tbl .cell-01{width:30px;}
+.data-list .ki-shougou-tbl .cell-02{width:auto;}
+.data-list .ki-shougou-tbl .cell-03{width:60px;}
+.data-list .ki-shougou-tbl .cell-04{width:60px;}
+.data-list .ki-shougou-tbl .cell-05{width:90px;}
+.data-list .ki-shougou-tbl .cell-06{width:90px;}
+.data-list .ki-shougou-tbl .cell-07{width:90px;}
+.data-list .ki-shougou-tbl .cell-08{width:90px;}
+.data-list .ki-shougou-tbl .cell-09{width:90px;}
+.data-list .ki-shougou-tbl .cell-10{width:50px;}
+.data-list .ki-shougou-tbl .cell-11{width:50px;}
+</style>
+</head>
+<body class="page">
+<div class="kaite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+<ul id="gnv" class="gnv clr">
+      <li id="gnv-myp"><a href="2640.html"><span>マイページ</span></a></li>
+      <li id="gnv-checkup"><a href="2650.html"><span>照合状況</span></a></li>
+      <li id="gnv-cus"><a href="2760.html"><span>取引先状況</span></a></li>
+      <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+    </ul>
+    <div class="usrnv clr">
+            <h2>株式会社デリコ 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+	  <form id="" name="" method="post" action="../dummy">
+         <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>マイページ</h1></th><td class="desc"><div>規格書の照合状況を取引先別に確認することができます。キーワードを入力し「検索する」をクリックしてください。</div></td>
+			<td class="nav">
+					<a onclick="javascript:history.back()" href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+		<div class="myp-main myp-ki-shougou-main">
+           <div class="myp-main-hdr">
+                <div class="bg-tl"><div class="bg-tr"><div class="bg-br"><div class="bg-bl">
+                    <table class="justify">
+                        <tbody>
+                            <tr>
+                                <td class="justify-l"><div>
+                                  <h1>株式会社デリコ 様</h1></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div></div></div></div>
+            </div>
+
+				<div class="myp-todo">
+					<table>
+						<thead>
+							<tr>
+								<th><div><img src="/web2/jp/images/myp-ti-operation-info.gif" alt="業務のご案内" width="86" height="14" ></div></th>
+								<th class="date"><div>2012年3月21日(水) 14:51</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2"><div><span class="mark"><img src="/web2/jp/images/ic-caution02.gif" alt="" width="18" height="15" ></span> <a href="2650.html">照合中の規格書が17件あります。</a></div></td>
+							</tr>
+							<tr>
+								<td colspan="2"><div> <a href="#">現在のアレルギー照合サービス返却予定日は2012年3月30日(金)です。</a></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+
+	<table class="tbl-r single-line03 col-two">
+		<tbody><tr class="first-row last-row">
+			<th class="cell-01 first-cell nowrap"><div class="ic-bg">キーワード<img src="/web2/jp/images/ic-hlp.gif" class="ml5"></div></th>
+			<td colspan="3" class="cell-02 last-cell">
+			  <div class="single-line-div"><span class="cstm-tx cstm-tx-box"><span class="cstm-tx-bg"><input type="text" value="キーワードを入力" title="取引先" id="search-freeword" class="has-placeholder w250"></span><a class="cancel" href="#"><img width="31" height="14" alt="クリア" src="/web2/jp/images/srch-ic-clear.gif"></a></span>
+			  <a class="bt bt-srch03" href="#"><span class="bt-label">検索する</span></a>
+			  </div>
+			</td>
+		</tbody>
+	</table>
+
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：23件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="num"><a href="#">2</a></span> <span class="next"><a href="#">次へ &#8250;</a></span> </div></td>
+	            <td class="justify-r"><div class="serach-results-filter"><label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>取引先（降順）</option>
+	                <option>取引先（昇順）</option>
+	                <option>-</option>
+                  </select><label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option>10</option>
+	                <option selected="selected">20</option>
+	                <option>40</option>
+	                <option>80</option>
+	                <option>100</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+  <table class="ki-shougou-tbl">
+      <tr class="first-row">
+        <td rowspan="2" class="first-cell"><div class="center unit02-l01">No.</div></td>
+        <td rowspan="2"><div class="unit02-l01">取引先</div></td>
+        <td rowspan="2"><div class="unit02-l01">規格書数</div></td>
+        <td rowspan="2" class="valign-m"><div>依頼前</div></td>
+        <td colspan="5"><div>照合中</div></td>
+        <td colspan="2" class="last-cell"><div>完了</div></td>
+      </tr>
+      <tr class="last-row">
+        <td class="nowrap"><div class="first-line">依頼確認中</div></td>
+        <td class="nowrap"><div>一次承認待ち</div></td>
+        <td class="nowrap"><div>二次承認待ち</div></td>
+        <td class="nowrap"><div>三次承認待ち</div></td>
+        <td class="nowrap"><div>照合済</div></td>
+        <td><div>承認</div></td>
+        <td><div class="last-line">否決</p></div></td>
+      </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03"><div> </div></td>
+      <td class="head-space cell-04"><div> </div></td>
+      <td class="head-space cell-05"><div> </div></td>
+      <td class="head-space cell-06"><div> </div></td>
+      <td class="head-space cell-07"><div> </div></td>
+      <td class="head-space cell-08"><div> </div></td>
+      <td class="head-space cell-09"><div> </div></td>
+      <td class="head-space cell-10"><div> </div></td>
+      <td class="head-space cell-11 head-space-last"><div> </div></td>
+    </tr>
+    <tr class="row-03">
+     <td class="list-cell"><div class="center">1</div></td>
+     <td class="list-cell nowrap"><div><a href="2650.html" class="no-line">インフォ食品(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">40</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">4</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">3</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">11</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">22</a></div></td>
+     <td class="list-cell"><div class="right"><a href="2650.html">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+ <tr>
+  <td class="list-cell"><div class="center">2</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)大門食品</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">2</a> </div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">3</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">浜松フーズ(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">4</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)東洋ハム</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">5</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">ホットカレー(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">2</a> </div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">2</a> </div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">6</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)Canフーズ</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">12</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">5</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="/21u-03_p02-1.html">7</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">7</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">増上寺製菓(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">8</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">門松食品(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">2</a> </div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">9</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)鈴木園</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">10</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">エヌビー食品(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">11</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">ダイハツ食品(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">11</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">6</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="/21u-03_p02-1.html">5</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">12</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">グルメ食品(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">3</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">2</a> </div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+ <tr>
+  <td class="list-cell"><div class="center">13</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)スパイスガーデン</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+ <tr>
+  <td class="list-cell"><div class="center">14</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">極東水産(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+ <tr>
+  <td class="list-cell"><div class="center">15</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)インフォ冷凍食品</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+ <tr>
+  <td class="list-cell"><div class="center">16</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">吉田製麺(株)</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+ <tr>
+  <td class="list-cell"><div class="center">17</div></td>
+  <td class="list-cell"><div><a href="#" class="no-line">(株)インフォフーズ</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+      <tr>
+        <td class="list-cell halign-c"><div>18</div></td>
+        <td class="list-cell"><div><a href="#" class="no-line">【卸売】IMフーズ株式会社</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+      <tr>
+        <td class="list-cell halign-c"><div>19</div></td>
+        <td class="list-cell"><div><a href="#" class="no-line">【卸売】インフォ水産</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+      <tr>
+        <td class="list-cell halign-c"><div>20</div></td>
+
+  <td class="list-cell"><div><a href="#" class="no-line">【卸売】インフォフルーツ</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">1</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+     <td class="list-cell"><div class="right"><a href="#">0</a></div></td>
+    
+    </tr>
+    <tr>
+      <td colspan="11" class="list-space"><div> </div></td>
+    </tr>
+
+
+</table>
+</div>
+
+
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：23件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="num"><a href="#">2</a></span> <span class="next"><a href="#">次へ &#8250;</a></span> </div></td>
+	            <td class="justify-r"><div>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><a onclick="javascript:history.back()" href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+	            <td class="justify-r"><div> </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+          </div>
+
+
+          </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>

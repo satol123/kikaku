@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+  <link rel="stylesheet" type="text/css" href="http://192.168.100.105:5013/web/jp/css/common.css" media="all">
+  <link rel="stylesheet" type="text/css" href="http://192.168.100.105:5013/web/jp/css/print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="/css/common_kikaku.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/guide.css" media="all">
+
+<!-- ======================チェックボックス背景色用============================ -->
+<script type="text/javascript" src="http://192.168.100.105:5013/web/jp/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://192.168.100.105:5013/web/jp/js/controls_common.js"></script>
+<link rel="stylesheet" type="text/css" href="http://192.168.100.105:5013/web/jp/js/jhc-sample-customcheck.css" media="print"><style type="text/css">
+.list-space -01{width:372px !important;}
+.list-space.cell-02{width:6px !important;}
+.list-space.cell-03{width:372px !important;}
+</style>
+
+</head>
+<body class="page">
+<div class="urite">
+	<!--hdr Start-->
+	<div class="hdr">
+        <div class="logo w350"><a href="#"><img width="169" height="24" alt="FOODS Info Mart" src="/images/logo-169x24.gif"></a> <a href="/"><img width="150" height="24" class="ml10" alt="ASP規格書システム" src="/images/logo-k.gif"></a></div>
+                <ul id="gnv" class="gnv clr">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+
+<!--　ヘッダ　タイトル　ここから -->
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="40" width="650" style="border-bottom: 2px #6fcf6e solid;"><img src="/guide/images/title_explainfunctions.gif" alt="機能概要・動作環境" width="190" height="40" border="0"></td>
+<td height="40" width="150" style="border-bottom: 2px #6fcf6e solid; padding:0 6px 3px 0;" align="right" valign="bottom"><a class="a2" href="#" onClick="history.back(-1)"><img src="/images/arow_green_lef.gif" alt="" width="12" height="13" border="0" align="absmiddle">前のページに戻る</a></td>
+</tr>
+</table>
+<!--　//ここまで -->
+<!--　ページ内リンク　ここから -->
+<div style="padding:10px 0 0 20px;">
+<table border="0" cellspacing="0" cellpadding="0" width="760">
+<tr>
+<td width="120" height="40"><a href="#01"><img src="images/btn_01.gif" width="120" height="40" alt="動作機器・必要OSを見る" border="0"></a></td>
+<td width="8" height="40"><img src="/images/spacer.gif" width="8" height="1" alt="" border="0"></td>
+<td width="120" height="40"><a href="#02"><img src="images/btn_02.gif" width="120" height="40" alt="必要なソフトウエアを見る" border="0"></a></td>
+<td width="8" height="40"><img src="/images/spacer.gif" width="8" height="1" alt="" border="0"></td>
+<td width="120" height="40"><a href="#03"><img src="images/btn_03.gif" width="120" height="40" alt="プラグインについてを見る" border="0"></a></td>
+<td width="8" height="40"><img src="/images/spacer.gif" width="8" height="1" alt="" border="0"></td>
+<td width="120" height="40"><a href="#04"><img src="images/btn_04.gif" width="120" height="40" alt="ブラウザの設定についてを見る" border="0"></a></td>
+<td width="8" height="40"><img src="/images/spacer.gif" width="8" height="1" alt="" border="0"></td>
+<td width="120" height="40"><a href="#05"><img src="images/btn_05.gif" width="120" height="40" alt="接続環境についてを見る" border="0"></a></td>
+<td width="8" height="40"><img src="/images/spacer.gif" width="8" height="1" alt="" border="0"></td>
+<td width="120" height="40"><a href="#06"><img src="images/btn_06.gif" width="120" height="40" alt="サイトへのアクセス方法についてを見る" border="0"></a></td>
+</tr>
+</table>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="760">
+<tr>
+<td width="760" style="padding-left:20px;">
+<!--　動作機器･必要OS　タイトル　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a name="01"><img src="./images/spacer.gif" width="1" height="20"></a></td>
+</tr>
+<tr>
+<td><font color="#005500">■動作機器・必要OS</font></td>
+</tr>
+<tr>
+<td><img src="./images/dot760pix.gif" width="760" height="5"></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　★動作機器･必要OS　本文　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<!--　動作機器･必要OS　ここから -->
+<table width="680" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
+<tr>
+<td width="115" bgcolor="#F0F0F0">&nbsp;</td>
+<td width="230" bgcolor="#F0F0F0">必須動作環境</td>
+<td width="230" bgcolor="#F0F0F0"><b>推奨動作環境</b></td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0">PC/Windows</td>
+<td bgcolor="#FFFFFF">OS： Vista/XP/2000/NT4.0/ME/98SE</td>
+<td bgcolor="#FFFFFF">OS： <b>XP(Professional以降）</b></td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0">PC/Mac</td>
+<td bgcolor="#FFFFFF">OS： X10.1以降/9.XX/8.1～</td>
+<td bgcolor="#FFFFFF">なし</td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0">メモリ</td>
+<td bgcolor="#FFFFFF">128ＭＢ以上<br>
+<span class="minifont">※但しＯＳの必須動作基準を満たす事</span></td>
+<td bgcolor="#FFFFFF"><b>256ＭＢ以上</b><br>
+<span class="minifont">※但しＯＳの推奨動作基準を満たす事</span></td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0">ディスプレイ</td>
+<td bgcolor="#FFFFFF">解像度： 800*600ピクセル以上<br>色： 256色以上</td>
+<td bgcolor="#FFFFFF">解像度： <b>1024*768ピクセル以上</b><br>色：<b> 65536色以上</b></td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0">インターネット接続</td>
+<td bgcolor="#FFFFFF">ダイヤルアップ、ISDNなど</td>
+<td bgcolor="#FFFFFF"><b>光ファイバー</b>、<b>ADSL</b>、又は<b>ケーブル回線</b></td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0">その他</td>
+<td bgcolor="#FFFFFF">なし</td>
+<td bgcolor="#FFFFFF"><b>プリンタ</b>&nbsp;&nbsp;<span class="minifont">※伝票など帳票類の印刷に</span></td>
+</tr>
+</table>
+<!--　★//ここまで -->
+
+<!--　項目区切りlineとスペース　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="15"></td>
+</tr>
+<tr>
+<td><a name="02" id="02"><img src="./images/line4pix_info2.gif" width="760" height="4"></a></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td align="right"><a href="#top"><img src="../images/arow_green_hig.gif" alt="上へ戻る" width="13" height="12" border="0" align="absmiddle">上へ戻る</a></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　ソフト　タイトル　ここから -->
+<table width="550" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><font color="#005500">■必要なソフトウエア</font></td>
+</tr>
+<tr>
+<td><img src="./images/dot760pix.gif" width="760" height="5"></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　ソフト　本文　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%" valign="top"><div class="browser">Windows版インターネットブラウザ</div>
+<div class="browser_sp">
+<a href="http://www.microsoft.com/japan/windows/internet-explorer/default.aspx" target="_blank">Microsoft Internet Explorer ver.6.0、ver.7.0、ver.8.0</a></div>
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" class="red">※</td><td class="gray">セキュリティ更新プログラムを最新の状態にしてください。</td>
+</tr>
+<tr>
+<td valign="top" class="red">※</td><td class="gray">タブブラウジングの設定について<br />
+IE7及びIE8の初期設定ではタブブラウズが有効になっておりますが、タブブラウズ無効の設定を推奨と致します。</td>
+</tr>
+</table>
+</div>
+</td>
+<td width="20"><img src="/images/spacer.gif" width="20" height="1" alt=""></td>
+<td width="50%" valign="top"><div class="browser">Macintosh版インターネットブラウザ</div>
+<div class="browser_sp">Microsoft Internet Explorer ver.5.0 以降</div>
+<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" class="red">※</td><td class="gray">Macintosh向けソフトウエアは現在マイクロソフト社による配布・<br />サポートを終了しています。新規にMacintoshをご購入された場合、このソフトウエアをご利用出来ない場合がありますのでご注意ください。</td>
+</tr>
+<tr>
+<td valign="top" class="red">※</td><td class="gray">OS及びブラウザのバージョンにより正常に動作しない場合があります。
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　項目区切りlineとスペース　ここから -->
+<table width="550" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="15"></td>
+</tr>
+<tr>
+<td><a name="03" id="03"><img src="./images/line4pix_info2.gif" width="760" height="4"></a></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td align="right"><a href="#top"><img src="../images/arow_green_hig.gif" alt="上へ戻る" width="13" height="12" border="0" align="absmiddle">上へ戻る</a></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　プラグインタイトル　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a><font color="#005500">■プラグインについて</font></a></td>
+</tr>
+<tr>
+<td><img src="./images/dot760pix.gif" width="760" height="5"></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　プラグイン　本文　ここから -->
+<table width="550" border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td width="457">使い方のマニュアルや受発注システムの帳票の表示・出力にはAdobe Reader 8.0以上（無償）をインストールしておく必要があります｡<BR>
+
+<BR>
+推奨 Ver8.0 -- ＯＳ環境により、Ver8.0未満のバージョンは動作不安定になる場合がありますのでご注意下さい。<br>
+PDFが正常に動作しない場合の<a href="./manual/Reader_v5.asp">対処法はこちら</a>をご覧下さい。</td>
+
+<td width="5"><img src="./images/spacer.gif" width="5" height="8"></td>
+<td width="88"><a href="http://www.adobe.com/jp/products/acrobat/readstep2.html" target="_blank"><img src="/guide/images/get_adobe_reader.gif" alt="Adobe Reader" width="112" height="33" border="0"></a></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　項目区切りlineとスペース　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="15"></td>
+</tr>
+<tr>
+<td><a name="04" id="04"><img src="./images/line4pix_info2.gif" width="760" height="4"></a></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td align="right"><a href="#top"><img src="../images/arow_green_hig.gif" alt="上へ戻る" width="13" height="12" border="0" align="absmiddle">上へ戻る</a></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　ブラウザ　タイトル　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a><font color="#005500">■ブラウザの設定について</font></a></td>
+</tr>
+<tr>
+<td><img src="./images/dot760pix.gif" width="760" height="5"></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　ブラウザ　本文　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td valign="top">FOODS Info MartではJavaScript、Cookieを使用しています。現在お使いになっているインターネットブラウザの設定にご注意ください。
+<div class="browser_sp2">
+・「JavaScriptを有効にする」設定にしてください。<br />
+・「Cookieを受け入れる」設定にしてください。
+</div>
+<font color="#FF3300">※</font><font color="#333333">設定が“無効”になっている場合は、一部のページがご覧頂けないことがあります。</font>
+<br /><br />
+IE7及びIE8の初期設定ではタブブラウズが有効になっておりますが、<b>タブブラウズ無効の設定を推奨</b>と致します。</td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　項目区切りlineとスペース　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="15"></td>
+</tr>
+<tr>
+<td><a name="05" id="05"><img src="./images/line4pix_info2.gif" width="760" height="4"></a></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+<td align="right"><a href="#top"><img src="../images/arow_green_hig.gif" alt="上へ戻る" width="13" height="12" border="0" align="absmiddle">上へ戻る</a></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　接続環境　タイトル　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><a><font color="#005500">■接続環境について</font></a></td>
+</tr>
+<tr>
+<td><img src="./images/dot760pix.gif" width="760" height="5"></td>
+</tr>
+<tr>
+<td><img src="./images/spacer.gif" width="1" height="10"></td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+<!--　接続環境　本文　ここから -->
+<table width="760" border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td valign="top">インターネットにアクセス可能な状態で、かつ<font color="#FF0000">*</font>SSL128bitの使用可能な環境をご用意下さい。<br /><br />
+<font color="#FF3300">※</font><font color="#333333">会員様設定のセキュリティ環境（ファイア・ウォールなど）によっては正常に動作しない場合があります。</font></td>
+</td>
+</tr>
+</table>
+<!--　//ここまで -->
+
+	</div>
+	<!--Contents END-->
+
+	<!--Footer Help Start-->
+	<p class="ftr-hlp-gotop mb10">
+    <a class="bt bt-back left" href="#"><span class="bt-label">戻る</span></a>
+    <a class="ic ic-arr-blu04" href="#"><span class="ic-label">ページトップへ</span></a></p>	
+		<div class="ftr-hlp">
+	</div>
+	<!--Footer Help End-->
+	</div>
+	<!--Contents End-->
+	<!--Footer Start-->
+	<div class="ftr">
+		<ul class="ftr-nv clr">
+			<li><a href="#">マイページ</a></li>
+			<li><a href="#">ご利用ガイド</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+			<li>お客様番号：<span class="tx-b">123456789</span></li>
+		</ul>
+		<ul class="usrnv clr">
+			<li><a href="#">ログアウト</a></li>
+		</ul>
+		<div class="small">
+			<p class="credits">
+			当サイトはJavaScriptおよびCookieを使用しています。<br>
+			Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.
+			</p>
+			<p class="number">S217739JP6EW17</p>
+		</div>
+	</div>
+	<!--Footer End-->
+</div>
+</body>
+</html>

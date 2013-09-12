@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02{ /*width:auto !important;*/}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 th.cell-01{width:25px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-02{width:60px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-03{width:80px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-04{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-05{width:95px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-06{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-07{width:75px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-08{width:60px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-09{width:45px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-10{width:70px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-11{width:65px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-12{width:55px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-13{width:55px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-14{width:65px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-15{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-16{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-17{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-18{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-19{width:50px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-20{width:65px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-21{width:25px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 .cell-21 div{width:25px !important;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 th{ width:35px !important; border-right:#FFF solid 1px;}
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 td{ width:35px !important; min-width:25px !important; }
+table.slip-detail-hdr-tbl-02.tbl-kikaku-info02 th div{width:auto !important; min-width:25px !important;padding:3px 5px !important;}
+</style>
+</head>
+<body class="page">
+<div class="kaite">	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+<ul id="gnv" class="gnv clr">
+      <li id="gnv-myp"><a href="0820.html"><span>マイページ</span></a></li>
+      <li id="gnv-checkup"><a href="2650.html"><span>照合状況</span></a></li>
+      <li id="gnv-cus"><a href="2760.html"><span>取引先状況</span></a></li>
+      <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+    </ul>
+    <div class="usrnv clr">
+<h2>株式会社デリコ 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+    <form id="" name="" method="post" action="../dummy">
+	<div class="contents">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>二次承認</h1></th><td class="desc"><div>この規格書は承認されています。</div></td>
+			<td class="nav">
+					<a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+<div class="db-gry pt10 mb10">
+            <div class="db-gre-bl clr">
+            <div class="db-gre-tl clr">
+            <div class="db-gre-br clr">
+            <div class="db-gre-tr">
+                <table class="tbl-inventory-input tbl-inventory-input5_1_2">
+                    <colgroup>
+                        <col class="col-01">
+                        <col class="col-02">
+                        <col class="col-03">
+                        <col class="col-04">
+                    </colgroup>
+                    <tbody>
+                        <tr class="row-01">
+                            <th class="cell-01 first-cell">
+                                <div class="w100">
+                                    依頼商品名
+                                </div>
+                            </th>
+                            <td class="cell-02">
+                                <div>
+                                    業務用冷凍ハンバーグ
+                                </div>
+                            </td>
+                            <th class="cell-03">
+                                <div>
+                                   規格書商品名
+                                </div>
+                            </th>
+                            <td class="cell-04">
+                                <div>
+                                    レンジでチン！冷凍ハンバーグ
+                                </div>
+                            </td>
+                            <th class="cell-05">
+                                <div>
+                                    規格書コード
+                                </div>
+                            </th>
+                            <td class="last-cell cell-06">
+                                <div>
+                                   G0999971-32DF6C0E-373710A7
+                                </div>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                </div>
+                </div>
+             	</div>
+              </div>
+
+
+        <table class="hgrp-nv tab-liquid">
+          <tbody>
+            <tr>
+              <td><div class="tabs-link tab_ki_search">
+                  <ul>
+                    <li class="w220"><a href="2673.html"><span class="bg-tabs-link">包材情報</span></a></li>
+                    <li class="w220"><a class="current" href="2674.html"><span class="bg-tabs-link">原材料情報</span></a></li>
+                  </ul>
+                </div></td>
+			<td class="nav"></td>
+            </tr>
+          </tbody>
+        </table>
+
+<table class="justify">
+	  <tbody>
+		<tr>
+         <td class="justify-r"><div><a href="#" class="bt bt02"><span class="bt-label">一次承認待ちに戻す</span></a><a href="#" class="bt bt02"><span class="bt-label">更新する</span></a><a href="#" class="bt bt-gre-large"><span class="bt-label">二次承認する</span></a></div></td>
+  		</tr>
+	  </tbody>
+</table>
+
+		    <table class="tbl-bd-wide-04 tbl-bd-wide-02-prod-reg-02 mb20">
+		      <tr>
+		        <th><div>照合回数</div></th>
+		        <td colspan="5"><div>1</div></td>
+              </tr>
+		      <tr>
+		        <th><div>一次照合承認者</div></th>
+		        <td><div>山田太郎 </div></td>
+		        <th> <div>二次照合承認者</div></th>
+		        <td><div><select name="shonin1" id="shonin1">
+                <option>山田太郎</option>
+                <option>荒木正道</option>
+                </select>
+                </div></td>
+		        <th> <div>三次照合承認者</div></th>
+		        <td><div> </div></td>
+          </tr>
+          </table>
+
+		    <table class="tbl-bd-wide-06 tbl-bd-wide-02-prod-reg-02 mb20">
+		      <tr>
+		        <th colspan="2"><div>一括表示</div></th>
+		      </tr>
+		      <tr>
+		        <th><div>商品区分</div></th>
+		        <td><div>冷凍食品</div></td>
+              </tr>
+		      <tr>
+		        <th><div>名称</div></th>
+		        <td><div>ハンバーグ（ソース入り）</div></td>
+              </tr>
+		      <tr>
+		        <th><div>原材料名</div></th>
+		        <td><div>牛肉、たまねぎ、豚脂、鶏皮、つなぎ（パン粉、鶏卵）、粒状大豆たん白、食塩、砂糖、香辛料、加工でん粉、リン酸塩（Na）、調味料（アミノ酸）、pH調整剤、カラメル色素、グリシン、ソース（ぶどう糖果糖液糖、しょうゆ、醸造酢、でん粉、増粘剤（加工でん粉）、カラメル色素、調味料（アミノ酸）、甘味料（ステビア））、揚げ油（なたね油、パーム油）、（原材料の一部に乳成分を含む）
+</div></td>
+              </tr>
+		      <tr>
+		        <th><div>アレルギー物質</div></th>
+		        <td><div>鶏肉,豚肉,小麦,乳,大豆,卵</div></td>
+              </tr>
+		      <tr>
+		        <th><div>【照合内容】<br>
+				原材料情報及びアレルギー
+                    <p class="eye-catch">外部公開されます</p></div></th>
+		        <td class="highlight"><div class="cstm-txarea charcount"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								  <textarea rel="1000文字以内" title="" class="w720 autogrow set-limit noticeTip" id="desc" name="desc" cols="60" rows="8"></textarea>
+								</span></span></span></span>
+								  <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p>
+								</div></td>
+              </tr>
+			</table>
+
+
+    </div>
+<div class="liquid">
+    <table class="justify">
+    	<tr>
+         <td class="justify-l"><div> </div></td>
+         <td class="justify-c">
+			<div class="slip-wrap" style="width:1300px;margin:0 auto;">
+
+
+
+					  <table class="slip-detail-hdr-tbl-02 tbl-kikaku-info02 mb5">
+				      <colgroup>
+				        <col class="cell01">
+				        <col class="cell02">
+				        <col class="cell03">
+				        <col class="cell04">
+				        <col class="cell05">
+				        <col class="cell06">
+				        <col class="cell07">
+				        <col class="cell08">
+				        <col class="cell09">
+				        <col class="cell10">
+				        <col class="cell11">
+				        <col class="cell12">
+				        <col class="cell13">
+				        <col class="cell14">
+				        <col class="cell15">
+				        <col class="cell16">
+				        <col class="cell17">
+				        <col class="cell18">
+				        <col class="cell19">
+				        <col class="cell20">
+						<col class="cell21">
+		          </colgroup>
+ 								<tbody>
+								  <tr>
+										<th rowspan="2" class="cell-01 nowrap"><div>No</div></th>
+										<th rowspan="2" class="cell-02 nowrap"><div>階層No</div></th>
+										<th rowspan="2" class="cell-03 nowrap"><div>原材料名/<br>添加物物質名</div></th>
+										<th rowspan="2" class="cell-04 nowrap"><div>種別</div></th>
+										<th rowspan="2" class="cell-05 nowrap"><div>原材料一般名称/<br>添加物物質名</div></th>
+										<th rowspan="2" class="cell-06 nowrap"><div>添加物<br>用途名</div></th>
+										<th rowspan="2" class="cell-07 nowrap"><div>メーカー名</div></th>
+										<th rowspan="2" class="cell-08 nowrap"><div>原産国</div></th>
+										<th rowspan="2" class="cell-09 nowrap"><div>産地</div></th>
+										<th rowspan="2" class="cell-10 nowrap"><div>配合率<br>【製品】%</div></th>
+										<th rowspan="2" class="cell-11 nowrap"><div>アレルギー<br>物質</div></th>
+										<th rowspan="2" class="cell-12 nowrap"><div>キャリー<br>オーバー</div></th>
+										<th rowspan="2" class="cell-13 nowrap"><div>加工助剤</div></th>
+										<th rowspan="2" class="cell-14 nowrap"><div>栄養強化剤</div></th>
+										<th rowspan="2" class="cell-15 nowrap"><div>遺伝子<br>組換区分</div></th>
+										<th rowspan="2" class="cell-16 nowrap"><div>基原原料</div></th>
+										<th colspan="3" class="cell-17 nowrap halign-c"><div>一括表示名</div></th>
+										<th rowspan="2" class="cell-20 nowrap"><div>原産国<br>表示場所</div></th>
+										<th rowspan="2" class="cell-21 nowrap"><div>備考</div></th>
+								  </tr>
+								  <tr>
+										<th class="cell-16 halign-c"><div>記載例</div></th>
+										<th class="cell-17 halign-c"><div>非表示</div></th>
+										<th class="cell-18 halign-c"><div>理由</div></th>
+								  </tr>
+								  <tr>
+										<th class="halign-c"><div>0</div></th>
+										<td><div>1</div></td>
+										<td><div>しょうゆ</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+								  </tr>
+								  <tr>
+										<th class="halign-c"><div>1</div></th>
+										<td><div>2</div></td>
+										<td><div>ごま</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+								  </tr>
+								  <tr>
+										<th class="halign-c"><div>2</div></th>
+										<td><div>3</div></td>
+										<td><div>にんじん</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>3</div></th>
+										<td><div>4</div></td>
+										<td><div>じゃがいも</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>4</div></th>
+										<td><div>5</div></td>
+										<td><div>たまねぎ</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>5</div></th>
+										<td><div>6</div></td>
+										<td><div>鶏肉</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>6</div></th>
+										<td><div>7</div></td>
+										<td><div>牛肉</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>7</div></th>
+										<td><div>8</div></td>
+										<td><div>豚肉</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>8</div></th>
+										<td><div>9</div></td>
+										<td><div>えび</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								  <tr>
+										<th class="halign-c"><div>9</div></th>
+										<td><div>10</div></td>
+										<td><div>かに</div></td>
+										<td class="nowrap"><div>商品名</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td class="halign-r"><div>10</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+										<td><div>&nbsp;</div></td>
+									</tr>
+								</tbody>
+							  </table>
+				</div>
+                </td>
+                <td class="justify-r"><div> </div></td>
+               </tr>
+            </table>
+				</div>
+
+      <div class="contents">
+
+<table class="justify-row">
+	  <tbody>
+		<tr>
+         <td class="justify-l"><div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+         <td class="justify-r"><div><a href="#" class="bt bt02"><span class="bt-label">一次承認待ちに戻す</span></a><a href="#" class="bt bt02"><span class="bt-label">更新する</span></a><a href="#" class="bt bt-gre-large"><span class="bt-label">二次承認する</span></a></div></td>
+  		</tr>
+	  </tbody>
+</table>
+    <!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

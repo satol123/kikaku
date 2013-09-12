@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<style type="text/css">
+.head-space.cell-01{width:30px;}
+.head-space.cell-02{width:360px;}
+.head-space.cell-03{width:240px;}
+.head-space.cell-04{width:50px;}
+.dialog-mdl-contents{*width:670px;}
+</style>
+</head>
+<body class="dialog-mdl dialog-mdl-popup">
+<div class="dialog-mdl-wrap">
+
+  <div class="dialog-mdl-hdr-wrap">
+    <div class="dialog-mdl-hdr">
+      <h1 class="logo"><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18"></a></h1>
+      <div class="usernv clr">
+        <ul>
+          <li><a href="#" class="ic ic-close"><span class="icon-label">閉じる</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+	<!--hdr Start-->
+<div class="dialog-mdl-hdr">
+    <h1>取引先選択</h1>
+    <div class="usernv clr">
+        <ul>
+            <li><a href="#" class="ic ic-close close-dialog-modal"><span class="icon-label">閉じる</span></a></li>
+
+        </ul>
+    </div>
+</div>
+	<!--hdr End-->
+    <form id="dummy-04k-01_p01-01" name="dummy-04k-01_p01-01" method="post" action="dummy">
+      <div class="dialog-mdl-contents-wrapper">
+       <div class="dialog-mdl-contents">
+
+			<!--<p class="mb10">テキストテキストテキストテキストテキストテキスト。</p>-->
+
+	<!--Contents Start-->
+              <div class="tbl-r-gry mb10">
+                <table class="pop">
+                  <tbody>
+                    <tr class="first-row last-row single-row">
+                      <th class="cell-01 first-cell"><div>取引先</div>
+                      </th>
+                      <td class="last-cell"><div><span class="checked">全て<a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+ <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：15件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div class="serach-results-filter"><label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>更新日</option>
+	                <option>--</option>
+                  </select><label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option>10</option>
+	                <option>20</option>
+	                <option>30</option>
+	                <option>40</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+<div class="data-list">
+                    <table>
+									<tbody>
+                       <tr class="first-row last-row">
+                        <td class="cell-01 first-cell"><div>No.</div></td>
+                        <td class="nowrap"><div>取引先</div></td>
+                        <td class="nowrap"><div>担当者</div></td>
+                        <td class="last-cell nowrap"><div>選択</div></td>      </tr>
+                       <tr>
+                          <td class="head-space cell-01 head-space-first"><div> </div></td>
+                          <td class="head-space cell-02"><div> </div></td>
+                          <td class="head-space cell-03"><div> </div></td>
+                          <td class="head-space cell-04 head-space-last”"><div> </div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">1</div></td>
+                          <td class="list-cell"><div>インフォ食品(株)</div></td>
+                          <td class="list-cell"><div>和田美咲</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">2</div></td>
+                          <td class="list-cell"><div>フーズインフォ(株)</div></td>
+                          <td class="list-cell"><div>大島隆二</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">3</div></td>
+                          <td class="list-cell"><div>(株)インフォハム</div></td>
+                          <td class="list-cell"><div>中谷公一</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">4</div></td>
+                          <td class="list-cell"><div>(株)大門食品</div></td>
+                          <td class="list-cell"><div>南隆弘</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">5</div></td>
+                          <td class="list-cell"><div>浜松フーズ(株)</div></td>
+                          <td class="list-cell"><div>中村哲也</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">6</div></td>
+                          <td class="list-cell"><div>(株)東洋ハム</div></td>
+                          <td class="list-cell"><div>阪本晃司</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">7</div></td>
+                          <td class="list-cell"><div>ホットカレー(株)</div></td>
+                          <td class="list-cell"><div>丸山千鶴</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">8</div></td>
+                          <td class="list-cell"><div>(株)Canフーズ</div></td>
+                          <td class="list-cell"><div>北野雄作</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">9</div></td>
+                          <td class="list-cell"><div>増上寺製菓(株)</div></td>
+                          <td class="list-cell"><div>山口正也</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">10</div></td>
+                          <td class="list-cell"><div>門松食品(株)</div></td>
+                          <td class="list-cell"><div>矢部修</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">11</div></td>
+                          <td class="list-cell"><div>(株)鈴木園</div></td>
+                          <td class="list-cell"><div>鈴木五郎</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">12</div></td>
+                          <td class="list-cell"><div>エヌビー食品(株)</div></td>
+                          <td class="list-cell"><div>馬場昇</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">13</div></td>
+                          <td class="list-cell"><div>ダイハツ食品(株)</div></td>
+                          <td class="list-cell"><div>大野純一</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">14</div></td>
+                          <td class="list-cell"><div>グルメ食品(株)</div></td>
+                          <td class="list-cell"><div>西田信吾</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr class="list-gry">
+                          <td class="list-cell">
+                           <div class="center">15</div></td>
+                          <td class="list-cell"><div>(株)スパイスガーデン</div></td>
+                          <td class="list-cell"><div>吉田康夫</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                        <tr>
+                          <td class="list-cell">
+                           <div class="center">16</div></td>
+                          <td class="list-cell"><div>極東水産(株)</div></td>
+                          <td class="list-cell"><div>伊達雅之</div></td>
+                          <td class="list-cell"><div class="center"><a href="#">選択</a></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+</div>
+ <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：15件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div> </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+
+
+	<!--Contents End-->
+    </div>
+  </div>
+
+            </form>
+  <div class="dialog-mdl-ftr-wrap">
+    <div class="dialog-mdl-ftr">
+      <div class="small">
+
+        <p class="credits"> Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. <a href="#" class="bt bt-close"> <span class="bt-label">閉じる</span> </a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

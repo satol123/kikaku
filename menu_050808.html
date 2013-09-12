@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_menu.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript">
+function modal_close(){
+		window.close();
+}
+</script>
+<style type="text/css">
+/*p49k-81_p01*/
+.head-space.cell-01{width:30px;}
+.head-space.cell-02{width:15px;}
+.head-space.cell-03{width:100px;}
+.head-space.cell-04{width:auto;}
+.head-space.cell-05{width:130px;}
+.head-space.cell-06{width:150px;}
+.head-space.cell-07{width:50px;}
+.data-list table td.list-space-none {height: 0 !important;}
+.data-list table tr td.list-space-none div {height: 0 !important;}
+</style>
+</head>
+<body class="dialog-mdl dialog-mdl-popup">
+<div class="dialog-mdl-wrap">
+
+  <div class="dialog-mdl-hdr-wrap">
+    <div class="dialog-mdl-hdr">
+      <h1 class="logo"><a href="/"><img src="/web2/jp/images/logo-menu-130.gif" alt="ASPメニュー管理システム" width="130" height="17"></a></h1>
+      <div class="usernv clr">
+        <ul>
+          <li><a href="#" class="ic ic-close"><span class="icon-label">閉じる</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+	<!--hdr Start-->
+<div class="dialog-mdl-hdr">
+    <h1>発注マスタ選択</h1>
+    <div class="usernv clr">
+        <ul>
+            <li><a href="#" class="ic ic-close close-dialog-modal"><span class="icon-label">閉じる</span></a></li>
+
+        </ul>
+    </div>
+</div>
+	<!--hdr End-->
+    <form id="dummy-04k-01_p01-01" name="dummy-04k-01_p01-01" method="post" action="dummy">
+  <div class="dialog-mdl-contents-wrapper">
+    <div class="dialog-mdl-contents">
+
+
+	<!--Contents Start-->
+
+
+<div class="tbl-r mt10">
+      <table>
+		<tbody>
+		<tr class="first-row">
+			<th class="first-cell nowrap"><div>取引先</div></th>
+			<td colspan="3" class="last-cell"><div class="tbl-r02-td-div"><span class="cstm-radio"><span class="checked">全て<a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span></span></div></td>
+		</tr>
+		<tr class="last-row">
+			<th class="first-cell nowrap"><div class="ic-bg">キーワード<img src="/web2/jp/images/ic-hlp.gif" class="imgover ml5"></div></th>
+			<td colspan="3" class="last-cell"><div class="single-line-div"><span class="cstm-tx cstm-tx-box"><span class="cstm-tx-bg"><input type="text" value="キーワードを入力" title="キーワードを入力" id="search-freeword" class="has-placeholder w250"></span><a class="cancel" href="#"><img width="31" height="14" alt="クリア" src="/web2/jp/images/srch-ic-clear.gif"></a></span><span class="cstm-checkbox ml5"><span><input type="checkbox" name="01k-01-5" id="01k-01-5a" checked><label for="01k-01-5a">非表示を含む</label></span></span></div></td>
+		</tr></tbody>
+</table>
+<div class="srch-panel-ftr"><a class="bt bt-srch" href="#"><span class="bt-label">検索する</span></a></div>
+</div>
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：5件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div class="serach-results-filter">
+	              <label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>自社商品コード(降順)</option>
+	                <option>--</option>
+                  </select>
+	              <label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option>20</option>
+	                <option>30</option>
+	                <option>40</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+            <table>
+              <tbody>
+                <tr class="first-row">
+                  <td class="first-cell"><div>No.</div></td>
+                  <td><div class="center"><img src="/web2/jp/images/ic-exclamation.gif" alt="！" width="3" height="19"></div></td>
+                  <td><div>自社商品コード</div></td>
+                  <td class="nowrap"><div>商品名</div></td>
+                  <td class="nowrap"><div>規格・入数／単位</div></td>
+                  <td class="nowrap"><div>取引先</div></td>
+                  <td class="last-cell nowrap"></td>
+                </tr>
+                <tr>
+                  <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+                  <td class="head-space cell-02"><div>&nbsp;</div></td>
+                  <td class="head-space cell-03"><div>&nbsp;</div></td>
+                  <td class="head-space cell-04"><div>&nbsp;</div></td>
+                  <td class="head-space cell-05"><div>&nbsp;</div></td>
+                  <td class="head-space cell-06"><div>&nbsp;</div></td>
+                  <td class="head-space cell-07 head-space-last"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>1</div></td>
+                  <td class="list-cell ic-status"><div></div></td>
+                  <td class="list-cell"><div>FIM517</div></td>
+                  <td class="list-cell"><div>卵<a href="#" class="icbt-share ml5"><span class="bt-label">共有</span></a></div></td>
+                  <td class="list-cell"><div>10個・5PC／CS</div></td>
+                  <td class="list-cell"><div>インフォ食品（株）</div></td>
+                  <td class="list-cell edit-checkbox halign-c valign-m"><div><a class="bt bt-gre" href="#"><span class="bt-label">選択</span></a></div></td>
+                </tr>
+                <tr>
+                  <td class="list-space-none" colspan="7"><div></div></td>
+                </tr>
+                <tr class="list-gry">
+                  <td class="list-cell"><div>2</div></td>
+                  <td class="list-cell ic-status"><div><img width="15" height="19" src="/web2/jp/images/slip-ic-hidden.gif" alt="非"></div></td>
+                  <td class="list-cell"><div>FIM525</div></td>
+                  <td class="list-cell"><div>砂糖<span class="icbt-stop ml5"><span class="bt-label">販中</span></span></div></td>
+                  <td class="list-cell"><div>200g・5袋／箱</div></td>
+                  <td class="list-cell"><div>インフォ食品（株）</div></td>
+                  <td class="list-cell cell-wht edit-checkbox halign-c valign-m"><div><a class="bt bt-gre" href="#"><span class="bt-label">選択</span></a></div></td>
+                </tr>
+                <tr>
+                  <td class="list-space-none" colspan="7"><div></div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>3</div></td>
+                  <td class="list-cell ic-status"><div></div></td>
+                  <td class="list-cell"><div>FIM518</div></td>
+                  <td class="list-cell"><div>小麦粉</div></td>
+                  <td class="list-cell"><div>200g・5袋／箱</div></td>
+                  <td class="list-cell"><div>インフォ食品（株）</div></td>
+                  <td class="list-cell edit-checkbox halign-c valign-m"><div><a class="bt bt-gre" href="#"><span class="bt-label">選択</span></a></div></td>
+                </tr>
+                <tr>
+                  <td class="list-space-none" colspan="7"><div></div></td>
+                </tr>
+                <tr class="list-gry">
+                  <td class="list-cell"><div>4</div></td>
+                  <td class="list-cell ic-status"><div></div></td>
+                  <td class="list-cell"><div>TA408</div></td>
+                  <td class="list-cell"><div>牛乳</div></td>
+                  <td class="list-cell"><div>1000ml・12本／CS</div></td>
+                  <td class="list-cell"><div>グローバルインフォマー...</div></td>
+                  <td class="list-cell cell-wht edit-checkbox halign-c valign-m"><div><a class="bt bt-gre" href="#"><span class="bt-label">選択</span></a></div></td>
+                </tr>
+                <tr>
+                  <td class="list-space-none" colspan="7"><div></div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>5</div></td>
+                  <td class="list-cell ic-status"><div></div></td>
+                  <td class="list-cell"><div>TA409</div></td>
+                  <td class="list-cell"><div>バター</div></td>
+                  <td class="list-cell"><div>200g・10個／箱</div></td>
+                  <td class="list-cell"><div>インフォダイニング</div></td>
+                  <td class="list-cell edit-checkbox halign-c valign-m"><div><a class="bt bt-gre" href="#"><span class="bt-label">選択</span></a></div></td>
+                </tr>
+                <tr>
+                  <td class="list-space" colspan="6"><div></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+	      <table class="justify mt10">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：5件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+              </tr>
+            </tbody>
+          </table>
+	<!--Contents End-->
+    </div>
+  </div>
+
+<div class="pt10 halign-c submit-bt"><a href="#" class="bt bt-gry03"><span class="bt-label">キャンセル</span></a></div>
+            </form>
+  <div class="dialog-mdl-ftr-wrap">
+    <div class="dialog-mdl-ftr">
+      <div class="small">
+
+        <p class="credits"> Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. <a href="#" class="bt bt-close"> <span class="bt-label">閉じる</span> </a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

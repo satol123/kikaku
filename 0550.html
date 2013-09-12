@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/sample/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/sample/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.tbl-bd-wide-06 th {width:auto;}
+.tbl-bd-wide-06 td {width:auto;}
+
+.tbl-inventory-input th.cell-01,.tbl-inventory-input th.cell-01 div{width:120px !important;_width:110px !important;}
+.tbl-inventory-input td.cell-02,.tbl-inventory-input td.cell-02 div{width:150px !important;}
+.tbl-inventory-input th.cell-01 div.ic-case{width:150px !important;_width:105px !important;}
+.tbl-inventory-input td.cell-03,.tbl-inventory-input td.cell-03 div{width:305px !important;}
+
+.head-space.cell-01{width:30px;}
+.head-space.cell-02{width:180px;}
+.head-space.cell-03{width:520px;}
+.head-space.cell-04{width:100px;}
+.head-space.cell-05{width:120px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck1{width:120px !important;}
+.tbl-bd-wide-02-prod-reg-02 .ck2{width:auto;}
+
+.tbl-bd-wide-06 th.cell-03,.tbl-bd-wide-06 th.cell-03 div{width:130px !important;_width:120px !important;}
+.tbl-bd-wide-06 td.cell-04,.tbl-bd-wide-06 td.cell-04 div{width:auto !important;}
+.tbl-bd-wide-06 td.cell-05,.tbl-bd-wide-06 td.cell-05 div{width:310px !important;}
+
+</style>
+</head>
+<body class="page">
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+                <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form id="" name="" method="post" action="../dummy">
+          <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>照合依頼中 [アレルギー照合]</h1></th><td class="desc"><div>依頼先にて、アレルギー照合中となります。<br>
+		          返却期限日回答前に限り、照合依頼取り消しが可能となります。</div></td>
+			<td class="nav">
+					<a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+<!--
+				<table class="justify mb10">
+					<tbody>
+						<tr>
+							<td class="justify-l">
+								<div class="step-blk">
+									<span class="item"><span class="num">1</span><span class="label">新規受付</span></span><span class="separator">></span><span class="item current"><span class="num">2</span><span class="label">提出可能</span></span><span class="separator">></span><span class="item"><span class="num">3</span><span class="label">確認画面</span></span><span class="separator">></span><span class="item"><span class="num">4</span><span class="label">提出完了</span></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+-->
+
+          <table class="justify mb10">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div></div></td>
+                <td class="justify-r">
+                    <div><a href="0552.html" class="bt bt-gre-large"><span class="bt-label">照合依頼取消</span></a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+<p class="results-ttl w950 clr"><span class="w750 flt-l"><span class="results-A">依頼先情報</span>　　<span class="results-B">返却期限日：2012/10/15(月)</span></span><span class="flt-r">更新日：2012/10/10(水) </span></p>
+<div class="db-gry mb10">
+            <div class="db-gre-bl clr">
+            <div class="db-gre-tl clr">
+            <div class="db-gre-br clr">
+            <div class="db-gre-tr">
+                <table class="tbl-inventory-input">
+                    <tbody>
+                        <tr>
+                            <th class="cell-01">
+                                <div>依頼先</div>
+                            </th>
+                            <td class="cell-03 last-cell">
+                                <div>（株）デリコ</div>
+                            </td>
+                            <th class="cell-01">
+                                <div>依頼先担当者</div>
+                            </th>
+                            <td class="cell-03 last-cell">
+                                <div>中村 八大</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="cell-01 first-cell">
+                                <div>コメント</div>
+                            </th>
+                            <td class="last-cell edited" colspan="3">
+                                <div>業務用冷凍ハンバーグ原材料で使用されている肉の種類と配合率について記載ください。よろしくお願いします。</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+<p class="results-ttl w950 clr"><span class="results-A">自社情報</span>&#12288;&#12288;<span class="results-B">適用日：2012/10/10(水) </span><span class="results-B"></span></p>
+<div class="db-gry mb10">
+            <div class="db-gre-bl clr">
+            <div class="db-gre-tl clr">
+            <div class="db-gre-br clr">
+            <div class="db-gre-tr">
+	            <table class="tbl-inventory-input">
+	              <tbody>
+                    <tr>
+                      <th class="cell-01"><div>依頼商品名</div></th>
+                      <td class="cell-03 last-cell"><div>レンジでチン！冷凍ハンバーグ</div></td>
+                      <th class="cell-01">
+                          <div>規格・入数／単位</div>
+                      </th>
+                      <td class="cell-03 last-cell">
+                          <div>180g・5PC／CS</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="cell-01"><div>自社商品コード</div></th>
+                      <td><div>111111</div></td>
+                      <th class="cell-01">
+                          <div>自社担当者</div>
+                      </th>
+                      <td class="last-cell">
+                          <div>和田美咲</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="cell-01"><div>規格書商品名</div></th>
+                      <td class="highlight"><div class="clr">
+                      <div>
+                        <p class="right"><a class="bt bt02 ml5" href="0150.html"><span class="bt-label">規格書表示</span></a></p>レンジでチン！冷凍ハンバーグ</div></div></td>
+                      <th class="cell-01">
+                          <div>規格</div>
+                      </th>
+                      <td>
+                          <div>180g・5PC／CS</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="cell-01"><div>規格書コード</div></th>
+                      <td class="last-cell"><div>G09999971-32DF6C0E-373710A7</div></td>
+                      <th class="cell-01 first-cell">
+                          <div>JANコード</div>
+                      </th>
+                      <td>
+                          <div>1234567890123</div>
+                      </td>
+                    </tr>
+					<tr>
+                      <th class="cell-01"><div>返却予定日</div></th>
+                      <td class="last-cell"><div>2012/07/06</div></td>
+                      <th class="cell-01 first-cell">
+                          <div>照合回数</div>
+                      </th>
+                      <td>
+                          <div>1</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="cell-01"><div>照合依頼日</div></th>
+                      <td class="last-cell"><div>2012/07/04</div></td>
+                      <th class="cell-01 first-cell">
+                          <div>照合有効期限</div>
+                      </th>
+                      <td>
+                          <div>2013/07/04</div>
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>            
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+		    <table class="tbl-bd-wide-06 tbl-bd-wide-02-prod-reg-02 mb5">
+		      <tr>
+		        <th class="cell-03 pt5 nowrap"><div class="ic-hlp">依頼先への<br>コメント<div class="letter-control">(全角1000文字以内)</div></div></th>
+		        <td class="cell-05"><div class="cstm-txarea charcount"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								  <textarea rel="全角1000文字以内" maxlength="2000"  title="" class="has-placeholder w300 autogrow set-limit noticeTip" id="desc" name="desc" cols="50" rows="10"></textarea>
+								</span></span></span></span>
+								  <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">500</span>文字</span></p>
+								</div></td>
+		        <th class="cell-03 pt5 nowrap"><div class="ic-hlp"><p class="disp-ic"><img height="13" width="33" class="ic-unpublish" alt="非公開" src="/web2/jp/images/ic-unpublish.gif"></p>社内用メモ<!--<img src="/web2/jp/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover ml5">--><div class="letter-control">(全角200文字以内)</div></div></th>
+		        <td class="cell-05"><div class="cstm-txarea charcount"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								  <textarea rel="全角200文字以内" maxlength="400"  title="" class="has-placeholder w300 autogrow set-limit noticeTip" id="desc" name="desc" cols="50" rows="10"></textarea>
+								</span></span></span></span>
+								  <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">500</span>文字</span></p>
+								</div></td>
+          </tr>
+        </table>
+
+<div class="data-list mb5">
+<table>
+  <tbody>
+    <tr>
+     <td><div>No.</div></td>
+     <td><div>照合状況</div></td>
+     <td><div>コメント</div></td>
+     <td><div>更新者</div></td>
+     <td><div>更新日</div></td>
+   </tr>
+   <tr>
+      <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+      <td class="head-space cell-02"><div>&nbsp;</div></td>
+      <td class="head-space cell-03"><div>&nbsp;</div></td>
+      <td class="head-space cell-04"><div>&nbsp;</div></td>
+      <td class="head-space cell-05 head-space-last"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell" rowspan="3"><div class="center">2</div></td>
+      <td class="list-cell"><div>包材画像</div></td>
+      <td class="list-cell"><div>包材画像についてのコメントコメント</div></td>
+      <td rowspan="3" class="list-cell"><div>中村 八大</div></td>
+      <td rowspan="3" class="list-cell"><div>2012/10/10(水)</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div>一括表示原材料名</div></td>
+      <td class="list-cell"><div>一括表示原材料名についてのコメントコメント</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div>原材料情報及びアレルギー</div></td>
+      <td class="list-cell"><div>原材料情報及びアレルギーについてのコメントコメント</div></td>
+    </tr>
+    <tr>
+      <td colspan="5" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell" rowspan="3"><div class="center">1</div></td>
+      <td class="list-cell"><div>包材画像</div></td>
+      <td class="list-cell"><div>包材画像についてのコメントコメント</div></td>
+      <td rowspan="3" class="list-cell"><div>中村 八大</div></td>
+      <td rowspan="3" class="list-cell"><div>2012/10/10(水)</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div>一括表示原材料名</div></td>
+      <td class="list-cell"><div>一括表示原材料名についてのコメントコメント</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div>原材料情報及びアレルギー</div></td>
+      <td class="list-cell"><div>原材料情報及びアレルギーについてのコメントコメント</div></td>
+    </tr>
+    <tr>
+      <td colspan="5" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+  </tbody></table>
+</div>
+
+					<table class="tbl-bd-wide-06 tbl-bd-wide-02-prod-reg-02 line-height-tx01 mb5">
+            <tbody><tr>
+						  <th class="tbl-bd-wide-06-ttl-th"><p class="tx-b">依頼先とのコメント・社内用メモ履歴</p></th>
+						</tr>
+						</tbody>
+					</table>
+
+<div class="data-list mb5">
+<table>
+  <tbody>
+    <tr>
+     <td><div>No.</div></td>
+     <td><div>提出状況</div></td>
+     <td><div>依頼先とのコメント</div></td>
+     <td><div>更新者</div></td>
+     <td><div>更新日</div></td>
+   </tr>
+   <tr>
+      <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+      <td class="head-space cell-02"><div>&nbsp;</div></td>
+      <td class="head-space cell-03"><div>&nbsp;</div></td>
+      <td class="head-space cell-04"><div>&nbsp;</div></td>
+      <td class="head-space cell-05 head-space-last"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="halign-c">-</div></td>
+      <td class="list-cell"><div class="halign-c">-</div></td>
+      <td class="list-cell"><div>コメントは、まだありません。</div></td>
+      <td class="list-cell"><div class="halign-c">-</div></td>
+      <td class="list-cell"><div class="halign-c">-</div></td>
+    </tr>
+  </tbody></table>
+</div>
+
+<div class="data-list mb5">
+<table>
+  <tbody>
+    <tr>
+     <td><div>No.</div></td>
+     <td><div>提出状況</div></td>
+     <td><div>社内用メモ</div></td>
+     <td><div>更新者</div></td>
+     <td><div>更新日</div></td>
+   </tr>
+   <tr>
+      <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+      <td class="head-space cell-02"><div>&nbsp;</div></td>
+      <td class="head-space cell-03"><div>&nbsp;</div></td>
+      <td class="head-space cell-04"><div>&nbsp;</div></td>
+      <td class="head-space cell-05 head-space-last"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div>2</div></td>
+      <td class="list-cell"><div>照合依頼前</div></td>
+      <td class="list-cell"><div>和田さん、承知しました。引継ぎいたします。</div></td>
+      <td class="list-cell"><div>岩田正道</div></td>
+      <td class="list-cell"><div>2012/10/10(水)</div></td>
+    </tr>
+    <tr>
+      <td colspan="5" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div>1</div></td>
+      <td class="list-cell"><div>照合依頼前</div></td>
+      <td class="list-cell"><div>岩田さん、よろしくお願いします。</div></td>
+      <td class="list-cell"><div>和田美咲</div></td>
+      <td class="list-cell"><div>2012/10/10(水)</div></td>
+    </tr>
+    <tr>
+      <td colspan="5" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><div><a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+                <td class="justify-r">
+                    <div><a href="0552.html" class="bt bt-gre-large"><span class="bt-label">照合依頼取消へ</span></a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <!--<table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="http://192.168.100.105:5055/0041.html" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+                <td class="justify-r">
+                    <div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>-->
+          
+          </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_menu.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_menu.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.tbl-bd-wide-02 th{width:150px;}
+</style>
+</head>
+<body class="page">
+<div class="menu-cnt">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w390"><a href="/"><img src="/web2/jp/images/logo-169x24.gif" alt="FOODS Info Mart" width="169" height="24"></a><a href="/"><img src="/web2/jp/images/logo-menu.gif" alt="ASP規格書システム" width="188" height="24" class="ml10"></a></div>
+        <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="/menu_010000.html" title="マイページ"><span>マイページ</span></a></li>
+            <li id="gnv-menu"><a href="menu_010101.html" title="メニュー検索"><span>メニュー検索</span></a></li>
+			<li id="gnv-menu-share"><a href="/menu_020105.html" title="メニュー共有"><span>メニュー共有</span></a></li>
+            <li id="gnv-input"><a href="/menu_020102.html" title="メニュー編集・承認"><span>メニュー編集・承認</span></a></li>
+            <li id="gnv-material"><a href="/menu_030101.html" title="材料・仕掛品管理"><span>材料・仕掛品管理</span></a></li>
+			<li id="gnv-set"><a href="/menu_040101.html" title="登録・設定"><span>登録・設定</span></a></li>
+            <li id="gnv-guid"><a href="#" title="ご利用ガイド"><span>ご利用ガイド</span></a></li>
+        </ul>
+        <div class="usrnv clr">
+            <h2>インフォダイニング 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+        </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+      <form name="dummy-21u-03-01" action="dummy" method="post" id="dummy-21u-03-01">
+        <div class="height-wrap">
+     <table class="hgrp">
+	<tbody>
+		<tr>
+			<th class="heading">
+				<h1>材料詳細</h1>
+			</th>
+			<td class="desc">
+				<div>登録されている材料の詳細を見ることができます。</div>
+			</td>
+			<td class="nav"><a href="/menu_030101.html" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01">
+      <tbody>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">自社商品コード</th>
+          <td colspan="3">A016</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">材料名</th>
+          <td>卵</td>
+          <th>材料名フリガナ</th>
+          <td>タマゴ</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">規格・入数／単位</th>
+          <td colspan="3">24kg・1.00/袋</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">取引先</th>
+          <td colspan="3">インフォ食材(株)</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">仕入単価/単位</th>
+          <td>100円/箱</td>
+          <th>換算数量/単位</th>
+          <td>6/個</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2" class="tbl-bd-wide-02-ic-02">歩留率</th>
+          <td>100%</td>
+          <th>歩留単価</th>
+          <td>17円</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">アレルギー</th>
+          <td colspan="3">卵</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th class="tbl-bd-wide-02-ic small-w-row w100" rowspan="2">アレルギー物質<br>
+            コンタミの可能性
+            <!--<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a> --></th>
+          <th class="tbl-bd-wide-02-ic small-w w50">有／無
+            <!--<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a> --></th>
+          <td colspan="3">無</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th class="tbl-bd-wide-02-ic small-w w50">備考
+            <!--）<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a> --></th>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">原産国</th>
+          <td colspan="3">日本</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">カロリー(100gあたり)</th>
+          <td>80kcal</td>
+          <th>食塩相当量(100gあたり)</th>
+          <td>0.4g</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2" class="w150">保存温度帯</th>
+          <td colspan="3">冷蔵</td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">受発注システム<br>
+            発注マスタと連携</th>
+          <td colspan="3">卵<span class="ml10">最終更新日：2012/10/20(土)</span></td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">受発注システム<br>
+            自社管理商品マスタと連携</th>
+          <td colspan="3">卵<span class="ml10">最終更新日：2012/10/20(土)</span></td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2">規格書システムと連携</th>
+          <td colspan="3">卵<span class="ml10">最終更新日：2012/10/20(土)</span></td>
+        </tr>
+        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+          <th colspan="2" class="w130">備考</th>
+          <td colspan="3"></td>
+        </tr>
+
+      </tbody>
+    </table>
+<table class="justify-row">
+<tbody>
+  <tr>
+    <td class="justify-l"><div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+  </tr>
+  </tbody>
+</table>
+				</div>
+
+            
+      
+    <!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+
+<script type="text/javascript" src="/js/modal.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
+</body>
+</html>

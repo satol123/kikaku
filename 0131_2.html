@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.tbl-r-step.step9_2 td.first-cell{width:5px;}
+.tbl-r-step.step9_2 td.first-cell div{padding-left:0;padding-right:0;}
+.tbl-r-step.step9_2 td.cell-02{width:295px;}
+.tbl-r-step.step9_2 td.cell-04{width:310px;}
+.tbl-r-step.step9_2 td.cell-05{width:auto;}
+.tbl-r-step.step9_2 td.cell-06{width:310px;}
+</style>
+</head>
+<body class="page">
+
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+                <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+	  <form id="" name="" method="post" action="../dummy">
+        <div class="height-wrap">
+    <table class="hgrp">
+			<tbody>
+				<tr>
+       	 <th class="heading"><h1>規格書提出確認</h1></th><td class="desc"><div>「取引先へのコメント」に記入の上、「提出する」をクリックすると取引先に規格書を提出できます。<br>
+            （選択された全商品を表示しております）</div></td>
+			<td class="nav">
+			  <a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+       	 </td>
+				</tr>
+			</tbody>
+		</table>
+
+				<!--<table class="justify mb0">
+					<tbody>
+						<tr>
+							<td class="justify-l">
+								<div class="step-blk">
+									<span class="item"><span class="num">1</span><span class="label">作成中</span></span><span class="separator">></span><span class="item current"><span class="num">2</span><span class="label">確認画面(記入チェック)</span></span><span class="separator">></span><span class="item"><span class="num">3</span><span class="label">提出完了</span></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>-->
+        
+		<table class="tbl-bd-wide-03 red">
+          <colgroup>
+              <col class="col-01">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td>
+                <div><span class="txt-msg-warn"><span class="tx-b"><img height="17" width="17" src="/web2/jp/images/ic-caution.gif" alt="">&nbsp;記入チェックした規格書に記入漏れがあります。</span></span></div>
+                <div class="pt15">規格書の記入チェック内容に問題がない場合は「提出する」をクリックしてください。<br>
+                     修正がある場合は「再記入」をクリックしてください。</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+<div class="tbl-r-step step9_2 mb10">
+                <table>
+                        <tr class="row-01 first-row last-row">
+                            <td class="cell-01 first-cell"><div><img src="/web2/jp/images/spacer.gif" width="5" height="1" alt=""></div></td>
+                            <td class="cell-02 w220">
+                                <div><p>1. 全商品を提出する場合</p>
+                                <div class="desc mt5">
+                                <p>取引先へのコメントを記入の上「提出する」を押してください。</p>
+                                </div></div>
+                            </td>
+                            <td class="cell-03 halign-c">
+                                <div><img src="/web2/jp/images/spacer.gif" width="1" height="1" alt=""></div>
+                            </td>
+                            <td class="cell-04 w220">
+                                <div>
+                                  <p>2. 全品修正する場合</p>
+                                <div class="desc mt5">
+                                
+                                <p>「再記入」を押し、「作成中」にて規格書を編集してください。</p>
+                                </div>
+                                </div>
+                            </td>
+                            <td class="cell-05 halign-c">
+                                <div><img src="/web2/jp/images/spacer.gif" width="1" height="1" alt=""></div>
+                            </td>
+                            <td class="cell-06 w220">
+                                <div>
+                                <p>3. 一部商品について「提出」もしくは「再記入」がある場合</p>
+                                <div class="desc mt5">
+                                
+                                <p>「戻る」を押し、再度商品を選択し一括更新を実施してください。</p>
+                                </div>
+                                </div>
+                            </td>
+                            <td class="cell-07 halign-c">
+                                <div><img src="/web2/jp/images/spacer.gif" width="1" height="1" alt=""></div>
+                            </td>
+                            <td class="cell-08 w220 last-cell">
+                                <div>
+                                <p>4. 記入できない項目がある場合</p>
+                                <div class="desc mt5">
+                                
+                                <p>「戻る」を押し、該当規格書を個別で提出してください。</p>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+                </table>
+</div>
+
+     
+     <table class="tbl-bd-wide-10 tbl-bd-wide-02-prod-reg-02">
+     	<colgroup>
+				<col class="c1">
+				<col class="c2">
+			</colgroup>
+			<tbody>
+
+        <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>規格書名</div></th>
+		      <td>
+          	<div>レンジでチン！冷凍ハンバーグ</div>
+          </td>
+        </tr>
+
+        <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>基本情報</div></th>
+		      <td>
+          	<div>製造者PL保険加入の有無　が入力されていません。<br>工場電話が入力されていません。</div>
+          </td>
+        </tr>
+        <tr>
+          <th class="tbl-bd-wide-02-ic pt5"><div>原材料リスト</div></th>
+          <td><div>原材料リストに原材料・添加物が入力されていません。<br>
+部材の原産国は非公開です。<br>
+原材料の製造内配合率は非公開です。<br>
+原材料の原材料・添加物メーカー名/原産国/産地名は非公開です。<br>
+添加物の原材料・添加物メーカー名は非公開です。<br>
+添加物の製品内配合率は非公開です。<br>
+※アレルギー物質の登録については貴社にてご確認ください。<br>
+※配合率【製品】(%)の値については貴社にてご確認ください。 </div></td>
+        </tr>
+        <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>包材表示</div></th>
+		      <td>
+          	<div>記入漏れは見当たりませんでした。</div>
+          </td>
+         </tr>
+         <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>製造品質</div></th>
+		      <td>
+          	<div>記入漏れは見当たりませんでした。</div>
+          </td>
+         </tr>
+       </tbody>
+      </table>
+     
+     <table class="tbl-bd-wide-10 tbl-bd-wide-02-prod-reg-02">
+     	<colgroup>
+				<col class="c1">
+				<col class="c2">
+		</colgroup>
+			<tbody>
+
+        <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>規格書名</div></th>
+		      <td>
+          	<div>レンジでチン！冷凍春巻</div>
+          </td>
+        </tr>
+
+        <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>基本情報</div></th>
+		      <td>
+          	<div>製造者PL保険加入の有無　が入力されていません。<br>工場電話が入力されていません。</div>
+          </td>
+        </tr>
+        <tr>
+          <th class="tbl-bd-wide-02-ic pt5"><div>原材料リスト</div></th>
+          <td><div>原材料リストに原材料・添加物が入力されていません。<br>
+部材の原産国は非公開です。<br>
+原材料の製造内配合率は非公開です。<br>
+原材料の原材料・添加物メーカー名/原産国/産地名は非公開です。<br>
+添加物の原材料・添加物メーカー名は非公開です。<br>
+添加物の製品内配合率は非公開です。<br>
+※アレルギー物質の登録については貴社にてご確認ください。<br>
+※配合率【製品】(%)の値については貴社にてご確認ください。 </div></td>
+        </tr>
+        <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>包材表示</div></th>
+		      <td>
+          	<div>記入漏れは見当たりませんでした。</div>
+          </td>
+         </tr>
+         <tr>
+		      <th class="tbl-bd-wide-02-ic pt5"><div>製造品質</div></th>
+		      <td>
+          	<div>記入漏れは見当たりませんでした。</div>
+          </td>
+         </tr>
+       </tbody>
+      </table>
+      
+  
+    
+     <table class="tbl-bd-wide-10 tbl-bd-wide-02-prod-reg-02">
+     	<colgroup>
+				<col class="c1">
+				<col class="c2">
+			</colgroup>
+			<tbody><tr>
+		        <th class="tbl-bd-wide-02-ic pt5"><div class="ic-hlp"><p class="disp-ic"><img height="13" width="33" class="ic-unpublish" alt="非公開" src="/web2/jp/images/ic-unpublish.gif"></p>社内用メモ<!--<img src="/web2/jp/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover ml5">--><div class="letter-control">200文字以内</div><br><br><p><a href="#">履歴を見る</a><!--<img src="/web2/jp/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover ml5">--></p></div></th>
+		        <td colspan="3"><div class="cstm-txarea charcount"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								  <textarea rel="200文字以内" title="" class="has-placeholder w650 autogrow set-limit noticeTip" id="desc" name="desc" cols="60" rows="5"></textarea>
+								</span></span></span></span>
+								  <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">200</span>文字</span></p>
+								</div></td>
+          </tr>
+
+        <tr>
+	        <th class="tbl-bd-wide-02-ic"><div class="ic-hlp">取引先への<br>コメント<!--<img src="/web2/jp/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover ml5">-->
+	        <div class="letter-control">1000文字以内</div><br><br><p><a href="#">履歴を見る</a><!--<img src="/web2/jp/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover ml5">--></p></div></th>
+		        <td><div class="cstm-txarea charcount">
+								 <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+								   <textarea rel="1000文字以内" cols="60" rows="5" maxlength="2000" class="w650 autogrow set-limit noticeTip" id="c1-27" name="c1-27">弊社の規格書をご提出いたします。ご確認の程、よろしくお願いします。</textarea>
+								 </span></span></span></span>
+								 <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p>
+							  </div></td>
+        </tr>
+       </tbody>
+     </table>      
+      
+      <table class="justify-row mb20">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+							<td class="justify-r">
+								<div><a href="#" class="bt bt-go02"><span class="bt-label">再記入</span></a><a href="#" class="bt bt-org-large"><span class="bt-label">提出する</span></a></div>
+							</td>
+              </tr>
+            </tbody>
+      </table>
+      
+      </div>
+
+     <!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

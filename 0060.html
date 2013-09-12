@@ -1,0 +1,679 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+/*.webentry_panel01 th{width:200px;}
+.webentry_panel01 th div{width:200px;}*/
+
+.tbl-bd-wide-02-prod-reg-02 .c1,.tbl-kikaku-info01 .c1{width:230px;}
+.tbl-bd-wide-02-prod-reg-02 .c2,.tbl-kikaku-info01 .c2{width:720px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck7,.tbl-kikaku-info01 .ck7{width:55px;}
+.tbl-bd-wide-02-prod-reg-02 .ck8,.tbl-kikaku-info01 .ck8{width:80px;}
+.tbl-bd-wide-02-prod-reg-02 .ck9,.tbl-kikaku-info01 .ck9{width:auto;}
+.tbl-bd-wide-02-prod-reg-02 .ck10,.tbl-kikaku-info01 .ck10{width:70px;}
+.tbl-bd-wide-02-prod-reg-02 .ck11,.tbl-kikaku-info01 .ck11{width:175px;}
+.tbl-bd-wide-02-prod-reg-02 .ck12,.tbl-kikaku-info01 .ck12{width:140px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck-b1,.tbl-kikaku-info01 .ck-b1{width:230px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b2,.tbl-kikaku-info01 .ck-b2{width:245px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b3,.tbl-kikaku-info01 .ck-b3{width:180px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b4,.tbl-kikaku-info01 .ck-b4{width:295px;}
+
+.tp-ic-side{padding-bottom:3px;}
+
+p.disp-ic .icbt-blue,.flt-r .icbt-blue{_top:0;}
+</style>
+</head>
+<body class="popup">
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w300"><a href="/"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"></a><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18" class="ml10"></a></div>
+
+
+        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+        </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+       <form id="" name="" method="post" action="../dummy">
+          <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>規格書登録</h1></th><td class="desc"><div>規格書プレミアムの作成・編集を行ってください。「登録して提出へ」は規格書登録完了保存、「保存する」は規格書作成中保存となります。規格書登録完了時は、ベーシックが同時作成されます。</div></td>
+			<td class="nav">
+					<a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table><!--
+				<table class="justify mb10">
+					<tbody>
+						<tr>
+							<td class="justify-l">
+								<div class="step-blk">
+									<span class="item"><span class="num">1</span><span class="label">新規受付</span></span><span class="separator">></span><span class="item current"><span class="num">2</span><span class="label">提出可能</span></span><span class="separator">></span><span class="item"><span class="num">3</span><span class="label">確認画面</span></span><span class="separator">></span><span class="item"><span class="num">4</span><span class="label">提出完了</span></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+--><table class="hgrp-nv">
+	  <tbody>
+		<tr>
+
+		  <td>
+			<div class="tabs-link">
+			  <ul>
+				<li class="tab-01"><a href="00691.html"><span class="bg-tabs-link">規格書ベーシック</span></a></li>
+				<li class="tab-02"><a href="0060.html" class="current"><span class="bg-tabs-link">規格書プレミアム</span></a></li>
+				<li class="tab-03"><a href="0068.html"><span class="bg-tabs-link">取引先追加項目</span></a></li>
+				<li class="tab-04"><a href="0067.html"><span class="bg-tabs-link">自社管理項目</span></a></li>
+
+			  </ul>
+			</div></td>
+			<td class="nav"></td>
+		</tr>
+	  </tbody>
+	</table>
+
+    <div class="tbl-r-gry">
+      <div class="sitesnav clr">
+          <ul class="clr tananv mr10">
+              <li class="sitesnav-hdr nowrap"><a href="0060.html" class="current">基本情報</a></li>
+              <li class="nowrap"><a href="0061.html">原材料情報</a></li>
+              <li class="nowrap"><a href="0065.html">包材情報</a></li>
+              <li class="last-child nowrap"><a href="0066.html">製造品質</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <table class="justify mb0">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l valign-b"><div class="mb10">登録済み規格書を呼び出す<span><a href="#" class="bt bt-list open-dialog-mdl" onClick="javascript:window.showModalDialog('6110.html',this,'dialogWidth=800px; dialogHeight=700px;')"><span class="bt-label">一覧から選択</span></a></span></div></td>
+               <td class="justify-r valign-b kikaku-webentry-btnarea"><div>
+               <a class="ic ic-caution02" href="#"><span class="ic-label">入力時のご注意</span></a>
+               <a class="ic ic-caution02" href="#"><span class="ic-label">各種保存ボタンのご注意</span></a>
+                  <a class="bt bt-tmp-save" href="#"><span class="bt-label">一時保存</span></a><a class="bt bt-save" href="#"><span class="bt-label">保存する</span></a><a href="0071.html" class="bt bt-gre-large"><span class="bt-label">登録して提出へ</span></a></div></td>
+	         </tr>
+	       </tbody>
+    </table>
+
+    <table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l valign-b"><div><a class="bt bt-preview" href="0150.html"><span class="bt-label">プレビュー表示</span></a></div></td>
+           <td class="justify-r valign-b"><div></div></td>
+	         </tr>
+	       </tbody>
+    </table>
+	
+
+<div class="">
+
+			<table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l">
+<div class="tbl-r-gry">
+<table class="col-two">
+                    <tbody><tr class="first-row last-row">
+                        <th class="first-cell w220"><div class="w220">取引先の必須項目を表示する</div></th>
+                        <td class="last-cell" colspan="3"><div>インフォダイニング</div></td>
+                    </tr>
+  </tbody></table>
+  </div>			   </td>
+	         </tr>
+	       </tbody>
+      </table>
+
+				<div class="form-intro pt5 mb10">
+				  <p>
+					<img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"> の項目は必ず入力してください。&nbsp;&nbsp;<img src="/web2/jp/images/img_input_pink.gif" width="20" height="10" class="" alt="取引必須項目">&nbsp;は取引先必須項目です。&nbsp;<img src="/web2/jp/images/img_input_green.gif" width="20" height="10" class="" alt="条件付き必須項目">&nbsp;は条件付き必須項目です。&nbsp;項目名にカーソルをあわせると、説明が表示されます。
+				  </p>
+				</div>
+
+					<p class="sub-ti mb5">商品マスタ情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					  <tbody>
+						<tr>
+						  <th class="w190 tbl-bd-wide-02-ic"><div class="w220"><label for="c1-64">自社商品コード</label></div></th>
+						  <td class="w230"><div class="w220">100100</div></td>
+						  <th class="w190"><div class="w220"><label for="c1-62">規格書商品名</label></div></th>
+						  <td class="w230"><div class="w220">業務用冷凍ハンバーグ</div></td>
+						</tr>
+						<tr>
+						  <th><div><label for="c1-63">規格書コード</label></div></th>
+						  <td><div>G0000756-32DFC0B-13392464</div></td>
+              <th class="tbl-bd-wide-02-ic small-w-row"><div>JICFS分類</div></th>
+		          <td><div><span class="checked">冷凍食品＞その他＞全般 <a href><img src="/web2/jp/images/ic-list.gif"></a><span><a class="ic ic-arr-blu" href="#"><span class="ic-label">解除</span></a></span></span></span></div></td>
+            </tr>
+						<tr>
+						  <th><div>備考</div></th>
+						  <td colspan="3"><div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class=" w400 noticeTip ime-actv" id="c1-29" name="c1-29"></span></span></div></td>
+            </tr>
+					  </tbody>
+					</table>
+
+
+					<p class="sub-ti mb5">規格書基本情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb5">
+				      <colgroup>
+				        <col class="c1">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+								<tr>
+									<th colspan="2" class="bg-wht"><span class="tx-b">商品情報</span></th>
+								</tr>
+
+							 <tr>
+							  <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label for="c1-100">適用日</label>
+							  </th>
+							  <td class="emphasis"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" value="2012/10/01" class="w100 ime-dis" id="c1-80" name="c1-80"></span></span></td>
+							</tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic"><label for="c1-5">通常アソート品区分</label>
+			              </th>
+				          <td><span class="cstm-radio"><span><input type="radio" checked="checked" id="c1-39a" name="c1-39"><label for="c1-39a">通常品</label></span> <span class="txt-separate">|</span> <span><input type="radio" id="c1-39b" name="c1-39"><label for="c1-39b">アソート品</label></span></span></td>
+			            </tr>
+				        <tr>
+				          <th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>規格書商品名<div class="letter-control">(全角100文字以内)</div></th>
+				          <td class="emphasis">
+										<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="200" rel="全角100文字以内" class=" w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="業務用冷凍ハンバーグ"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>規格書商品名フリガナ<div class="letter-control">(半角カナ200文字以内)</div></th>
+				          <td class="emphasis">
+										<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="400" rel="半角カナ200文字以内" class=" w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="レンジデチン！レイトウハンバーグ"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic pr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>ブランド名<div class="letter-control">(全角50文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class=" w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="食の安全シリーズ"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>ブランド区分</th>
+				          <td class="mainline">
+										<select class="cstm-select" id="c1-5" name="c1-38">
+                                        <option value="" selected>NB　</option>
+                                        <!--
+				            <option value="">区分を選択する　</option>
+                            -->
+				            <option value="1">区分 #1</option>
+				            <option value="2">区分 #2</option>
+				            </select></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>規格<div class="letter-control">(全角20文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="1kg/10PC"></span></span>
+<span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">規格半角<div class="letter-control">(半角40文字以内)</div></th>
+				          <td class="mainline">&nbsp;</td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic">規格単位</th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="80" rel="半角40文字以内" class="w300 noticeTip ime-actv" id="c1-2" name="c1-2">
+				          </span></span>
+				            <select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="" selected>C/S</option>
+				            <option value="1">単位 #1</option>
+				            <option value="2">単位 #2</option>
+				            </select></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>賞味・消費区分・製造日含め<div class="letter-control">(半角数字4桁以内)</div></th>
+				          <td class="mainline"><select class="cstm-select" id="c1-5" name="c1-38">	
+                          
+                          <option value="">区分を選択する　</option>
+                        
+                         
+				            <option value="1">区分 #1</option>
+				            <option value="2">区分 #2</option>
+				            </select><span class="cstm-tx num ml10">製造日含め <span class="cstm-tx-bg"><input type="text" maxlength="4" class=" w40 noticeTip ime-dis" id="c1-28" name="c1-28" value="60"></span></span>日
+						  </td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic">期限表示有無・表示例<div class="letter-control">(全角64文字以内)</div></th>
+				          <td class="mainline">
+										<select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有無を選択する　</option>
+				            <option value="1" selected>有り</option>
+				            <option value="2">無し</option>
+				            </select>
+										<span class="cstm-tx ml10"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w150 noticeTip ime-actv" id="c1-28" name="c1-28" value="賞味期限　2012.11.11"></span></span><span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span>
+				          </td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic">製造日表示有無・表示例<div class="letter-control">(全角25文字以内)</div></th>
+				          <td class="mainline">
+										<select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有無を選択する　</option>
+				            <option value="1" selected>有り</option>
+				            <option value="2">無し</option>
+				            </select>
+										<span class="cstm-tx ml10"><span class="cstm-tx-bg"><input type="text" maxlength="50" rel="全角25文字以内" class="w150 noticeTip ime-actv" id="c1-28" name="c1-28" value="製造日　2011.11.11"></span></span><span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span>
+				          </td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic">発注単位</th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">単位を選択する　</option>
+				            <option value="1">単位 #1</option>
+				            <option value="2">単位 #2</option>
+                            <option value="3" selected>ケース</option>
+                            
+				            </select></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>保存温度帯</th>
+				          <td class="mainline">
+										<select class="cstm-select" id="c1-5" name="c1-38">
+                                        
+				            <option value="" selected>冷凍（-18℃以下）</option>
+                            <!--
+                            <option value="">温度帯を選択する　</option>
+				            -->
+                            <option value="1">温度帯 #1</option>
+				            <option value="2">温度帯 #2</option>
+				            </select>
+						  </td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic">例外日付管理設定・（例外）製造日含め<div class="letter-control halign-r">(半角数字4桁以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-04" id="f1-04" size="10" value="2012/06/01" class="w80 ime-dis"></span></span><span class="mr10"> ～</span><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-05" id="f1-05" size="10" value="2012/08/30" class="w80 ime-dis"></span></span><span></span>
+								  <span class="cstm-tx num ml10">（例外）製造日含め <span class="cstm-tx-bg"><input type="text" maxlength="4" class=" w40 noticeTip ime-dis" id="c1-28" name="c1-28" value="60"></span></span>日
+				          </td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb5">
+				      <colgroup>
+				        <col class="ck7">
+				        <col class="ck8">
+				        <col class="ck8">
+				        <col class="ck8">
+				        <col class="ck9">
+				        <col class="ck10">
+				        <col class="ck11">
+				        <col class="ck12">
+				        <col class="ck12">
+			          </colgroup>
+							<thead>
+			          <tr>
+			            <th colspan="4">商品形態（風袋込み）</th>
+			            <th class="nowrap"><span>
+					        <input type="checkbox" value="01" class="c1-105" id="c1-135a" name="c1-135"><label for="c1-135a">不定貫</label>
+					        </span></th>
+			            <th>&nbsp;</th>
+			            <th class="nowrap"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><span>
+					        <input type="checkbox" value="01" class="c1-105" id="c1-135b" name="c1-135"><label for="c1-135b">JANコード無</label></span></th>
+			            <th colspan="2"></th>
+	              </tr>
+			          <tr>
+			            <th class="solo-w50">&nbsp;</th>
+			            <th>幅/長辺</th>
+			            <th>奥/短辺</th>
+			            <th>高さ</th>
+			            <th>重量</th>
+			            <th>入数</th>
+			            <th class="tbl-bd-wide-02-ic nowrap">JANコード<div class="letter-control">(半角数字13桁)</div></th>
+			            <th class="tbl-bd-wide-02-ic">ITFコード<div class="letter-control">(半角数字16桁)</div></th>
+			            <th class="tbl-bd-wide-02-ic">GTINコード<div class="letter-control">(半角数字14桁)</div></th>
+	              </tr>
+	            </thead>
+				      <tbody>
+				        <tr>
+				          <th class="nowrap ic-hlp">ピース</th>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="c1-28" name="c1-28"> g</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td class="emphasis nowrap"><div class="clr"><p class="flt-l"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></p><p class="flt-r"><span class="icbt-blue mt5 ml5"><span class="bt-label">規Ｂ</span></span><span class="ml5"><img height="13" width="23" class="ic-required tp-ic-side" alt="必須" src="/web2/jp/images/ic-must.gif"></span></p></div></td>
+				          <td>&nbsp;</td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="nowrap ic-hlp">パック</th>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="c1-28" name="c1-28"> g</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td class="disp-ic"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td>&nbsp;</td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="nowrap ic-hlp">ボール</th>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="c1-28" name="c1-28"> g</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="16" class="w95 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="nowrap ic-hlp">ケース</th>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28" value="185"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28" value="320"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28" value="180"> mm</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="c1-28" name="c1-28" value="2500"> g</span></span></td>
+				          <td class="mainline"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="c1-28" name="c1-28" value="10"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="c1-28" name="c1-28" value="4911678901237"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="16" class="w95 noticeTip" id="c1-28" name="c1-28" value="491167890123712"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip" id="c1-28" name="c1-28" value="49116789012371"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="nowrap ic-hlp">甲</th>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="c1-28" name="c1-28"> mm</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="c1-28" name="c1-28"> g</span></span></td>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="16" class="w95 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+		          </tbody>
+		        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="c1">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>商品特徴<div class="letter-control">(全角250文字以内(改行含む))</div></th>
+				          <td class="mainline">
+										<div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+						        <textarea cols="200" rows="5" maxlength="500" class="w525 autogrow set-limit noticeTip ime-actv" id="c1-25" name="c1-136">国産牛肉を使用し、豚脂を使ったハンバーグに、ソースを入れて食べやすくしてあります。</textarea>
+						        </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">500</span>文字</span></p>
+					        </div>
+						  </td>
+		            </tr>
+				        <tr>
+				          <th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>召し上がり方・利用方法<div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td class="mainline">
+										<div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+						        <textarea cols="200" rows="5" maxlength="860" class="w525 autogrow set-limit noticeTip ime-actv" id="c1-25" name="c1-136">凍ったままの商品を沸騰したお湯に入れて約10分間温めてください。
+国産牛肉を使用し、豚脂を使ったハンバーグに、ソースを入れて食べやすくしてあります。</textarea>
+						        </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">500</span>文字</span></p>
+									</div></td>
+		            </tr>
+				        <tr>
+				          <th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>使用・保管・廃棄上の注意<div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td class="mainline">
+										<div class="cstm-txarea charcount">
+										  <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">500</span>文字</span></p>
+									</div></td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+    <table class="justify">
+		   <tbody>
+		     <tr>
+		       
+               <td class="justify-r valign-b kikaku-webentry-btnarea"><div>
+               <a class="bt bt-tmp-save" href="#"><span class="bt-label">一時保存</span></a></div></td>
+	         </tr>
+	       </tbody>
+    </table><!--
+    <span class="cstm-txarea charcount"><span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+    <textarea cols="200" rows="5" maxlength="860" class="w525 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-3">※いったん解けたものを再び凍らせると品質が変わることがありますのでご注意ください。
+※袋が鍋のふちにふれたりはみ出すと袋が溶けることがありますのでご注意ください。
+※温めすぎると調理不良の原因になりますのでご注意ください。
+※調理の際、火傷には十分ご注意ください。</textarea>
+    </span></span></span></span></span>-->
+<p class="sub-ti mb5">企業情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb10">
+				      <colgroup>
+				        <col class="c1">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+								<tr>
+									<th colspan="2" class="bg-wht"><span class="tx-b">販売者</span></th>
+								</tr>
+
+							 <tr>
+							  <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label for="c1-100">企業名</label><div class="letter-control">(全角50文字以内)</div>
+							  </th>
+							  <td class="emphasis"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="株式会社インフォマート販売"></span></span>
+<span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+							</tr>
+				        <tr>
+				          <th class="ic-hlp">担当者名<div class="letter-control">(全角20文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class=" w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="和田美咲"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>住所<div class="letter-control">(全角50文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="東京都港区浜松町1-1-1"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>TEL<div class="letter-control">(半角15文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic pr30"></p>FAX<div class="letter-control">(半角15文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>PL加入有無</th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有</option>
+				            <option value="1">無</option>
+				            </select></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">備考<div class="letter-control">(全角50文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+								<tr>
+									<th colspan="2" class="bg-wht"><span class="tx-b">製造者</span></th>
+								</tr>
+
+							 <tr>
+							  <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label for="c1-100">企業名</label><div class="letter-control">(全角50文字以内)</div>
+							  </th>
+							  <td class="mainline"><!--<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w300 noticeTip" id="c1-28" name="c1-28" value=""></span></span> -->
+<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="株式会社インフォマート"></span></span>
+<span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+							</tr>
+				        <tr>
+				          <th class="ic-hlp">担当者名<div class="letter-control">(全角20文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class=" w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="和田美咲"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>住所<div class="letter-control">(全角50文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="東京都港区浜松町1-1-1"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>TEL<div class="letter-control">(半角15文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">FAX<div class="letter-control">(半角15文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>PL加入有無</th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有</option>
+				            <option value="1">無</option>
+				            </select></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">備考<div class="letter-control">(全角50文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+								<tr>
+									<th colspan="2" class="bg-wht"><span class="tx-b">工場</span></th>
+								</tr>
+
+							 <tr>
+							  <th class="ic-hlp"><label for="c1-100">企業名</label><div class="letter-control">(全角50文字以内)</div>
+							  </th>
+							  <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="株式会社インフォマート　東京工場"></span></span>
+<span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+							</tr>
+				        <tr>
+				          <th class="ic-hlp">担当者名<div class="letter-control">(全角20文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class=" w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="和田美咲"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">住所<div class="letter-control">(全角50文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="東京都港区浜松町1-1-1"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">TEL<div class="letter-control">(半角15文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">FAX<div class="letter-control">(半角15文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">備考<div class="letter-control">(全角50文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">原料仕込みから製品仕上げまでの<br>所有日数・時間<div class="letter-control">(半角数字3桁以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="1日2時間"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">製造ロット(CS)<div class="letter-control">(半角数字6桁以内)</div></th>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="6" rel="半角数字6桁以内" class="w50 noticeTip ime-dis" id="c1-" name="c1-">
+			              <input type="text" maxlength="6" rel="半角数字6桁以内" class="w50 noticeTip ime-dis" id="c1-28" name="c1-28" value="10000"></span></span>CS
+						  </td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">1日（8時間）稼働生産量 (CS)<div class="letter-control">(半角数字7桁以内)</div></th>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" rel="半角数字7桁以内" class="w50 noticeTip ime-dis" id="c1-28" name="c1-28" value="10000"></span></span>CS
+						  </td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp">受注可能最小生産量(CS)<div class="letter-control">(半角数字7桁以内)</div></th>
+				          <td><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" rel="半角数字7桁以内" class="w50 noticeTip ime-dis" id="c1-28" name="c1-28" value="100"></span></span>CS
+						  </td>
+		            </tr>
+								<tr>
+									<th colspan="2" class="bg-wht"><span class="tx-b">輸入者</span></th>
+								</tr>
+
+							 <tr>
+							  <th class="ic-hlp"><p class="disp-ic pr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label for="c1-100">企業名</label><div class="letter-control">(全角50文字以内)</div>
+							  </th>
+							  <td class="mainline"><!--<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="60" rel="全角30文字以内" class="w300 noticeTip" id="c1-28" name="c1-28" value=""></span></span> -->
+<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="株式会社インフォマート商事"></span></span>
+<span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+							</tr>
+				        <tr>
+				          <th class="ic-hlp">担当者名<div class="letter-control">(全角20文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class=" w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="和田美咲"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic pr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>住所<div class="letter-control">(全角50文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28" value="東京都港区浜松町1-27-16"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic pr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>TEL<div class="letter-control">(半角15文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="半角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic pr30"></p>FAX<div class="letter-control">(半角15文字以内)</div></th>
+				          <td class="mainline"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" rel="全角14文字以内" class="w150 noticeTip ime-dis" id="c1-28" name="c1-28" value="03-0000-0000"></span></span></td>
+		            </tr>
+				        <tr>
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic pr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>PL加入有無</th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有</option>
+				            <option value="1">無</option>
+				            </select></td>
+		            </tr>
+				        <tr>
+				          <th class="ic-hlp"><p class="disp-ic pr30"></p>備考<div class="letter-control">(全角50文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="c1-28" name="c1-28"></span></span></td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+		  </div>
+    <div class="tbl-r-gry">
+      <div class="sitesnav clr">
+          <ul class="clr tananv mr10">
+              <li class="sitesnav-hdr nowrap"><a href="0060.html" class="current">基本情報</a></li>
+              <li class="nowrap"><a href="0061.html">原材料情報</a></li>
+              <li class="nowrap"><a href="0065.html">包材情報</a></li>
+              <li class="last-child nowrap"><a href="0066.html">製造品質</a></li>
+          </ul>
+      </div>
+    </div>
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+				<td class="justify-r"><div><a class="bt bt-tmp-save" href="#"><span class="bt-label">一時保存</span></a><a class="bt bt-save" href="#"><span class="bt-label">保存する</span></a><a href="0071.html" class="bt bt-gre-large"><span class="bt-label">登録して提出へ</span></a>
+      </div></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">
+<!--        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul> -->
+        <div class="small">
+            <p class="credits">Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.</p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+
+    </div>
+	<!--ftr End-->
+</div>
+</body>
+</html>

@@ -1,0 +1,1095 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/sample/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/sample/js/jhc-sample-customcheck.js"></script>
+
+<style type="text/css">
+.mt95{margin-top:95px;}
+</style>
+</head>
+<body class="popup">
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w300"><a href="/"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"></a><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18" class="ml10"></a></div>
+
+
+        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#" class="ic ic-close"><span class="ic-label">閉じる</span></a></li>
+            </ul>
+        </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form id="" name="" method="post" action="../dummy">
+         <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>規格書WEB登録</h1></th><td class="desc"><div>WEB上で商品規格書の作成・編集ができます。</div></td>
+			<td class="nav">
+					<a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+				<table class="justify mb0">
+					<tbody>
+						<tr>
+							<td class="justify-l">
+								<div class="step-blk">
+									<span class="item current"><span class="num">1</span><span class="label">規格書を作成</span></span><span class="separator">></span><span class="item"><span class="num">2</span><span class="label">保存する</span></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+	<table class="hgrp-nv">
+	  <tbody>
+		<tr>
+		  <td>
+			<div class="tabs-link">
+			  <ul>
+				<li class="tab-01"><a href="02971.html"><span class="bg-tabs-link">規格書ライト</span></a></li>
+				<li class="tab-02"><a href="0290.html" class="current"><span class="bg-tabs-link">規格書スタンダード</span></a></li>
+				<li class="tab-03"><a href="0068.html"><span class="bg-tabs-link">取引先追加項目</span></a></li>
+				<li class="tab-04"><a href="0297.html"><span class="bg-tabs-link">自社管理項目</span></a></li>
+			  </ul>
+			</div></td>
+			<td class="nav"></td>
+		</tr>
+	  </tbody>
+	</table>
+
+			<table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l"><div class="tbl-r-gry">
+<div class="sitesnav clr">
+	<ul class="clr tananv mr10">
+		<li class="sitesnav-hdr nowrap"><a href="0290.html">基本情報</a></li>
+		<li class="nowrap"><a href="0291.html">原材料情報</a></li>
+		<li class="nowrap"><a href="0295.html" class="current">包材情報</a></li>
+		<li class="last-child nowrap"><a href="0296.html">製造品質</a></li>
+	</ul>
+	
+</div>
+		       
+<!--<div>（入力補助項目であることを説明するテキスト）</div>-->
+		         </div></td>
+						<td class="justify-r valign-b kikaku-webentry-btnarea"><div>
+                  <a class="bt" href="#"><span class="bt-label">一時保存</span></a><a class="bt" href="#"><span class="bt-label">作成中で保存する</span></a><a class="bt bt-org-large" href="#"><span class="bt-label">作成完了で保存する</span></a></div></td>
+	         </tr>
+	       </tbody>
+      </table>
+<div class="mb10"><a class="bt bt-preview" href="#"><span class="bt-label">プレビュー表示</span></a></div>
+<!--
+<table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l"><div class="tbl-r-gry">
+		         <table>
+		           <tbody><tr class="row-01 first-row last-row">
+		             <th class="first-cell"><div>レイアウト設定</div></th>
+		             <td class="valign-m"><div><select name="f1-01" class="cstm-select" id="f1-01">
+<option>全項目</option>
+<option>基本情報</option>
+<option>米トレ、トランス脂肪酸、アルコール</option>
+</select></div></td>
+		             <th class=""><div>編集区分</div></th>
+		             <td class="last-cell valign-m"><div><select name="f1-01" class="cstm-select" id="f1-01">
+<option>未完了</option>
+<option>-----</option>
+</select></div></td>
+	               </tr>
+	             </tbody></table>
+		         </div></td>
+<td class="justify-r valign-b"><div><a class="ic ic-caution02" href="#"><span class="ic-label">入力時のご注意</span></a><a class="bt bt-gre-large" href="#"><span class="bt-label">確認画面へ</span></a></div></td>
+	         </tr>
+	       </tbody>
+      </table>
+
+
+
+				<table class="justify">
+					<tbody>
+						<tr>
+							<td class="justify-r valign-b pl150">
+								<div><a href="#" class="bt bt-gre-large"><span class="bt-label">保存して終了</span></a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+-->
+
+<div class="grid-row">
+				<div class="grid-unit right w160  mt95">
+				 <div class="bd-grybg-lt"><div class="bd-grybg-rt"><div class="bd-grybg-rb"><div class="bd-grybg-lb">
+				  <div class="form-notes">
+					<ul>
+					  <li><a class="ic ic-caution02" href="#"> <span class="ic-label">入力時のご注意</span></a></li>
+					</ul>
+					<ul class="mt20">
+					  <li class="elem-first"><span class="line-blankwin-trailer"><a class="ic ic-blu-hlp" href="#"> 入力例 - 1</a></span></li>
+					  <li><span class="line-blankwin-trailer"><a class="ic ic-blu-hlp" href="#"> 入力例 - 2</a></span></li>
+					  <li><span class="line-blankwin-trailer"><a class="ic ic-blu-hlp" href="#"> 入力例 - 3</a></span></li>
+					</ul>
+				  </div>
+				</div></div></div></div>
+			 </div>
+
+			<div class="grid-unit w780 left">
+            <div class="tbl-r-gry mb5">
+<table>
+                    <tbody><tr class="row-01 first-row">
+                        <th class="first-cell nowrap"><div class="w200">取引先の必須項目を表示する</div></th>
+                        <td class="last-cell" colspan="3"><div><span class="cstm-radio mr5"><span><label for="f1-03b"></label><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a><span></span></span></span></div></td>
+                    </tr>
+                    <tr class="row-01 last-row">
+                        <th class="first-cell nowrap"><div>項目レイアウトを表示する</div></th>
+                        <td class="last-cell" colspan="3"><div><select name="f1-01" class="cstm-select" id="f1-01">
+<option>全項目</option>
+<option>基本情報</option>
+<option>米トレ、トランス脂肪酸、アルコール</option>
+</select></div></td>
+                    </tr>
+  </tbody></table>
+  </div>
+				<div class="form-intro pt5 mb10">
+				  <p>
+					<img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"> の項目は必ず入力してください。
+				  </p>
+				</div>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				    <colgroup>
+						<col class="c1">
+						<col class="c2">
+					  </colgroup>
+					  <tbody>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th colspan="2">規格書マスタ管理</th>
+						</tr>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th class="w170"><label for="c1-62">商品名</label>
+					      </th>
+						  <td>業務用冷凍ハンバーグ</td>
+					    </tr>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th class="w170"><label for="c1-63">規格書コード</label>
+					      </th>
+						  <td>G0000756-32DFC0B-13392464</td>
+					    </tr>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th class="tbl-bd-wide-02-ic w170"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p>
+						    <label for="c1-64">自社商品コード設定</label>
+						    <a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+						  <td>100100
+						    <!--<span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w200 ime-dis" id="c1-80" name="c1-80"></span></span>
+ <span class="cstm-checkbox"><span>
+					        <input type="checkbox" value="01" class="c1-105" id="c1-135a" name="c1-135"><label for="c1-135a">コード無</label></span> <span class="txt-separate">|</span> <span>
+					          <input type="checkbox" value="02" class="c1-105" id="c1-135b" name="c1-135"><label for="c1-135b">規格書マスタとして設定する</label></span></span> --></td>
+					    </tr>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th class="tbl-bd-wide-02-ic small-w-row">JICFS分類コード<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+						  <td>10203
+						    <!--<span class="cstm-radio"><span><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span></span> 大分類、中分類、小分類、細分類 --></td>
+					    </tr>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th><label for="c1-63">編集区分</label>
+					      </th>
+						  <td><span class="cstm-radio"><span>
+						    <input type="radio" checked="checked" id="c1-01a" name="c1-01">
+						    <label for="c1-01a">作成中</label>
+						    </span> <span class="txt-separate">|</span> <span>
+						      <input type="radio" id="c1-01b" name="c1-01">
+						      <label for="c1-01b">作成完了</label>
+						      </span></span></td>
+					    </tr>
+					  </tbody>
+					</table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				    <colgroup>
+						<col class="c1">
+						<col class="c2">
+					  </colgroup>
+					  <tbody>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th colspan="2"><span class="tx-b">画像情報</span></th>
+						</tr>
+							 <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+							  <th class="ic-hlp"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span><label for="c1-100">商品画像</label><img class="imgover ml5" height="19" width="16" src="/web2/jp/images/ic-hlp.gif" alt=""><br>（ピース単位の画像）
+							  </p></th>
+							  <td>
+<div class="article_choice40"><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w250 interlock-trigger switch-trigger ime-actv" id="c1-80" name="c1-80"></span></span><a href="#" class="bt bt-folder03 ml5"><span class="bt-label">参照</span></a><a href="#" class="bt bt-default ml10"><span class="bt-label">クリア</span></a>
+</div>
+<div class="article_img40"><img src="/web2/jp/images/noobject_50.gif" alt="images" width="40" height="40"></div>
+</td>
+							</tr>
+							 <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+							  <th><label for="c1-100">包材画像1</label><img class="imgover ml5" height="19" width="16" src="/web2/jp/images/ic-hlp.gif" alt=""><br>（ケース単位の画像）
+							  </th>
+							  <td>
+<div class="article_choice40"><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w250 interlock-trigger switch-trigger ime-actv" id="c1-80" name="c1-80"></span></span><a href="#" class="bt bt-folder03 ml5"><span class="bt-label">参照</span></a><a href="#" class="bt bt-default ml10"><span class="bt-label">クリア</span></a>
+</div>
+<div class="article_img40"><img src="/web2/jp/images/noobject_50.gif" alt="images" width="40" height="40"></div>
+</td>
+							</tr>
+							 <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+							  <th><label for="c1-100">包材画像2</label><img class="imgover ml5" height="19" width="16" src="/web2/jp/images/ic-hlp.gif" alt=""><br>（一括表示の画像）
+							  </th>
+							  <td>
+<div class="article_choice40"><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w250 interlock-trigger switch-trigger ime-actv" id="c1-80" name="c1-80"></span></span><a href="#" class="bt bt-folder03 ml5"><span class="bt-label">参照</span></a><a href="#" class="bt bt-default ml10"><span class="bt-label">クリア</span></a></div>
+<div class="article_img40"><img src="/web2/jp/images/noobject_50.gif" alt="images" width="40" height="40"></div>
+</td>
+							</tr>
+							 <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+							  <th><label for="c1-100">包材画像3</label><img class="imgover ml5" height="19" width="16" src="/web2/jp/images/ic-hlp.gif" alt=""><br>（その他の画像）
+							  </th>
+							  <td>
+<div class="article_choice40"><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w250 interlock-trigger switch-trigger ime-actv" id="c1-80" name="c1-80"></span></span><a href="#" class="bt bt-folder03 ml5"><span class="bt-label">参照</span></a><a href="#" class="bt bt-default ml10"><span class="bt-label">クリア</span></a></div>
+<div class="article_img40"><img src="/web2/jp/images/noobject_50.gif" alt="images" width="40" height="40"></div>
+</td>
+							</tr>
+					  </tbody>
+					</table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 tbl-checkbox-allergy">
+				      <colgroup>
+				        <col class="c1">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th colspan="2"><span class="tx-b">一括表示情報</span></th>
+						</tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">商品区分<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">冷凍食品</option>
+				            <option value="1">レトルト食品</option>
+				            <option value="2">食肉製品, ソーセージ, 蒲鉾類</option>
+				            </select></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>名称区分<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></p></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">名称</option>
+				            <option value="1">品名</option>
+				            <option value="2">種類別名称</option>
+				            </select></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            名称
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="200" rel="全角100文字以内" class="w500 noticeTip ime-actv" id="c1-28" name="c1-28" value="名称＿一括表示">
+				            </span></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            原材料名
+				            </p><div class="letter-control">(全角200文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea name="c1-136" id="c1-25" class="w500 autogrow set-limit noticeTip ime-actv" maxlength="400" rows="10" cols="200"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">500</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            内容量<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="430文字以内" cols="200" rows="1" maxlength="860" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span> </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            期限区分<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></p></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">賞味期限</option>
+				            <option value="1">消費期限</option>
+				            <option value="2">品質保証期限</option>
+				            </select></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            期限
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="300" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">150</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            保存方法<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" rel="全角430文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="">
+				            </span></span> <span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            販売者<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" rel="全角430文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="">
+				            </span></span> <span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            製造者<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" rel="全角430文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="">
+				            </span></span> <span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            輸入者<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" rel="全角430文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="">
+				            </span></span> <span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            加工者<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" rel="全角430文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="">
+				            </span></span> <span><a target="_blank" href="/21u-03_p02-1.html" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></span></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            原産国<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            でん粉含有量<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            調理方法<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="430文字以内" cols="200" rows="1" maxlength="860" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">430</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            使用上の注意<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="430文字以内" cols="200" rows="1" maxlength="860" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">860</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            使用方法<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="430文字以内" cols="200" rows="1" maxlength="860" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">430</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            殺菌方法<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="430文字以内" cols="200" rows="1" maxlength="860" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">430</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            固形量<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            内容総量<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            原料原産地<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            無脂乳固形分<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            乳脂肪分<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            凍結前加熱の有無<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            加熱調理の必要性<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            アルコール分<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全角100文字以内(改行含む))</div></th>
+				          <td><div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+				            <textarea rel="100文字以内" cols="200" rows="1" maxlength="200" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				            <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">100</span>文字</span></p>
+				            </div></td>
+			            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck13">
+				        <col class="ck14">
+				        <col class="ck8">
+				        <col class="ck8">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="4">その他表示項目の編集<a href="#" class="bt bt-add ml5"><span class="bt-label">行の追加</span></a><a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w-row"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            名称<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全行で全角430文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            値<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            </p><div class="letter-control">(全行で全角2000文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">削除</th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">移動</th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" class="w160 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></td>
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="860" class="w160 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="4000" class="w160 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></td>
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="4000" class="w160 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck6">
+				        <col class="ck6">
+				        <col class="ck6">
+				        <col class="ck6">
+				        <col class="ck6">
+				        <col class="ck6">
+				        <col class="ck6">
+		          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="7" class="w940">アレルギー情報<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a><span class="small ml5">※原材料情報に登録のあるアレルギー名を背景色で表示しています。編集を行う場合は原材料情報より行って下さい。</span></th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="allergy-base-color-1"><div class="halign-c">小麦</div></td>
+				          <td><div class="halign-c">そば</div></td>
+				          <td><div class="halign-c">卵</div></td>
+				          <td><div class="halign-c">乳</div></td>
+				          <td><div class="halign-c">落花生</div></td>
+				          <td><div class="halign-c">えび</div></td>
+				          <td><div class="halign-c">かに</div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td><div class="halign-c">あわび</div></td>
+				          <td><div class="halign-c">いか</div></td>
+				          <td><div class="halign-c">いくら</div></td>
+				          <td><div class="halign-c">オレンジ</div></td>
+				          <td><div class="halign-c">キウイフルーツ</div></td>
+				          <td><div class="halign-c">牛肉</div></td>
+				          <td><div class="halign-c">くるみ</div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td><div class="halign-c">さけ</div></td>
+				          <td><div class="halign-c">さば</div></td>
+				          <td class="allergy-base-color-2"><div class="halign-c">大豆</div></td>
+				          <td class="allergy-base-color-2"><div class="halign-c">鶏肉</div></td>
+				          <td class="allergy-base-color-2"><div class="halign-c">豚肉</div></td>
+				          <td><div class="halign-c">まつたけ</div></td>
+				          <td><div class="halign-c">もも</div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td><div class="halign-c">やまいも</div></td>
+				          <td><div class="halign-c">りんご</div></td>
+				          <td><div class="halign-c">ゼラチン</div></td>
+				          <td><div class="halign-c">バナナ</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="allergy-base-color-3"><div class="halign-c">米</div></td>
+				          <td class="allergy-base-color-3"><div class="halign-c">ごま</div></td>
+				          <td class="allergy-base-color-3"><div class="halign-c">魚介類</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+				          <td><div class="halign-c">&nbsp;</div></td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck5">
+				        <col class="ck6">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+						<tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+						  <th colspan="3"><span class="tx-b">栄養成分情報</span></th>
+						</tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic" colspan="2">対象名<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全角20文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" class=" w300 noticeTip ime-actv" id="c1-28" name="c1-28"></span></span>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic" colspan="2">栄養成分表示有無<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有　</option>
+				            <option value="1">無</option>
+				            </select>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w-row" rowspan="2">分析単位<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <th class="tbl-bd-wide-02-ic small-w"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>
+				            分析単位選択<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></p></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">100gあたり</option>
+				            <option value="1">100mlあたり</option>
+				            <option value="2">1個あたり</option>
+				            <option value="2">1食あたり</option>
+				            </select>
+				          </td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w">その他入力欄<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全角50文字以内)</div></th>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28"></span></span>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w" colspan="2">備考<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全角45文字以内)</div></th>
+				          <td>
+										<div class="cstm-txarea charcount"> <span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl"><textarea rel="45文字以内" cols="200" rows="1" maxlength="300" class="w500 autogrow set-limit noticeTip ime-actv" id="c1-3" name="c1-34"></textarea>
+				            </span></span></span></span>
+				              <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">150</span>文字</span></p></div>
+									</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck6">
+				        <col class="ck15">
+				        <col class="ck6">
+				        <col class="ck15">
+				        <col class="ck6">
+				        <col class="ck15">
+				        <col class="ck6">
+				        <col class="ck15">
+				        <col class="ck6">
+				        <col class="ck15">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">熱量(kcal)<p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p></th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">リン(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">βカロテン当量(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンB2(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">コレステロール(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">たんぱく質(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">鉄(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">レチノール当量(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ナイアシン(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">水溶性食物繊維(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">脂質(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">亜鉛(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンD(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンB6(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">不溶性食物繊維(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">炭水化物(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">銅(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンE(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンB12(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">食物繊維(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">ナトリウム(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">マンガン(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">αトコフェロール(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">葉酸(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">食塩相当量(g)<p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p></th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">水分(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">レチノール(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">βトコフェロール(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">パントテン酸(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">トランス脂肪酸(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">灰分(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">カロテン(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">γトコフェロール(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンC(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">&nbsp;</th>
+				          <td>&nbsp;</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">カリウム(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">αカロテン(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">δトコフェロール(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">飽和脂肪酸(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">&nbsp;</th>
+				          <td>&nbsp;</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">カルシウム(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">βカロテン(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンK(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">不飽和脂肪酸（一価）(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">&nbsp;</th>
+				          <td>&nbsp;</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic">マグネシウム(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">クリプトキサンチン(μg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">ビタミンB1(mg)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">不飽和脂肪酸（多価）(g)</th>
+				          <td><div class="right"><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" class="price w30 ime-dis" id="f2-01-01" name="f2-01-01"></span></span></div></td>
+				          <th class="tbl-bd-wide-02-ic">&nbsp;</th>
+				          <td>&nbsp;</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck13">
+				        <col class="ck14">
+				        <col class="ck8">
+				        <col class="ck8">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="4">その他栄養成分<a href="#" class="bt bt-add ml5"><span class="bt-label">行の追加</span></a><a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w-row">名称<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全行で全角2000文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">値<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全行で全角860文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">削除</th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">移動</th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="4000" class="w200 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></td>
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="4000" class=" w200 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span></td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="1720" class="w200 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="1720" class=" w200 noticeTip ime-actv" id="c1-28" name="c1-28">
+				            </span></span></td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+          <table class="justify-row mb10">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div> </div></td>
+							<td class="justify-r">
+								 
+							</td>
+              </tr>
+            </tbody>
+          </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck13">
+				        <col class="ck14">
+				        <col class="ck8">
+				        <col class="ck8">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="4" class="nowrap w500">包装への識別・認証マーク記載<a href="#" class="bt bt-add ml5"><span class="bt-label">行の追加</span></a><a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w-row">種類<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">認定機関<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a><div class="letter-control">(全行で全角2000文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">削除</th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">移動</th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">スチール缶材質表示マーク　</option>
+				            <option value="1">アルミ缶材質表示マーク　</option>
+				            <option value="2">PETボトル表示マーク　</option>
+				            </select>
+									</td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="4000" class="w250 noticeTip ime-actv" id="c1-28" name="c1-28" value="スチール缶リサイクル協会"></span></span>
+									</td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">スチール缶材質表示マーク　</option>
+				            <option value="1">アルミ缶材質表示マーク　</option>
+				            <option value="2">PETボトル表示マーク　</option>
+				            </select>
+									</td>
+				          <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="4000" class="w250 noticeTip ime-actv" id="c1-28" name="c1-28" value="スチール缶リサイクル協会"></span></span>
+									</td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+						<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck5">
+				        <col class="ck6">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="2">遺伝子組換え表示有無<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有　</option>
+				            <option value="1" selected>無</option>
+				            </select>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="2">原料原産地表示有無<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <td><select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">有　</option>
+				            <option value="1" selected>無</option>
+				            </select>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w-row" rowspan="2">トレーサビリティ<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+				          <th class="small-w"><p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span>米トレサ法対象区分</p></th>
+				          <td class="w525">
+										<select class="cstm-select" id="c1-5" name="c1-38">
+				            <option value="">対象外　</option>
+				            <option value="1">対象</option>
+				            </select>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="small-w">産地情報伝達方法</th>
+				          <td>
+										<span class="cstm-checkbox"><span>
+						        <input type="checkbox" value="01" class="c1-105" id="c1-135a" name="c1-135"><label for="c1-135a">包材に産地名を表示</label></span> <span class="txt-separate">|</span> <span>
+					          <input type="checkbox" value="02" class="c1-105" id="c1-135b" name="c1-135"><label for="c1-135b">その他</label></span></span>
+									</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck13">
+				        <col class="ck14">
+				        <col class="ck8">
+				        <col class="ck8">
+			          </colgroup>
+				      <tbody>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th colspan="4" class="nowrap w500">強調・注意喚起に関する表示<a href="#" class="bt bt-add ml5"><span class="bt-label">行の追加</span></a><a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a></th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <th class="tbl-bd-wide-02-ic small-w-row">表示種別<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全行で全角50文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">表示内容<a href="#" class="ml5"><img height="19" width="16" class="imgover" alt="" src="/web2/jp/images/ic-hlp.gif"></a>
+				            <div class="letter-control">(全行で全角2000文字以内)</div></th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">削除</th>
+				          <th class="tbl-bd-wide-02-ic small-w-row">移動</th>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="100" class="w160 noticeTip" id="c1-28" name="c1-28">
+				            </span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></td>
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="100" class="w160 noticeTip" id="c1-28" name="c1-28">
+				            </span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+				        <tr class="kbn-sys-01 kbn-sys-02 kbn-sys-03 kbn-sys-04">
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="4000" class="w160 noticeTip" id="c1-28" name="c1-28">
+				            </span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></td>
+				          <td class="nowrap"><span class="cstm-tx"><span class="cstm-tx-bg">
+				            <input type="text" maxlength="4000" class="w160 noticeTip" id="c1-28" name="c1-28">
+				            </span></span><a target="_blank" href="#" class="bt bt-list open-dialog-mdl"><span class="bt-label">一覧から選択</span></a></td>
+				          <td>
+										<div class="halign-c"><a href="#" class="bt bt-del"><span class="bt-label">削除</span></a></div>
+									</td>
+				          <td>
+										<div class="mt5 halign-c"><span class="sort-bt"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr.gif"><img height="15" width="15" alt="" src="/web2/jp/images/mym-bt-arr02.gif"></span></div>
+									</td>
+		            </tr>
+			          </tbody>
+			        </table>
+
+
+			  </div>
+</div>
+
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+							<td class="justify-r valign-b">
+								<div>							<a class="bt bt03" href="0295.html"><span class="bt-label">一時保存する</span></a><a class="bt bt-org-large mb5" href="0071.html"><span class="bt-label">保存する</span></a></div>
+							</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">
+<!--        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul> -->
+        <div class="small">
+            <p class="credits">Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.<a class="bt bt-close" href="#"><span class="bt-label">閉じる</span></a></p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

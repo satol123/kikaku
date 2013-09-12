@@ -1,0 +1,401 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_menu.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_menu.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.data-list table td.head-space.cell-01 { width:50px; }
+.data-list table td.head-space.cell-02 { width:15px; }
+.data-list table td.head-space.cell-03 { width:80px; }
+.data-list table td.head-space.cell-04 { width:auto; }
+.data-list table td.head-space.cell-05 { width:150px; }
+.data-list table td.head-space.cell-06 { width:60px; }
+.data-list table td.head-space.cell-07 { width:150px; }
+.data-list table td.head-space.cell-08 { width:70px; }
+.tbl-bd-wide-02 th { width:150px; }
+table.tbl-bd-wide-02 {table-layout:fixed !important;}
+</style>
+</head>
+<body class="page">
+<div class="menu-cnt">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w390"><a href="/"><img src="/web2/jp/images/logo-169x24.gif" alt="FOODS Info Mart" width="169" height="24"></a><a href="/"><img src="/web2/jp/images/logo-menu.gif" alt="ASP規格書システム" width="188" height="24" class="ml10"></a></div>
+        <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="/menu_010000.html" title="マイページ"><span>マイページ</span></a></li>
+            <li id="gnv-menu"><a href="menu_010101.html" title="メニュー検索"><span>メニュー検索</span></a></li>
+			<li id="gnv-menu-share"><a href="/menu_020105.html" title="メニュー共有"><span>メニュー共有</span></a></li>
+            <li id="gnv-input"><a href="/menu_020102.html" title="メニュー編集・承認"><span>メニュー編集・承認</span></a></li>
+            <li id="gnv-material"><a href="/menu_030101.html" title="材料・仕掛品管理"><span>材料・仕掛品管理</span></a></li>
+			<li id="gnv-set"><a href="/menu_040101.html" title="登録・設定"><span>登録・設定</span></a></li>
+            <li id="gnv-guid"><a href="#" title="ご利用ガイド"><span>ご利用ガイド</span></a></li>
+        </ul>
+        <div class="usrnv clr">
+            <h2>インフォダイニング 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+        </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form name="dummy-21u-03-01" action="dummy" method="post" id="dummy-21u-03-01">
+			<div class="height-wrap">
+				<table class="hgrp">
+					<tbody>
+						<tr>
+							<th class="heading"> <h1>仕掛品登録</h1>
+							</th>
+							<td class="desc"><div>仕掛品の詳細情報の登録・修正ができます。</div></td>
+							<td class="nav"><a href="/menu_030102.html" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+						</tr>
+					</tbody>
+				</table>
+
+<table class="justify mb10">
+        <tbody>
+          <tr>
+            <td class="justify-l"><div class="step-blk"><span class="item current"><span class="num">1</span><span class="label">登録</span></span><span class="separator">&gt;</span><span class="item"><span class="num">2</span><span class="label">完了</span></span></div></td>
+
+          </tr>
+        </tbody>
+      </table>
+
+				<table class="hgrp-nv">
+					<tbody>
+						<tr>
+							<td><div class="tabs-link">
+									<ul>
+										<li><a href="/menu_030401.html"><span class="bg-tabs-link">基本情報</span></a></li>
+										<li><a href="/menu_030402.html" class="current"><span class="bg-tabs-link">詳細情報</span></a></li>
+										<li><a href="/menu_030403.html"><span class="bg-tabs-link">追加項目</span></a></li>
+									</ul>
+								</div></td>
+							<td class="nav"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="justify">
+					<tbody>
+						<tr>
+							<td class="justify-l"></td>
+							<td class="justify-r"><div> <a class="bt bt-tmp-save" href="#"><span class="bt-label">一時保存する</span></a><a href="menu_030405.html" class="bt bt-org-large"><span class="bt-label">登録する</span></a></div></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="justify mb10">
+					<tbody>
+						<tr>
+							<td class="justify-l">
+									<div class="kikakusho-preview"><a class="bt bt-preview" onClick=" window.open('menu_030202.html', '_blank', 'width=1020,height=800,scrollbars=yes,resizable=yes'); return false;" href="menu_030202.html" ><span class="bt-label">プレビュー表示</span></a></div>
+								</td>
+                <td class="justify-r valign-b">
+                <div><a href="#" class="ic ic-caution02"><span class="ic-label">入力時のご注意</span></a></div>
+                </td>
+						</tr>
+					</tbody>
+      </table>
+				<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01 mb10">
+					<tbody>
+						<tr>
+							<th class="w160"><label for="f1-01">仕掛品コード</label>
+							</th>
+							<td class="w500">1501-H</td>
+						</tr>
+						<tr>
+							<th><label for="name">仕掛品名</label>
+							</th>
+							<td>豆腐ハンバーグだね</td>
+						</tr>
+						<tr>
+							<th> <label for="name-kana">仕掛品名フリガナ</label>
+							</th>
+							<td>トウフハンバーグダネ</td>
+						</tr>
+						<tr>
+							<th>備考</th>
+							<td>冷蔵庫にて保管。作成日をシールで貼り付けること。<br>2日以内に使用すること。</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="sub-ti pt5 mb5">原価管理</p>
+				<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01">
+					<tbody>
+						<tr>
+							<th class="w160"> <label for="f1-01">仕掛品単価</label>
+							</th>
+							<td class="w500">1,800円/<a class="bt bt-scale02" href="#"><span class="bt-label">個</span></a></td>
+						</tr>
+						<tr>
+							<th>換算値数量/単位<img class="imgover ml5" height="19" width="16" src="/web2/jp/images/ic-hlp.gif" alt=""></th>
+							<td><span class="cstm-tx"><span class="cstm-tx-bg">
+								<input type="text" value="2000" class="interlock-trigger w130 ime-dis" size="10" id="f1-01" name="f1-01">
+								</span></span>/<a class="bt bt-scale02" href="#"><span class="bt-label">g</span></a></td>
+						</tr>
+						<tr>
+							<th>歩留率</th>
+							<td><span class="cstm-tx"><span class="cstm-tx-bg">
+								<input type="text" value="100" class="interlock-trigger w60" size="10" id="f1-01" name="f1-01">
+								%</span></span>
+							</td>
+						</tr>
+						<tr>
+							<th>歩留単価/単位</th>
+							<td>0.9円/g</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="sub-ti pt5 mb5">アレルギー情報</p>
+				<div class="data-list mb10">
+					<table class="data-list-status">
+						<tbody>
+							<tr>
+								<td class="nowrap first-cell"><div class="tx02-l01">材料コード</div></td>
+								<td class="hdr-status"><div class="tx02-l01 center"><img width="3" height="19" alt="！" src="/web2/jp/images/ic-exclamation.gif"></div></td>
+								<td width="5%" class="cell-04 nowrap"><div class="tx02-l01">種別</div></td>
+								<td class="nowrap"><div class="tx02-l01">材料名 </div></td>
+								<td class="nowrap"><div class="tx02-l01">アレルギー</div></td>
+								<td class="nowrap"><div class="tx02-l01">コンタミの可能性</div></td>
+								<td class="nowrap"><div class="tx02-l01">原産国</div></td>
+								<td class="last-cell nowrap"><div class="tbl-r-ic txt02-l01">自動<br>
+										更新<img width="16" height="19" src="/web2/jp/images/ic-hlp.gif" alt="" class="imgover ml5"></div></td>
+							</tr>
+							<tr>
+								<td class="head-space cell-01 head-space-first"><div> </div></td>
+								<td class="head-space cell-02"><div> </div></td>
+								<td class="head-space cell-03"><div> </div></td>
+								<td class="head-space cell-04"><div> </div></td>
+								<td class="head-space cell-05"><div> </div></td>
+								<td class="head-space cell-06"><div> </div></td>
+								<td class="head-space cell-07"><div></div></td>
+								<td class="head-space cell-08 head-space-last"><div> </div></td>
+							</tr>
+							<tr>
+								<td class="list-cell"><div>A001</div></td>
+								<td class="list-cell"><div> </div></td>
+								<td class="list-cell nowrap"><div>材料</div></td>
+								<td class="list-cell nowrap"><div>絹豆腐<a href="#" class="icbt-org-gra ml5"><span class="bt-label">規格書</span></a></div></td>
+								<td class="list-cell nowrap"><div>大豆</div></td>
+								<td class="list-cell nowrap"><div>無</div></td>
+								<td class="list-cell"><div>日本</div></td>
+								<td class="list-cell edit-checkbox"><div class="center">しない</div></td>
+							</tr>
+							<!--<tr>
+      <th colspan="3" class="status-bgcolor-cell-06 list-cell"><div>アレルギー</div></th>
+      <td colspan="2" class="list-cell"><div></div></td>
+     <th class="status-bgcolor-cell-06 list-cell nowrap"><div>コンタミの可能性</div></th>
+      <td class="list-cell"><div>無</div></td>
+      <td colspan="4" class="list-cell"><div></div></td>
+      </tr>-->
+							<tr>
+								<td class="list-space-none" colspan="8"><div> </div></td>
+							</tr>
+							<tr>
+								<td class="list-cell"><div>A002</div></td>
+								<td class="list-cell"><div> </div></td>
+								<td class="list-cell nowrap"><div>材料</div></td>
+								<td class="list-cell nowrap"><div>鶏肉<a href="#" class="icbt-org-gra ml5"><span class="bt-label">規格書</span></a></div></td>
+								<td class="list-cell nowrap"><div>鶏肉</div></td>
+								<td class="list-cell nowrap"><div>無</div></td>
+								<td class="list-cell"><div>日本</div></td>
+								<td class="list-cell edit-checkbox"><div class="center">しない</div></td>
+							</tr>
+							<!--<tr>
+      <th colspan="3" class="status-bgcolor-cell-06 list-cell"><div>アレルギー</div></th>
+      <td colspan="2" class="list-cell"><div></div></td>
+     <th class="status-bgcolor-cell-06 list-cell nowrap"><div>コンタミの可能性</div></th>
+      <td class="list-cell"><div>無</div></td>
+      <td colspan="4" class="list-cell"><div></div></td>
+      </tr>-->
+							<tr>
+								<td class="list-space-none" colspan="8"><div> </div></td>
+							</tr>
+							<tr>
+								<td class="list-cell"><div>A003</div></td>
+								<td class="list-cell slip-status"><div class="center"><img width="15" height="19" alt="非" src="/web2/jp/images/slip-ic-undo.gif"></div></td>
+								<td class="list-cell nowrap"><div>材料</div></td>
+								<td class="list-cell nowrap"><div>薄力粉</div></td>
+								<td class="list-cell nowrap"><div>小麦</div></td>
+								<td class="list-cell nowrap"><div>無</div></td>
+								<td class="list-cell"><div>アメリカ合衆国</div></td>
+								<td class="list-cell edit-checkbox"><div class="center">する</div></td>
+							</tr>
+							<tr>
+								<td class="list-space-none" colspan="8"><div> </div></td>
+							</tr>
+							<tr>
+								<td class="list-cell"><div>A004</div></td>
+								<td class="list-cell slip-status"><div class="center"></div></td>
+								<td class="list-cell nowrap"><div>材料</div></td>
+								<td class="list-cell nowrap"><div>サラダ油</div></td>
+								<td class="list-cell nowrap"><div><span class="cstm-radio"><span class="selected">アレルギー物質なし<a href="#"><img width="18" height="19" src="/web2/jp/images/ic-list.gif" alt="一覧から選択"></a></span></span></div></td>
+								<td class="list-cell nowrap"><div>
+										<select class="cstm-select" id="c1-5" name="c1-38">
+											<option value="">有</option>
+											<option value="1" selected="selected">無</option>
+										</select>
+										<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="price w100" size="10" id="f2-2" name="f2-2"></span></span></div></td>
+								<td class="list-cell"><div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w100" size="10" id="f2-" name="f2-"></span></span></div></td>
+								<td class="list-cell edit-checkbox"><div class="center"></div></td>
+							</tr>
+							<tr>
+								<td class="list-space" colspan="8"><div> </div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<table class="justify">
+					<tbody>
+						<tr>
+							<td class="justify-r"><a onclick="disp('材料情報を反映してよろしいですか？','menu_030403.html')" class="bt bt-reload" href="#"><span class="bt-label">材料からアレルギー情報を反映</span></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+					<tbody>
+						<tr>
+							<th colspan="7">アレルギー物質 </th>
+						</tr>
+						<tr>
+							<td class="checkbox-width allergy-7"><span>小麦</span></td>
+							<td class="checkbox-width"><span>そば</span></td>
+							<td class="checkbox-width"><span>卵</span></td>
+							<td class="checkbox-width"><span>乳</span></td>
+							<td class="checkbox-width"><span>落花生</span></td>
+							<td class="checkbox-width"><span>えび</span></td>
+							<td class="checkbox-width"><span>かに</span></td>
+						</tr>
+						<tr>
+							<td class="checkbox-width"><span>あわび</span></td>
+							<td class="checkbox-width"><span>いか</span></td>
+							<td class="checkbox-width"><span>いくら</span></td>
+							<td class="checkbox-width"><span>オレンジ</span></td>
+							<td class="checkbox-width nowrap"><span>キウイフルーツ</span></td>
+							<td class="checkbox-width"><span>牛肉</span></td>
+							<td class="checkbox-width"><span>くるみ</span></td>
+						</tr>
+						<tr>
+							<td class="checkbox-width"><span>さけ</span></td>
+							<td class="checkbox-width"><span>さば</span></td>
+							<td class="checkbox-width allergy-18"><span>大豆</span></td>
+							<td class="checkbox-width allergy-18"><span>鶏肉</span></td>
+							<td class="checkbox-width"><span>豚肉</span></td>
+							<td class="checkbox-width"><span>まつたけ</span></td>
+							<td class="checkbox-width"><span>もも</span></td>
+						</tr>
+						<tr>
+							<td class="checkbox-width"><span>やまいも</span></td>
+							<td class="checkbox-width"><span>りんご</span></td>
+							<td class="checkbox-width"><span>ゼラチン</span></td>
+							<td class="checkbox-width"><span>バナナ</span></td>
+							<td class="checkbox-width">&nbsp;</td>
+							<td class="checkbox-width">&nbsp;</td>
+							<td class="checkbox-width">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="checkbox-width"><span>米</span></td>
+							<td class="checkbox-width"><span>ごま</span></td>
+							<td class="checkbox-width"><span>魚介類</span></td>
+							<td class="checkbox-width">&nbsp;</td>
+							<td class="checkbox-width">&nbsp;</td>
+							<td class="checkbox-width">&nbsp;</td>
+							<td class="checkbox-width">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="7"><span>アレルギー物質なし</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01">
+					<tbody>
+						<tr>
+							<th class="w160"><div>コンタミの可能性<br><span class="letter-control">（全角128文字以内）</span></div></th>
+							<td class="w500"><div>
+									<select class="custom-select" name="f3-05" id="f3-05">
+										<option>有</option>
+										<option>無</option>
+									</select><span class="cstm-tx ml5"><span class="cstm-tx-bg">
+								<input type="text" maxlength="60" rel="全角128文字以内" class="w300 noticeTip ime-actv" id="c1-28" name="c1-28" value="コンタミ">
+								</span></span></div></td>
+						</tr>
+						<tr>
+							<th><div>カロリー（１食あたり）</div></th>
+							<td><div><span class="cstm-tx"><span class="cstm-tx-bg">
+									<input type="text" name="f2-2" id="f2-2" size="10" class="price interlock-trigger w100">
+									</span></span>kcal</div></td>
+						</tr>
+						<tr>
+							<th><div>食塩相当量（１食あたり）</div></th>
+							<td><div><span class="cstm-tx"><span class="cstm-tx-bg">
+									<input type="text" name="f2-2" id="f2-2" size="10" class="price interlock-trigger w100">
+									</span></span>g</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<table class="justify-row">
+				<tbody>
+					<tr>
+						<td class="justify-l"><a href="/menu_030102.html" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+						<td class="justify-r"><div> <a class="bt bt-tmp-save" href="#"><span class="bt-label">一時保存する</span></a><a class="bt bt-org-large" href="menu_030405.html"><span class="bt-label">登録する</span></a></div></td>
+					</tr>
+				</tbody>
+			</table>
+			<!--Footer Help Start-->
+			<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+			<div class="ftr-hlp">
+				<div class="inner"><span class="tx-hlp">
+					<label for="s">ヘルプ</label>
+					</span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div>
+			</div>
+			<!--Footer Help End-->
+		</form>
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+	<div class="ftr">
+		<ul class="ftr-nv clr">
+			<li><a href="#">マイページ</a></li>
+			<li><a href="#">ご利用ガイド</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+			<li>お客様番号：<span class="tx-b">564231897</span></li>
+		</ul>
+		<div class="small">
+			<p class="credits">Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.
+				<!--<a class="bt bt-close" href="#"><span class="bt-label">閉じる</span></a>-->
+			</p>
+			<p class="number">S217739JP6EW17</p>
+		</div>
+	</div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+<script type="text/javascript" src="/js/modal.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
+</body>
+</html>

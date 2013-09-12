@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>フーズインフォマートＡＳＰ規格書システム</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="test_files/common.css">
+<link rel="stylesheet" type="text/css" href="test_files/parts.css">
+<link rel="stylesheet" type="text/css" href="test_files/print.css">
+<link rel="stylesheet" type="text/css" href="test_files/controls.css">
+<link rel="stylesheet" type="text/css" href="test_files/common_kikaku.css">
+<link rel="stylesheet" type="text/css" href="test_files/parts_kikaku.css">
+<link rel="stylesheet" type="text/css" href="test_files/jquery-ui.css">
+<style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+
+/** reset styling **/
+
+.firebugResetStyles {
+
+    z-index: 2147483646 !important;
+
+    top: 0 !important;
+
+    left: 0 !important;
+
+    display: block !important;
+
+    border: 0 none !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    outline: 0 !important;
+
+    min-width: 0 !important;
+
+    max-width: none !important;
+
+    min-height: 0 !important;
+
+    max-height: none !important;
+
+    position: fixed !important;
+
+    transform: rotate(0deg) !important;
+
+    transform-origin: 50% 50% !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    background: transparent none !important;
+
+    pointer-events: none !important;
+
+    white-space: normal !important;
+
+}
+
+
+
+.firebugBlockBackgroundColor {
+
+    background-color: transparent !important;
+
+}
+
+
+
+.firebugResetStyles:before, .firebugResetStyles:after {
+
+    content: "" !important;
+
+}
+
+/**actual styling to be modified by firebug theme**/
+
+.firebugCanvas {
+
+    display: none !important;
+
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.firebugLayoutBox {
+
+    width: auto !important;
+
+    position: static !important;
+
+}
+
+
+
+.firebugLayoutBoxOffset {
+
+    opacity: 0.8 !important;
+
+    position: fixed !important;
+
+}
+
+
+
+.firebugLayoutLine {
+
+    opacity: 0.4 !important;
+
+    background-color: #000000 !important;
+
+}
+
+
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+
+    width: 1px !important;
+
+    height: 100% !important;
+
+}
+
+
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+
+    width: 100% !important;
+
+    height: 1px !important;
+
+}
+
+
+
+.firebugLayoutLineTop {
+
+    margin-top: -1px !important;
+
+    border-top: 1px solid #999999 !important;
+
+}
+
+
+
+.firebugLayoutLineRight {
+
+    border-right: 1px solid #999999 !important;
+
+}
+
+
+
+.firebugLayoutLineBottom {
+
+    border-bottom: 1px solid #999999 !important;
+
+}
+
+
+
+.firebugLayoutLineLeft {
+
+    margin-left: -1px !important;
+
+    border-left: 1px solid #999999 !important;
+
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.firebugLayoutBoxParent {
+
+    border-top: 0 none !important;
+
+    border-right: 1px dashed #E00 !important;
+
+    border-bottom: 1px dashed #E00 !important;
+
+    border-left: 0 none !important;
+
+    position: fixed !important;
+
+    width: auto !important;
+
+}
+
+
+
+.firebugRuler{
+
+    position: absolute !important;
+
+}
+
+
+
+.firebugRulerH {
+
+    top: -15px !important;
+
+    left: 0 !important;
+
+    width: 100% !important;
+
+    height: 14px !important;
+
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
+
+    border-top: 1px solid #BBBBBB !important;
+
+    border-right: 1px dashed #BBBBBB !important;
+
+    border-bottom: 1px solid #000000 !important;
+
+}
+
+
+
+.firebugRulerV {
+
+    top: 0 !important;
+
+    left: -15px !important;
+
+    width: 14px !important;
+
+    height: 100% !important;
+
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
+
+    border-left: 1px solid #BBBBBB !important;
+
+    border-right: 1px solid #000000 !important;
+
+    border-bottom: 1px dashed #BBBBBB !important;
+
+}
+
+
+
+.overflowRulerX > .firebugRulerV {
+
+    left: 0 !important;
+
+}
+
+
+
+.overflowRulerY > .firebugRulerH {
+
+    top: 0 !important;
+
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.fbProxyElement {
+
+    position: fixed !important;
+
+    pointer-events: auto !important;
+
+}
+
+</style></head><body class="page" id="body"><input id="memberRole" value="" type="hidden"><script src="test_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="test_files/jquery-1.js"></script>
+<script type="text/javascript" src="test_files/jquery_002.js"></script>
+<script type="text/javascript" src="test_files/jquery.js"></script>
+<script type="text/javascript" src="test_files/jquery-ui.js"></script>
+<script type="text/javascript" src="test_files/modal.js"></script>
+<script type="text/javascript" src="test_files/projectCommonJs.js"></script>
+<script type="text/javascript" src="test_files/hcommon.js"></script>
+<script type="text/javascript" src="test_files/controls_common.js"></script>
+<script type="text/javascript" src="test_files/kikaku_check.js"></script>
+
+    
+    <span id="jsArea"></span>
+    
+	<a name="pagetop"></a>
+    
+		<!--規格書B票 #15813
+		<table id="waitTable" width="950" border="0" cellspacing="0" cellpadding="0" style="display: none;">
+        <tr>
+            <td>
+                <div class="loading-page"></div>
+                <p class="loading-tx">処理中です。しばらくお待ちください。...</p>
+            </td>
+        </tr>
+		</table>-->
+		<div class="contents" style="display: none;" id="waitTable">
+			<div class="loading-page"></div>
+			<p class="loading-tx">読込み中です。しばらくお待ち下さい。</p>
+		</div>
+        <div id="baseTable" class="kaite">
+          <!--hdr Start-->
+            
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="test_files/logo-169x24.gif" alt="FOODS Info Mart" height="24" width="169"></a><a href="http://www2.awsinfomart.co.jp/"><img src="test_files/logo-k.gif" alt="ASP規格書システム" class="ml10" height="24" width="150"></a></div>
+        <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="http://www2.awsinfomart.co.jp/kikaku/kikakumypage.page"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="http://www2.awsinfomart.co.jp/kikaku/kikakusearch.page"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="http://www2.awsinfomart.co.jp/kikaku/kikakucustomerstatuslist.page"><span>取引先マッチング</span></a></li>
+            <li id="gnav-submit-req"><a href="http://www2.awsinfomart.co.jp/kikaku/kikakubuyerdependmanage.page" class="current"><span>提出依頼管理</span></a></li>
+            <li id="gnv-pickup"><a href="http://www2.awsinfomart.co.jp/kikaku/kikakukaisyuuproductgrouplist.page?mode=1&amp;tab_kbn"><span>回収状況管理</span></a></li>
+            <li id="gnv-control"><a href="http://www2.awsinfomart.co.jp/kikaku/kikakubuymenu.page"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="http://www2.awsinfomart.co.jp/shinrai/kikaku/guide/guide.page?uid=b00000"><span>ご利用ガイド</span></a></li>
+        </ul>
+        
+        
+        
+		<div class="usrnv clr">
+			<ul><li><a href="http://www2.awsinfomart.co.jp/kikaku/kikakuadminlist.page">管理画面へ戻る</a>&nbsp;&nbsp;</li></ul>
+            <h2>&nbsp;<span id="lblHeaderUserName">買テスト企業０　買テスト担当者０</span>様</h2>
+            <ul>
+                <li><a href="http://www2.awsinfomart.co.jp/kikaku/kikakulogin.page">ログアウト</a></li>
+            </ul>
+       </div>
+      </div>
+    
+    
+            <!--hdr End-->
+
+            <!--Contents Start-->
+            <div class="contents">
+                
+     <div id="AllBuyerDependPanel">
+    <style type="text/css">
+/*<![CDATA[*/
+
+.head-space.cell-01{width:120px;}
+.head-space.cell-02{width:auto;}
+.head-space.cell-03{width:140px;}
+.head-space.cell-04{width:180px;}
+.head-space.cell-05{width:300px;}
+
+.data-list .tdnobottom{border-bottom:0px !important;}
+.data-list .tdnotop{border-top:0px !important;}
+
+.word-break {
+    word-wrap:break-word;overflow:hidden
+
+}
+
+/*]]>*/
+</style>
+<!--Contents Start-->
+   <div class="contents">
+   <form id="form" name="" method="post" action="kikakuallbuyerdepend.page?144-1.IFormSubmitListener-body-bodyContainer-AllBuyerDependPanel-form&amp;sessionFlg99802=1" onsubmit="return validatorSubmit()" onkeydown="if (event.keyCode == 13) return true;"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input name="form_hf_0" id="form_hf_0" type="hidden"></div>
+     <div class="height-wrap">
+       <table class="hgrp">
+         <tbody>
+           <tr>
+             <th class="heading"><h1>一括提出依頼</h1></th><td class="desc"><div>取引先へのコメントを記入後、提出期限日を設定の上、「確認画面へ」を押してください。</div></td>
+             <td class="nav"><a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+           </tr>
+         </tbody>
+       </table>
+       <input value="999026" name="userCd" id="userCd" type="hidden">
+       
+       <table class="justify">
+         <tbody><tr>
+           <td class="justify-r"><div><a class="bt bt-gre-large" id="btnConfirmTop" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById('form_hf_0'); e.name='btnConfirmTop'; e.value='x';var f=document.getElementById('form');var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value='';e.name='form_hf_0'; return false;}"><span class="bt-label">確認画面へ</span></a></div></td>
+         </tr>
+       </tbody></table>
+       <table class="tbl-bd-wide-06 tbl-bd-wide-02-prod-reg-02">
+         <tbody>
+           <tr>
+             <th class="nowrap"><div><p class="disp-ic"><img class="ic-must" alt="必須" src="test_files/ic-must.gif" height="13" width="23"></p>提出期限日</div></th>
+               <td class="highlight" id="tdTxtDeadlineDay">
+                 <div><span class="cstm-tx"><span class="cstm-tx-bg">
+                                <input name="tdTxtDeadlineDay:txtDeadlineDay" size="10" maxlength="10" class="interlock-trigger switch-trigger w80 date-unit ime-dis" value="2013/04/25" id="txtDeadlineDay" onkeydown="if (event.keyCode == 13) return false;" url="/kikaku/kikakuselcalendar.page?fnm=form&amp;inm=txtDeadlineDay" type="text">
+</span><span id="week-txtDeadlineDay">(木)</span></span></div>
+               </td>
+             <th class="nowrap">自社担当者</th>
+             <td>
+               <div>
+                 <select class="cstm-select w160" name="selBuyUserId" id="f1-02">
+<option selected="selected" value="b00000">買テスト担当者０</option>
+</select>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <th class="tbl-bd-wide-02-ic w120 pt5 nowrap">
+               <div class="ic-hlp w120">取引先への<br>コメント<!--<img src="/images/ic-hlp.gif" alt="" width="16" height="19" class="imgover ml5">-->
+               <div class="letter-control">(全角1000文字以内)
+               </div>
+               </div>
+             </th>
+               <td class="highlight" id="tdTxtMemo">
+                 <div class="cstm-txarea charcount">
+                   <span class="cstm-txarea-bg-tl">
+                     <span class="cstm-txarea-bg-tr">
+                       <span class="cstm-txarea-bg-br">
+                         <span class="cstm-txarea-bg-bl">
+                           <textarea name="tdTxtMemo:txtMemo" id="c1-27" class="w310 autogrow set-limit noticeTip" maxlength="2000" rows="10" cols="60" rel="全角1000文字以内"></textarea>
+                         </span>
+                       </span>
+                     </span>
+                   </span>
+                           <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p>
+                  </div>
+               </td>
+             <th class="tbl-bd-wide-02-ic w120 pt5 nowrap">
+               <div class="ic-hlp w120">
+                 <p class="disp-ic"><img class="ic-unpublish" alt="非公開" src="test_files/ic-unpublish.gif" height="13" width="33">
+                 </p>社内用メモ<div class="letter-control">(全角200文字以内)</div></div></th>
+               <td id="tdTxtBuyMemo">
+                 <div class="cstm-txarea charcount">
+                   <span class="cstm-txarea-bg-tl">
+                     <span class="cstm-txarea-bg-tr">
+                       <span class="cstm-txarea-bg-br">
+                         <span class="cstm-txarea-bg-bl">
+                           <textarea name="tdTxtBuyMemo:txtBuyMemo" id="c1-27" class="w310 autogrow set-limit noticeTip" maxlength="2000" rows="10" cols="60" rel="全角200文字以内"></textarea>
+                         </span></span></span></span>
+                <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">1000</span>文字</span></p>
+                </div>
+               </td>
+             </tr>
+         </tbody>
+       </table>
+          <table class="justify mt10">
+            <tbody>
+              <tr>
+                <td class="justify-l" id="pageMoveTopContainer">
+                <div class="paging" id="pageMoveTop">
+<div class="paging">
+<span id="ken">件数：<span id="sum">20</span>件</span>
+<span class="prev"><span id="prev" class="inactive">‹ 前へ</span></span><span class="num"><span id="pageLink"><em class="current"><span id="pageNumber">1</span></em></span></span><span class="next"><span id="next" class="inactive">次へ ›</span></span>
+</div>
+</div></td>
+                <td class="justify-r"><div class="serach-results-filter"><label for="f3-01">並び順</label>
+                  <select class="custom-select" name="selSortno" id="f3-01" onchange="setWaitDspWin();document.getElementById('form_hf_0').value='kikakuallbuyerdepend.page?144-1.IOnChangeListener-body-bodyContainer-AllBuyerDependPanel-form-selSortno&amp;sessionFlg99802=1';document.getElementById('form').submit();">
+<option selected="selected" value="1">登録日(降順)</option>
+<option value="2">登録日(昇順)</option>
+<option value="3">自社商品コード(昇順)</option>
+<option value="4">自社商品コード(降順)</option>
+<option value="5">取引先コード(降順)</option>
+<option value="6">取引先コード(昇順)</option>
+<option value="7">取引先(昇順)</option>
+<option value="8">取引先(降順)</option>
+</select> <label for="f3-02">表示数</label>
+                  <select class="custom-select w50" name="selLineCnt" id="f3-02" onchange="setWaitDspWin();document.getElementById('form_hf_0').value='kikakuallbuyerdepend.page?144-1.IOnChangeListener-body-bodyContainer-AllBuyerDependPanel-form-selLineCnt&amp;sessionFlg99802=1';document.getElementById('form').submit();">
+<option selected="selected" value="20">20</option>
+<option value="40">40</option>
+<option value="60">60</option>
+<option value="80">80</option>
+<option value="100">100</option>
+</select>
+                  </div></td>
+              </tr>
+            </tbody>
+          </table>
+    <div class="data-list">
+      <table>
+        <tbody>
+          <tr class="first-row">
+              <td class="first-cell nowrap w120"><div>自社商品コード<br>【取引先商品コード】</div></td>
+              <td><div class="w200">依頼商品名<br>【商品分類】</div></td>
+              <td><div class="w140">規格・入数／単位</div></td>
+              <td><div class="w180">取引先</div></td>
+              <td class="last-cell w300"><div>規格書区分</div></td>
+          </tr>
+          <tr>
+            <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+            <td class="head-space cell-02"><div>&nbsp;</div></td>
+            <td class="head-space cell-03"><div>&nbsp;</div></td>
+            <td class="head-space cell-04"><div>&nbsp;</div></td>
+            <td class="head-space cell-05 head-space-last"><div>&nbsp;</div></td>
+          </tr>
+         </tbody><tbody id="grid-0">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR025</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト5####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">卸売テスト企業０</div>
+           		<input value="54465" name="grid:1:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn0"><span class=""><input name="grid:1:radItemKbn" value="1" id="radItemKbn0-1" type="radio"><label for="radItemKbn0-1">ベーシック</label></span><span><input name="grid:1:radItemKbn" checked="checked" value="0" id="radItemKbn0-0" type="radio"><label for="radItemKbn0-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:1:radItemKbn" value="2" id="radItemKbn0-2" type="radio"><label for="radItemKbn0-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54465" name="grid:1:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-1">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR021</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト1####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">卸売テスト企業０</div>
+           		<input value="54461" name="grid:2:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn1"><span class=""><input name="grid:2:radItemKbn" value="1" id="radItemKbn1-1" type="radio"><label for="radItemKbn1-1">ベーシック</label></span><span><input name="grid:2:radItemKbn" checked="checked" value="0" id="radItemKbn1-0" type="radio"><label for="radItemKbn1-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:2:radItemKbn" value="2" id="radItemKbn1-2" type="radio"><label for="radItemKbn1-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54461" name="grid:2:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-2">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR029</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト9####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">卸売テスト企業０</div>
+           		<input value="54469" name="grid:3:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn2"><span class=""><input name="grid:3:radItemKbn" value="1" id="radItemKbn2-1" type="radio"><label for="radItemKbn2-1">ベーシック</label></span><span class="checked"><input name="grid:3:radItemKbn" checked="checked" value="0" id="radItemKbn2-0" type="radio"><label for="radItemKbn2-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:3:radItemKbn" value="2" id="radItemKbn2-2" type="radio"><label for="radItemKbn2-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54469" name="grid:3:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-3">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR019</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト9####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">卸売テスト企業０</div>
+           		<input value="54459" name="grid:4:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn3"><span class=""><input name="grid:4:radItemKbn" value="1" id="radItemKbn3-1" type="radio"><label for="radItemKbn3-1">ベーシック</label></span><span class="checked"><input name="grid:4:radItemKbn" checked="checked" value="0" id="radItemKbn3-0" type="radio"><label for="radItemKbn3-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:4:radItemKbn" value="2" id="radItemKbn3-2" type="radio"><label for="radItemKbn3-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54459" name="grid:4:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-4">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR018</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト8####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="54458" name="grid:5:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn4"><span class=""><input name="grid:5:radItemKbn" value="1" id="radItemKbn4-1" type="radio"><label for="radItemKbn4-1">ベーシック</label></span><span class="checked"><input name="grid:5:radItemKbn" checked="checked" value="0" id="radItemKbn4-0" type="radio"><label for="radItemKbn4-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:5:radItemKbn" value="2" id="radItemKbn4-2" type="radio"><label for="radItemKbn4-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54458" name="grid:5:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-5">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR011</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト1####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">卸売テスト企業０</div>
+           		<input value="54451" name="grid:6:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn5"><span class=""><input name="grid:6:radItemKbn" value="1" id="radItemKbn5-1" type="radio"><label for="radItemKbn5-1">ベーシック</label></span><span class="checked"><input name="grid:6:radItemKbn" checked="checked" value="0" id="radItemKbn5-0" type="radio"><label for="radItemKbn5-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:6:radItemKbn" value="2" id="radItemKbn5-2" type="radio"><label for="radItemKbn5-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54451" name="grid:6:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-6">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">ATHR003</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####別名テスト####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">売_有本</div>
+           		<input value="54449" name="grid:7:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn6"><span class=""><input name="grid:7:radItemKbn" value="1" id="radItemKbn6-1" type="radio"><label for="radItemKbn6-1">ベーシック</label></span><span class="checked"><input name="grid:7:radItemKbn" checked="checked" value="0" id="radItemKbn6-0" type="radio"><label for="radItemKbn6-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:7:radItemKbn" value="2" id="radItemKbn6-2" type="radio"><label for="radItemKbn6-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="54449" name="grid:7:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120">URI0001</div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-7">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">TEST9999</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####テスト####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格入り数</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="45067" name="grid:8:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn7"><span class=""><input name="grid:8:radItemKbn" value="1" id="radItemKbn7-1" type="radio"><label for="radItemKbn7-1">ベーシック</label></span><span class="checked"><input name="grid:8:radItemKbn" checked="checked" value="0" id="radItemKbn7-0" type="radio"><label for="radItemKbn7-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:8:radItemKbn" value="2" id="radItemKbn7-2" type="radio"><label for="radItemKbn7-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="45067" name="grid:8:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120">URI0001</div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-8">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">TEST9999</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">####テスト####</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">規格</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="45068" name="grid:9:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn8"><span class=""><input name="grid:9:radItemKbn" value="1" id="radItemKbn8-1" type="radio"><label for="radItemKbn8-1">ベーシック</label></span><span class="checked"><input name="grid:9:radItemKbn" checked="checked" value="0" id="radItemKbn8-0" type="radio"><label for="radItemKbn8-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:9:radItemKbn" value="2" id="radItemKbn8-2" type="radio"><label for="radItemKbn8-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="45068" name="grid:9:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120">URI0002</div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-9">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs026</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-026</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32304" name="grid:10:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn9"><span class="checked"><input checked="checked" name="grid:10:radItemKbn" value="1" id="radItemKbn9-1" type="radio"><label for="radItemKbn9-1">ベーシック</label></span><span class=""><input name="grid:10:radItemKbn" value="0" id="radItemKbn9-0" type="radio"><label for="radItemKbn9-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:10:radItemKbn" value="2" id="radItemKbn9-2" type="radio"><label for="radItemKbn9-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32304" name="grid:10:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-10">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs025</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-025</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32303" name="grid:11:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn10"><span class=""><input name="grid:11:radItemKbn" value="1" id="radItemKbn10-1" type="radio"><label for="radItemKbn10-1">ベーシック</label></span><span class="checked"><input name="grid:11:radItemKbn" checked="checked" value="0" id="radItemKbn10-0" type="radio"><label for="radItemKbn10-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:11:radItemKbn" value="2" id="radItemKbn10-2" type="radio"><label for="radItemKbn10-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32303" name="grid:11:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-11">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs024</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-024</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32302" name="grid:12:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn11"><span class=""><input name="grid:12:radItemKbn" value="1" id="radItemKbn11-1" type="radio"><label for="radItemKbn11-1">ベーシック</label></span><span class="checked"><input name="grid:12:radItemKbn" checked="checked" value="0" id="radItemKbn11-0" type="radio"><label for="radItemKbn11-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:12:radItemKbn" value="2" id="radItemKbn11-2" type="radio"><label for="radItemKbn11-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32302" name="grid:12:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-12">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs023</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-023</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32301" name="grid:13:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn12"><span class=""><input name="grid:13:radItemKbn" value="1" id="radItemKbn12-1" type="radio"><label for="radItemKbn12-1">ベーシック</label></span><span class="checked"><input name="grid:13:radItemKbn" checked="checked" value="0" id="radItemKbn12-0" type="radio"><label for="radItemKbn12-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:13:radItemKbn" value="2" id="radItemKbn12-2" type="radio"><label for="radItemKbn12-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32301" name="grid:13:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-13">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs022</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-022</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32300" name="grid:14:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn13"><span class=""><input name="grid:14:radItemKbn" value="1" id="radItemKbn13-1" type="radio"><label for="radItemKbn13-1">ベーシック</label></span><span class="checked"><input name="grid:14:radItemKbn" checked="checked" value="0" id="radItemKbn13-0" type="radio"><label for="radItemKbn13-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:14:radItemKbn" value="2" id="radItemKbn13-2" type="radio"><label for="radItemKbn13-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32300" name="grid:14:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-14">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs021</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-021</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32299" name="grid:15:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn14"><span class=""><input name="grid:15:radItemKbn" value="1" id="radItemKbn14-1" type="radio"><label for="radItemKbn14-1">ベーシック</label></span><span class="checked"><input name="grid:15:radItemKbn" checked="checked" value="0" id="radItemKbn14-0" type="radio"><label for="radItemKbn14-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:15:radItemKbn" value="2" id="radItemKbn14-2" type="radio"><label for="radItemKbn14-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32299" name="grid:15:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-15">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs020</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-020</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32298" name="grid:16:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn15"><span class=""><input name="grid:16:radItemKbn" value="1" id="radItemKbn15-1" type="radio"><label for="radItemKbn15-1">ベーシック</label></span><span class="checked"><input name="grid:16:radItemKbn" checked="checked" value="0" id="radItemKbn15-0" type="radio"><label for="radItemKbn15-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:16:radItemKbn" value="2" id="radItemKbn15-2" type="radio"><label for="radItemKbn15-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32298" name="grid:16:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-16">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs019</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-019</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32297" name="grid:17:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn16"><span class=""><input name="grid:17:radItemKbn" value="1" id="radItemKbn16-1" type="radio"><label for="radItemKbn16-1">ベーシック</label></span><span class="checked"><input name="grid:17:radItemKbn" checked="checked" value="0" id="radItemKbn16-0" type="radio"><label for="radItemKbn16-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:17:radItemKbn" value="2" id="radItemKbn16-2" type="radio"><label for="radItemKbn16-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32297" name="grid:17:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-17">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs018</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-018</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32296" name="grid:18:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn17"><span class=""><input name="grid:18:radItemKbn" value="1" id="radItemKbn17-1" type="radio"><label for="radItemKbn17-1">ベーシック</label></span><span class="checked"><input name="grid:18:radItemKbn" checked="checked" value="0" id="radItemKbn17-0" type="radio"><label for="radItemKbn17-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:18:radItemKbn" value="2" id="radItemKbn17-2" type="radio"><label for="radItemKbn17-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32296" name="grid:18:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-18">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs016</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-016</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32294" name="grid:19:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn18"><span class=""><input name="grid:19:radItemKbn" value="1" id="radItemKbn18-1" type="radio"><label for="radItemKbn18-1">ベーシック</label></span><span class="checked"><input name="grid:19:radItemKbn" checked="checked" value="0" id="radItemKbn18-0" type="radio"><label for="radItemKbn18-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:19:radItemKbn" value="2" id="radItemKbn18-2" type="radio"><label for="radItemKbn18-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32294" name="grid:19:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody><tbody id="grid-19">
+         <tr>
+           <td class="list-cell tdnobottom word-break"><div class="w120">bs017</div></td>
+           <td class="list-cell tdnobottom word-break"><div class="w200">中華春巻-s-017</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w140">１０個入り</div></td>
+           <td class="list-cell word-break" rowspan="2"><div class="w180">テスト企業０</div>
+           		<input value="32295" name="grid:20:hidSysProCd" id="hidSysProCd" type="hidden">
+           </td>
+           <td class="list-cell" rowspan="2"><div><span class="cstm-radio" id="radItemKbn19"><span class=""><input name="grid:20:radItemKbn" value="1" id="radItemKbn19-1" type="radio"><label for="radItemKbn19-1">ベーシック</label></span><span class="checked"><input name="grid:20:radItemKbn" checked="checked" value="0" id="radItemKbn19-0" type="radio"><label for="radItemKbn19-0">プレミアム</label></span><span class="txt-separate ml20">|</span><span><input name="grid:20:radItemKbn" value="2" id="radItemKbn19-2" type="radio"><label for="radItemKbn19-2">取消</label></span></span></div></td>
+         </tr>
+         <input value="32295" name="grid:20:hidSeqProduct" id="hidSeqProduct" type="hidden">
+         <tr>
+            <td class="list-cell tdnotop word-break"><div class="w120"></div></td>
+            <td class="list-cell tdnotop word-break"><div class="x-small ml5 w200"></div></td>
+         </tr>
+         <tr>
+           <td class="list-space" colspan="5"><div></div></td>
+         </tr>
+         </tbody>
+       
+     </table>
+    </div>
+    <table class="justify mt10">
+      <tbody>
+        <tr>
+          <td class="justify-l"><div class="paging" id="pageMoveDown">
+<div class="paging">
+<span id="ken">件数：<span id="sum">20</span>件</span>
+<span class="prev"><span id="prev" class="inactive">‹ 前へ</span></span><span class="num"><span id="pageLink"><em class="current"><span id="pageNumber">1</span></em></span></span><span class="next"><span id="next" class="inactive">次へ ›</span></span>
+</div>
+</div></td>
+          <td class="justify-r">
+            <div>
+              <a class="bt bt-gre-large" id="btnConfirmBottom" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById('form_hf_0'); e.name='btnConfirmBottom'; e.value='x';var f=document.getElementById('form');var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value='';e.name='form_hf_0'; return false;}">
+                <span class="bt-label">確認画面へ</span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="justify-row">
+      <tbody>
+        <tr>
+          <td class="justify-l"><div><a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+          <td class="justify-r"><div> </div></td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+     <input value="54465:0,54461:0,54469:0,54459:0,54458:0,54451:0,54449:0,45067:0,45068:0,32304:0,32303:0,32302:0,32301:0,32300:0,32299:0,32298:0,32297:0,32296:0,32294:0,32295:0" name="gridSelected" id="gridSelected" type="hidden">
+<input name="form_sf" id="form_sf" type="hidden"><input name="form_se" id="form_se" type="hidden"></form>
+    </div>
+</div>
+
+				<div id="footerhelp">
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+<div class="ftr-hlp">
+<div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="http://www.infomart.co.jp/scripts/qa_op_redirect.asp?ShinraiFlg=ON&amp;user_cd=999989&amp;user_id=buyeee&amp;BS=B" class="ic ic-blu-faq" target="_blank"><span class="ic-label">教えてインフォマート</span></a></div>
+</div>
+</div>
+            </div>
+            <!--Contents End-->
+
+            <!--ftr Start-->
+            <div class="ftr" id="footer">
+    		<ul class="ftr-nv clr">
+            	<li><a href="http://www2.awsinfomart.co.jp/kikaku/kikakumypage.page">マイページ</a></li>
+            	<li><a href="http://www2.awsinfomart.co.jp/shinrai/kikaku/guide/guide.page?uid=b00000">ご利用ガイド</a></li>
+            	<li><a href="http://www2.awsinfomart.co.jp/shinrai/corporate/kikaku_contact.page?sub=ASP">お問い合わせ</a></li>
+                <li>お客様番号：<span class="tx-b" id="lblFooterKyakuBangou"></span></li>
+        	</ul>
+        	<ul class="usrnv clr">
+            	<li><a href="http://www2.awsinfomart.co.jp/kikaku/kikakulogin.page">ログアウト</a></li>
+        	</ul>
+        	<div class="small">
+            	<p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+					Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            	<p class="number"><span id="lblHostName">ip-10-132-16-156.ap-northeast-1.compute.internal</span></p>
+        	</div>
+</div>
+            <!--ftr End-->
+        </div>
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1680872-41']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+/*]]>*/
+</script>
+    
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+        function masterWindow(){
+            return getPrePage();
+        }
+        $('.close-dialog-modal, .submit-dialog-modal, #accord ul.second > li > a').click(function(){
+            closeModalWindow();
+            return false;
+        });
+        
+/*]]>*/
+</script>
+
+</body></html>

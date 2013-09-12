@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_menu.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_menu.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.data-list table.menu_tbl_chourihou td.head-space.cell-01{width:40px;}
+.data-list table.menu_tbl_chourihou td.head-space.cell-02{width:auto;}
+.data-list table.menu_tbl_chourihou td.head-space.cell-03{width:70px;}
+.data-list table.menu_tbl_chourihou td.head-space.cell-04{width:200px;}
+.data-list table.menu_bunryou td.head-space.cell-10{width:100px;}
+.tbl-bd-wide-02 th{width:140px;}
+</style>
+</head>
+<body class="page">
+<div class="menu-cnt">
+  <!--hdr Start-->
+  <div class="hdr">
+    <div class="logo w390"><a href="/"><img src="/web2/jp/images/logo-169x24.gif" alt="FOODS Info Mart" width="169" height="24"></a><a href="/"><img src="/web2/jp/images/logo-menu.gif" alt="ASP規格書システム" width="188" height="24" class="ml10"></a></div>
+    <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="/menu_010000.html" title="マイページ"><span>マイページ</span></a></li>
+            <li id="gnv-menu"><a href="menu_010101.html" title="メニュー検索"><span>メニュー検索</span></a></li>
+			<li id="gnv-menu-share"><a href="/menu_020105.html" title="メニュー共有"><span>メニュー共有</span></a></li>
+            <li id="gnv-input"><a href="/menu_020102.html" title="メニュー編集・承認"><span>メニュー編集・承認</span></a></li>
+            <li id="gnv-material"><a href="/menu_030101.html" title="材料・仕掛品管理"><span>材料・仕掛品管理</span></a></li>
+			<li id="gnv-set"><a href="/menu_040101.html" title="登録・設定"><span>登録・設定</span></a></li>
+            <li id="gnv-guid"><a href="#" title="ご利用ガイド"><span>ご利用ガイド</span></a></li>
+        </ul>
+    <div class="usrnv clr">
+      <h2>インフォダイニング 様</h2>
+      <ul>
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">ログアウト</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--hdr End-->
+  <!--Contents Start-->
+  <div class="contents">
+    <form name="dummy-21u-03-01" action="dummy" method="post" id="dummy-21u-03-01">
+      <div class="height-wrap">
+        <table class="hgrp">
+          <tbody>
+            <tr>
+              <th class="heading"> <h1>メニュー詳細</h1>
+              </th>
+              <td class="desc w230 nowrap"><div>登録されたメニューの詳細を見ることができます。</div></td>
+              <td class="nav"><a href="/menu_020102.html" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="justify">
+          <tbody>
+            <tr>
+              <td class="justify-l"><div>
+                  <div class="related-items mb0 left">
+                    <h3>過去のメニューを見る</h3>
+                    <span class="item backward-rv-current"><a href="/menu_020201.html">最新のメニュー</a></span> <span class="item backward-rv current"><a href="/menu_020202.html"><span class="ic-label">2011/01/20</span></a></span> <span class="item backward-rv"><a href="#"><span class="ic-label">2011/01/15</span></a></span> <span class="item backward-rv"><a href="#"><span class="ic-label">2011/01/10</span></a></span>
+                    <!--			<span class="item forward">受領伝票</span>-->
+                  </div>
+         <div class="left ki-tbl-difference-wrapper">
+            <a class="ic ic-caution02" href="#"><span class="ic-label">差分表記</span></a>
+            <div class="ki-tbl-difference">
+                <p class="tx-b">【差分表記】</p>
+                <table>
+                  <tr>
+                    <td><div>黒字</div></td><td><div>提出時の情報です。</div></td>
+                    <td class="edited"><div class="data-frm"></div><div class="data-add">赤字</div></td><td><div>提出時と比較して、<br>
+                      追加された情報です。</div></td>
+                  </tr>
+                  <tr>
+                    <td class="edited"><div class="data-frm tx-del">グレー字</div><div class="data-chg">赤字</div></td><td><div>提出時と比較して、<br>
+                      変更された情報です。</div></td>
+                    <td class="edited"><div class="data-frm tx-del">グレー字</div><div class="data-del">[削]</div></td><td><div>提出時と比較して、<br>
+                      入力行が削除された情報です。</div></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+              
+                </div></td>
+              <td class="justify-r valign-b"><!--<div><span class="tx-b">閲覧権限切換</span>
+                  <select class="custom-select mr20" name="f1-01" id="f1-01">
+                    <option>本部</option>
+                    <option>店舗A</option>
+                    <option>店舗B</option>
+                    <option>店舗C</option>
+                  </select>
+                </div>--></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="grid-row">
+          <!--<table class="justify">
+            <tbody>
+              <tr>
+                <td class="justify-r"><div><a class="bt bt-print" href="#" onClick="popup_modal('/menu_050505.html',800,700)"><span class="bt-label w45">印刷する</span></a></div></td>
+              </tr>
+            </tbody>
+          </table>-->
+          <div class="grid-row clr mt5">
+            <table class="justify menu_detail_header">
+              <tr>
+                <td class="justify-l menu_name">赤ピーマンの豆腐ハンバーグ詰め</td>
+                <td class="justify-r valign-m pr5">自社メニューコード：1501-A<br>
+                  最終更新日：2009/04/01&nbsp;作成日：2009/02/01 </td>
+              </tr>
+            </table>
+            <div class="grid-unit">
+              <div class="upload-image edited left"><div class="data-img-frm"><img src="/web2/jp/images/menu-sample20.jpg" width="260" height="260" alt="赤ピーマンの豆腐ハンバーグ詰め"></div><div class="data-chg"><img src="/web2/jp/images/menu-sample21_260x260.jpg" width="260" height="260" alt="赤ピーマンの豆腐ハンバーグ詰め"></div></div>
+            </div>
+            <div class="right w670">
+              <table class="justify">
+                <tr>
+                  <td class="justify-l"><span class="tx-b"> ▼基本情報</span></td>
+                  <td class="justify-r"> 作成者：小林太郎、承認者：山本太郎 </td>
+                </tr>
+              </table>
+              <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01">
+                <tbody>
+                  <tr>
+                    <th>利用業態</th>
+                    <td class="edited"><div class="data-frm tx-del">ファミリーレストラン</div><div class="data-chg">ファミレス</div></td>
+                    <th class="w90">メニュー区分</th>
+                    <td class="edited"><div class="data-frm"></div><div class="data-add">主菜</div></td>
+                  </tr>
+                  <tr>
+                    <th>メニュー種別</th>
+                    <td class="edited"><div class="data-frm tx-del">ディナー</div><div class="data-del">［削]</div></td>
+                    <th>販売時期 </th>
+                    <td><div>3月～11月</div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mt10">
+                <tbody>
+                  <tr>
+                    <th>特徴</th>
+                    <td colspan="3"><div class="menu-cell-feature"> 鶏挽肉と絹豆腐を使用し、ローカロリーなピーマンの肉詰めに仕上げました。 </div></td>
+                  </tr>
+                  <tr>
+                    <th> 販売価格 </th>
+                    <td class="edited"><div class="data-frm tx-del">923円</div><div class="data-chg">933円</div></td>
+                    <th><div>粗利益</div></th>
+                    <td><div>232.27円</div></td>
+                  </tr>
+                  <tr>
+                    <th> 原価</th>
+                    <td><div>647.73円</div></td>
+                    <th>原価率</th>
+                    <td><div>69.4%</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="clr">
+
+     <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01 mt20">
+       <tbody>
+        <tr>
+              <th class="cell-k01 nowrap"><div>アレルギー物質</div></th>
+        <td class="edited"><div class="tx-del">小麦、乳、豚肉、ゼラチン、米</div><div class="data-chg">卵、大豆、鶏肉、小麦</div></td>
+        </tr>
+      </tbody>
+    </table>
+
+            
+            <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01">
+              <tbody>
+                <tr>
+                  <th>コンタミの可能性</th>
+                  <td><div class="halign-c">有</div></td>
+                  <td colspan="6"><div>原料由来では、えびにいか。店内コンタミの注意。まな板共有。</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01">
+              <tbody>
+                <tr>
+                  <th>カロリー(1食あたり)</th>
+                  <td colspan="3"><div>300kcal</div></td>
+                  <th>食塩相当量(1食あたり)</th>
+                  <td colspan="3"><div>1.5g</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mt10">
+              <tbody>
+                <tr>
+                  <th> BSE関連（原料原産国） </th>
+                  <td colspan="2"><div>日本</div></td>
+                </tr>
+                <tr>
+                  <th> 残留農薬検査</th>
+                  <td colspan="2"><div>有</div></td>
+                </tr>
+                <tr>
+                  <th> 証明書類 </th>
+                  <td colspan="2"><div>&nbsp;</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <div><span class="tx-b">▼分量表</span></div>
+            <div class="data-list mt10 mb5">
+              <table class="menu_bunryou">
+                <tr class="first-row last-row">
+                  <td class="first-cell"><div>種別</div></td>
+                  <td><div>コード</div></td>
+                  <td><div>材料名</div></td>
+                  <td><div>仕入先</div></td>
+                  <td><div>分量</div></td>
+                  <td><div>原価</div></td>
+                  <td><div>原産国</div></td>
+                  <td><div>アレルギー</div></td>
+                  <td><div>コンタミ</div></td>
+                  <td class="last-cell"><div>規格書</div></td>
+                </tr>
+                <tr class="row-01">
+                  <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+                  <td class="head-space cell-02"><div>&nbsp;</div></td>
+                  <td class="head-space cell-03"><div>&nbsp;</div></td>
+                  <td class="head-space cell-04"><div>&nbsp;</div></td>
+                  <td class="head-space cell-05"><div>&nbsp;</div></td>
+                  <td class="head-space cell-06"><div>&nbsp;</div></td>
+                  <td class="head-space cell-07"><div>&nbsp;</div></td>
+                  <td class="head-space cell-08"><div>&nbsp;</div></td>
+                  <td class="head-space cell-09"><div>&nbsp;</div></td>
+                  <td class="head-space cell-10 head-space-last"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>仕掛</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>豆腐ハンバーグだね</div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                  <td class="list-cell"><div class="halign-r">831.00g</div></td>
+                  <td class="list-cell"><div class="halign-r">445.34</div></td>
+                  <td class="list-cell"><div>日本</div></td>
+                  <td class="list-cell"><div>卵,大豆,鶏肉</div></td>
+                  <td class="list-cell"><div>無</div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td colspan="10" class="list-space"></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>材料</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>赤ピーマン（２個分）</div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                  <td class="list-cell"><div class="halign-r">200.00g</div></td>
+                  <td class="list-cell"><div class="halign-r">200.00</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>無 </div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td colspan="10" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>材料</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell edited"><div class="data-frm tx-del">強力粉</div><div class="data-chg">薄力粉</div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                  <td class="list-cell"><div class="halign-r">10.00g</div></td>
+                  <td class="list-cell"><div class="halign-r">1.00</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>小麦</div></td>
+                  <td class="list-cell"><div>無 </div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td colspan="10" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell"><div>材料</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>サラダ油</div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                  <td class="list-cell"><div class="halign-r">10.00g</div></td>
+                  <td class="list-cell"><div class="halign-r">1.39</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>-</div></td>
+                  <td class="list-cell"><div>無 </div></td>
+                  <td class="list-cell"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td colspan="10" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+              </table>
+            </div>
+            <div><span class="tx-b">▼調理法</span></div>
+            <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-01 mt10 w200">
+              <tbody>
+                <tr>
+                  <th>調理時間合計</th>
+                  <td><div>10分</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="data-list mt10 mb10">
+              <table class="menu_tbl_chourihou">
+                <tr class="first-row last-row">
+                  <td class="cell-01 first-cell nowrap"><div>手順</div></td>
+                  <td class="cell-02"><div>調理内容</div></td>
+                  <td class="cell-03 nowrap"><div>調理時間</div></td>
+                  <td class="cell-04 last-cell"><div>写真</div></td>
+                </tr>
+                <tr class="row-01">
+                  <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+                  <td class="head-space cell-02"><div>&nbsp;</div></td>
+                  <td class="head-space cell-03"><div>&nbsp;</div></td>
+                  <td class="head-space cell-04 head-space-last"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell nowrap"><div>【1】</div></td>
+                  <td class="list-cell"><div>赤ピーマンはヘタを取らずに１/２の縦割りにカットします。</div></td>
+                  <td class="list-cell edited"><div class="data-frm tx-del">30秒</div><div class="data-chg">1分</div></td>
+                  <td class="list-cell edited"><div class="center "><div class="data-img-frm"><img src="/web2/jp/images/menu-sample21_process02.jpg" width="180" height="135" alt="調理法05"></div><div class="data-chg"><img src="/web2/jp/images/menu-sample21_process05.jpg" width="180" height="135" alt="調理法05"></div></div></td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell nowrap"><div>【2】</div></td>
+                  <td class="list-cell"><div>【1】に、スタンバイしておいた豆腐ハンバーグだねを詰めます。</div></td>
+                  <td class="list-cell"><div class="center">2分</div></td>
+                  <td class="list-cell"><div class="center"><img src="/web2/jp/images/menu-sample21_process06.jpg" width="180" height="135" alt="調理法06"></div></td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell nowrap"><div>【3】</div></td>
+                  <td class="list-cell"><div>【2】に薄力粉を塗ります。</div></td>
+                  <td class="list-cell"><div class="center">1分</div></td>
+                  <td class="list-cell"><div class="center"><img src="/web2/jp/images/menu-sample21_process07.jpg" width="180" height="135" alt="調理法07"></div></td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+                <tr>
+                  <td class="list-cell nowrap"><div>【4】</div></td>
+                  <td class="list-cell"><div>熱したフライパンにサラダ油を引き、弱火で片面約３分間ずつ焼き、出来上がり。</div></td>
+                  <td class="list-cell"><div class="center">6分</div></td>
+                  <td class="list-cell"><div class="center"><img src="/web2/jp/images/menu-sample21_process08.jpg" width="180" height="135" alt="調理法08"> </div></td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="list-space"><div>&nbsp;</div></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <table class="justify-row">
+          <tr>
+            <td class="justify-l"><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+<td class="justify-r"><div><a class="bt bt-print" href="#" onClick="popup_modal('/menu_050505.html',800,700)"><span class="bt-label w45">印刷する</span></a></div></td>          </tr>
+        </table>
+      </div>
+    <!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+  </div>
+  <!--Contents End-->
+  <!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+    <ul class="usrnv clr">
+      <li><a href="#">ログアウト</a></li>
+    </ul>
+    <div class="small"> <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+        Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p> <p class="number">S217739JP6EW17</p> </div>
+  </div>
+  <!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+<script type="text/javascript" src="/js/modal.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
+</body>
+</html>

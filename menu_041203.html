@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_menu.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_menu.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_menu.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ 
+（一時的に読み込みを停止しています）
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>-->
+<style type="text/css">
+.tbl-bd-wide-02 th{width:150px;}
+
+.head-space.cell-01{width:50px;}
+.head-space.cell-02{width:130px;}
+.head-space.cell-03{width:200px;}
+.head-space.cell-04{width:200px;}
+.head-space.cell-05{width:auto;}
+.head-space.cell-06{width:80px;}
+.head-space.cell-07{width:100px;}
+.head-space.cell-08{width:110px;}
+
+</style>
+</head>
+<body class="page">
+<div class="menu-cnt">
+  <!--hdr Start-->
+  <div class="hdr">
+    <div class="logo w390"><a href="/"><img src="/web2/jp/images/logo-169x24.gif" alt="FOODS Info Mart" width="169" height="24"></a><a href="/"><img src="/web2/jp/images/logo-menu.gif" alt="ASP規格書システム" width="188" height="24" class="ml10"></a></div>
+    <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="/menu_010000.html" title="マイページ"><span>マイページ</span></a></li>
+            <li id="gnv-menu"><a href="menu_010101.html" title="メニュー検索"><span>メニュー検索</span></a></li>
+			<li id="gnv-menu-share"><a href="/menu_020105.html" title="メニュー共有"><span>メニュー共有</span></a></li>
+            <li id="gnv-input"><a href="/menu_020102.html" title="メニュー編集・承認"><span>メニュー編集・承認</span></a></li>
+            <li id="gnv-material"><a href="/menu_030101.html" title="材料・仕掛品管理"><span>材料・仕掛品管理</span></a></li>
+			<li id="gnv-set"><a href="/menu_040101.html" title="登録・設定"><span>登録・設定</span></a></li>
+            <li id="gnv-guid"><a href="#" title="ご利用ガイド"><span>ご利用ガイド</span></a></li>
+        </ul>
+    <div class="usrnv clr">
+      <h2>インフォダイニング 様</h2>
+      <ul>
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">ログアウト</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--hdr End-->
+  <!--Contents Start-->
+  <div class="contents">
+    <form id="" name="" method="post" action="../dummy">
+      <div class="height-wrap">
+        <table class="hgrp">
+          <tbody>
+            <tr>
+              <th class="heading"> <h1>一括印刷</h1>
+              </th>
+              <td class="desc"><div>「受信」を押して、結果を取得して下さい。</div></td>
+              <td class="nav"><a href="/menu_020102.html" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+	 <table class="hgrp-nv tab-liquid">
+	  <tbody>
+		<tr>
+		  <td>
+			<div class="tabs-link tab_ki_search">
+			  <ul>
+				<li class="w180"><a href="menu_041201.html"><span class="bg-tabs-link">一括印刷依頼</span></a></li>
+				<li class="w180"><a class="current" href="menu_041203.html"><span class="bg-tabs-link">一括印刷履歴</span></a></li>
+			  </ul>
+			</div>
+		  </td>
+		  <td class="nav"></td>
+		</tr>
+	  </tbody>
+	</table>
+
+      <div class="tbl-r">
+        <table>
+          <tr class="first-row">
+            <th class="first-cell w125"><div>種別</div>
+            </th>
+            <td class="w350"><div>
+              <span class="cstm-radio"><span class="checked"><input type="radio" name="41k-01-2" id="41k-01-2a" checked="checked"><label for="41k-01-2a">全て</label></span><span><input type="radio" name="41k-01-2" id="41k-01-2b"><label for="41k-01-2b">メニュー</label></span><span><input type="radio" name="41k-01-2" id="41k-01-2c"><label for="41k-01-2c">仕掛品</label></span></span>
+            </div></td>
+            <th class="w125"><div>担当者</div>
+            </th>
+            <td class="last-cell w350"><div><select class="cstm-select w150" name="f1-05" id="f1-05"><option>全て</option><option>鈴木一郎</option><option>加藤洋二</option><option>佐藤敬三</option></select></div></td>
+          </tr>
+          <tr class="last-row">
+            <th class="first-cell w125"><div>処理</div>
+            </th>
+            <td class="w350"><div>
+							<span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="41k-01-5" id="41k-01-5a" checked="checked"><label style="white-space:nowrap;" for="41k-01-5a">処理待ち</label></span><span><input type="checkbox" name="41k-01-5" id="41k-01-5b"><label for="41k-01-5b">完了</label></span><span><input type="checkbox" name="41k-01-5" id="41k-01-5c"><label for="41k-01-5c">エラー</label></span></span>
+						</div></td>
+            <th class="w125"><div>依頼日</div>
+            </th>
+            <td class="last-cell w350"><div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" value="2012/10/10" name="41k-01-4" id="41k-01-4" size="10" class="w80"></span></span>(水)～<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="41k-01-4-2" id="41k-01-4-2" size="10" class="w80" value="2012/10/10"></span></span>(水)</div></td>
+          </tr>
+        </table>
+<div class="srch-panel-ftr"> <a href="#" class="bt bt-srch"><span class="bt-label">検索する</span></a> </div>
+      </div>
+
+	      <table class="justify mb10">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：10件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div class="serach-results-filter">
+	              <label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>依頼日時（降順）</option>
+	                <option>依頼日時（昇順）</option>
+	                <option>-</option>
+                  </select>
+	              <label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option selected="selected">20</option>
+	                <option>40</option>
+	                <option>80</option>
+	                <option>100</option>
+                  </select>
+                  
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+  <table>
+    <tbody>
+    <tr class="tool-first">
+        <td class="first-cell" colspan="4"><div></td>
+        <td class="last-cell no-bd" colspan="4"><div><span><a class="bt bt-reload02" href="#"><span class="bt-label">最新の情報に更新する</span></a></span></div></td>
+    </tr>
+    <tr class="first-row last-row">
+      <td class="first-cell"><div>No.</div></td>
+      <td class="nowrap"><div>種別</div></td>
+      <td class="nowrap"><div>依頼日時</div></td>
+      <td class="nowrap" colspan="2"><div>処理日時</div></td>
+      <td class="nowrap"><div>件数</div></td>
+      <td class="nowrap"><div>担当者</div></td>
+      <td class="last-cell"><div></div></td>
+    </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+      <td class="head-space cell-02"><div>&nbsp;</div></td>
+      <td class="head-space cell-03"><div>&nbsp;</div></td>
+      <td class="head-space cell-04"><div>&nbsp;</div></td>
+      <td class="head-space cell-05"><div>&nbsp;</div></td>
+      <td class="head-space cell-06"><div>&nbsp;</div></td>
+      <td class="head-space cell-07"><div>&nbsp;</div></td>
+      <td class="head-space cell-08 head-space-last"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="center">1</div></td>
+      <td class="list-cell nowrap"><div>メニュー</div></td>
+      <td class="list-cell nowrap"><div>2012/10/10 18:22:09</div></td>
+      <td class="list-cell nowrap"><div>2012/10/10 18:23:10</div></td>
+      <td class="list-cell"><div class="center">完了</div></td>
+      <td class="list-cell"><div class="center">64</div></td>
+      <td class="list-cell"><div>鈴木一郎</div></td>
+      <td class="list-cell"><div><span class="left"><a class="bt mr10" href="#"><span class="bt-label">受信</span></a></span><span class="right"><a class="bt" href="#"><span class="bt-label">削除</span></a></span></div></td>
+    </tr>
+		<tr>
+      <td colspan="8" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="center">2</div></td>
+      <td class="list-cell nowrap"><div>仕掛品</div></td>
+      <td class="list-cell nowrap"><div>2012/10/10 15:22:09</div></td>
+      <td class="list-cell nowrap"><div>2012/10/10 15:23:10</div></td>
+      <td class="list-cell"><div class="center"><font color="#ff0000">エラー</font></div></td>
+      <td class="list-cell"><div class="center">-</div></td>
+      <td class="list-cell"><div>加藤洋二</div></td>
+      <td class="list-cell"><div><span class="left"><!--<a class="bt mr10" href="#"><span class="bt-label">受信</span></a>--></span><span class="right"><a class="bt" href="#"><span class="bt-label">削除</span></a></span></div></td>
+    </tr>
+		<tr>
+      <td colspan="8" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="center">3</div></td>
+      <td class="list-cell nowrap"><div>材料</div></td>
+      <td class="list-cell nowrap"><div>2012/10/09 18:22:09</div></td>
+      <td class="list-cell nowrap"><div>2012/10/09 18:23:10</div></td>
+      <td class="list-cell"><div class="center">完了</div></td>
+      <td class="list-cell"><div class="center">3</div></td>
+      <td class="list-cell"><div>佐藤敬三</div></td>
+      <td class="list-cell"><div><span class="left"><a class="bt mr10" href="#"><span class="bt-label">受信</span></a></span><span class="right"><a class="bt" href="#"><span class="bt-label">削除</span></a></span></div></td>
+    </tr>
+		<tr>
+      <td colspan="8" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="center">4</div></td>
+      <td class="list-cell nowrap"><div>メニュー</div></td>
+      <td class="list-cell nowrap"><div>2012/10/09 15:22:09</div></td>
+      <td class="list-cell nowrap"><div>2012/10/09 15:23:10</div></td>
+      <td class="list-cell"><div class="center">完了</div></td>
+      <td class="list-cell"><div class="center">64</div></td>
+      <td class="list-cell"><div>鈴木一郎</div></td>
+      <td class="list-cell"><div><span class="left"><a class="bt mr10" href="#"><span class="bt-label">受信</span></a></span><span class="right"><a class="bt" href="#"><span class="bt-label">削除</span></a></span></div></td>
+    </tr>
+		<tr>
+      <td colspan="8" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="center">5</div></td>
+      <td class="list-cell nowrap"><div>仕掛品</div></td>
+      <td class="list-cell nowrap"><div>2012/10/08 18:22:09</div></td>
+      <td class="list-cell nowrap"><div></div></td>
+      <td class="list-cell"><div class="center">処理待ち</div></td>
+      <td class="list-cell"><div class="center"></div></td>
+      <td class="list-cell"><div>鈴木一郎</div></td>
+      <td class="list-cell"><div><span class="left"><!--<a class="bt mr10" href="#"><span class="bt-label">受信</span></a>--></span><span class="right"><a class="bt" href="#"><span class="bt-label">削除</span></a></span></div></td>
+    </tr>
+		<tr>
+      <td colspan="8" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td class="list-cell"><div class="center">6</div></td>
+      <td class="list-cell nowrap"><div>材料</div></td>
+      <td class="list-cell nowrap"><div>2012/10/08 15:22:09</div></td>
+      <td class="list-cell nowrap"><div></div></td>
+      <td class="list-cell"><div class="center">処理待ち</div></td>
+      <td class="list-cell"><div class="center"></div></td>
+      <td class="list-cell"><div>加藤洋二</div></td>
+      <td class="list-cell"><div><span class="left"><!--<a class="bt mr10" href="#"><span class="bt-label">受信</span></a>--></span><span class="right"><a class="bt" href="#"><span class="bt-label">削除</span></a></span></div></td>
+    </tr>
+		<tr>
+      <td colspan="8" class="list-space"><div>&nbsp;</div></td>
+    </tr>
+  </tbody></table>
+</div>
+
+<table class="justify">
+		  <tbody>
+			  <tr>
+				  <td class="justify-l">
+					  <div class="paging">
+					  件数：6件
+					  <span class="prev"><span class="inactive">&#8249; 前へ</span></span><span class="num"><em class="current">1</em></span><span class="next"><span class="inactive">次へ &#8250;</span></span>
+					  </div>
+				  </td>
+			  </tr>
+		  </tbody>
+		</table>
+
+        <table class="justify mt10 mb20">
+          <tr>
+            <td class="justify-l"><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+          </tr>
+        </table>
+      </div>
+      <!--Footer Help Start-->
+      <p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+      <div class="ftr-hlp">
+        <div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div>
+      </div>
+      <!--Footer Help End-->
+    </form>
+    <!--Left Column End-->
+  </div>
+</div>
+<!--Contents End-->
+<!--ftr Start-->
+<div class="ftr">
+  <ul class="ftr-nv clr">
+    <li><a href="#">マイページ</a></li>
+    <li><a href="#">ご利用ガイド</a></li>
+    <li><a href="#">お問い合わせ</a></li>
+  </ul>
+  <ul class="usrnv clr">
+    <li><a href="#">ログアウト</a></li>
+  </ul>
+  <div class="small"> <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+      Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p> <p class="number">S217739JP6EW17</p> </div>
+</div>
+<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

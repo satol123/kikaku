@@ -1,0 +1,111 @@
+﻿@charset "UTF-8";
+/*==================DHC追加共通==Start=======================*/
+table.no-bd-b{border-bottom-width:0 !important;}
+
+table td.bd-b,table th.bd-b{border-bottom:1px solid #ccc;}
+
+/* hover */
+td.hover-highlight { background-color: #daffa6!important; }
+
+/* textEdited */
+td.textEdited{ background-color: #b6e673!important; }
+
+/* edited-hover */
+td.edited-hover{ background-color: #a7e650!important; }
+
+.loading-tx
+{line-height: 1.5;color: #333;
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","MS PGothic","ＭＳ Ｐゴシック",
+	Verdana,sans-serif;font-size: 13px;
+} 
+
+/*==================DHC追加共通==End=======================*/
+
+/*==================DHC追加paging==Start=====================*/
+.paging .num em { padding:0 8px;display:inline-block;text-align:center; font-weight: bold; font-style: normal; }
+.paging .prev em { display:inline-block;padding:0 8px;text-decoration:none;color:#999; font-style: normal; }
+.paging .next em { display:inline-block;padding:0 8px;text-decoration:none;color:#999; font-style: normal; }
+/*==================DHC追加paging==End=======================*/
+/*==================DHC追加リスト==Start=====================*/
+/*==================greenについて-S-==================*/
+/*============20120812#9203============*/
+/* hover */
+/*.data-list table .hover td.list-cell.highlight,.data-list02 table .hover td.listtd-m.highlight,
+.data-list02 table .hover td.listtd-cm.highlight,.data-list02 table .hover td.listtd.highlight,.data-list02 table .hover td.listtd-r.highlight,
+.data-list table .hover td.highlight.edit-checkbox,.data-list02 table .hover td.highlight.edit-checkbox, td.hover-highlight { background-color: #daffa6!important; }*/
+
+/* edited */
+/*.data-list table .selected td.list-cell.highlight,.data-list02 table .selected td.listtd-m.highlight,
+.data-list02 table .selected td.listtd-cm.highlight,.data-list02 table .selected td.listtd.highlight,.data-list02 table .selected td.listtd-r.highlight,
+.data-list table .selected td.highlight.edit-checkbox,.data-list02 table .selected td.highlight.edit-checkbox { background-color: #b6e673!important; }*/
+
+/* edited-hover */
+/*.data-list table .selected-hover td.list-cell.highlight,.data-list02 table .selected-hover td.listtd-m.highlight,
+.data-list02 table .selected-hover td.listtd-cm.highlight,.data-list02 table .selected-hover td.listtd.highlight,.data-list02 table .selected-hover td.listtd-r.highlight,
+.data-list table .selected-hover td.highlight.edit-checkbox { background-color: #a7e650!important; }*/
+/*==================greenについて-E-==================*/
+/*============20120812#9203============*/
+/*.data-list .hover td.list-cell{background-color:#e5eeff ! important;}
+.data-list .hover td.list-cell-odd{background-color:#f5f5f5!important;}
+.data-list .hover td.list-cell-odd-end{background-color:#f5f5f5!important;}
+.data-list .hover td.edited{background-color:#ffffbf!important;}
+.data-list .hover td.list-cell-even{background-color:#e5eeff!important;}
+.data-list .hover td.list-cell-even-end{background-color:#e5eeff!important;}
+.data-list02 .hover td.listtd-even-end{background-color:#e5eeff!important;}
+
+.data-list table .selected td.list-cell{background-color:#d9e5ff!important;}
+.data-list table .selected td.list-cell-odd{background:#d9e5ff!important;}
+.data-list table .selected td.list-cell-odd-end{background:#d9e5ff!important;}
+.data-list table .selected td.edited{background-color:#d9e5ff!important;}
+.data-list table .selected td.list-cell-even{background:#d9e5ff!important;}
+.data-list table .selected td.list-cell-even-end{background:#d9e5ff!important;}
+.data-list02 table .selected td.listtd-even-end{background:#d9e5ff!important;}
+
+.data-list table .selected-hover td.list-cell{background-color:#cedeff!important;}
+.data-list table .selected-hover td.list-cell-odd{background:#cedeff!important;}
+.data-list table .selected-hover td.list-cell-odd-end{background:#cedeff!important;}
+.data-list table .selected-hover td.edited{background-color:#cedeff!important;}
+.data-list table .selected-hover td.list-cell-even{background:#cedeff!important;}
+.data-list table .selected-hover td.list-cell-even-end{background:#cedeff!important;}
+.data-list02 table .selected-hover td.listtd-even-end{background:#cedeff!important;}*/
+
+/*==================DHC追加リスト==End=======================*/
+
+/*==================DHC追加リスト==Start=====================*/
+.status-hover {background:#e5eeff;}
+/*==================DHC追加リスト==End=======================*/
+
+/*==================DHC追加tooltip==Start=====================*/
+.sec-src-bln {
+
+	position:absolute;
+
+}
+/*==================DHC追加tooltip==End=======================*/
+/*==================DHC追加tooltip==Start=====================*/
+/*============20110711削除-S---============*/
+/*.input-lbl {
+
+	border:none;
+	background: #E4FFBF;
+	background:none;
+
+}*/
+/*============20110711削除-E---============*/
+/*==================DHC追加tooltip==End=======================*/
+
+/*==================DHC追加data-list02==Start=====================*/
+/*============20120812#9203============*/
+/*.selected, .selected .listtd, .selected .listtd-r, .selected .listtd-l, 
+.selected .listtd-m, .selected .listtd-cm, .selected .listtd-nobd-l, 
+.selected .listtd-nobd-r, .selected .listtd-odd, .selected .listtd-odd-rm, 
+.selected .listtd-odd-cm, .selected .listtd-even, .selected .listtd-even-rm, 
+.selected .listtd-even-cm, .selected .listtd-gry, .selected .listtd-gry-m,
+.selected .listtd-gry-nobd-l, .selected .listtd-sun, .selected .listtd-sat, 
+.selected .listtd-odd-end,
+.selected .listtd-gry-cm
+
+{
+background: #D9E5FF !important;
+}*/
+/*==================DHC追加data-list02==End=======================*/

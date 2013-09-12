@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="print">
+<!-- ============================= チェックボックス背景色用 ============================ -->
+<script type="text/javascript" src="/web2/jp/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery.bgiframe.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/modal.js"></script>
+<script type="text/javascript" src="/web2/jp/js/projectCommonJs.js"></script>
+<script type="text/javascript" src="/web2/jp/js/hcommon.js"></script>
+<script type="text/javascript" src="/web2/jp/js/controls_common.js"></script>
+</head>
+<body class="dialog-mdl dialog-mdl-popup">
+<div class="dialog-mdl-wrap">
+  <!--hdr Start-->
+  <div class="dialog-mdl-hdr">
+    <h1>テキスト（文字）入力時のご注意</h1>
+
+    <div class="usernv clr">
+            <ul>
+              <li><a href="mail_attention.html" class="ic ic-arr-blu05 mr10"><span class="ic-label">メールアドレス入力時のご注意</span></a><a class="ic ic-close"  href="javascript:closeModalWindow();" ><span class="icon-label">閉じる</span></a></li>
+            </ul>
+    </div>
+  </div>
+  <!--hdr End-->
+<div class="dialog-mdl-contents-wrapper h470">
+    <a name="modaltop" id="modaltop">&nbsp;</a>
+    <div class="dialog-mdl-contents">
+      <!--Contents Start-->
+    <p class="mb5"><span class="tx-att-ora">FOODS Info Martでは下記の文字を使用禁止とし、入力しても削除されます。</span></p>
+    <div class="sho-msg msg-war mb5"><span class="x20-large tx-b">&#037;　&#094;　&#042;　&#040;　&#041;　&#039;　&#091;　&#093;　&lt;　&gt;　&quot;　&#044;</span></div>
+    <p class="mb10">以上12文字（全て半角）</p>
+
+
+    <p class="sub-ti">ご利用不適切な文字（機種依存文字）</p>
+    <p><span class="eye-catch"><span class="tx-b">囲み英数字・アラビア数字</span></span></p>
+    <p class="mt5 mb10 pl30"><img src="/web2/jp/images/img-fontguide01.gif" alt="" width="528" height="91"></p>
+    <p class="hr-div-dotted pt10"><span class="eye-catch"><span class="tx-b">年号・囲み文字・省略文字</span></span></p>
+    <p class="mt5 mb10 pl30"><img src="/web2/jp/images/img-fontguide02.gif" alt="" width="528" height="93"></p>
+    <p class="hr-div-dotted pt10"><span class="eye-catch"><span class="tx-b">単位・記号・絵文字</span></span></p>
+    <p class="mt5 mb10 pl30"><img src="/web2/jp/images/img-fontguide03.gif" alt="" width="528" height="92"></p>
+    <p class="hr-div-dotted pt10"><span class="eye-catch"><span class="tx-b">半角カタカナ</span></span></p>
+    <p class="mt5 mb10 pl30">半角カタカナは機種依存文字ではありませんが、インターネット、特に電子メールでのご使用において文字化けを生じる場合がございますので、ご使用なさらないようにお願い致します。</p>
+    <p class="hr-div-dotted pt10"><span class="eye-catch"><span class="tx-b">半角スペース</span></span></p>
+    <p class="mt5 mb10 pl30">連続する半角スペースは、HTMLの仕様により1文字の半角スペースに変換されます。<br>スペースを入力する場合は、全角スペースをご使用になるようお願い致します。</p>
+    <p class="hr-div-dotted pt10"><span class="tx-emphasis tx-b">機種依存文字とは</span></p>
+    <p class="mt5 mb10 pl30">パソコンの種類や環境（OS）に依存し、異なる環境で表示させた場合に、意図とは異なる文字に化けたり機器の誤作動を引き起こす可能性のある文字のことです。<br>固有漢字、固有記号、特殊記号なども文字化けを起こします。</p>
+
+    <div class="sho-msg msg-war mb5"><p class="tx-slip"><span class="tx-b">この注意事項はサイト内の全てのテキスト（文字）入力に対してあてはまりますのでお気をつけください。</span></p></div>
+
+
+      <!--Contents End-->
+</div><!-- dialog-mdl-contents-wrapper End -->
+  </div>
+  <div class="pt10 halign-c"><a class="bt bt-close02"  href="javascript:closeModalWindow();" > <span class="bt-label">閉じる</span></a></div>
+</div>
+<script type="text/javascript">
+        function masterWindow(){
+            return getPrePage();
+        }
+        $('.close-dialog-modal, .submit-dialog-modal, #accord ul.second > li > a').click(function(){
+            closeModalWindow();
+            return false;
+        });
+</script>
+</body>
+</html>

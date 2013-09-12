@@ -1,0 +1,2539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title wicket:id="title">フーズインフォマートＡＳＰ規格書システム</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+</head>
+    
+    <span wicket:id="jsArea" id="jsArea"></span>
+    
+    <a name="pagetop"></a>
+    <body class="page" wicket:id="body" id="body" onload="frmOnLoad()">
+		<table id="waitTable" width="800" border="0" cellspacing="0" cellpadding="0" style="display: none;">
+        <tr>
+            <td>
+                <div class="loading-page"></div>
+                <p class="loading-tx">処理中です。しばらくお待ちください。...</p>
+            </td>
+        </tr>
+		</table>
+        <div wicket:id="bodyContainer" id="baseTable" class="kaite">
+          <!--hdr Start-->
+            <div class="hdr" wicket:id="header" id="header"><wicket:panel>
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a><a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+        
+        
+        
+        <ul class="gnv clr" id="gnv" wicket:id="certifyContainer">
+            <li id="gnv-myp"><a wicket:id="lnkHeaderMyPageCertify" href="/kikaku/kikakucertifymy.page"><span>マイページ</span></a></li>
+            <li id="gnv-checkup"><a wicket:id="lnkHeaderCertifyStatusCertify" href="/kikaku/kikakucertifystatuslist.page" class="current"><span>照合状況</span></a></li>
+            <li id="gnv-cus"><a wicket:id="lnkHeaderCustomerStatusCertify" href="/kikaku/kikakucertifycustomerlist.page"><span>取引先状況</span></a></li>
+            <li id="gnv-guid"><a wicket:id="lnkHeaderKikakuGuidePageCertify" href="/shinrai/guide/kikaku_guide.page"><span>ご利用ガイド</span></a></li>
+        </ul>
+		<div class="usrnv clr">
+			<ul><li>&nbsp;&nbsp;</li></ul>
+            <h2>&nbsp;<span wicket:id="lblHeaderUserName" id="lblHeaderUserName">株式会社デリコ　田村晋一</span>様</h2>
+            <ul>
+                <li><a wicket:id="lnkHeaderLogout" href="/kikaku/kikakulogin.page">ログアウト</a></li>
+            </ul>
+       </div>
+    </wicket:panel></div>
+            <!--hdr End-->
+
+            <!--Contents Start-->
+            <div class="contents" wicket:id="contentsid" id="contentsid">
+                <wicket:child><wicket:extend>
+     <div wicket:id="CertifyStatusEditPagePanel" id="CertifyStatusEditPagePanel"><wicket:panel>
+<style type="text/css">
+/*<![CDATA[*/
+
+
+.tbl-bd-wide-06 th {width:auto;}
+
+.tbl-bd-wide-06 td {width:auto;}
+
+
+
+.tbl-inventory-input th.cell-01,.tbl-inventory-input th.cell-01 div{width:120px !important;_width:110px !important;}
+
+.tbl-inventory-input td.cell-02,.tbl-inventory-input td.cell-02 div{width:150px !important;}
+
+.tbl-inventory-input th.cell-01 div.ic-case{width:150px !important;_width:105px !important;}
+
+.tbl-inventory-input td.cell-03,.tbl-inventory-input td.cell-03 div{width:305px !important;}
+
+
+
+.head-space.cell-01{width:30px;}
+
+.head-space.cell-02{width:180px;}
+
+.head-space.cell-03{width:auto;}
+
+.head-space.cell-04{width:100px;}
+
+.head-space.cell-05{width:120px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck1{width:120px !important;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck2{width:auto;}
+
+.tbl-bd-wide-06 th.cell-03,.tbl-bd-wide-06 th.cell-03 div{width:120px !important;_width:120px !important;}
+
+.tbl-bd-wide-06 td.cell-04,.tbl-bd-wide-06 td.cell-04 div{width:auto !important;}
+
+.tbl-bd-wide-06 td.cell-05,.tbl-bd-wide-06 td.cell-05 div{width:310px !important;}
+/*]]>*/
+</style>
+    <!--Contents Start-->
+    <div class="contents">
+		<form wicket:id="form" id="form" method="post" action="kikakucertifystatusedit.page?33-1.IFormSubmitListener-body-bodyContainer-contentsid-CertifyStatusEditPagePanel-form&amp;back_buysell_flg=1&amp;back_customer_cd&amp;back_customer_name&amp;back_henkou=0&amp;back_keisai&amp;back_kigen=0&amp;back_line_cnt=20&amp;back_misettei=0&amp;back_nodsp_flg=1&amp;back_sakusei&amp;back_scwd&amp;back_sortno=1&amp;back_status_cd&amp;buysell_flg=1&amp;item_cd=1&amp;p_customer_cd=888010&amp;read_kbn&amp;show_kbn=7&amp;status_cd=130&amp;user_cd=3987" onsubmit="return validatorSubmit()" onkeydown="if (event.keyCode == 13) return true;"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="form_hf_0" id="form_hf_0" /></div>
+			<div class="height-wrap">
+
+				<table class="hgrp">
+					<tbody>
+						<tr>
+							<!-- タイトル -->
+							<th class="heading">
+								<h1>
+									<span wicket:id="lblTitle" id="lblTitle">照合中</span>
+								</h1>
+							</th>
+							<!-- 説明文 -->
+							<td class="desc">
+								<div>
+									<span wicket:id="lblComment" id="lblComment">取引先から提供された規格書の一次承認を行います。</span>
+								</div>
+							</td>
+							<!-- 戻る（上） -->
+							<td class="nav">
+								<a class="bt bt-back" href="Javascript:history.back();"><span class="bt-label">戻る</span></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <!-- ボタンエリア1 -->
+				<span wicket:id="btn1Container" id="btn1Container">
+					<table class="justify">
+						<tbody>
+							<tr>
+								<td class="justify-l">
+									<div></div>
+								</td>
+								<td class="justify-r">
+									<div>
+										
+										
+										
+										
+										<a href="javascript:void(0)" class="bt bt-org-large" wicket:id="lnkReject" id="lnkReject" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;form_hf_0&#039;); e.name=&#039;btn1Container:lnkReject&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;form&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;form_hf_0&#039;; return false;}"><span class="bt-label">否決する</span></a><a href="javascript:void(0)" class="bt bt-org-large" wicket:id="lnkApproval" id="lnkApproval" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;form_hf_0&#039;); e.name=&#039;btn1Container:lnkApproval&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;form&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;form_hf_0&#039;; return false;}"><span class="bt-label">承認する</span></a>
+                                        
+									</div>
+								</td>
+								
+							</tr>
+							<!-- <tr wicket:id="reSendContainer">
+								<td class="justify-l valign-m w130">
+									<div>&nbsp;</div>
+								</td>
+								<td class="justify-l valign-m small">
+									<div>&nbsp;</div>
+								</td>
+								<td class="justify-r w440">
+									<div class="db-gre">
+										<div class="db-gre-tl">
+											<div class="db-gre-tr">
+												<div class="db-gre-br">
+													<div class="db-gre-bl">
+														<table class="tbl-vertical tbl-approval-request halign-l">
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="nowrap">wicket:id="reSendMessage"
+																			<span class="tx-b">再提出：</span>アレルギー照合サービスへ規格書の<br/>再照合依頼を行います。
+																		</div>
+																	</td>
+																	<td class="nowrap valign-m">
+																		<div class="ml10">
+																			<a class="bt bt-gre-large" href="#" wicket:id="lnkReSend"><span class="bt-label">再提出する</span></a>
+																		</div>
+																	</td>
+
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</span>
+                
+
+                <!-- 売り手 -->
+				
+
+				
+				
+
+				
+				
+
+                
+
+                <!-- 精査機関 -->
+                <div wicket:id="sellInfoContainer" id="sellInfoContainer">
+				<p class="results-ttl w950 clr">
+					<span class="w750 flt-l">
+						<span class="results-A">取引先情報</span>　　
+						<span class="results-B"><span wicket:id="lblRequestDateSTitle" id="lblRequestDateSTitle">依頼日：</span><span wicket:id="lblRequestDateS" id="lblRequestDateS">2013/01/05（土）</span></span>
+					</span>
+					<span class="flt-r"><span wicket:id="lblUpdDateSTitle" id="lblUpdDateSTitle">更新日：</span><span wicket:id="lblUpdDateS" id="lblUpdDateS">2013/01/29（火）</span></span>
+				</p>
+
+				<div class="db-gry mb10">
+					<div class="db-gre-bl clr">
+						<div class="db-gre-tl clr">
+							<div class="db-gre-br clr">
+								<div class="db-gre-tr">
+									<table class="tbl-inventory-input">
+										<tbody>
+											<tr>
+												<th class="cell-01">
+													<div>依頼商品名</div>
+												</th>
+												<td class="cell-03">
+													<div wicket:id="lblDmyItemNameS" class="lblDmyItemNameS-width pre" id="lblDmyItemNameS">ばなな</div>
+												</td>
+												<th class="cell-01">
+													<div>規格・入数／単位</div>
+												</th>
+												<td class="cell-03 last-cell">
+													<div wicket:id="lblSpecInfoS" class="lblSpecInfoS-width pre" id="lblSpecInfoS"></div>
+												</td>
+											</tr>
+											<tr>
+												<th class="cell-01 first-cell">
+													<div>取引先商品コード</div>
+												</th>
+												<td>
+													<div wicket:id="lblSellOwnCdS" class="lblSellOwnCdS-width pre" id="lblSellOwnCdS">Z0001</div>
+												</td>
+												<th class="cell-01 first-cell">
+													<div>取引先コード</div>
+												</th>
+												<td>
+													<div wicket:id="lblCustomerCdS" class="lblCustomerCdS-width pre" id="lblCustomerCdS">888010</div>
+												</td>
+											</tr>
+											<tr>
+												<th>
+													<div>取引先</div>
+												</th>
+												<td>
+													<div wicket:id="lblCustomerNameS" class="lblCustomerNameS-width pre" id="lblCustomerNameS">Hisoft果物</div>
+												</td>
+												<th>
+													<div>取引先担当者</div>
+												</th>
+												<td class="last-cell">
+													<div wicket:id="lblRrequestUserIdS" class="lblRrequestUserIdS-width pre" id="lblRrequestUserIdS">海太郎</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="cell-01">
+													<div>規格書商品名</div>
+												</th>
+												<td class="highlight">
+													<div class="clr lblSpecificationCdS-width pre">
+														<div>
+															<p class="right">
+																<a class="bt bt02 ml5" href="javascript:void(0)" wicket:id="lnkDispItemDetailS" id="lnkDispItemDetailS" onclick="setWaitDspWin();var m=openFurebyuPage(&#039;/kikaku/kikakudispdetail.page?addKbn=&amp;ckdflg=1&amp;companyCd=3987&amp;companyCd2=&amp;itemCd=&amp;itemNum2=&amp;itemNumber=G0888010-33062609-1E1907F5&amp;pbCheckFlg=0&amp;procKbn=&amp;seqNum=&amp;unConfirmedFlg=0&#039;,&#039;G0888010-33062609-1E1907F5&#039;);;if(m){var e=document.getElementById(&#039;form_hf_0&#039;); e.name=&#039;sellInfoContainer:lnkDispItemDetailS&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;form&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;form_hf_0&#039;; return false;}">
+																	<span class="bt-label">規格書表示</span>
+																</a>
+															</p><span wicket:id="lblItemNameS" class="lblItemNameS-width pre" id="lblItemNameS">ばなな</span>
+															
+															
+														</div>
+													</div><!--<div>レンジでチン！冷凍ハンバーグ<a href="#" class="bt bt02 ml5"><span class="bt-label">規格書表示</span></a></div>--></td>
+												<th class="cell-01">
+													<div>規格書コード</div>
+												</th>
+												<td class="last-cell">
+													<div wicket:id="lblSpecificationCdS" class="lblSpecificationCdS-width pre" id="lblSpecificationCdS">G0888010-33062609-1E1907F5</div>
+												</td>
+											</tr>
+											<tr wicket:id="memoSContainer" id="memoSContainer">
+												<th class="cell-01 first-cell">
+													<div>コメント</div>
+												</th>
+												<td class="last-cell edited" colspan="3">
+													<div wicket:id="lblMemoS" class="lblMemoC-width pre" id="lblMemoS">株式会社デリコへ<br/>コメント</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+                <div wicket:id="certifyInformationContainer" id="certifyInformationContainer">
+				<p class="results-ttl w950 clr">
+					<span class="results-A">自社情報</span>
+				</p>
+				<div class="db-gry mb10">
+					<div class="db-gre-bl clr">
+						<div class="db-gre-tl clr">
+							<div class="db-gre-br clr">
+								<div class="db-gre-tr">
+									<table class="tbl-inventory-input">
+										<tbody>
+											<tr wicket:id="certifyActContainer" id="certifyActContainer">
+												<th class="cell-01">
+													<div>照合入力</div>
+												</th>
+												<td colspan="3">
+													<div>
+                                                        
+                                                        
+                                                        
+                                                        <a href="javascript:void(0)" class="bt bt-gre" wicket:id="lnkAgreeFinish" id="lnkAgreeFinish" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;form_hf_0&#039;); e.name=&#039;certifyInformationContainer:certifyActContainer:lnkAgreeFinish&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;form&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;form_hf_0&#039;; return false;}">
+                                                            <span class="bt-label">承認済み</span>
+                                                        </a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="cell-01">
+                                                    
+													返却予定日<BR/>
+												</th>
+												<td class="cell-03 last-cell" wicket:id="tdReturnDay" id="tdReturnDay">
+													<div>
+														<span class="cstm-tx">
+															<span class="cstm-tx-bg">
+																
+																<input type="text" value="2013/01/05" size="10" class="interlock-trigger w80 ime-dis date-unit" maxlength="10" wicket:id="txtReturnDay" name="certifyInformationContainer:tdReturnDay:txtReturnDay" id="txtReturnDay" onkeydown="if (event.keyCode == 13) return false;" url="/kikaku/kikakuselcalendar.page?fnm=form&amp;inm=txtReturnDay"/>
+															</span><span id="week-txtReturnDay"></span>
+														</span>
+														<div wicket:id="chkReturnDay" id="chkReturnDay"><wicket:panel>
+    
+</wicket:panel></div>
+													</div>
+												</td>
+												<th class="cell-01">
+													<div>照合回数</div>
+												</th>
+												<td class="cell-03">
+													<div wicket:id="lblRecCount" id="lblRecCount">1</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="cell-01">
+													<div>照合有効期限</div>
+												</th>
+												<td>
+													<div wicket:id="lblCertifyTermCancelDate" id="lblCertifyTermCancelDate">2014/01/05</div>
+												</td>
+												<th class="cell-01">
+													<div>自社担当者</div>
+												</th>
+												<td class="last-cell">
+													
+                                                    <select class="cstm-select" name="certifyInformationContainer:selCertifyUserId" id="f3-01" wicket:id="selCertifyUserId">
+<option value="R21575053">担当者全権限</option>
+<option value="DQ0001">麻田静</option>
+<option value="SKC10001">精査担当陳</option>
+<option value="DLC003">田村晋一</option>
+<option value="N89tnuHr">テスト</option>
+<option value="CpXqbkPK">テスト２</option>
+<option selected="selected" value="SK01001">精査機関結合01</option>
+<option value="tst999888">tst999888</option>
+<option value="kFfBRbct">テスト33</option>
+</select>
+												</td>
+											</tr>
+											<tr wicket:id="memoC1Container" id="memoC1Container">
+												<th class="cell-01">
+                                                    
+													<div>取引先への
+														<br/>コメント
+													</div>
+													<div class="letter-control">（全角1000文字以内）</div>
+												</th>
+												<td class="highlight" wicket:id="tdMemoC1" id="tdMemoC1">
+													<div class="cstm-txarea charcount">
+														<p class="grp-txt-trailer grp-charcount">
+															<span class="counter-wrap">
+																<span class="counter">0</span>／
+																<span class="max-length">1000</span>文字
+															</span>
+															<span class="cstm-txarea-bg-tl">
+																<span class="cstm-txarea-bg-tr">
+																	<span class="cstm-txarea-bg-br">
+																		<span class="cstm-txarea-bg-bl">
+																			<textarea rel="1000文字以内" title="" wicket:id="txtMemoC1" maxlength="1000" class="w300 autogrow set-limit noticeTip" id="desc2" name="certifyInformationContainer:memoC1Container:tdMemoC1:txtMemoC1" cols="60" rows="5">株式会社デリコへ
+コメント</textarea>
+                                                                
+																		</span>
+																	</span>
+																</span>
+															</span><div wicket:id="chkMemoC1" id="chkMemoC1"><wicket:panel>
+    
+</wicket:panel></div>
+														</p>
+
+													</div>
+												</td>
+												<th class="cell-01">
+													<div>
+														<p class="disp-ic">
+															<img height="13" width="33" class="ic-unpublish" alt="非公開" src="/web2/jp/images/ic-unpublish.gif"/>
+														</p>社内用メモ
+													</div>
+													<div class="letter-control">（全角200文字以内）</div>
+												</th>
+												<td wicket:id="tdCertifyMemoC1" class="" id="tdCertifyMemoC1">
+													<div class="cstm-txarea charcount">
+														<span class="cstm-txarea-bg-tl">
+															<span class="cstm-txarea-bg-tr">
+																<span class="cstm-txarea-bg-br">
+																	<span class="cstm-txarea-bg-bl">
+																		<textarea rel="200文字以内" cols="200" wicket:id="txtCertifyMemoC1" rows="5" maxlength="200" class="w300 autogrow set-limit noticeTip" id="c1-27" name="certifyInformationContainer:memoC1Container:tdCertifyMemoC1:txtCertifyMemoC1">社内メモ</textarea>
+																	</span>
+																</span>
+															</span>
+														</span>
+																		<div wicket:id="chkCertifyMemoC1" id="chkCertifyMemoC1"><wicket:panel>
+    
+</wicket:panel></div>
+														<p class="grp-txt-trailer grp-charcount">
+															<span class="counter-wrap">
+																<span class="counter">0</span>／
+																<span class="max-length">200</span>文字
+															</span>
+														</p>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+                <!-- コメント用Container -->
+                
+
+                <div wicket:id="historyContainer" id="historyContainer">
+                <!-- 照合 -->
+		        <table class="tbl-bd-wide-06 tbl-bd-wide-02-prod-reg-02 line-height-tx01 mb5">
+		            <tbody><tr>
+		              <th class="tbl-bd-wide-06-ttl-th"><p class="tx-b">照合内容</p></th>
+		            </tr>
+		            </tbody>
+		        </table>
+                <div class="data-list mb5">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>No.</div>
+                                </td>
+                                <td>
+                                    <div>照合状況</div>
+                                </td>
+                                <td>
+                                    <div>コメント</div>
+                                </td>
+                                <td>
+                                    <div>更新者</div>
+                                </td>
+                                <td>
+                                    <div>更新日</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="head-space cell-01 head-space-first">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-02">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-03">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-04">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-05 head-space-last">
+                                    <div>&nbsp;</div>
+                                </td>
+                            </tr>
+								<div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-0">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">18</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-1">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">17</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-2">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">16</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-3">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">15</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-4">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">14</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-5">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">13</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-6">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">12</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-7">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">11</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-8">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">10</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-9">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">9</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-10">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">8</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-11">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">7</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-12">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">6</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-13">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">5</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-14">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">4</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-15">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">3</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-16">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">2</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry">外部公開</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div><div wicket:id="certifyHistoryGridView" id="certifyHistoryGridView-17">
+									<div wicket:id="itemContainer" id="itemContainer">
+									<tr>
+										<td class="list-cell" rowspan="3">
+											<div class="center" wicket:id="lstNo" id="lstNo">1</div>
+										</td>
+										<td class="list-cell nowrap">
+											<div>包材画像</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstPacking" class="pre" id="lstPacking">包材画像、照合内容</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+										</td>
+										<td rowspan="3" class="list-cell">
+											<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>一括表示原材料名</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstRaw" class="pre" id="lstRaw">外部公開されますか</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="list-cell nowrap">
+											<div>原材料情報及びアレルギー</div>
+										</td>
+										<td class="list-cell">
+											<div wicket:id="lstAllegry" class="pre" id="lstAllegry"></div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5" class="list-space">
+											<div>&nbsp;</div>
+										</td>
+									</tr>
+									</div>
+								</div>
+
+                                
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 取引先とのコメント・社内用メモ履歴  -->
+                <table class="tbl-bd-wide-06 tbl-bd-wide-02-prod-reg-02 line-height-tx01 mb5">
+                    <tbody>
+                        <tr>
+                            <th class="tbl-bd-wide-06-ttl-th">
+                                <p class="tx-b" wicket:id="lblCustomerTitle" id="lblCustomerTitle">取引先とのコメント・社内用メモ履歴</p>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 取引先とのコメント一覧項目  -->
+                <div class="data-list mb5">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>No.</div>
+                                </td>
+                                <td>
+                                    <div>提出状況</div>
+                                </td>
+                                <td>
+                                    <div wicket:id="lblCustomerTitle1" id="lblCustomerTitle1">取引先とのコメント</div>
+                                </td>
+                                <td>
+                                    <div>更新者</div>
+                                </td>
+                                <td>
+                                    <div>更新日</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="head-space cell-01 head-space-first">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-02">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-03">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-04">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-05 head-space-last">
+                                    <div>&nbsp;</div>
+                                </td>
+                            </tr>
+                            <div wicket:id="memoHistoryGridView" id="memoHistoryGridView-0">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">23</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-1">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">22</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-2">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">21</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-3">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">20</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認待ち)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-4">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">19</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-5">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">18</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-6">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">17</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-7">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">16</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-8">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">15</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-9">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">14</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-10">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">13</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-11">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">12</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認待ち)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-12">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">11</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-13">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">10</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-14">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">9</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-15">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">8</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-16">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">7</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-17">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">6</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-18">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">5</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合中(一次承認待ち)</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-19">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">4</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合依頼中</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											<span class="icbt-pnk mr5" wicket:id="markContainer" id="markContainer">
+												<span class="bt-label" wicket:id="lstMark" id="lstMark">取引先から</span>
+											</span>
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">-----</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-20">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">3</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合依頼前</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											<span class="icbt-pnk mr5" wicket:id="markContainer" id="markContainer">
+												<span class="bt-label" wicket:id="lstMark" id="lstMark">取引先から</span>
+											</span>
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">-----</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-21">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">2</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合依頼前</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											<span class="icbt-pnk mr5" wicket:id="markContainer" id="markContainer">
+												<span class="bt-label" wicket:id="lstMark" id="lstMark">取引先から</span>
+											</span>
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">-----</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div><div wicket:id="memoHistoryGridView" id="memoHistoryGridView-22">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">1</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div class="" wicket:id="lstStatus" id="lstStatus">照合依頼前</div>
+									</td>
+									<td class="list-cell">
+										<div class="Memo-width3 pre">
+											<span class="icbt-pnk mr5" wicket:id="markContainer" id="markContainer">
+												<span class="bt-label" wicket:id="lstMark" id="lstMark">取引先から</span>
+											</span>
+											<span wicket:id="lstMemo" id="lstMemo">株式会社デリコへ<br/>コメント</span>
+										</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdName" id="lstUpdName">-----</div>
+									</td>
+									<td class="list-cell">
+										<div class="" wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <td colspan="5" class="list-space">
+                                        <div>&nbsp;</div>
+                                    </td>
+                                </tr>
+                            </div>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="data-list mb5">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>No.</div>
+                                </td>
+                                <td>
+                                    <div>提出状況</div>
+                                </td>
+                                <td>
+                                    <div>社内用メモ</div>
+                                </td>
+                                <td>
+                                    <div>更新者</div>
+                                </td>
+                                <td>
+                                    <div>更新日</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="head-space cell-01 head-space-first">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-02">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-03">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-04">
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="head-space cell-05 head-space-last">
+                                    <div>&nbsp;</div>
+                                </td>
+                            </tr>
+							<div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-0">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">19</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-1">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">18</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-2">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">17</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-3">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">16</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認待ち)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-4">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">15</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-5">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">14</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-6">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">13</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-7">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">12</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">精査機関結合01</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/14（月）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-8">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">11</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-9">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">10</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-10">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">9</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-11">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">8</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認待ち)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-12">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">7</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-13">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">6</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/08（火）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-14">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">5</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(三次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-15">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">4</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(二次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-16">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">3</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-17">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">2</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認済み)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div><div wicket:id="memoInHistoryGridView" id="memoInHistoryGridView-18">
+								<tr>
+									<td class="list-cell">
+										<div class="center" wicket:id="lstNo" id="lstNo">1</div>
+									</td>
+									<td class="list-cell nowrap">
+										<div wicket:id="lstStatus" id="lstStatus">照合中(一次承認待ち)</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstMemoIn" class="Memo-width3 pre" id="lstMemoIn">社内メモ</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdName" id="lstUpdName">田村晋一</div>
+									</td>
+									<td class="list-cell">
+										<div wicket:id="lstUpdDate" id="lstUpdDate">2013/01/05（土）</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="5" class="list-space">
+										<div>&nbsp;</div>
+									</td>
+								</tr>
+							</div>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+                <table class="justify-row">
+                    
+                </table>
+
+                <table class="justify-row">
+                    <tbody>
+                        <tr>
+                            <td class="justify-l">
+                                <div>
+                                    <a href="Javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+                                </div>
+                            </td>
+
+                            <td class="justify-r" wicket:id="btn2Container" id="btn2Container">
+                                <div>
+                                    
+                                    
+                                    
+                                    <a href="javascript:void(0)" class="bt bt-org-large" wicket:id="lnkReject1" id="lnkReject1" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;form_hf_0&#039;); e.name=&#039;btn2Container:lnkReject1&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;form&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;form_hf_0&#039;; return false;}"><span class="bt-label">否決する</span></a><a href="javascript:void(0)" class="bt bt-org-large" wicket:id="lnkApproval1" id="lnkApproval1" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;form_hf_0&#039;); e.name=&#039;btn2Container:lnkApproval1&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;form&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;form_hf_0&#039;; return false;}"><span class="bt-label">承認する</span></a>
+                                    
+                                    
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <!-- <tr wicket:id="reSend1Container">
+                            <td class="justify-l valign-m w130">
+                                <div>&nbsp;</div>
+                            </td>
+                            <td class="justify-l valign-m small">
+                                <div>&nbsp;</div>
+                            </td>
+                            <td class="justify-r w440">
+                                <div class="db-gre">
+                                    <div class="db-gre-tl">
+                                        <div class="db-gre-tr">
+                                            <div class="db-gre-br">
+                                                <div class="db-gre-bl">
+                                                    <table class="tbl-vertical tbl-approval-request halign-l">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="nowrap">wicket:id="reSendMessage1"
+                                                                        <span class="tx-b">再提出：</span>アレルギー照合サービスへ規格書の<br/>再照合依頼を行います。
+                                                                    </div>
+                                                                </td>
+                                                                <td class="nowrap valign-m">
+                                                                    <div class="ml10">
+                                                                        <a class="bt bt-gre-large" href="#" wicket:id="lnkReSend1"><span class="bt-label">再提出する</span></a>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+			</div>
+
+            <input wicket:id="hidSaveMemo" type="hidden" name="hidSaveMemo" value="株式会社デリコへ
+コメント" id="hidSaveMemo"/><!-- 企業間伝達事項（HIDDEN）  -->
+            <input wicket:id="hidUserCd" type="hidden" name="hidUserCd" value="3987" id="hidUserCd"/><!-- 精査機関会社コード（HIDDEN）  -->
+            <input wicket:id="hidCertifyUserId" type="hidden" name="hidCertifyUserId" value="SK01001" id="hidCertifyUserId"/><!-- 精査機関担当者ID（HIDDEN）  -->
+            <input wicket:id="hidCustomerCd" type="hidden" name="hidCustomerCd" value="888010" id="hidCustomerCd"/><!-- 売り手会社コード（HIDDEN）  -->
+            <input wicket:id="hidRequestUserId" type="hidden" name="hidRequestUserId" value="ZYL001" id="hidRequestUserId"/><!-- 売り手担当者ID（HIDDEN）  -->
+            <input wicket:id="hidSpecBegin" type="hidden" name="hidSpecBegin" value="20130105" id="hidSpecBegin"/><!-- 適用日（HIDDEN）  -->
+            <input wicket:id="hidItemName" type="hidden" name="hidItemName" value="ばなな" id="hidItemName"/><!-- 規格書名（HIDDEN）  -->
+            <input wicket:id="hidSpecName" type="hidden" name="hidSpecName" value="５００KG／箱" id="hidSpecName"/><!-- 規格（HIDDEN）  -->
+            <input wicket:id="hidItemNumber" type="hidden" name="hidItemNumber" value="G0888010-33062609-1E1907F5" id="hidItemNumber"/><!-- 規格書コード（HIDDEN）  -->
+            <input wicket:id="hidPieceJancode" type="hidden" name="hidPieceJancode" value="" id="hidPieceJancode"/><!-- JANコード（HIDDEN）  -->
+            <input wicket:id="hidItemCd" type="hidden" name="hidItemCd" value="1" id="hidItemCd"/><!-- レコード番号（HIDDEN）  -->
+            <input wicket:id="hidSpecificationCd" type="hidden" name="hidSpecificationCd" value="G0888010-33062609-1E1907F5" id="hidSpecificationCd"/><!-- 規格書コード（表示用）（HIDDEN）  -->
+            <input wicket:id="hidDmyItemName" type="hidden" name="hidDmyItemName" value="ばなな" id="hidDmyItemName"/><!-- 商品名（HIDDEN）  -->
+            <input wicket:id="hidSellOwnCd" type="hidden" name="hidSellOwnCd" value="Z0001" id="hidSellOwnCd"/><!-- 売り手自社商品コード（HIDDEN）  -->
+            <input wicket:id="hidSpecInfo" type="hidden" name="hidSpecInfo" value="" id="hidSpecInfo"/><!-- 規格・入数／単位（HIDDEN）  -->
+            <input wicket:id="hidStatusCd" type="hidden" name="hidStatusCd" value="130" id="hidStatusCd"/><!-- 状態（HIDDEN）  -->
+            <input wicket:id="hidEntryKbn" type="hidden" name="hidEntryKbn" value="1" id="hidEntryKbn"/><!-- 編集フラグ（HIDDEN）  -->
+            <input wicket:id="hidConfigFlg" type="hidden" name="hidConfigFlg" value="" id="hidConfigFlg"/><!-- 確認フラグ（HIDDEN）  -->
+            <input wicket:id="hidControlId" type="hidden" name="hidControlId" value="" id="hidControlId"/><!-- コントロールID（HIDDEN）  -->
+            <input wicket:id="hidBuysellFlg" type="hidden" name="hidBuysellFlg" value="1" id="hidBuysellFlg"/><!-- 売買区分（HIDDEN）  -->
+            <input id="hidTempItem" type='hidden' name='hidTempItem'/>
+
+			<script type="text/javascript">
+/*<![CDATA[*/
+
+                var arrMsg = new Array();
+                arrMsg[0]="規格書を編集しますか？\nWEB編集を行うと、今後eBASEからの更新ができなくなります。";
+                arrMsg[1]="規格書を編集しますか？";
+                arrMsg[2]="アレルギー照合サービス、記入チェック実行しますか？";
+                arrMsg[3]="規格書を編集しますか？\nWEB編集を行うと、今後eBASEからの更新ができなくなります。";
+                arrMsg[4]="規格書を編集しますか？";
+                arrMsg[5]="精査依頼取消しますか？";
+                arrMsg[6]="精査受理しますか？";
+                arrMsg[7]="否決しますか？";
+                arrMsg[8]="承認しますか？";
+                arrMsg[9]="再提出を行うために、作成中に戻りますがよろしいですか？";
+			
+/*]]>*/
+</script>
+		<input type="hidden" name="form_sf" id="form_sf" /><input type="hidden" name="form_se" id="form_se" /></form>
+
+    </div>
+
+</wicket:panel></div>
+</wicket:extend></wicket:child>
+                <div wicket:id="footerhelp" id="footerhelp"><wicket:panel>
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+<div class="ftr-hlp" style="display:none;">
+<div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="/kikaku/kikakumypage.page" class="ic ic-blu-faq" wicket:id="lnkFooterHelp"><span class="ic-label">教えてインフォマート</span></a></div>
+</div>
+</wicket:panel></div>
+            </div>
+            <!--Contents End-->
+
+            <!--ftr Start-->
+            <div class="ftr" wicket:id="footer" id="footer"><wicket:panel>
+    		<ul class="ftr-nv clr">
+            	<li><a wicket:id="lnkFooterMyPage" href="/kikaku/kikakumypage.page">マイページ</a></li>
+            	<li><a href="/shinrai/guide/kikaku_guide.page">ご利用ガイド</a></li>
+            	<li><a href="/shinrai/corporate/kikaku_contact.asp?sub=ASP" >お問い合わせ</a></li>
+                <li>お客様番号：<span wicket:id="lblFooterKyakuBangou" class="tx-b" id="lblFooterKyakuBangou"></span></li>
+        	</ul>
+        	<ul class="usrnv clr">
+            	<li><a wicket:id="lnkFooterLogout" href="/kikaku/kikakulogin.page">ログアウト</a></li>
+        	</ul>
+        	<div class="small">
+            	<p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+					Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            	<p class="number"><span wicket:id="lblHostName" id="lblHostName">integration.kikaku.domain</span></p>
+        	</div>
+</wicket:panel></div>
+            <!--ftr End-->
+        </div>
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1680872-41']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+/*]]>*/
+</script>
+    </body>
+</html>

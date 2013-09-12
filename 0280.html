@@ -1,0 +1,1405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================-->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<style type="text/css">
+.head-space.cell-01{width:750px !important;}
+.head-space.cell-02{width:100px !important;}
+.head-space.cell-03{width:100px !important;}
+
+.ki-tbl-0280 input{top:-1px !important;}
+</style>
+
+<script type="text/javascript">
+<!--
+function upDateconfirm(){
+	if(window.confirm('更新しますか？')){
+		location.href = "0280.html";
+	}
+	else{
+		return false;
+	}
+}
+// -->
+</script>
+</head>
+<body class="page">
+
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+                <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form id="" name="" method="post" action="../dummy">
+      <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>FDBデータ連携項目設定</h1></th><td class="desc"><div>FDBデータの連携対象項目の登録時連携・更新時連携の設定を行ってください。</div></td>
+			<td class="nav">
+					<a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+				<table class="justify">
+					<tbody>
+						<tr>
+							<td class="justify-r valign-b">
+								<div><a href="#" onClick="upDateconfirm(); return false;" class="bt bt-gre-large"><span class="bt-label">更新する</span></a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p class="mb10">
+					<span class="eye-catch">通常（特に設定をしない場合）は全項目が対象となります。</span><br>
+				</p>
+
+
+<table class="justify">
+	<tbody>
+		<tr>
+			<td class="justify-l">
+				<table class="justify w300">
+					<tbody><tr>
+						  <td class="opt-nv"><div class="inner-gry">
+								<div class="tl"><div class="tr"><div class="br"><div class="bl pt5">
+								<table class="tbl-vertical tbl-approval-request mb5 w160">
+									<tbody><tr>
+										<th><span class="cstm-checkbox"><span><input type="checkbox" class="toggle-hidden-table" id="f0" name="f0" checked="checked"><label for="f0" class="valign-t"><span class="tx-b">すべてを選択する</span></label></span></span></th>
+										<td class="nowrap valign-m" colspan="2">&nbsp;</td>
+									</tr>
+								</tbody></table>
+								</div></div></div></div>
+							</div>
+						</td>
+						<td class="justify-l w650">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+              </td>
+            </tr>
+         </tbody>
+</table>
+<div class="data-list">
+
+   <table class="single-line04 ki-tbl-0280 mb10">
+      <tr class="tool-first">
+        <td colspan="2" class="first-cell">
+	<div><span class="cstm-checkbox"><span><input class="toggle-hidden-table valign-m" id="f1-XXX" name="f1-01" type="checkbox" checked="checked"><label for="f1-XXX"><span class="tx-b">基本情報</span></label></span></span></div>
+
+	    </td>
+        <td class="last-cell"><div>&nbsp;</div></td>
+      </tr>
+  
+    <tr class="last-row">
+      <td class="first-cell valign-m"><div>&nbsp;</div></td>
+      <td class="halign-l edit-checkbox"><div><span class="cstm-checkbox"><span><input id="f4-1" name="f4-1" type="checkbox" checked="checked" class="valign-m"><label for="f4-1">登録時連携</label></span></span></div></td>
+      <td class="halign-l last-cell"><div><span class="cstm-checkbox"><span><input id="f4-2" name="f4-2" type="checkbox" checked="checked" class="valign-m"><label for="f4-2">更新時連携</label></span></span></div></td>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03 head-space-last"><div> </div></td>
+      </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>商品名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品名　フリガナ</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>ブランド名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>ブランド区分</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>規格</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>規格半角</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>規格単位</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>賞味・消費区分</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>賞味期限（製造日含め）</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>期限表示の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>期限表示例</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>製造日表示例</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>製造日表示の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>保存温度帯</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>例外日付管理機関（開始）</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>例外日付管理機関（終了）</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>例外（製造日含め）</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>JICFS分類</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>商品形態・不定貫</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品形態・JANコード無し</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>商品形態・幅/長辺</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品形態・幅/短辺</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>商品形態・高さ</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品形態・重量</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>商品形態・入数</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品形態・JANコード</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>商品形態・GTINコード</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品特徴</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>召し上がり方・利用方法</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>使用・保管・廃棄上の注意</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>製造者名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>製造者住所</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>製造者電話</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>製造者PL保険加入の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>工場名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>工場住所</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>販売者名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>販売者住所</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>販売者電話</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>販売者PL保険加入の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>輸入者名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>輸入者住所</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>輸入者電話</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>輸入者PL保険加入の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    </table>
+</div>
+<div class="data-list mb10">
+   <table class="ki-tbl-0280">
+      <tr class="tool-first">
+        <td colspan="2" class="first-cell"><div>
+		<span class="cstm-checkbox"><span>
+            <input type="checkbox" class="toggle-hidden-table valign-m" id="f3-01" name="f3-01" checked="checked"><label for="f3-01"><span class="tx-b">包材・表示情報</span></label></span></span>
+		</div></td>
+        <td class="last-cell"><div>&nbsp;</div></td>
+      </tr>
+    <tr class="last-row">
+      <td class="first-cell valign-m"><div>&nbsp;</div></td>
+      <td class="halign-l edit-checkbox"><div><span class="cstm-checkbox"><span><input id="f4-1" name="f4-1" type="checkbox" checked="checked" class="valign-m"><label for="f4-1" class="mr5">登録時連携</label></span></span></div></td>
+      <td class="halign-l last-cell"><div><span class="cstm-checkbox"><span><input id="f4-2" name="f4-2" type="checkbox" checked="checked" class="valign-m"><label for="f4-2" class="mr5">更新時連携</label></span></span></div></td>
+    </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03 head-space-last"><div> </div></td>
+      </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示名称区分</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示名称</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示原材料名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示内容量</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示期限区分</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示賞味期限</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示保存方法</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示販売者</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示製造者</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示輸入者</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示加工者</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示使用上の注意</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示原産国</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示調理方法</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示使用方法</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示殺菌方法</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示でん粉含有量</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示固形量</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示内容総量</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示原料原産地</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示無脂乳固形分</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示乳脂肪分</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>一括表示凍結前加熱の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>一括表示加熱調理の必要性</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分対象名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分表示の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分分析単位</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分1_熱量</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分1_たんぱく質</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分1_脂質</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分1_炭水化物</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分1_ナトリウム</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_水分(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_灰分(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_カリウム(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_カルシウム(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_マグネシウム(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_リン(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_鉄(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_亜鉛(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_銅(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_マンガン(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_レチノール(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_αカロテン(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_βカロテン(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_クリプトキサンチン(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_βカロテン当量(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_レチノール当量(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_ビタミンD(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_ビタミンE(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_αトコフェロール(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_βトコフェロール(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_γトコフェロール(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_δトコフェロール(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_ビタミンK(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_ビタミンB1(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_ビタミンB2(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_ビタミンB6(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_ビタミンB12(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_葉酸(μg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_パントテン酸(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_ビタミンC(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_飽和脂肪酸(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_不飽和脂肪酸(一価)(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_不飽和脂肪酸(多価)(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_コレステロール(mg)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_水溶性植物繊維(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_不水溶性植物繊維(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>栄養成分_植物繊維(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>栄養成分_食塩相当量(g)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>包装への識別・認証マーク記載</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>遺伝子組み換え表示の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>包装への識別・認証マーク記載</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>遺伝子組み換え表示の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>原料原産地表示の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>商品画像</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>包材画像1</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    </table>
+</div>
+<div class="data-list mb10">
+   <table class="single-line04 ki-tbl-0280">
+      <tr class="tool-first">
+        <td colspan="2" class="first-cell"><div> 
+		<span class="cstm-checkbox"><span>
+            <input type="checkbox" class="toggle-hidden-table valign-m" id="f3-01" name="f3-01" checked="checked"><label for="f3-01"><span class="tx-b">製造・品質情報</span></label></span></span>
+		</div></td>
+        <td class="last-cell"><div>&nbsp;</div></td>
+      </tr>
+    <tr class="last-row">
+      <td class="first-cell valign-m"><div>&nbsp;</div></td>
+      <td class="halign-l edit-checkbox"><div><span class="cstm-checkbox"><span><input id="f4-1" name="f4-1" type="checkbox" checked="checked" class="valign-m"><label for="f4-1" class="mr5">登録時連携</label></span></span></div></td>
+      <td class="halign-l last-cell"><div><span class="cstm-checkbox"><span><input id="f4-2" name="f4-2" type="checkbox" checked="checked" class="valign-m"><label for="f4-2" class="mr5">更新時連携</label></span></span></div></td>
+    </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03 head-space-last"><div> </div></td>
+      </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>製造工程 フリー入力</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>備考</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>包材部位名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>材質記号及び規格</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>自社検査室の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>品質保持剤（封入の有無）</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>アレルギー物質コンタミ可能性の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>金属探知機の有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>ウェイトチェッカーの有無</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>金属探知機(Fe)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>金属探知機(SUS)</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>検査項目</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>検査頻度</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>その他異物検出方法</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>品質保持剤の種類</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>品質保持剤の名称</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>製造工程図</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    </table>
+</div>
+<div class="data-list mb10">
+   <table class="single-line04 ki-tbl-0280">
+      <tr class="tool-first">
+        <td colspan="2" class="first-cell"><div> 
+		<span class="cstm-checkbox"><span class="checked">
+            <input type="checkbox" class="toggle-hidden-table valign-m" id="f3-01" name="f3-01" checked="checked"><label for="f3-01"><span class="tx-b">原材料詳細</span></label></span>&nbsp;&nbsp;原材料の連携は新規登録のみ有効です。
+        </span></span>
+		</div></td>
+        <td class="last-cell"><div>&nbsp;</div></td>
+      </tr>
+    <tr class="last-row">
+      <td class="first-cell valign-m"><div>&nbsp;</div></td>
+      <td class="halign-l edit-checkbox"><div><span class="cstm-checkbox"><span><input id="f4-1" name="f4-1" type="checkbox" checked="checked" class="valign-m"><label for="f4-1" class="mr5">登録時連携</label></span></span></div></td>
+      <td class="halign-l last-cell"><div><span class="cstm-checkbox"><span><label for="f4-2" class="mr5">更新時連携</label></span></span></div></td>
+    </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03 head-space-last"><div> </div></td>
+      </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>原材料・添加物商品名</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell halign-c"><div><!--<span class="cstm-checkbox"><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></span>--></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    <tr class="list-gry selected">
+      <td class="list-cell"><div>製品の配合率</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell halign-c"><div><!--<span class="cstm-checkbox"><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></span>--></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    </table>
+</div>
+
+<div class="data-list mb10">
+   <table class="single-line04 ki-tbl-0280">
+      <tr class="tool-first">
+        <td colspan="2" class="first-cell"><div> 
+		<span class="cstm-checkbox"><span>
+            <input type="checkbox" class="toggle-hidden-table valign-m" id="f3-01" name="f3-01" checked="checked"><label for="f3-01"><span class="tx-b">規格書ベーシック情報</span></label></span></span>
+		</div></td>
+        <td class="last-cell"><div>&nbsp;</div></td>
+      </tr>
+    <tr class="last-row">
+      <td class="first-cell valign-m"><div>&nbsp;</div></td>
+      <td class="halign-l edit-checkbox"><div><span class="cstm-checkbox"><span><input id="f4-1" name="f4-1" type="checkbox" checked="checked" class="valign-m"><label for="f4-1" class="mr5">登録時連携</label></span></span></div></td>
+      <td class="halign-l last-cell"><div><span class="cstm-checkbox"><span><input id="f4-2" name="f4-2" type="checkbox" checked="checked" class="valign-m"><label for="f4-2" class="mr5">更新時連携</label></span></span></div></td>
+    </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03 head-space-last"><div> </div></td>
+      </tr>
+    <tr class="selected">
+      <td class="list-cell"><div>アレルギー物質</div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+      <td class="list-cell highlight halign-c edit-checkbox"><div><span><input type="checkbox" id="f2-3" name="f2-3" checked="checked"></span></div></td>
+    </tr>
+          <tr>
+            <td class="list-space-none" colspan="3"><div>&nbsp;</div></td>
+          </tr>
+    </table>
+</div>
+
+
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+                <td class="justify-r">
+                    <div><a href="#" onClick="upDateconfirm(); return false;" class="bt bt-gre-large"><span class="bt-label">更新する</span></a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+</div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

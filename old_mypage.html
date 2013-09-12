@@ -1,0 +1,1534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="ja-JP"><head><title>フーズインフォマートＡＳＰ規格書システム</title>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Sctipt-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="old_mypage_files/mypage.css">
+
+<script language="JavaScript1.1" src="old_mypage_files/headder.js"></script><link rel="STYLESHEET" type="text/css" href="old_mypage_files/font.css" title="Infomart">
+
+
+<script language="JavaScript" src="old_mypage_files/common_functions.js"></script>
+
+<script language="JavaScript" src="old_mypage_files/common.js"></script>
+<script language="JavaScript" src="old_mypage_files/js_common.js"></script>
+
+<script language="JavaScript1.1">
+<!--
+if (navigator.appVersion.indexOf("Mac",0)!=-1) {
+document.writeln("<LINK REL=\"STYLESHEET\" TYPE=\"text/css\" HREF=\"../css/fontmac.css\" TITLE=\"Infomart\">");
+}
+else {
+document.writeln("<LINK REL=\"STYLESHEET\" TYPE=\"text/css\" HREF=\"../css/font.css\" TITLE=\"Infomart\">");
+}
+
+
+/***********************************************************************************************************************
+機　能　：リアルタイム時刻表示機能
+引　数　：none
+返り値　：none
+備　考　：/include/JS_watch.incの表示形式を YYYY/MM/DD HH:MM:SS から YYYY年M月D日 （曜日） HH:MM:SS に変更したもの。
+使用方法：<body> の onLoad イベントで呼び出す（例：<body onLoad="gfMP2JWATCH_Update();">
+　　　　　又、id.timer* (*=1,2,3,...) をタイマーを表示したい位置に定義す。
+作成日　：15-Jun-2006
+ 
+変更日______担当者________変更内容____________________________________________________________________________________
+____/__/__  ________      新規
+************************************************************************************************************************/
+var glngMP2JWATCH_ServerDateTime = Date.parse("2013/04/11 9:39:37");
+//var glngMP2JWATCH_ServerDateTime = new Date();
+//var glngMP2JWATCH_ServerDateTime = Date.getDate("yyyy/mm/dd hh:mm:ss");
+var glngMP2JWATCH_ClientDateTime = 0;
+var glngMP2JWATCH_DateTimeDiff   = 0;
+
+if (glngMP2JWATCH_ClientDateTime == 0) {
+var gobjDateWork = new Date();
+glngMP2JWATCH_ClientDateTime = gobjDateWork.getTime();
+glngMP2JWATCH_DateTimeDiff   = glngMP2JWATCH_ServerDateTime - glngMP2JWATCH_ClientDateTime;
+}
+
+function gfMP2JWATCH_Update() {
+
+//変数定義:時間取得
+var warrWeekTbl = new Array( "日","月","火","水","木","金","土" );
+var wobjDate	= new Date();
+wobjDate.setTime(wobjDate.getTime() + glngMP2JWATCH_DateTimeDiff);	//サーバーとクライアントのタイム差を埋める
+var wintYear	= wobjDate.getYear();
+var wintMonth	= wobjDate.getMonth()+1;
+var wintDay		= wobjDate.getDate();
+var wstrWeek	= warrWeekTbl[wobjDate.getDay()];
+var wintHour	= wobjDate.getHours();
+var wintMinute	= wobjDate.getMinutes();
+var wintSecond	= wobjDate.getSeconds();
+var wstrTime    = "";
+var wlngDateTime= 0;
+
+//時:分:秒が1桁ならば、2桁に変換します。
+//if (wintMonth  < 10) { wintMonth  = "0" + wintMonth;  }
+//if (wintDay    < 10) { wintDay    = "0" + wintDay;    }
+if (wintHour   < 10) { wintHour   = "0" + wintHour;   }
+if (wintMinute < 10) { wintMinute = "0" + wintMinute; }
+if (wintSecond < 10) { wintSecond = "0" + wintSecond; }
+
+//表示時刻設定
+wstrTime = wintYear + '年 ' + wintMonth + '月 ' + wintDay + '日 （' + wstrWeek + '） ' + wintHour + ':' + wintMinute + ':' + wintSecond;
+wlngDateTime = Date.parse(wstrTime);
+
+if (document.all) {			//document.allがサポートされている場合
+var wintSeq = 1;
+while ( eval("document.all.timer" + wintSeq) ) {
+eval("document.all.timer" + wintSeq + ".innerHTML = wstrTime");
+wintSeq++;
+}
+}
+
+setTimeout(gfMP2JWATCH_Update, 500);
+}
+
+function editClick(frm, user_cd,customer_cd,item_cd){
+
+frm.user_cd.value = user_cd;
+frm.customer_cd.value = customer_cd;
+frm.item_cd.value = item_cd;
+frm.submit();
+
+return false;
+
+};
+
+function mailClick(frm,kbn,status_cd){
+frm.sendrcv_flg.value = kbn;
+if( status_cd != 0 )
+{
+frm.status_cd.value = status_cd;
+}
+else
+{
+frm.status_cd.value = "";
+}
+frm.submit();
+};
+
+function ReDsp(frm){
+frm.submit();
+};
+
+function GoSubmit(frm){
+frm.submit();
+};
+
+function ReDsp2(frm,buysell){
+frm.buysell_flg.value = buysell;
+frm.submit();
+};
+
+// 画像切り替え
+function ChangeImg(gpara,no){
+if (no == 1) {
+document.teishutu_1.src = gpara;
+}
+else if (no == 2) {
+document.teishutu_2.src = gpara;
+}
+else if (no == 3) {
+document.teishutu_3.src = gpara;
+}
+else if (no == 4) {
+document.teishutu_4.src = gpara;
+}
+else if (no == 5) {
+document.teishutu_5.src = gpara;
+}
+else if (no == 6) {
+document.teishutu_6.src = gpara;
+}
+else if (no == 7) {
+document.teishutu_7.src = gpara;
+}
+else if (no == 8) {
+document.teishutu_8.src = gpara;
+}
+else if (no == 0) {
+document.teishutu_0.src = gpara;
+}
+else if (no == 101) {
+document.status_list_1.src = gpara;
+}
+else if (no == 102) {
+document.status_list_2.src = gpara;
+}
+else if (no == 103) {
+document.status_list_3.src = gpara;
+}
+else if (no == 104) {
+document.status_list_4.src = gpara;
+}
+else if (no == 105) {
+document.status_list_5.src = gpara;
+}
+else if (no == 106) {
+document.status_list_6.src = gpara;
+}
+else if (no == 107) {
+document.status_list_7.src = gpara;
+}
+else if (no == 108) {
+document.status_list_8.src = gpara;
+}
+else if (no == 109) {
+document.status_list_9.src = gpara;
+}
+else if (no == 110) {
+document.status_list_10.src = gpara;
+}
+else if (no == 200) {
+document.status_asp.src = gpara;
+}
+else if (no == 201) {
+document.status_shodan.src = gpara;
+}
+else if (no == 202) {
+document.teishutu_s2_1.src = gpara;
+}
+
+}
+
+function user_status_list_Click(frm,buysell,kbn){
+
+frm.sakusei.value = ""
+frm.keisai.value = ""
+frm.kigen.value = ""
+frm.scwd.value = ""
+frm.own_status.value = ""
+
+if( buysell == 1 )
+{
+frm.buysell_flg.value = 1 ;		//買い
+}
+else
+{
+frm.buysell_flg.value = 2 ;		//売り
+}
+
+if( kbn == 'ALL' )
+{
+frm.status_cd.value = "";
+}
+if( kbn == 'MISYORI' )
+{
+frm.own_status.value = 4;
+frm.status_cd.value = "";
+}
+if( kbn == 'SPEC_CHANGE' )
+{
+frm.status_cd.value = "-2";
+}
+if( kbn == 'CERTIFY' )
+{
+frm.status_cd.value = "-3";
+}
+else if( kbn == '30' )
+{
+frm.status_cd.value = 30;
+}
+else if( kbn == '40' )
+{
+frm.status_cd.value = 40;
+}
+else if( kbn == '45' )
+{
+frm.status_cd.value = 45;
+}
+else if( kbn == '61' )
+{
+frm.status_cd.value = 61;
+}
+else if( kbn == '120' )
+{
+frm.status_cd.value = 120;
+}
+else if( kbn == '130' )
+{
+frm.status_cd.value = 130;
+}
+else if( kbn == '141' )
+{
+frm.status_cd.value = 141;
+}
+else if( kbn == '200' )
+{
+frm.status_cd.value = 200;
+}
+
+frm.submit();
+}
+
+
+//↓↓↓↓↓20091101精査機関対応
+function certify_status_list_Click(frm,buysell,kbn){
+
+frm.sakusei.value = ""
+frm.keisai.value = ""
+frm.kigen.value = ""
+frm.scwd.value = ""
+frm.own_status.value = ""
+frm.misettei.value = ""
+
+if( buysell == 1 )
+{
+frm.buysell_flg.value = 1 ;		//買い
+}
+else
+{
+frm.buysell_flg.value = 2 ;		//売り
+}
+
+if( kbn == 'ALL' )
+{
+frm.own_status.value = 1;
+frm.status_cd.value = "";
+}
+if( kbn == 'MISYORI' )
+{
+frm.own_status.value = 4;
+frm.status_cd.value = "";
+}
+if( kbn == 'LIMIT' )
+{
+frm.misettei.value = 2;
+frm.status_cd.value = "";
+}
+if( kbn == 'SOON' )
+{
+frm.misettei.value = 3;
+frm.status_cd.value = "";
+}
+else if( kbn == '30' )
+{
+frm.own_status.value = 2;
+frm.status_cd.value = 30;
+}
+else if( kbn == '40' )
+{
+frm.own_status.value = 2;
+frm.status_cd.value = 40;
+}
+else if( kbn == '45' )
+{
+frm.own_status.value = 2;
+frm.status_cd.value = 45;
+}
+else if( kbn == '61' )
+{
+frm.own_status.value = 2;
+frm.status_cd.value = 61;
+}
+else if( kbn == '120' )
+{
+frm.own_status.value = 2;
+frm.status_cd.value = 120;
+}
+else if( kbn == '130' )
+{
+frm.own_status.value = 2;
+frm.status_cd.value = 130;
+}
+else if( kbn == '141' )
+{
+frm.own_status.value = 1;
+frm.status_cd.value = 141;
+}
+else if( kbn == '200' )
+{
+frm.own_status.value = 3;
+frm.status_cd.value = 200;
+}
+
+frm.submit();
+}
+//↑↑↑↑↑20091101精査機関対応
+
+
+function customer_status_list_Click(frm,buysell,kbn){
+
+if( buysell == 1 )
+{
+frm.buysell_flg.value = 1 ;		//買い
+}
+else
+{
+frm.buysell_flg.value = 2 ;		//売り
+}
+
+
+frm.submit();
+}
+// ニュースの表示
+function GoPupup(theURL,winName) { 
+features = 'scrollbars=yes,resizable=yes,left=20,top=20,width=620,height=538';
+	  
+window.open(theURL,winName,features);
+
+};
+
+
+//規格書ＷＥＢ編集呼び出し
+function EntrySubmit(frm , itemnum){
+frm.item_number.value = itemnum;
+frm.submit();
+}
+
+//卸売り買い切り替え
+function chk_oroshi_chg(frm) {
+
+}
+//卸売り買い切り替え
+function oroshi_chgClk_Submit(id) {
+document.oroshi_cgf_frm.oroshi_chg_buysell.value = id;
+document.oroshi_cgf_frm.orochi_fst_chg_flg.value = "1";
+document.oroshi_cgf_frm.submit();
+
+}
+
+function search_certify_Click(frm){
+frm.submit();
+}
+
+//業務の案内追加（取引依頼） 20120823 sac
+function customer_matching_lilst_Click(frm){
+frm.submit();
+}
+// -->
+</script><link rel="STYLESHEET" type="text/css" href="old_mypage_files/font.css" title="Infomart">
+
+
+<style type="text/css">A.head {
+COLOR: #ffffff
+}
+A.head:visited {
+COLOR: #ffffff
+}
+A.head:hover {
+COLOR: #ff0000
+}
+</style>
+
+
+<meta content="MSHTML 6.00.2900.2873" name="GENERATOR"></head>
+<body leftmargin="0" topmargin="0" onload="gfMP2JWATCH_Update();chk_oroshi_chg(oroshi_cgf_frm);" onunload="closeAllChildWindow()" bgcolor="#ffffff" marginheight="0" marginwidth="0">
+
+<script type="text/javascript">
+<!--
+function IncimgChange(ImgMode,ImgPath) {
+	if (ImgMode == 'MyPage') {
+		document.MyPage.src = ImgPath;
+	}
+	if (ImgMode == 'Customer') {
+		document.Customer.src = ImgPath;
+	}
+	if (ImgMode == 'Search') {
+		document.Search.src = ImgPath;
+	}
+	if (ImgMode == 'Catalog') {
+		document.Catalog.src = ImgPath;
+	}
+	if (ImgMode == 'Trade') {
+		document.Trade.src = ImgPath;
+	}
+
+//↓↓↓↓↓20091101精査機関対応
+	if (ImgMode == 'Certify') {
+		document.Certify.src = ImgPath;
+	}
+//↑↑↑↑↑20091101精査機関対応
+
+	if (ImgMode == 'Data') {
+		document.Data.src = ImgPath;
+	}
+	if (ImgMode == 'Guide') {
+		document.Guide.src = ImgPath;
+	}
+	if (ImgMode == 'Manual') {
+		document.Manual.src = ImgPath;
+	}
+	if (ImgMode == 'Kensaku') {
+		document.Kensaku.src = ImgPath;
+	}
+}
+
+function jumpsubmit(pfrm,act) {
+	pfrm.action = act;
+	pfrm.submit();
+}
+
+function PageChange( pstrUrl ){
+	location.href = pstrUrl;
+}
+
+// -->
+</script>
+
+<form name="jumpfrm" action="" method="POST">
+	<input name="buysell_flg" value="2" type="HIDDEN">
+	<input name="user_cd" value="999971" type="HIDDEN">
+	<input name="g_page_no" value="1" type="HIDDEN">
+</form>
+
+<table border="0" cellpadding="0" cellspacing="0" height="50" width="800">
+<tbody>
+
+		<tr>
+			<td rowspan="2" height="44" valign="BOTTOM" width="240">
+				<a href="http://www.foods-shinrai.net/login.asp" target="_top">
+				<img alt="ASP規格書システム" src="old_mypage_files/shinrai2.gif" border="0" height="44" width="210">
+				</a>
+			</td>
+			<td height="14" align="RIGHT">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<td><img alt="" src="old_mypage_files/space.gif" height="10"></td>
+						<td valign="BOTTOM" align="RIGHT">
+							<font style="color=#000000; font-size:11px">
+
+								<a class="gray" href="http://www.kikaku-s.com/index.asp" target="_top">ASP規格書システムトップ</a>｜
+								<a class="gray" href="http://www.infomart.co.jp/foods/index.asp" target="_top">FOODS Info Martトップ</a>｜
+<a class="gray" href="#" onclick="PageChange('../logout.asp'); return false;" target="_top">ログアウト</a>&nbsp;&nbsp;
+										<a href="http://www.infomart.co.jp/scripts/qa_op_redirect.asp?ShinraiFlg=ON&amp;user_cd=999971&amp;user_id=sellaa&amp;BS=S" target="_TOP">
+										<img alt="FAQ" src="old_mypage_files/faq.gif" name="FAQ" border="0" align="absMiddle">
+										</a>
+
+						</font></td>
+					</tr>
+				</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+
+			<td bgcolor="#FFFFFF" valign="BOTTOM" width="560" align="RIGHT">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+
+							<td><a onmouseover="IncimgChange('MyPage','../img_sample/head_sellmenu_mypage2.gif');" onmouseout="IncimgChange('MyPage','../img_sample/head_sellmenu_mypage1.gif');" href="javascript:jumpsubmit(jumpfrm,'../standard/mypage.asp');"><img alt="マイページ" src="old_mypage_files/head_sellmenu_mypage1.gif" name="MyPage" border="0" height="20" width="84"></a></td>
+
+								<td><a onmouseover="IncimgChange('Catalog','../img_sample/head_sellmenu_item2.gif');" onmouseout="IncimgChange('Catalog','../img_sample/head_sellmenu_item1.gif');" href="javascript:jumpsubmit(jumpfrm,'../standard/user_status_list.asp');"><img alt="規格書状況一覧" src="old_mypage_files/head_sellmenu_item1.gif" name="Catalog" border="0" height="20" width="84"></a></td>
+
+							<td><a onmouseover="IncimgChange('Customer','../img_sample/head_sellmenu_customer2.gif');" onmouseout="IncimgChange('Customer','../img_sample/head_sellmenu_customer1.gif');" href="javascript:jumpsubmit(jumpfrm,'../standard/customer_status_list.asp');"><img alt="取引先一覧" src="old_mypage_files/head_sellmenu_customer1.gif" name="Customer" border="0" height="20" width="84"></a></td>
+
+							<td><a onmouseover="IncimgChange('Kensaku','../img_sample/head_sellmenu_serch2.gif');" onmouseout="IncimgChange('Kensaku','../img_sample/head_sellmenu_serch1.gif');" href="javascript:jumpsubmit(jumpfrm,'../search/search.asp');"><img alt="規格書検索" src="old_mypage_files/head_sellmenu_serch1.gif" name="Kensaku" border="0" height="20" width="84"></a></td>
+
+							<td><a onmouseover="IncimgChange('Guide','../img_sample/head_sellmenu_guide2.gif');" onmouseout="IncimgChange('Guide','../img_sample/head_sellmenu_guide1.gif');" href="javascript:jumpsubmit(jumpfrm,'../guide/index.asp');"><img alt="ご利用ガイド" src="old_mypage_files/head_sellmenu_guide1.gif" name="Guide" border="0" height="20" width="84"></a></td>
+
+						<td width="10">
+							<img alt="" src="old_mypage_files/space.gif" height="1" width="1">
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</td>
+		</tr>
+
+		<tr bgcolor="#F2AA34">
+			<td colspan="2" height="3"><img alt="" src="old_mypage_files/space.gif" height="3" width="1"></td>
+		</tr>
+
+</tbody>
+</table>
+<table>
+<tbody>
+	<tr>
+		<td height="5"></td>
+	</tr>
+</tbody>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="800">
+<tbody>
+<tr>
+<!--TD width=20 rowSpan=3>&nbsp;</TD-->
+<td style="PADDING-LEFT: 5px;" width="150">
+<img src="old_mypage_files/t_mypage.gif">
+<!--font face='ＭＳ Ｐゴシック' color=#056A2A style=font-size:17pt>マイページ</font-->
+</td>
+<td width="400">
+<font style="font-size:13pt;font-weight: normal" color="#000000" face="ＭＳ Ｐゴシック"><b>売り手企業Ａ（デモ用）様</b></font>
+</td>
+<td align="right">
+
+</td>
+</tr>
+<tr>
+<td height="6">
+</td>
+</tr>
+<tr>
+<td colspan="5" bgcolor="#70b018" height="2">
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0" width="800">
+<tbody>
+<tr>
+<td rowspan="2" bgcolor="#ffffff" valign="top" width="155">
+<table border="0" cellpadding="0" cellspacing="0" width="155">
+<tbody>
+
+
+<tr>
+<td bgcolor="#ffffff" valign="top" width="155">
+<img src="old_mypage_files/side_title1.gif" border="0" align="middle">
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'ALL')" onmouseover="ChangeImg('../mypage_files/status_list1_r.gif',101)" onmouseout="ChangeImg('../mypage_files/status_list1_1.gif',101)">
+<img name="status_list_1" alt="" src="old_mypage_files/status_list1_1.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="javascript:customer_status_list_Click(customer_status_list_frm,2,'')" onmouseover="ChangeImg('../mypage_files/status_list2_r.gif',102)" onmouseout="ChangeImg('../mypage_files/status_list2_1.gif',102)">
+<img name="status_list_2" alt="" src="old_mypage_files/status_list2_1.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#ffffff" valign="top" width="155">
+<img src="old_mypage_files/side_title2.gif" border="0" align="middle">
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="javascript:ReDsp(kikakuSearch_frm)" onmouseover="ChangeImg('../mypage_files/status_dsp_2r.gif',103)" onmouseout="ChangeImg('../mypage_files/status_dsp_2.gif',103)">
+<img name="status_list_3" alt="" src="old_mypage_files/status_dsp_2.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top" width="155">
+<img src="old_mypage_files/side_title3.gif" border="0" align="middle">
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="javascript:ReDsp(user_customer_list_frm)" onmouseover="ChangeImg('../mypage_files/status_customer_r.gif',104)" onmouseout="ChangeImg('../mypage_files/status_customer1.gif',104)">
+<img name="status_list_4" alt="" src="old_mypage_files/status_customer1.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="javascript:ReDsp(charge_list_frm)" onmouseover="ChangeImg('../mypage_files/status_charge_r.gif',105)" onmouseout="ChangeImg('../mypage_files/status_charge1.gif',105)">
+<img name="status_list_5" alt="" src="old_mypage_files/status_charge1.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="javascript:ReDsp(matching_list_frm)" onmouseover="ChangeImg('../mypage_files/status_matching_r.gif',109)" onmouseout="ChangeImg('../mypage_files/status_matching1.gif',109)">
+<img name="status_list_9" alt="" src="old_mypage_files/status_matching1.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+
+
+<!--受発注側システム-->
+<tr>
+<td style="BORDER-RIGHT: #bbbbbb 1px solid;" bgcolor="#eeeeee" height="20" valign="top" width="155">
+<img src="old_mypage_files/dummy.gif" border="0" align="middle">
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="http://www.foods-shinrai.net/standard/contact.asp?sub=ASP" onmouseover="ChangeImg('../mypage_files/status_asp_r.gif',200)" onmouseout="ChangeImg('../mypage_files/status_asp.gif',200)">
+<img name="status_asp" alt="" src="old_mypage_files/status_asp.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155">
+<a href="http://www.foods-shinrai.net/standard/contact.asp?sub=SHODAN" onmouseover="ChangeImg('../mypage_files/status_shodan_r.gif',201)" onmouseout="ChangeImg('../mypage_files/status_shodan.gif',201)">
+<img name="status_shodan" alt="" src="old_mypage_files/status_shodan.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+<tr>
+<td colspan="1" style="padding-top:5px;padding-left:7px;BORDER-RIGHT: #bbbbbb 1px solid;" bgcolor="#eeeeee" width="155">
+<img src="old_mypage_files/arrow.gif" height="9" width="5">
+<a href="http://www.foods-shinrai.net/corporate/y_id_entry.asp">
+受発注・商談システム<br>&nbsp;&nbsp;&nbsp;とのログイン切替方法
+</a>
+</td>
+</tr>
+<tr>
+<td colspan="1" style="padding-top:5px;padding-left:7px;BORDER-RIGHT: #bbbbbb 1px solid;" bgcolor="#eeeeee" width="155">
+<img src="old_mypage_files/arrow.gif" height="9" width="5">
+<a href="http://www.foods-shinrai.net/nikkei/nikkei.asp" target="_blank">
+日経ニュース
+</a>
+</td>
+</tr>
+
+<tr>
+<td style="BORDER-RIGHT: #bbbbbb 1px solid;" bgcolor="#eeeeee" height="20" valign="top" width="155">
+<img src="old_mypage_files/dummy.gif" border="0" align="middle">
+</td>
+</tr>
+<tr>
+<td colspan="1" style="padding-top:5px;BORDER-RIGHT: #bbbbbb 1px solid;" bgcolor="#eeeeee" width="155">
+<a href="http://www.foods-shinrai.net/guide/online_seminer.asp">
+<img name="bnr" alt="" src="old_mypage_files/bnr_lesson_mypage.gif" border="0" align="absMiddle"></a>
+</td>
+</tr>
+
+<tr>
+
+<td style="PADDING-LEFT: 6px;PADDING-RIGHT: 5px;" colspan="2" border="1" bgcolor="#eeeeee" height="590" valign="top" width="155" align="left">
+&nbsp;<img src="old_mypage_files/dummy.gif" border="0">
+</td>
+</tr>
+
+</tbody>
+</table>
+</td>
+<td rowspan="2" bgcolor="#ffffff" valign="top" width="10">&nbsp;&nbsp;</td>
+<td bgcolor="#ffffff" valign="top" width="635" align="left">
+
+<table valign="top" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" width="635" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr><td colspan="1" bgcolor="#ffffff" height="3"></td>
+<td colspan="4" bgcolor="#ffffff" height="3"></td>
+</tr>
+<!-- 緊急アナウンス -->
+<tr>
+<td colspan="4">
+<table  width="635" style="border:3px solid red; padding:8px;">
+<tr><td>
+<b><a href="#"><font color="#FF0000">【お詫び】</font>&nbsp;不具合に伴うリニューアル延期について</a>
+<br><br>4月13日（土）13時にASP規格書システムのフルモデルチェンジをリリースいたしましたが、現在システムの不具合発生により、旧画面に戻しております。お客様には多大なるご迷惑をお掛けいたしましたことを、深くお詫び申し上げます。早急に原因を究明するとともに、再リリース時期に関しましては、改めてご報告させていただきます。
+</b></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 緊急アナウンス -->
+<tr height="2">
+<td colspan="4" rowspan="1" bgcolor="#ffffff" valign="top" align="left">
+<img src="old_mypage_files/t_osirase.gif">
+</td>
+</tr>
+<tr>
+<!--
+<TD rowspan=1 width=4></TD>
+<TD rowspan=1 width=5></TD>
+<TD rowspan=1 width=1></TD>
+<TD width="495" colspan=1 >
+-->
+<td colspan="4">
+
+<table id="LineM213" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" width="540"><tbody><tr><td height="3"></td></tr><tr><td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="540"><tbody><tr><td width="15"><img src="old_mypage_files/arow_green_rig.gif" alt=""></td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="85">[2013/04/09]</td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="35"><img src="old_mypage_files/mrk_announce.gif" alt="インフォマートから最新のお知らせ" height="12" width="41"></td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="390"><a class="ble" href="http://www.foods-shinrai.net/guide/notice_list.asp?notice_category=2&amp;date=201304#20130409-1">【時間延長あり】定期メンテナンスのお知らせ (2013/4/21）</a>&nbsp;<font color="GREEN">【予告】</font></td></tr></tbody></table></td></tr><tr><td colspan="3"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="5" width="1"></td></tr><tr><td height="3"></td></tr><tr><td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="540"><tbody><tr><td width="15"><img src="old_mypage_files/arow_green_rig.gif" alt=""></td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="85">[2013/04/08]</td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="35"><img src="old_mypage_files/mrk_system.gif" alt="システムから最新のお知らせ" height="12" width="41"></td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="390"><a class="ble" href="http://www.foods-shinrai.net/guide/notice_list.asp?notice_category=1&amp;date=201304">規格書登録ソフト(eBASEjr.)バージョンアップのお知らせ</a></td></tr></tbody></table></td></tr><tr><td colspan="3"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="5" width="1"></td></tr><tr><td height="3"></td></tr><tr><td colspan="3"><table border="0" cellpadding="0" cellspacing="0" width="540"><tbody><tr><td width="15"><img src="old_mypage_files/arow_green_rig.gif" alt=""></td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="85">[2013/03/12]</td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="35"><img src="old_mypage_files/mrk_announce.gif" alt="インフォマートから最新のお知らせ" height="12" width="41"></td><td width="5"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="1" width="5"></td><td width="390"><a class="ble" href="http://www.foods-shinrai.net/guide/notice_list.asp?notice_category=2&amp;date=201303"><font color="#FF0000">【重要】</font>&nbsp;4月13日（土）「ASP規格書システム」がフルモデルチェンジ！</a></td></tr></tbody></table></td></tr><tr><td colspan="3"><img src="old_mypage_files/space_002.gif" alt="" border="0" height="5" width="1"></td></tr></tbody></table>
+</td>
+</tr>
+<!-- 緊急アナウンスの際はコメントアウト -->
+<!--
+<tr>
+<td colspan="4" style="font-size:9pt;" bgcolor="#ffffff" valign="TOP" align="left">
+<a href="http://www.foods-shinrai.net/next/kokuchi2/index.asp?" target="_blank">
+<img name="oshiraseNew" alt="次世代 FOODS Info Mart" src="old_mypage_files/bnr_mirai_kmyp_prm.gif" border="0" align="absTop">
+</a>
+</td>
+</tr>
+-->
+<tr>
+
+<td colspan="2" style="font-size:9pt; width:316px" bgcolor="#ffffff" valign="TOP" align="left">
+<a href="http://www.foods-shinrai.net/promotion/lecture_201303.asp" target="_self">
+<img name="oshiraseCaravan" alt="新画面操作講習会" src="old_mypage_files/bnr_kmyp_lecture_m.gif" border="0" align="absTop">
+</a>
+</td>
+<td style="width:3px"></td>
+<td style="font-size:9pt; width:316px" bgcolor="#ffffff" valign="TOP" align="right">
+<a href="http://www.foods-shinrai.net/next/movie/index_kikaku2.asp?" target="_blank">
+<img name="oshiraseMovie" alt="次世代 FOODS Info Mart" src="old_mypage_files/bnr_mirai_kmyp_movie_s.gif" border="0" align="absTop">
+</a>
+</td>
+
+
+</tr>
+
+<tr height="3">
+<td colspan="4" bgcolor="#ffffff"></td>
+</tr>
+
+<!--
+<TR height=54>
+<TD colspan=4 align=right valign=TOP height="60" width="635" bgColor=#ffffff style="font-size:9pt;">
+-->
+<!-- 2012/04/25よりマッチングバナーを非表示とし無料IDバナーを表示させる
+<A href="../promotion/matching_maker.asp">
+<IMG NAME="oshiraseNew" ALT="ASP規格書システム" SRC="../promotion/images/bnr_matching_maker.gif" ALIGN="absTop" BORDER="0"></A>
+-->
+<!--
+<A href="../promotion/id_for_search.asp">
+<IMG NAME="oshiraseNew" ALT="お取引先無料ID機能" SRC="../promotion/images/bnr_id_for_search.jpg" ALIGN="absTop" BORDER="0"></A>
+-->
+<!-- 2012/09/20よりお取引先無料ID機能バナー復活表示させる
+<A href="../promotion/lecture_201208.asp">
+<IMG NAME="oshiraseNew" ALT="メーカー機能使い方講習" SRC="../promotion/images/bnr_lecture_201208.gif" ALIGN="absTop" BORDER="0"></A>
+-->
+<!--
+</TD>
+</TR>
+-->
+
+<!--TR height=54>
+<TD colspan=4 align=right valign=TOP height="60" width="635" bgColor=#ffffff style="font-size:9pt;">
+<A href="http://www.infomart.co.jp/corporate/seminar/kikaku_seminar200909.asp?site=shinrai" target="_blank">
+<IMG NAME="oshiraseNew" ALT="食の安全・安心対策セミナー" SRC="../promotion/images/bnr_seminar200910.gif" ALIGN="absTop" BORDER="0"></A>
+</TD>
+</TR-->
+
+<!--TR>
+<TD colspan=4 align=right valign=TOP bgColor=#ffffff>
+<A href="../promotion/excel.asp">
+<IMG NAME="oshiraseNew" ALT="ASP規格書システム" SRC="../promotion/bnr_excel200911.gif" ALIGN="absTop" BORDER="0"></A>
+</TD>
+</TR-->
+<!--TR height=25>
+<TD colspan=4 align=left valign=TOP>
+&nbsp;<img src="/mypage_files/pr/arrow.gif" width="5"><img src='../files/dummy.gif' border="0" width="0" height="13">
+料金改定のご案内については、<A href="../promotion/2009newrelease05.asp">2009年5月下旬よりご案内のページ</A>にてご案内させていただいております。
+</TD>
+</TR-->
+
+</tbody>
+</table>
+</td>
+</tr></tbody>
+</table>
+	
+
+<table border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" valign="top" width="635" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr height="1">
+<td colspan="4" rowspan="1" bgcolor="#ffffff" valign="top" align="left">
+
+<img src="old_mypage_files/t_annai.gif"></td></tr><tr height="1"><td rowspan="1" width="1"></td><td colspan="3" id="timer1" style="font-size:10pt" bgcolor="#DDF8F7" height="25" width="490" align="buttom"></td>
+
+<td rowspan="1" width="1"></td>
+</tr>
+<tr>
+<td rowspan="1" width="4"></td>
+<td colspan="3" bgcolor="#CEE0DF" height="2" width="474"></td><td rowspan="1" width="1"></td>
+</tr>
+<tr>
+<td rowspan="1" width="4"></td>
+<td rowspan="1" width="5"></td>
+<td rowspan="1" width="1"></td>
+<td colspan="1" width="625">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr height="40">
+<td colspan="2" style="font-size:11pt" bgcolor="#ffffff" width="600" align="left">
+
+<img style="VERTICAL-ALIGN: middle" src="old_mypage_files/arow_green_rig.gif" border="0" height="13" width="12">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'MISYORI')">
+<font style="color:blue;font-size:11pt;" face="ＭＳ Ｐゴシック">提出されていない規格書が<font style="color:red;font-size:11pt;">50件</font>あります。</font></a><font style="color:blue;font-size:11pt;" face="ＭＳ Ｐゴシック">
+
+<br>
+<img style="VERTICAL-ALIGN: middle" src="old_mypage_files/arow_green_rig.gif" border="0" height="13" width="12">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'141')">
+<font style="color:blue;font-size:11pt;" face="ＭＳ Ｐゴシック">取引先に承認されなかった規格書が<font style="color:red;font-size:11pt;">5件</font>あります。</font></a><font style="color:blue;font-size:11pt;" face="ＭＳ Ｐゴシック">
+
+<!--業務の案内追加（取引依頼） 20120823 sac start-->
+
+<br>
+<img style="VERTICAL-ALIGN: middle" src="old_mypage_files/arow_green_rig.gif" border="0" height="13" width="12">
+<a href="javascript:customer_matching_lilst_Click(customer_matching_lilst_frm)">
+<font style="color:blue;font-size:11pt;" face="ＭＳ Ｐゴシック">取引先からのマッチングが<font style="color:red;font-size:11pt;">1件</font>あります。</font></a><font style="color:blue;font-size:11pt;" face="ＭＳ Ｐゴシック">
+
+<!--業務の案内追加（取引依頼） 20120823 sac end-->
+
+</font></font></font></td>
+</tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr></tbody>
+</table>
+	
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" width="625" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr height="2">
+<td bgcolor="#ffffff" valign="top" align="left">
+<img src="old_mypage_files/t_teisyutu.gif">
+</td>
+</tr>
+<tr height="20">
+<td bgcolor="#ffffff" align="center">
+作業区分について　
+<img src="old_mypage_files/kubun1.gif" style="VERTICAL-ALIGN: bottom">
+貴社作業
+<img src="old_mypage_files/kubun2.gif" style="VERTICAL-ALIGN: bottom">
+取引先作業
+</td>
+</tr>
+</tbody>
+</table>
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td colspan="1" bgcolor="#ffffff" height="1" width="5"></td>
+<td colspan="2" bgcolor="#888888" height="1"></td>
+<td colspan="1" bgcolor="#ffffff" height="1" width="10"></td>
+</tr>
+<tr>
+<td colspan="4" bgcolor="#ffffff" height="5"></td>
+</tr>
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="625">
+<tbody>
+
+<tr height="25">
+<td rowspan="1" bgcolor="#ffffff" valign="middle" width="65" align="center">
+該当件数
+</td>
+<td rowspan="1" bgcolor="#ffffff" valign="middle" width="225" align="center">
+業務フロー
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="middle" width="155" align="center">
+業務メニュー
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="middle" width="180" align="center">
+その他業務　
+</td>
+</tr>
+
+<!--2007/08/24 add to-take-->
+<tr height="38">
+<td rowspan="1" style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+20件
+</td>
+<td rowspan="1" bgcolor="#ffffff" valign="top" width="225" align="right">
+<img src="old_mypage_files/status_sell.gif" style="VERTICAL-ALIGN: top">
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'30')" onmouseover="ChangeImg('../mypage_files/teishutu_s0r.gif',0)" onmouseout="ChangeImg('../mypage_files/teishutu_s0.gif',0)">
+<img name="teishutu_0" alt="提出依頼" src="old_mypage_files/teishutu_s0.gif" border="0" align="absMiddle"></a>
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="180" align="left">
+</td>
+</tr>
+<!--2007/08/24 add to-take-->
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" height="5"></td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" height="1" width="5"></td>
+<td colspan="2" bgcolor="#888888" height="1"></td>
+<td colspan="1" bgcolor="#ffffff" height="1" width="10"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" height="5"></td>
+</tr>
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="625">
+<tbody>
+<tr height="38">
+<td rowspan="1" style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+－
+</td>
+<td rowspan="1" bgcolor="#ffffff" valign="top" width="225" align="right">
+<img src="old_mypage_files/status_sell1.gif" style="VERTICAL-ALIGN: top">
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155" align="center">
+
+<a href="javascript:GoSubmit(new_editfrm)" onmouseover="ChangeImg('../mypage_files/teishutu_s1r.gif',1)" onmouseout="ChangeImg('../mypage_files/teishutu_s1.gif',1)">
+<img name="teishutu_1" alt="個別登録" src="old_mypage_files/teishutu_s1.gif" border="0" align="absMiddle"></a>
+
+</td>
+<td colspan="1" style="font-size:8pt" bgcolor="#EEEEEE" valign="middle" width="180" align="left">
+
+&nbsp;&nbsp;・一括登録は<a href="javascript:GoSubmit(fileup_frm)" style="font-size:8pt"><u>こちら</u></a>
+
+</td>
+</tr>
+
+<tr height="38">
+<td rowspan="1" style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+－
+</td>
+<td rowspan="1" bgcolor="#ffffff" valign="top" width="225" align="right">
+<img src="old_mypage_files/status_sell2.gif" style="VERTICAL-ALIGN: top">
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155" align="center">
+
+<a href="#" onclick='EntrySubmit(Entry_Frm,"")' onmouseover="ChangeImg('../mypage_files/teishutu_s2_1_r.gif',202)" onmouseout="ChangeImg('../mypage_files/teishutu_s2_1.gif',202)"><img name="teishutu_s2_1" alt="" src="old_mypage_files/teishutu_s2_1.gif" border="0" align="absMiddle"></a>
+
+</td>
+<td colspan="1" style="font-size:8pt" bgcolor="#EEEEEE" valign="middle" width="180" align="left">
+
+&nbsp;&nbsp;・CSVアップロードは<a href="javascript:GoSubmit(csvfileup_frm)" style="font-size:8pt"><u>こちら</u></a>
+
+</td>
+</tr>
+
+<tr height="38">
+<td rowspan="1" style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+15件
+</td>
+<td rowspan="1" bgcolor="#ffffff" valign="top" width="225" align="right">
+<img src="old_mypage_files/status_sell3.gif" style="VERTICAL-ALIGN: top">
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'40')" onmouseover="ChangeImg('../mypage_files/teishutu_s3r.gif',2)" onmouseout="ChangeImg('../mypage_files/teishutu_s3.gif',2)">
+<img name="teishutu_2" alt="作成中" src="old_mypage_files/teishutu_s3.gif" border="0" align="absMiddle"></a>
+</td>
+<td colspan="1" style="font-size:8pt" bgcolor="#EEEEEE" valign="middle" width="180" align="left">
+<!--<img align=middle valign=top src='../mypage_files/status_subtitle3.gif' border="0">-->
+&nbsp;&nbsp;・非表示設定
+</td>
+</tr>
+<tr height="38">
+<td rowspan="1" style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+2件
+</td>
+<td rowspan="1" bgcolor="#ffffff" valign="top" width="225" align="right">
+<img src="old_mypage_files/status_sell5.gif" style="VERTICAL-ALIGN: top">
+</td>
+<td colspan="1" bgcolor="#ffffff" valign="top" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'61')" onmouseover="ChangeImg('../mypage_files/teishutu_s5r.gif',4)" onmouseout="ChangeImg('../mypage_files/teishutu_s5.gif',4)">
+<img name="teishutu_4" alt="記入チェック済み" src="old_mypage_files/teishutu_s5.gif" border="0" align="absMiddle"></a>
+</td>
+<td colspan="1" style="font-size:8pt" bgcolor="#EEEEEE" width="180" align="left">
+<!--<img align=middle valign=top src='../mypage_files/status_subtitle5.gif' border="0">-->
+&nbsp;&nbsp;・再記入（処理後は③に移動）
+<br>&nbsp;&nbsp;・<a href="javascript:user_status_list_Click(user_status_list_frm,2,'45')"><font style="font-size:8pt">記入チェック待ちの処理はこちら</font></a>
+</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" height="5"></td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" height="1" width="5"></td>
+<td colspan="2" bgcolor="#888888" height="1"></td>
+<td colspan="1" bgcolor="#ffffff" height="1" width="10"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" height="5"></td>
+</tr>
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="625">
+<tbody>
+<tr height="30">
+<td style="color:blue" bgcolor="#ffffff" valign="middle" width="65" align="right">
+5件
+</td>
+<td rowspan="2" bgcolor="#ffffff" valign="middle" width="225" align="right">
+<img src="old_mypage_files/status_sell6.gif" style="VERTICAL-ALIGN: bottom">
+</td>
+<td bgcolor="#ffffff" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'120')" onmouseover="ChangeImg('../mypage_files/teishutu_s6_1r.gif',5)" onmouseout="ChangeImg('../mypage_files/teishutu_s6_1.gif',5)">
+<img name="teishutu_5" alt="一次承認待ち" src="old_mypage_files/teishutu_s6_1.gif" border="0" align="absMiddle"></a>
+</td>
+<td bgcolor="#ffffff" width="170" align="left">
+</td>
+</tr>
+<tr height="40">
+<td style="color:blue" bgcolor="#ffffff" valign="middle" width="65" align="right">
+11件
+</td>
+<td bgcolor="#ffffff" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'130')" onmouseover="ChangeImg('../mypage_files/teishutu_s6_2r.gif',6)" onmouseout="ChangeImg('../mypage_files/teishutu_s6_2.gif',6)">
+<img name="teishutu_6" alt="最終承認待ち" src="old_mypage_files/teishutu_s6_2.gif" border="0" align="absMiddle"></a>
+</td>
+<td bgcolor="#ffffff" width="180" align="left">
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" height="5"></td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" height="1" width="5"></td>
+<td colspan="2" bgcolor="#888888" height="1"></td>
+<td colspan="1" bgcolor="#ffffff" height="1" width="10"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" height="5"></td>
+</tr>
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="625">
+<tbody>
+<tr height="30">
+<td style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+5件
+</td>
+<td bgcolor="#ffffff" valign="middle" width="225" align="right">
+<img src="old_mypage_files/status_sell7.gif" style="VERTICAL-ALIGN: bottom">
+</td>
+<td bgcolor="#ffffff" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'141')" onmouseover="ChangeImg('../mypage_files/teishutu_s7r.gif',7)" onmouseout="ChangeImg('../mypage_files/teishutu_s7.gif',7)">
+<img name="teishutu_7" alt="承認否決" src="old_mypage_files/teishutu_s7.gif" border="0" align="absMiddle"></a>
+</td>
+<td bgcolor="#ffffff" width="180" align="left">
+</td>
+</tr>
+<tr height="40">
+<td style="color:red" bgcolor="#ffffff" valign="middle" width="65" align="right">
+32件
+</td>
+<td bgcolor="#ffffff" valign="middle" width="225" align="right">
+<img src="old_mypage_files/status_sell8.gif" style="VERTICAL-ALIGN: bottom">
+</td>
+<td bgcolor="#ffffff" width="155" align="center">
+<a href="javascript:user_status_list_Click(user_status_list_frm,2,'200')" onmouseover="ChangeImg('../mypage_files/teishutu_s8r.gif',8)" onmouseout="ChangeImg('../mypage_files/teishutu_s8.gif',8)">
+<img name="teishutu_8" alt="承認済み" src="old_mypage_files/teishutu_s8.gif" border="0" align="absMiddle"></a>
+</td>
+<td style="font-size:8pt" bgcolor="#EEEEEE" valign="middle" width="180" align="left">
+<!--<img align=middle src='../mypage_files/status_subtitle9.gif' border="0">-->
+&nbsp;&nbsp;・仕様変更通知<br>&nbsp;&nbsp;・取引終了設定
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td colspan="4" bgcolor="#ffffff" height="5"></td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" height="1" width="5"></td>
+<td colspan="2" bgcolor="#888888" height="1"></td>
+<td colspan="1" bgcolor="#ffffff" height="1" width="10"></td>
+</tr>
+<tr>
+<td colspan="4" bgcolor="#ffffff" height="5"></td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr></tbody>
+</table>
+
+<!-- 規格書PR部分 -->
+<table class="pr_s" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<table class="base" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td class="box_r"><img src="old_mypage_files/service_pr.gif" height="15" width="64"></td>
+<td class="box_l">
+
+	<table style="margin-bottom:5px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+			<td class="pr_cm4_2" width="50%"><a class="a1" href="http://www.infomart.co.jp/oroshi/index.asp" target="_blank">食品卸「IT武装化」宣言！<br>ASP受注・営業システム・始動</a></td>
+			<td class="pr_cm4_2" width="50%"><a class="a1" href="http://www.foods-shinrai.net/promotion/matching_maker.asp">つながるほど便利に。<br>取引先マッチング機能</a></td>
+		</tr>
+	</tbody></table>
+
+</td>
+</tr>
+</tbody></table>
+<table class="base" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td class="box_r" align="center"><img src="old_mypage_files/contents.gif" height="14" width="80"></td>
+<td class="box_l">
+<table border="0" cellpadding="0" cellspacing="5" width="100%">
+<tbody><tr>
+<td><strong style="color:#ed7a51;font-size:14px;">規格書タイムズ　　毎月最終木曜日更新</strong></td>
+</tr>
+<tr>
+<td class="pr_line" colspan="3"></td>
+</tr>
+<tr>
+<td style="line-height:140%;padding-left:5px;"><img src="old_mypage_files/arrow.gif" height="9" width="5">&nbsp;<a href="http://www.foods-shinrai.net/times/anzen/index.asp" target="_blank">食の安全・安心をテーマにした業界スペシャリストのコラムを掲載</a></td></tr>
+<tr>
+<td style="line-height:140%;padding-left:5px;"><img src="old_mypage_files/arrow.gif" height="9" width="5">&nbsp;<a href="http://www.foods-shinrai.net/times/eisei/index.asp" target="_blank">食品関連法規と食品表示に関する最新更新情報をがわかる</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table class="base" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td class="box_r"><img src="old_mypage_files/support.gif" height="16" width="62"></td>
+<td class="box_l">
+<table border="0" cellpadding="0" cellspacing="5" width="100%">
+<tbody><tr>
+<td colspan="3">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td width="50%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td width="50"><a class="a1" target="_blank" href="http://www.infomart.co.jp/scripts/qa_op_redirect.asp?ShinraiFlg=ON&amp;user_cd=999971&amp;user_id=sellaa&amp;BS=S"><img src="old_mypage_files/support_faq.gif" alt="お問合せ・FAQ" border="0" height="45" width="45"></a></td>
+<td valign="middle"><a class="a1" target="_blank" href="http://www.infomart.co.jp/scripts/qa_op_redirect.asp?ShinraiFlg=ON&amp;user_cd=999971&amp;user_id=sellaa&amp;BS=S"><strong>【お問合せ・FAQ】</strong><br>
+操作上のご不明点はここから<br>ご確認ください。</a></td>
+</tr>
+</tbody></table>
+</td>
+<td width="50%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td width="50"><a class="a1" href="http://www.foods-shinrai.net/pm_cti/index.asp"><img src="old_mypage_files/support_cust.gif" alt="カスタマーセンター" border="0" height="45" width="45"></a></td>
+<td valign="middle"><a class="a1" href="http://www.foods-shinrai.net/pm_cti/index.asp"><strong>【カスタマーセンター】</strong><br>TEL：0120-935-235<br>受付：月～金  9：00-18：00<br><span style="font-size:10px;">(祝祭日除く)</span></a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="height:50%">
+
+<td width="50%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td width="50"><a class="a1" href="http://www.foods-shinrai.net/guide/online_seminer.asp"><img src="old_mypage_files/support_webex.gif" alt="動画で分かる使い方" border="0" height="45" width="45"></a></td>
+<td valign="middle"><a class="a1" href="http://www.foods-shinrai.net/guide/online_seminer.asp"><strong>【動画で分かる使い方】</strong><br>ASP規格書システムの使い方を<br>動画でご説明いたします。</a></td>
+</tr>
+</tbody></table>
+</td>
+<td width="50%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td width="50"><a class="a1" href="http://www.foods-shinrai.net/guide/index.asp"><img src="old_mypage_files/support_manu.gif" alt="各種操作マニュアル" border="0" height="45" width="45"></a></td>
+<td valign="middle"><a class="a1" href="http://www.foods-shinrai.net/guide/index.asp"><strong>【各種操作マニュアル】</strong><br>基本的な操作方法はここから<br>ご確認ください。</a></td>
+</tr>
+</tbody></table>
+</td>
+
+</tr>
+</tbody></table>
+<!-- サービス、導入事例、サポート ここまで↑ -->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td colspan="4" bgcolor="#ffffff" height="5"></td>
+</tr>
+<tr>
+<td colspan="1" bgcolor="#ffffff" height="1" width="5"></td>
+<td colspan="2" bgcolor="#888888" height="1"></td>
+<td colspan="1" bgcolor="#ffffff" height="1" width="10"></td>
+</tr>
+<tr>
+<td colspan="4" bgcolor="#ffffff" height="5"></td>
+</tr>
+</tbody>
+</table>
+
+<form name="pagefrm" action="customer_status_list_page_jump.asp" method="POST">
+<input name="g_page_no" value="" type="hidden">
+</form>
+
+<form name="user_status_list_frm" action="user_status_list.asp" method="POST">
+<input name="re_disply" value="1" type="hidden">
+<input name="buysell_flg" value="2" type="hidden">
+
+<input name="g_page_no" value="" type="hidden">
+<input name="customer_cd" value="" type="hidden">
+<input name="status_cd" value="" type="hidden">
+<input name="sakusei" value="" type="hidden">
+<input name="keisai" value="" type="hidden">
+<input name="kigen" value="" type="hidden">
+<input name="scwd" value="" type="hidden">
+<input name="own_status" value="" type="hidden">
+
+</form>
+
+
+
+<form name="certify_status_list_frm" action="../certify/certify_status_list.asp" method="POST">
+<input name="re_disply" value="1" type="hidden">
+<input name="buysell_flg" value="2" type="hidden">
+
+<input name="g_page_no" value="" type="hidden">
+<input name="customer_cd" value="" type="hidden">
+<input name="status_cd" value="" type="hidden">
+<input name="sakusei" value="" type="hidden">
+<input name="keisai" value="" type="hidden">
+<input name="kigen" value="" type="hidden">
+<input name="scwd" value="" type="hidden">
+<input name="own_status" value="" type="hidden">
+<input name="misettei" value="" type="hidden">
+
+</form>
+
+
+<form name="customer_status_list_frm" action="customer_status_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<!--自社商品コードアップロード-->
+<form name="ownfile_menu" action="ownfile_menu.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+
+<input name="user_cd" value="999971" type="hidden">
+</form>
+
+
+<!--アップロード-->
+<form name="fileup_frm" action="fileup.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">	<!--売り手-->
+
+<input name="user_cd" value="999971" type="hidden">
+</form>
+<form name="csvfileup_frm" action="csvfileup.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">	<!--売り手-->
+
+<input name="user_cd" value="999971" type="hidden">
+</form>
+
+<!--新規作成・マイページへ戻らない-->
+<form name="new_editfrm" action="user_status_edit.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+<input name="p_proc_flg" value="1" type="hidden">	<!--新規作成-->
+<input name="user_menu_jump" value="2" type="hidden">
+<input name="user_cd" value="999971" type="hidden">
+
+</form>
+
+<!--新規作成・マイページへ戻る-->
+<form name="new_editfrm_back" action="user_status_edit.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">	<!--売り手-->
+<input name="p_proc_flg" value="1" type="hidden">	<!--新規作成-->
+
+<input name="g_back_action" value="mypage.asp" type="hidden">		<!--mypageへ戻る-->
+</form>
+
+<form name="mail_frm" action="mail_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+
+<input name="sendrcv_flg" value="" type="hidden">	<!--'送受信フラグ-->
+<input name="status_cd" value="" type="hidden">	<!--'未読・既読フラグ-->
+</form>
+
+<form name="kikakuchk_frm" action="check_kikaku.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">	<!--'売り-->
+</form>
+	
+<form name="kikakukakka_frm" action="kekka_kikaku.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+<input name="mypage_kekka_disp" value="1" type="hidden">
+<input name="check_err_flg" value="true" type="hidden"><!--マイページからの遷移時は結果と関係ないのでTrueセット-->
+<input name="selin_err_flg" value="true" type="hidden"><!--マイページからの遷移時は結果と関係ないのでTrueセット-->
+<input name="Haita_Kekka" value="true" type="hidden"><!--マイページからの遷移時は結果と関係ないのでTrueセット-->
+</form>
+	
+<form name="kikakuSearch_frm" action="../search/search.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<form name="torihikisaki_frm" action="" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+
+<input name="rcv_user_cd" value="" type="hidden">
+<input name="rcv_user_name" value="" type="hidden">
+<input name="rcv_user_id" value="" type="hidden">
+<input name="rcv_charge_name" value="" type="hidden">
+</form>
+<form name="user_customer_list_frm" action="user_customer_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+	
+<form name="charge_list_frm" action="charge_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<form name="batch_list_frm" action="batch_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<form name="csv_pat_frm" action="../download/csv_down_pattern.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<form name="oroshi_cgf_frm" action="mypage.asp" method="POST">
+<input name="buysell_flg" value="" type="hidden">	<!--売り買い区分クリア-->
+<input name="orochi_fst_chg_flg" value="" type="hidden">
+<input name="oroshi_chg_buysell" value="" type="hidden">
+<input name="oroshi_aite_user_id" value="" type="hidden">
+</form>
+
+<form name="matching_list_frm" action="customer_matching_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+<input name="proc_kbn" value="0" type="hidden">
+</form>
+
+<form name="maillist" action="sendmail_user_list.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<form name="search_certify_frm" action="/search/search_certify.asp" method="POST">
+<input name="buysell_flg" value="2" type="hidden">
+</form>
+
+<!--規格書ＷＥＢ編集-->
+<form name="Entry_Frm" action="../entry/basic_information_edit.asp?di=" enctype="multipart/form-data" method="POST">
+<input name="am1" value="0" type="hidden">
+<!---input type='hidden' name='am2' value='mypage.asp' -->
+<input name="am2" value="0002000" type="hidden">
+
+<input name="company_code" value="ZZ00" type="hidden">
+<input name="item_number" value="" type="hidden">
+
+<input name="user_cd" value="999971" type="hidden">
+	
+
+</form>
+
+<!--業務の案内追加（取引依頼） 20120823 sac start-->
+<form name="customer_matching_lilst_frm" action="customer_matching_list.asp" method="POST">
+<input name="g_page_no" value="" type="hidden">
+<input name="buysell_flg" value="2" type="hidden">
+<input name="proc_kbn" value="3" type="hidden">
+<input name="keyword" value="" type="hidden">
+</form>
+<!--業務の案内追加（取引依頼） 20120823 sac end-->
+
+</td>
+</tr></tbody>
+</table>
+
+
+
+<!-- ライン　ここから -->
+	
+<table border="0" cellpadding="0" cellspacing="0" width="800">
+  <tbody>
+  <tr>
+    <td bgcolor="#ccff99" height="16" valign="center" width="80%" align="right">
+		<font style="FONT-SIZE: 10px" color="#003300" size="-2">
+		<img alt="" src="old_mypage_files/space.gif" height="1" width="50">      [&nbsp;&nbsp;<a class="footer" href="http://www.infomart.co.jp/foods/index.asp" target="_top">FOODS Info Martについて</a><!--&nbsp;｜&nbsp;<A class=footer 
+      href="http://www.foodsinfomart.com/service/index.asp" 
+      target=_top>資料請求</A--><!--&nbsp;｜&nbsp;<a href="#" class="footer" target="_top">免責事項</a>-->&nbsp;｜&nbsp;<a class="footer" href="http://www.infomart.co.jp/Index.asp" target="_top">企業情報</a>&nbsp;｜&nbsp;<a class="footer" href="http://www.infomart.co.jp/information/security.asp" target="_top">セキュリティポリシー</a>&nbsp;&nbsp;]&nbsp; <img alt="" src="old_mypage_files/space.gif" height="1" width="65">
+    </font></td>
+    <td bgcolor="#ccff99" width="20%">
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr bgcolor="#ccff99">
+          <td nowrap="nowrap" valign="center" width="9%" align="right">
+<img src="old_mypage_files/arrow_g_clear.gif" border="0" height="9" width="9"><a href="http://www.foods-shinrai.net/login.asp" target="_top"><font style="font-size:9pt" color="#003300">再ログイン</font></a><font style="font-size:9pt" color="#003300">&nbsp;</font>
+	  </td>
+	</tr></tbody>
+	</table>
+     </td>
+  </tr>
+  <tr>
+    <td colspan="3" bgcolor="#708019" height="1"><!--IMG height=1 alt="" src="../files/space.gif" width=1-->
+	</td>
+  </tr>
+  <tr>
+    <td colspan="3" bgcolor="#eeeeee" height="14"><span style="FONT-SIZE: 10px; COLOR: #666666">
+
+	Web56
+
+	 </span>
+		<img alt="" src="old_mypage_files/space.gif" height="1" width="200">
+		<font style="FONT-SIZE: 10px" color="#666666">　　　　　　Copyright(C) 1998 - 2013 Info Mart Corporation. All rights Reserved.</font>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td><img alt="" src="old_mypage_files/space.gif" height="7" width="1">
+		  </td>
+		</tr>
+        <tr valign="bottom">
+          <td><font style="FONT-SIZE: 10px" color="#666666">&nbsp;当ホームページはJavaScriptおよびCookie を使用して作成しており、<br>Internet Explorer 6.0、7.0、8.0（Macintoshの場合にはInternet Explorer 5.0以上）のブラウザを推奨しております。</font>
+		  </td>
+          <td align="right">
+            <span style="FONT-SIZE: 10px; COLOR: #666666">売り手企業Ａ（デモ用）</span><br>
+
+          </td></tr></tbody>
+	</table>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="3" height="5"><img alt="" src="old_mypage_files/space.gif" height="1" width="1">
+	</td>
+  </tr>
+  </tbody>
+</table>
+
+	
+
+<script language="JavaScript1.1">
+<!--
+function loginClick(frm, asppage){
+
+	frm.jump_page.value = asppage ;
+	frm.submit();
+
+    return false;
+};
+
+// -->
+</script>
+
+
+
+
+
+
+<!-- ●●End Footer●● -->
+</body></html>

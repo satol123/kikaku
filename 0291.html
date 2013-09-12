@@ -1,0 +1,579 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/u_add_parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<style type="text/css">
+.mt95{margin-top:95px;}
+.tbl-bd-wide-02 td {width:auto;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b1,.tbl-kikaku-info01 .ck-b1{width:230px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b2,.tbl-kikaku-info01 .ck-b2{width:245px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b3,.tbl-kikaku-info01 .ck-b3{width:180px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b4,.tbl-kikaku-info01 .ck-b4{width:295px;}
+table.justify td div.tbl-valign{display:table-cell;/display:inline;/zoom:1;}
+</style>
+
+</head>
+<body class="popup">
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w300"><a href="/"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"></a><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18" class="ml10"></a></div>
+
+
+        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#" class="ic ic-close"><span class="ic-label">閉じる</span></a></li>
+            </ul>
+        </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form id="" name="" method="post" action="../dummy">
+         <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>規格書登録</h1></th><td class="desc"><div>商品規格書の原材料情報の登録・編集が行えます。 <br>また、階層No.及び配合率の入力ができます。「再表示」をクリックすると、階層No.順に並び替えができます。</div></td>
+			<td class="nav">
+					<a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+	<table class="hgrp-nv">
+	  <tbody>
+		<tr>
+		  <td>
+			<div class="tabs-link">
+			  <ul>
+				<li class="tab-01"><a href="02971.html"><span class="bg-tabs-link">規格書ベーシック</span></a></li>
+				<li class="tab-02"><a href="0290.html" class="current"><span class="bg-tabs-link">規格書プレミアム</span></a></li>
+				<li class="tab-03"><a href="0068.html"><span class="bg-tabs-link">取引先追加項目</span></a></li>
+				<li class="tab-04"><a href="0297.html"><span class="bg-tabs-link">自社管理項目</span></a></li>
+			  </ul>
+			</div></td>
+			<td class="nav"></td>
+		</tr>
+	  </tbody>
+	</table>
+
+<table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l"><div class="tbl-r-gry">
+						<div class="sitesnav clr">
+							<ul class="clr tananv mr10">
+								<li class="sitesnav-hdr nowrap"><a href="0290.html" class="current">基本情報</a></li>
+								<li class="nowrap"><a href="0291.html">原材料情報</a></li>
+								<li class="nowrap"><a href="0295.html">包材情報</a></li>
+								<li class="last-child nowrap"><a href="0296.html">製造品質</a></li>
+							</ul>
+						</div>
+                        </div>
+						</td>
+	         </tr>
+	       </tbody>
+      </table>
+
+<!--
+						<td class="justify-r valign-b kikaku-webentry-btnarea"><div>
+                  <a class="bt" href="#"><span class="bt-label">一時保存</span></a><a class="bt" href="#"><span class="bt-label">保存する</span></a><a class="bt bt-org-large" href="#"><span class="bt-label">作成完了で保存する</span></a></div></td>
+-->
+
+
+    <table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l valign-m">
+                <div>
+                    <a class="bt bt-preview" href="#"><span class="bt-label">プレビュー表示</span></a>
+                </div></td>
+               <td class="justify-r valign-m"><div>
+               <a class="ic ic-caution02" href="#"> <span class="ic-label">入力時のご注意</span></a>
+                  <a class="bt bt02" href="#"><span class="bt-label">一時保存</span></a><a class="bt bt02" href="#"><span class="bt-label">保存する</span></a><a href="#" class="bt bt-gre-large"><span class="bt-label">登録する</span></a></div></td>
+	         </tr>
+	       </tbody>
+    </table>
+	
+			<div class="grid-row">
+
+			<div class="grid-unit">
+            
+            
+            <div class="tbl-r-gry mb5">
+<table>
+                    <tbody><tr class="row-01 first-row">
+                        <th class="first-cell nowrap"><div class="w220">取引先の必須項目を表示する</div></th>
+                        <td class="last-cell"><div class="w690"><span class="cstm-radio mr5"><span><label for="f1-03b"></label><a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span></span></div></td>
+                    </tr>
+                    <tr class="row-01 last-row">
+                        <th class="first-cell nowrap"><div>項目レイアウトを表示する</div></th>
+                        <td class="last-cell"><div><select name="f1-01" class="cstm-select" id="f1-01">
+<option>全項目</option>
+<option>基本情報</option>
+<option>米トレ、トランス脂肪酸、アルコール</option>
+</select></div></td>
+                    </tr>
+  </tbody></table>
+  </div>
+            
+            
+		         
+            
+				<div class="form-intro pt5 mb10">
+				  <p>
+					<img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"> の項目は必ず入力してください。
+				  </p>
+				</div>
+
+					<p class="sub-ti mb5">商品マスタ情報</p>
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+				      <colgroup>
+				        <col class="ck-b1">
+				        <col class="ck-b2">
+				        <col class="ck-b3">
+				        <col class="ck-b4">
+		          </colgroup>
+					  <tbody>
+						<tr>
+						  <th class="tbl-bd-wide-02-ic"><div><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><label for="c1-64">自社商品コード</label></div></th>
+						  <td><div>100100</div></td>
+						  <th><div><label for="c1-62">商品名</label></div></th>
+						  <td><div>業務用冷凍ハンバーグ</div></td>
+						</tr>
+						<tr>
+						  <th><div><label for="c1-63">規格書コード</label></div></th>
+						  <td><div>G0000756-32DFC0B-13392464</div></td>
+              <th class="tbl-bd-wide-02-ic small-w-row"><div>JICFS分類</div></th>
+		          <td><div>冷凍食品＞その他＞全般</div></td>
+            </tr>
+						<tr>
+						  <th><div>備考</div></th>
+						  <td colspan="3"><div></div></td>
+            </tr>
+					  </tbody>
+					</table>
+<!--
+			<table class="justify">
+		   <tbody>
+		     <tr>
+		       <td class="justify-l">
+						<span class=""><span class="tx-b">新規作成&nbsp;：</span></span>
+						<a class="bt wide04 ml5" href="0062.html"><span class="bt-label">原材料</span></a>
+						<a class="bt wide04 ml5" href="0064.html"><span class="bt-label">添加物</span></a>
+						<a class="bt wide04 ml5" href="0063.html"><span class="bt-label">部　材</span></a>
+					<div class="sitesnav clr mb0">
+            <span class="sitesnav-hdr">新規作成</span>
+            <ul class="clr">
+                <li><a href="#">原材料</a></li>
+                <li><a href="#">添加物</a></li>
+                <li class="last-child"><a href="#">部材</a></li>
+            </ul></div>
+</td>
+		       <td class="justify-r valign-b"></td>
+		     </tr>
+		   </tbody>
+			</table>
+-->
+
+					<p class="sub-ti mb5">規格書原材料情報</p>
+<div class="data-list mb10">
+<table>
+     <tbody>
+      <tr class="tool-first">
+       <td class="first-cell valign-m" colspan="3"><div>
+				<select class="cstm-select w100" name="f1-05" id="f1-05"><option>原材料</option><option>添加物</option><option>部　材</option></select>&nbsp;を&nbsp;
+				<select class="cstm-select" name="f1-06" id="f1-06"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>&nbsp;行&nbsp;<a class="bt bt-add02 ml5" href="#"><span class="bt-label">追加する</span></a>
+</div></td>
+       <td colspan="4" class="last-cell valign-m"><div><a class="bt bt-add02" href="#"><span class="bt-label">作成済みの原材料を追加する</span></a><a href="#" class="bt ml5"><span class="bt-label">階層No.で並べ替え</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="first-cell nowrap" rowspan="2"><div class="unit02-l01">No.</div></td>
+		<td><div>階層No.</div></td>
+		<td><div>原材料一般名称／添加物物質名</div></td>
+        <td><div>添加物用途名</div></td>
+		<td class="nowrap"><div>アレルギー物質</div></td>
+		<td rowspan="2"><div class="unit02-l02">配合率<br>【製品】％</div></td>
+        <td rowspan="2" class="last-cell"><div class="unit02-l01">処理</div></td>
+      </tr>
+      <tr class="last-row">
+		<td><div class="first-line">種別</div></td>
+        <td class="nowrap"><div>原材料名／添加物物質名</div></td>
+        <td class="nowrap"><div>原産国・産地</div></td>
+		<td><div class="last-line">遺伝子組換区分</div></td>
+      </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div>&nbsp;</div></td>
+      <td class="head-space cell-02"><div>&nbsp;</div></td>
+      <td class="head-space cell-03"><div>&nbsp;</div></td>
+      <td class="head-space cell-04"><div>&nbsp;</div></td>
+      <td class="head-space cell-05"><div>&nbsp;</div></td>
+      <td class="head-space cell-06"><div>&nbsp;</div></td>
+      <td class="head-space cell-08 head-space-last"><div>&nbsp;</div></td>
+    </tr>
+
+      <tr>
+        <td colspan="5" class="list-cell"><div class="halign-r">一次階層の配合率合計</div></td>
+        <td class="list-cell"><div class="halign-r"><span>50</span> ％</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">1</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="1" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>牛肉</div></td>
+        <td class="list-cell valign-m"><div></div></td>
+        <td class="list-cell valign-m"><div>牛肉</div></td>
+<td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="50" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container"><span class="cstm-tx"><span class="cstm-tx-bg">
+       <input type="text" class="w150 ime-actv" value="牛肉" id="f1-" name="f1-">
+    </span></span></div></td>
+        <td class="list-cell valign-m"><div>アイスランド</div></td>
+        <td class="list-cell valign-m"><div>対象外</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">2</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="2" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="32" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="しょうゆ" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">3</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="3" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="12" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="ごま" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">4</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="4" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="8.5" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="にんじん" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">5</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="5" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="2.6" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="じゃがいも" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">6</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="6" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="2.2" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="たまねぎ" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">7</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="7" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="2.2" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="鶏肉" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">8</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="8" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="2.1" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="牛肉" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">9</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="9" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="21" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="えび" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell valign-m" rowspan="2"><div class="center">10</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="10" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m" rowspan="2"><div class="datepicker-container center">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w30 ime-dis large halign-r" value="7.4" id="f1-01" name="f1-01"></span></span>
+        </div></td>        <td class="list-cell" rowspan="2"><div><a class="bt" href="#"><span class="bt-label">編集</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">複製</span></a></div>
+<div><a class="bt" href="#"><span class="bt-label">削除</span></a></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>原材料</div></td>
+        <td class="list-cell valign-m"><div class="datepicker-container">
+            <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w150 ime-actv" value="かに" id="f1-01" name="f1-01"></span></span>
+        </div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td colspan="5" class="list-cell"><div class="halign-r">一次階層の配合率合計</div></td>
+        <td class="list-cell"><div class="halign-r"><span>50</span> ％</div></td>
+        <td class="list-cell valign-m"><div>&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td class="list-space" colspan="7"><div>&nbsp;</div></td>
+      </tr>
+    </tbody></table>
+
+</div>
+</div>
+
+</div>
+
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div>
+<div class="sitesnav clr">
+	<ul class="clr tananv">
+		<li class="sitesnav-hdr nowrap"><a href="0290.html">基本情報</a></li>
+		<li class="nowrap"><a href="#" class="current">原材料情報</a></li>
+		<li class="nowrap"><a href="0295.html">包材情報</a></li>
+		<li class="last-child nowrap"><a href="0296.html">製造品質</a></li>
+	</ul>
+</div>
+<a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+      <td class="justify-r valign-b kikaku-webentry-btnarea"><div>
+      <a class="bt bt02" href="#"><span class="bt-label">一時保存</span></a><a class="bt bt02" href="#"><span class="bt-label">作成中で保存する</span></a><a href="#" class="bt bt-gre-large"><span class="bt-label">登録する</span></a>
+      </div>
+      </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div> </div></td>
+							<td class="justify-r">
+ 
+							</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          </div>
+
+	<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">
+<!--        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul> -->
+        <div class="small">
+            <p class="credits">Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved.<a class="bt bt-close" href="#"><span class="bt-label">閉じる</span></a></p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+
+    </div>
+	<!--ftr End-->
+</div>
+    <script type="text/javascript" src="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/web2/jp/js/parts_html_render.js"></script>
+</body>
+</html>

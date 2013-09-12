@@ -1,0 +1,3375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>フーズインフォマートＡＳＰ規格書システム</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+    
+<script type="text/javascript" id="jp-co-infomart-common-common-web-page-base-panel-CustomerSelectPanel1-0">
+/*<![CDATA[*/
+
+
+function custemEven1(){
+	 var customerNameSelectA = $("#hdnCustomerNameSelectA").val();
+	 var len =6;
+	 if (customerNameSelectA.length >len) {
+		 customerNameSelectA=customerNameSelectA.substring(0,len) + "..."
+	 }
+	  $("#lblCustomerNameSelectA").html(customerNameSelectA);
+	  document.getElementById("lnkUnBind1").style.display="inline";
+	  document.getElementById("lblCustomerNameSelectA").setAttribute("data-tooltip",$("#hdnCustomerNameSelectA").val());
+	  if("全て" == customerNameSelectA){
+	    document.getElementById("lnkUnBind1").style.display="none";
+	  }
+}
+function hiddenUnBind1(){
+	 $("#hdnCustomerCdSelectA").val("");
+	 $("#hdnCustomerNameSelectA").val("全て");
+	 $("#lblCustomerNameSelectA").html("全て");
+	 document.getElementById("lblCustomerNameSelectA").setAttribute("data-tooltip","全て");
+     document.getElementById("lnkUnBind1").style.display="none";
+}
+
+
+
+/*]]>*/
+</script>
+
+<style type="text/css" id="jp-co-infomart-kikaku-standard-flow-web-page-kaisyuu-statuslist-KikakuKaisyuuProductGroupListPage-1-0">
+/*<![CDATA[*/
+
+.head-space.cell-01{width:30px;}
+.head-space.cell-02{width:60px;}
+.head-space.cell-03{width:15px;}
+.head-space.cell-04{width:30px;}
+.head-space.cell-05{width:300px;}
+.head-space.cell-06{width:110px;}
+.head-space.cell-07{width:90px;}
+.head-space.cell-08{width:auto;}
+.head-space.cell-09{width:160px;}
+.head-space.cell-10{width:45px;}
+.word-break{word-wrap:break-word;overflow:hidden}
+
+/*]]>*/
+</style>
+
+<script type="text/javascript" id="jp-co-infomart-kikaku-standard-flow-web-page-kaisyuu-statuslist-KikakuKaisyuuProductGroupListPage-1-1">
+/*<![CDATA[*/
+
+
+window.onfocus = function() {
+
+	 var len=6;
+	var objCustomerNameSelectA = document.getElementById("hdnCustomerNameSelectA");
+
+	var customerNameSelectA ="";
+
+	if(objCustomerNameSelectA!=null){
+		customerNameSelectA = objCustomerNameSelectA.value;
+	}
+
+	if (customerNameSelectA != "") {
+		 document.getElementById("lblCustomerNameSelectA").setAttribute("data-tooltip",customerNameSelectA);
+
+
+		if(customerNameSelectA.length >len){
+			customerNameSelectA = customerNameSelectA.substring(0,len) + "...";
+		}
+		 $("#lblCustomerNameSelectA").html(customerNameSelectA);
+
+	}
+
+	var objCustomerName2 = document.getElementById("hdnCustomerName2");
+
+	var customerName2 ="";
+
+	if(objCustomerName2!=null){
+		customerName2 = objCustomerName2.value;
+	}
+
+
+	if (customerName2 != "") {
+		 document.getElementById("lblCustomerName2").setAttribute("data-tooltip",customerName2);
+		if(customerName2.length >len){
+			customerName2 = customerName2.substring(0,len) + "...";
+
+		}
+
+		 $("#lblCustomerName2").html(customerName2);
+	}
+
+	if (customerNameSelectA != "" && customerNameSelectA != "全て") {
+		  document.getElementById("lnkUnBind1").style.display="";
+	}
+
+	if (customerName2 != "" && customerName2 != "全て") {
+		  document.getElementById("lnkUnBind2").style.display="";
+	}
+
+}
+
+
+
+/*]]>*/
+</script>
+<script type="text/javascript" src="/web2/jp/kikaku/js/KikakuKaisyuuProductGroupListPage.js?79"></script>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css?79" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css?79" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css?79" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/controls.css?79" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css?79" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css?79" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.css?79" />
+<input type="hidden" id="memberRole" value=""/><script type="text/javascript" src="/web2/jp/js/jquery-1.7.1.min.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery.bgiframe.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery.mousewheel.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.min.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/modal.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/projectCommonJs.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/hcommon.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/controls_common.js?79"></script>
+<script type="text/javascript" src="/web2/jp/js/kikaku_check.js?79"></script>
+</head>
+    
+    <span id="jsArea"></span>
+    
+	<a name="pagetop"></a>
+    <body class="page" id="body" onload="frm1OnLoad()">
+		<!--規格書B票 #15813
+		<table id="waitTable" width="950" border="0" cellspacing="0" cellpadding="0" style="display: none;">
+        <tr>
+            <td>
+                <div class="loading-page"></div>
+                <p class="loading-tx">処理中です。しばらくお待ちください。...</p>
+            </td>
+        </tr>
+		</table>-->
+		<div class="contents" style="display: none;" id="waitTable">
+			<div class="loading-page"></div>
+			<p class="loading-tx">読込み中です。しばらくお待ち下さい。</p>
+		</div>
+        <div id="baseTable" class="oroshi">
+          <!--hdr Start-->
+            
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a><a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+        
+        
+        <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="/kikaku/kikakumypage.page"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="/kikaku/kikakusearch.page"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="/kikaku/kikakucustomerstatuslist.page?customer_kbn=1"><span>取引先マッチング</span></a></li>
+            <li id="gnv-cus"><a href="/kikaku/kikakuteisyutuproductgrouplist.page?mode=1&amp;tab_kbn"><span>提出状況管理</span></a></li>
+            <li id="gnv-sup"><a href="/kikaku/kikakukaisyuuproductgrouplist.page?mode=1&amp;tab_kbn" class="current"><span>回収状況管理</span></a></li>
+            <li id="gnv-set"><a href="/kikaku/kikakuoroshimenu.page"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="/shinrai/kikaku/guide/guide.page?uid=obuybb"><span>ご利用ガイド</span></a></li>
+        </ul>
+        
+		<div class="usrnv clr">
+			<ul><li><a href="/kikaku/kikakuadminlist.page">管理画面へ戻る</a>&nbsp;&nbsp;</li></ul>
+            <h2>&nbsp;<span id="lblHeaderUserName">【卸】卸テスト　　卸買　開発テスト</span>様</h2>
+            <ul>
+                <li><a href="/kikaku/kikakulogin.page">ログアウト</a></li>
+            </ul>
+       </div>
+      </div>
+    <div class="w950 box-c" id="isBrowser">
+    <table class="tbl-bd-wide-03 mb5" id="browserTbCont">
+        <tbody>
+            <tr>
+                <td class="tbl-bd-wide-03-td attention">
+                <div><a target="_blank" href="http://www.foods-shinrai.net/next/browser.asp" class="ic ic-caution03"><span class="ic-label tx-b"><span class="tx-err">【重要】</span>現在お使いのブラウザについてはこちら</span></a></div>
+            </td></tr>
+        </tbody>
+    </table>
+    </div>
+    
+            <!--hdr End-->
+
+            <!--Contents Start-->
+            <div class="contents">
+                
+     <div id="productGroupList">
+	<!--Contents Start-->
+
+		<form style="MARGIN: 0px" id="frm" name="frm" method="post" action="kikakukaisyuuproductgrouplist.page?11-1.IFormSubmitListener-body-bodyContainer-productGroupList-frm&amp;mode=1&amp;tab_kbn=o1o2_1&amp;kaisyuu_Custome=0" onsubmit="return validatorSubmit()"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="frm_hf_0" id="frm_hf_0" /></div>
+		<input type="hidden" id="hidDateBegin" value="" name="hidDateBegin"/>
+		<input type="hidden" id="hidDateEnd" value="" name="hidDateEnd"/>
+		<input type="hidden" value="" name="hidRecordSelectKey0830" id="hidRecordSelectKey0830"/>
+
+      <div class="height-wrap">
+	    <table class="hgrp">
+          <tbody>
+            <tr>
+              <th class="heading">
+				<h1 id="headerTop1">回収状況管理</h1>
+				
+				
+				
+			  </th>
+			  <td class="desc">
+				
+				
+				
+				<div id="header2">仕入先へ依頼した全ての回収状況を管理します。</div>
+				
+				
+				
+			  </td>
+			  <td rowspan="2" class="halign-r">
+                  <table class="ki-header-graph">
+                     <tr>
+                     <td><div id="kayisyuurituPanel">
+ <p> 回収率(合計：<span id="totalCount">143</span>件　回収：<span id="kasyuu">56</span>件　未回収：<span id="mikasyuu">87</span>件)</p>
+    <div class="graph-collect">
+    <input type="hidden" id="hidKayisyuuRitu" value="39" name="kayisyuurituPanel:hidKayisyuuRitu"/>
+    <input type="hidden" id="hidbKayisyuuRitu" value="14" name="kayisyuurituPanel:hidbKayisyuuRitu"/>
+	<p id="kayisyuuritu"  class="percent">XX%<span class="percent-small">（内、ベーシックYY%）</span></p>
+	<p class="collected" id="collected" style="width:25%"></p><p class="uncollected" id="uncollected" style="width:14%"></p>
+    </div>
+    <script>
+/*<![CDATA[*/
+
+	    var vhtml = document.getElementById('kayisyuuritu').innerHTML;
+		vhtml = vhtml.replace('XX',document.getElementById('hidKayisyuuRitu').value);
+		vhtml = vhtml.replace('YY',document.getElementById('hidbKayisyuuRitu').value);
+		document.getElementById('kayisyuuritu').innerHTML = vhtml;
+	
+/*]]>*/
+</script>
+</div></td>
+                    </tr>
+                   </table>
+                </td>
+              <td class="nav nowrap">
+                  <!--#16325 2013/04/05 Mod Start by Kentaro Ichikawa
+                  <a href="Javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+                  #16325 2013/04/05 Mod End by Kentaro Ichikawa-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+			<input type="hidden" id="hidAllCheckedType" value="" name="hidAllCheckedType"/>
+
+			<input type="hidden" id="displayFlag" value="" name="hidDisplayFlag"/>
+			<input type="hidden" value="0" id="displayFlag"/>
+			<input type="hidden" id="tabKbnHi" value="o1o2_1" name="tabKbnHi"/>
+
+
+			<table class="hgrp-nv tab-liquid">
+				<tbody>
+					<tr>
+						<td>
+							<div class="tabs-link tab_ki_search" id="panelTabMenu">
+	<!--Contents Start-->
+	<div class="tabs-link tab_ki_search">
+			  <ul>
+				<li class="w180" id="liSyouhinnMayi"><a class="current" id="lnkSyouhinnMayi" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTabMenu:liSyouhinnMayi:lnkSyouhinnMayi&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bg-tabs-link">商品ごと</span></a></li>
+				
+				<li class="w180" id="liSiireSakiMayi"><a id="lnkSiireSakiMayi" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTabMenu:liSiireSakiMayi:lnkSiireSakiMayi&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bg-tabs-link">仕入先ごと</span></a></li>
+				<li class="w180 ml50" id="liKikakuMasutaKanri"><a id="lnkKikakuMasutaKanri" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTabMenu:liKikakuMasutaKanri:lnkKikakuMasutaKanri&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bg-tabs-link">規格書マスタ管理</span></a></li>
+			  </ul>
+			  </div>
+	<!--Contents End-->
+</div>
+						</td>
+						<td class="nav"></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div id="kaisyuuDetailConditionPanel">
+<input type="hidden" value="" name="kaisyuuDetailConditionPanel:hidDateOtherBegin" id="hidDateOtherBegin"/>
+<input type="hidden" value="" name="kaisyuuDetailConditionPanel:hidDateOtherEnd" id="hidDateOtherEnd"/>
+<input type="hidden" value="3283" name="kaisyuuDetailConditionPanel:hidSelfCustomerCd" id="hidSelfCustomerCd"/>
+	<div class="tbl-r-gry">
+	<table>
+                 <tr class="first-row last-row">
+                        <th class="first-cell" id="siiresaki"><div>仕入先</div></th>
+                        <td class="ic-status">
+	                    	<div id="panelCustomerSelect1">
+	<input type="hidden" id="hdnCustomerCdSelectA" value="" name="kaisyuuDetailConditionPanel:panelCustomerSelect1:hdnCustomerCdSelectA"/>
+	<input type="hidden" id="hdnCustomerNameSelectA" value="全て" name="kaisyuuDetailConditionPanel:panelCustomerSelect1:hdnCustomerNameSelectA"/>
+	<input type="hidden" value="3284" name="kaisyuuDetailConditionPanel:panelCustomerSelect1:userCdA" id="userCdA"/>
+	<input type="hidden" value="1" name="kaisyuuDetailConditionPanel:panelCustomerSelect1:buySellFlgA" id="buySellFlgA"/>
+		<input type="hidden" value="1" name="kaisyuuDetailConditionPanel:panelCustomerSelect1:p6621A" id="p6621A"/>
+		<span class="checked"><span class="tooltip-over" id="lblCustomerNameSelectA" data-tooltip="全て">全て</span><a id="lnkCustomerCdSelectA" class="bt bt-list open-dialog-modal" href="/kikaku/kikakuproductcustomerlist.page" target="_blank"><span class="bt-label">一覧から選択</span></a><a href="#" class="ic ic-arr-blu" id="lnkUnBind1" onclick="hiddenUnBind1();" style="display:none"><span class="ic-label">絞込解除</span></a></span>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+
+		custemEven1();
+
+        $('#lnkCustomerCdSelectA').bind("click",function(event){
+            if($(this).is('a') && !($(this).attr("disabled") == "disabled" || $(this).attr("disabled"))) {
+            	var url = "kikakuproductcustomerlist.page?buy_sell_flg="
+            			+document.getElementById("buySellFlgA").value
+            			+"&customer_code_name_list=hdnCustomerCdSelectA&customer_code_name_list2=hdnCustomerNameSelectA&doEven=custemEven1&user_cd_p="
+            			+ document.getElementById("userCdA").value
+            			+ "&selectCode="
+            			+ document.getElementById("hdnCustomerCdSelectA").value
+            			+"&P_6621="+document.getElementById("p6621A").value
+            			+"&match_flg=0";
+                document.getElementById("lnkCustomerCdSelectA").href = url;
+                openModal($(this).attr("href"));
+            }
+            event.stopImmediatePropagation();
+            return false;
+        });
+
+
+
+/*]]>*/
+</script>
+
+
+</div>
+                        </td>
+                        <th><div>自社担当者</div></th>
+                        <td class="last-cell"><div id="tantousya">
+	<select class="custom-select" name="kaisyuuDetailConditionPanel:tantousya:chargeSelectListPanel" id="f3-00">
+<option selected="selected" value="">全て</option>
+<option value="obuybb">卸買　開発テスト</option>
+<option value="takitest">卸買い手　連携テスト用ユーザー</option>
+<option value="takitest2">買い手　テスト　瀧口連携分</option>
+</select>
+</div></td>
+                 </tr>
+	</table>
+    </div>
+	
+</div>
+			<table id="singleKeyWord" class="tbl-r single-line03 col-two mt10 sch2_1_1">
+		<tbody>
+		<tr class="first-row last-row">
+
+			<th class="cell-01 first-cell nowrap"><div class="ic-bg">キーワード
+			<img class="imgover tooltip-over ml5" src="/web2/jp/images/ic-hlp.gif" width="16" height="19" data-tooltip="キーワードの検索対象は自社商品名、規格書名、自社商品コード、規格書コードです。">
+
+			</div></th>
+			<td colspan="3" class="cell-02 last-cell">
+			  <div class="single-line-div">
+				  <span class="cstm-tx cstm-tx-box custom-text-has-cancel">
+						<span class="cstm-tx-bg">
+								<input type="text" title="キーワードを入力" value="" id="txtKeyWord" maxlength="1000" class="has-placeholder ime-actv w300" name="keywordSearchPanel:txtKeyWord" onkeydown="doEnterKeyDown(event,&#039;txtKeyWord&#039;,&#039;btnSearch&#039;);">
+						</span>
+						<a   class="cancel"  href="#" >
+								<img width="31" height="14" alt="クリア" src="/web2/jp/images/srch-ic-clear.gif">
+						</a>
+					</span>
+					<a id="btnSearch" class="bt bt-srch03" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;keywordSearchPanel:btnSearch&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">検索する</span></a>
+					  <a class="ic ic-arr-blu03" href="javascript:void(0)" id="lnkSearchKantan" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;keywordSearchPanel:lnkSearchKantan&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">
+					  <!--  <a class="ic ic-arr-blu04" onclick="document.getElementById('kennsakuAll').style.display='';document.getElementById('singleKeyWord').style.display='none';document.getElementById('displayFlag').value='0';document.getElementById('txtKeyWord2').value=document.getElementById('txtKeyWord').value;" href="#" >-->
+
+
+					  <span class="ic-label">詳細条件を表示する</span></a>
+			  </div>
+			</td>
+			</tr>
+		</tbody>
+</table>
+
+			<div class="mb10" id="kaisyuuStatusActionPanelTop">
+
+
+
+	<script language="JavaScript1.1">
+/*<![CDATA[*/
+
+		  var mstrSaveFieldValue;
+
+	function SaveFieldValue(pobjObject) {
+			 	mstrSaveFieldValue = pobjObject.value;
+			}
+
+	function CheckInputText(obj){
+   var nowyear = new Date;
+   var str = EmpTrim(obj.value);
+   obj.value = str;
+   if (str == '') return;
+   var y, m, d;
+   var new_y, new_m, new_d;
+   if (str.match(/^(([0-9]{4})\/|)([0-9]{1,2})\/([0-9]{1,2})$/)){
+       y = RegExp.$2;
+       m = RegExp.$3;
+       d = RegExp.$4;
+       if (y == ''){
+           y = nowyear.getFullYear();
+       }
+       if (IsDate(y, RegExp.$3, RegExp.$4)){
+           new_y = ('0000' + y); new_y = new_y.substring(new_y.length-4);
+           new_m = ('00' + m);   new_m = new_m.substring(new_m.length-2);
+           new_d = ('00' + d);   new_d = new_d.substring(new_d.length-2);
+           obj.value = new_y + '/' + new_m + '/' + new_d;
+           return;
+       }
+       else
+       {
+           obj.value = mstrSaveFieldValue;
+       }
+   }
+   else
+   {
+       obj.value = mstrSaveFieldValue;
+   }
+}
+
+function saiTeisyutuIrai(){
+		if( confirm('否決しますか？')) {
+            return true;
+        }else{
+            return false;
+		}
+}
+function finalRecognit(){
+		if( confirm('最終承認しますか？')) {
+            return true;
+        }else{
+            return false;
+		}
+}
+
+
+function syuRyouhi(val){
+
+			if(val.id == "txtEndDayTop"){
+				$("#txtEndDayDown").val($("#txtEndDayTop").val());
+				$("#txtEndDayDown").blur();
+			}
+
+			if(val.id == "txtEndDayDown"){
+				$("#txtEndDayTop").val($("#txtEndDayDown").val());
+				$("#txtEndDayTop").blur();
+			}
+	}
+
+
+
+/*]]>*/
+</script>
+</div>
+			<input type="hidden" value="" name="hdnCnt" id="hdnCnt"/>
+
+			<table class="justify">
+				<tbody>
+					<tr>
+						<td class="justify-l">
+							<div>
+								<span id="pageMoveTop">
+<div class="paging">
+<span id="ken">件数：<span id="sum">88</span>件</span>
+<span class="prev"><span id="prev" class="inactive">‹ 前へ</span></span><span class="num"><span id="pageLink"><em class="current"><span id="pageNumber">1</span></em></span></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveTop:navigation:1:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">2</span></a></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveTop:navigation:2:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">3</span></a></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveTop:navigation:3:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">4</span></a></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveTop:navigation:4:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">5</span></a></span><span class="next"><a id="next" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveTop:next&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">次へ ›</a></span>
+</div>
+</span>
+							</div>
+						</td>
+						<td class="justify-r"><div class="serach-results-filter">
+								<label for="f3-01">並び順</label> <select onchange="setWaitDspWin();document.getElementById(&#039;frm_hf_0&#039;).value=&#039;kikakukaisyuuproductgrouplist.page?11-1.IOnChangeListener-body-bodyContainer-productGroupList-frm-selSortno&amp;mode=1&amp;tab_kbn=o1o2_1&amp;kaisyuu_Custome=0&#039;;document.getElementById(&#039;frm&#039;).submit();" name="selSortno" id="selSortno">
+<option selected="selected" value="1">更新日(降順)</option>
+<option value="2">更新日(昇順)</option>
+<option value="3">提出期限日(降順)</option>
+<option value="4">提出期限日(昇順)</option>
+<option value="5">自社商品コード(昇順)</option>
+<option value="6">自社商品コード(降順)</option>
+<option value="7">得意先(降順)</option>
+<option value="8">得意先(昇順)</option>
+<option value="9">仕入先(降順)</option>
+<option value="10">仕入先(昇順)</option>
+</select> <label for="f3-02">表示数</label> <select class="custom-select w50" onchange="setWaitDspWin();document.getElementById(&#039;frm_hf_0&#039;).value=&#039;kikakukaisyuuproductgrouplist.page?11-1.IOnChangeListener-body-bodyContainer-productGroupList-frm-selLineCnt&amp;mode=1&amp;tab_kbn=o1o2_1&amp;kaisyuu_Custome=0&#039;;document.getElementById(&#039;frm&#039;).submit();" name="selLineCnt" id="selLineCnt">
+<option selected="selected" value="20">20</option>
+<option value="40">40</option>
+<option value="60">60</option>
+<option value="80">80</option>
+<option value="100">100</option>
+</select>
+							</div></td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="panelTab">
+<div class="tabs-nav-w100-2 tabs-nav-03" id="div_clr">
+	<ul class="clr">
+		
+		
+		
+		<li class="tabs-nav-w100-li item-w100-03" id="tab_o1o2_1"><a class="selected" id="lnk_o1o2_1" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:div_clr:tab_o1o2_1:lnk_o1o2_1&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="tx-b">受付全て</span> <span class="count" id="cnt_o1o2_1">98件</span></a></li>
+
+		<li class="tabs-nav-w100-li item-w100-03" id="tab_b2o1o2_2"><a class="active" id="lnk_b2o1o2_2" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:div_clr:tab_b2o1o2_2:lnk_b2o1o2_2&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="tx-b">新規回収</span> <span class="count" id="cnt_b2o1o2_2">83件</span></a></li>
+		<li class="tabs-nav-w100-li item-w100-03" id="tab_o1o2_3"><a class="active" id="lnk_o1o2_3" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:div_clr:tab_o1o2_3:lnk_o1o2_3&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="tx-b">再回収</span><span class="count" id="cnt_o1o2_3">5件</span></a></li>
+		
+		
+		
+
+        <li class="tabs-nav-w100-li item-w100-15" id="tab_b3o1o2_4"><a class="active" id="lnk_b3o1o2_4" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:div_clr:tab_b3o1o2_4:lnk_b3o1o2_4&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="tx-b">承認依頼</span> <span class="count" id="cnt_b3o1o2_4">5件</span></a></li>
+        <li class="tabs-nav-w100-li item-w100-15" id="tab_b3o1o2_5"><a class="active" id="lnk_b3o1o2_5" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:div_clr:tab_b3o1o2_5:lnk_b3o1o2_5&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="tx-b">最終承認依頼</span> <span class="count" id="cnt_b3o1o2_5">5件</span></a></li>
+
+		<li class="tabs-nav-w100-li item-w100-16" id="tab_b1o1_6"><a class="active" id="lnk_b1o1_6" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:div_clr:tab_b1o1_6:lnk_b1o1_6&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="tx-b">承認完了</span><span class="count" id="cnt_b1o1_6">62件</span></a></li>
+
+	</ul>
+</div>
+
+<div class="data-list">
+	<table class="justify mb0">
+		<tr>
+			
+			
+			
+			<td class="justify-l w700 settd-l tool-tab-03-l valign-m" id="dis_o1o2_1"><div class="ml5"> 提出依頼に対して、仕入先からの未回収と貴社の承認待ちの一覧です。<br/>「新規回収」「再回収」「承認依頼」「最終承認依頼」から対応ください。 </div></td>
+
+			
+
+			
+			
+
+			
+			
+
+			
+			
+
+
+
+			
+
+			
+			<td class="justify-r valign-b settd-r tool-tab-03-r" id="td_action">
+				<div>
+					<span id="lnkDownloadCon" class=""><a class="ic ic-blu-dl mr10" id="lnk_Download" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:td_action:lnkDownloadCon:lnk_Download&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="ic-label">ダウンロード</span></a></span>
+					<span id="lnk_DeleteCon" class=""></span>
+					<span id="lnk_NoDisplayCon" class=""><a class="bt" id="lnk_NoDisplay" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;panelTab:td_action:lnk_NoDisplayCon:lnk_NoDisplay&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">非表示にする</span></a></span>
+					<span id="lnk_DisplayCon" class=""></span>
+					<!--<span wicket:id="lnk_DisplayCon"><a wicket:id="lnk_Display"  class="bt"><span class="bt-label">表示にする</span></a></span>-->
+				</div>
+			</td>
+	  </tr>
+	</table>
+</div>
+<script language="JavaScript1.1">
+/*<![CDATA[*/
+
+
+function deleteConfirm(){
+ return	confirm('提出状況の削除を行って宜しいですか？');
+
+}
+
+
+/*]]>*/
+</script>
+
+</div>
+			<div class="data-list" id="grdContainer">
+				<table class="data-list-status">
+					<tr>
+						<td rowspan="2" class="first-cell valign-m w30">
+						 <div class="center">No.</div>
+						</td>
+						<td rowspan="2" class="valign-m w60">
+						  <div class="unit02-l02 center">回収<br/>状況<br/></div>
+							
+						</td>
+						<td rowspan="2" class="hdr-status w15"><div class="unit02-l01 center">
+								<img src="/web2/jp/images/ic-exclamation.gif" alt="！" width="3" height="19"/>
+							</div>
+						</td>
+						<td rowspan="2" class="valign-m nowrap">
+							<div class="unit02-l01 center">区分</div>
+						</td>
+						<td><div>依頼商品名</div></td>
+						<td class="nowrap"><div>規格・入数／単位</div></td>
+						<td class="nowrap"><div>提出期限日</div></td>
+						<td><div>自社商品コード</div></td>
+						<td><div id="hdr_productName">商品マスタ名</div></td>
+
+				        <td class="last-cell valign-m" rowspan="2" id="chkDetailTopCon">
+				        	
+							<!--<div class="center" wicket:id="chkDetailTop">
+								<ul  wicket:id="menuDown" class="menu-pulldown-r" valign="middle">
+									<li class="menu-pulldown-li01"><span><a wicket:id="lnkSentaku" id="lnkSentaku" href="#"><img width="31" height="24" class="bt-select" alt="選択" src="/web2/jp/images/bt-select.gif" style="text-align:left;"/></a></span>
+									<ul style="display: none;">
+										<li class="menu-pulldown-li02"><a	href="javascript:allChecked(1);"><img width="17" height="13" src="/web2/jp/images/ic-page-all.gif"/>表示中の一覧を全て選択</a></li>
+										<li class="menu-pulldown-li02"><a	href="javascript:allChecked(2);"><img width="17" height="13" src="/web2/jp/images/ic-search-all.gif"/>検索結果の全てを選択</a></li>
+										<li class="menu-pulldown-li02"><a	href="javascript:allChecked(3);"><img width="17" height="13" src="/web2/jp/images/ic-search-del.gif"/>選択した全てを解除</a></li>
+										<li class="menu-pulldown-li02"><a	href="javascript:allChecked(4);"><img width="17" height="13" src="/web2/jp/images/ic-search-off.gif"/>表示中の選択を全て解除</a></li>
+									</ul>
+									</li>
+								</ul>
+							</div>-->
+				       </td>
+
+					</tr>
+
+					<tr class="last-row">
+						<td class="nowrap  valign-m"><div class="first-line">規格書商品名</div></td>
+						<td class="nowrap valign-m" id="hdr_tokuisaki"><div>得意先</div></td>
+						<td colspan="2" class="valign-m">
+							<div id="hdr_siiresaki">仕入先</div>
+							
+						</td>
+						
+						<td class="nowrap  valign-m"><div></div></td>
+					</tr>
+					<tr>
+						<td class="head-space cell-01 head-space-first"><div></div></td>
+						<td class="head-space cell-02"><div></div></td>
+						<td class="head-space cell-03"><div></div></td>
+						<td class="head-space cell-04"><div></div></td>
+						<td class="head-space cell-05"><div></div></td>
+						<td class="head-space cell-06"><div></div></td>
+						<td class="head-space cell-07"><div></div></td>
+						<td class="head-space cell-08"><div></div></td>
+						<td class="head-space cell-09" id="spaceTopUp"></td>
+						<td class="head-space cell-10 head-space-last" id="spaceTop"></td>
+					</tr>
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">1</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">仕分け確認用その３</span><span id="icon4">
+<span id="newIcon"><img class="ml5" src="/web2/jp/images/ic-new03.gif" width="31" height="14"></span>
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2013/04/13</span><span id="icon9">
+
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">TEST003</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName">仕分けテストその３</span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｇ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｇ（ＳＡＣ検証用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:1:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="754125-2" name="grdContainer:grdDetail:1:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:1:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:1:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="754125-2" name="grdContainer:grdDetail:1:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">2</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">仕分け確認用その１</span><span id="icon4">
+<span id="newIcon"><img class="ml5" src="/web2/jp/images/ic-new03.gif" width="31" height="14"></span>
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2013/04/13</span><span id="icon9">
+
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">TEST001</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName">仕分けテストその１</span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｇ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｇ（ＳＡＣ検証用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:2:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="754123-2" name="grdContainer:grdDetail:2:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:2:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:2:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="754123-2" name="grdContainer:grdDetail:2:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">3</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">仕分け確認用その２</span><span id="icon4">
+<span id="newIcon"><img class="ml5" src="/web2/jp/images/ic-new03.gif" width="31" height="14"></span>
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2013/04/13</span><span id="icon9">
+
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">TEST002</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName">仕分けテストその２</span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｇ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｇ（ＳＡＣ検証用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:3:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="754124-2" name="grdContainer:grdDetail:3:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:3:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:3:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="754124-2" name="grdContainer:grdDetail:3:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">4</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">一括連携テスト（デモ用）０１１</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/05/15</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span><input type="checkbox" class="pd-checkbox" name="grdContainer:grdDetail:4:chkDetailCon:chkDetail" id="chkDetail_3" edit_ID="678953-1"/></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName"></span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｖ(卸機能テスト)</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:4:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="678953-1" name="grdContainer:grdDetail:4:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:4:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:4:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="678953-1" name="grdContainer:grdDetail:4:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">5</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">再回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">販売者テスト２</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/03/02</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="">販売者テスト２</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ａ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ａ（デモ用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:5:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">【卸買】卸テスト担当者２</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+<a class="mr5" href="javascript:void(0)" id="lnkDisplay" onclick="DispWindowPB(&#039;/kikaku/kikakudispdetail.page?addKbn=1&amp;bCustomerCd=999971&amp;ckdflg=1&amp;companyCd=3284&amp;companyCd2=&amp;itemCd=668337&amp;itemNum2=&amp;itemNumber=G0999971-3302EE12-1D2609EA-999985-999971-003284&amp;pbCheckFlg=1&amp;pblcflg=&amp;procKbn=6&amp;seqNum=0&amp;torihikisaki_cd=999985&amp;unConfirmedFlg=0&#039;,&#039;G0999971-3302EE12-1D2609EA-999985-999971-003284&#039;);return false;">
+	<span class="" id="lblDisplay">規格書表示</span>
+	
+</a>
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="668337-2" name="grdContainer:grdDetail:5:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:5:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:5:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="668337-2" name="grdContainer:grdDetail:5:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">6</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">再回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">販売者情報テスト</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/03/02</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="">販売者テスト</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ａ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ａ（デモ用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:6:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+<a class="mr5" href="javascript:void(0)" id="lnkDisplay" onclick="DispWindowPB(&#039;/kikaku/kikakudispdetail.page?addKbn=1&amp;bCustomerCd=999971&amp;ckdflg=1&amp;companyCd=3284&amp;companyCd2=&amp;itemCd=668336&amp;itemNum2=&amp;itemNumber=G0999971-3302EE12-142909E8-999985-999971-003284&amp;pbCheckFlg=1&amp;pblcflg=&amp;procKbn=6&amp;seqNum=0&amp;torihikisaki_cd=999985&amp;unConfirmedFlg=0&#039;,&#039;G0999971-3302EE12-142909E8-999985-999971-003284&#039;);return false;">
+	
+	<span class="bt-label" id="lblPreDisplay">前回規格書表示</span>
+</a>
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="668336-2" name="grdContainer:grdDetail:6:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:6:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:6:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="668336-2" name="grdContainer:grdDetail:6:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">7</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">再回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">てすと</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2013/02/22</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="">ヨーグルチェいちご（向後テスト用）</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Q</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｖ(卸機能テスト)</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:7:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+<span id="memo">
+<img class="imgover tooltip-over" data-tooltip="あああ" width="16" height="19" alt="" src="/web2/jp/images/ic-balloon02.gif">
+</span>
+</span>
+								<span id="lblBuyMemo">あああ</span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+<a class="mr5" href="javascript:void(0)" id="lnkDisplay" onclick="DispWindowPB(&#039;/kikaku/kikakudispdetail.page?addKbn=1&amp;bCustomerCd=3962&amp;ckdflg=1&amp;companyCd=3284&amp;companyCd2=&amp;itemCd=660531&amp;itemNum2=&amp;itemNumber=G0004326-33061310-0D10065D-004327-004326-003963-003284&amp;pbCheckFlg=1&amp;pblcflg=&amp;procKbn=6&amp;seqNum=0&amp;torihikisaki_cd=4327&amp;unConfirmedFlg=0&#039;,&#039;G0004326-33061310-0D10065D-004327-004326-003963-003284&#039;);return false;">
+	
+	<span class="bt-label" id="lblPreDisplay">前回規格書表示</span>
+</a>
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="660531-2" name="grdContainer:grdDetail:7:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:7:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:7:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="660531-2" name="grdContainer:grdDetail:7:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">8</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">あああ</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2013/01/25</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｖ(...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Q</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:8:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+<span id="memo">
+<img class="imgover tooltip-over" data-tooltip="いいいいいいいいいいい" width="16" height="19" alt="" src="/web2/jp/images/ic-balloon02.gif">
+</span>
+</span>
+								<span id="lblBuyMemo">いいいいいいいいいいい</span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買い手　連携テスト用ユーザー</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="660530-2" name="grdContainer:grdDetail:8:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:8:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:8:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="660530-2" name="grdContainer:grdDetail:8:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">9</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">りんご</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/12/31</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span><input type="checkbox" class="pd-checkbox" name="grdContainer:grdDetail:9:chkDetailCon:chkDetail" id="chkDetail_8" edit_ID="563089-1"/></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName"></span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Q</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:9:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="563089-1" name="grdContainer:grdDetail:9:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:9:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:9:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="563089-1" name="grdContainer:grdDetail:9:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">10</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">りんご</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/12/31</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Q</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Q</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:10:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="562810-2" name="grdContainer:grdDetail:10:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:10:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:10:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="562810-2" name="grdContainer:grdDetail:10:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">11</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">りんご</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/12/31</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Q</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Q</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:11:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="563088-2" name="grdContainer:grdDetail:11:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:11:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:11:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="563088-2" name="grdContainer:grdDetail:11:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-15" id="td_NO">
+								<div><span class="center" id="panellblNO">12</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-15" id="td_Status">
+							 <div><span id="lblStatusCd">承認<br/>依頼</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+<span class="imgover tooltip-over" data-tooltip="新規の承認依頼です。" id="newIcon"><img width="50" height="14" alt="新規" src="/web2/jp/images/ic-kaishu-01.gif"/></span>
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">海老シュウマイ</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/12/31</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="">中華春巻</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Q</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">（株）インフォフーズ【売】</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	
+    <span class="bt bt-gre02 mb5 imgover tooltip-over ml5" id="syouninn" data-tooltip="自動転送に設定されているため、操作できません。"><span class="bt-label-gre02 w140 halign-c" id="syouninnChild">承認へ</span></span>
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+<a class="mr5" href="javascript:void(0)" id="lnkDisplay" onclick="DispWindowPB(&#039;/kikaku/kikakudispdetaillite.page?addKbn=1&amp;bCustomerCd=999980&amp;ckdflg=1&amp;companyCd=3284&amp;companyCd2=&amp;itemCd=551298&amp;itemNum2=&amp;itemNumber=G0999980-32DB890D-332C1EBD-004327-999980-003284&amp;pbCheckFlg=1&amp;pblcflg=&amp;procKbn=&amp;seqNum=&amp;torihikisaki_cd=4327&amp;unConfirmedFlg=0&#039;,&#039;G0999980-32DB890D-332C1EBD-004327-999980-003284&#039;);return false;">
+	<span class="" id="lblDisplay">規格書表示</span>
+	
+</a>
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="551298-2" name="grdContainer:grdDetail:12:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:12:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:12:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="551298-2" name="grdContainer:grdDetail:12:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">13</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">一括連携確認用</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2011/01/01</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">test001</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName">一括連携確認用</span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｇ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｇ（ＳＡＣ検証用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:13:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="306912-2" name="grdContainer:grdDetail:13:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:13:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:13:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="306912-2" name="grdContainer:grdDetail:13:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-15" id="td_NO">
+								<div><span class="center" id="panellblNO">14</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-15" id="td_Status">
+							 <div><span id="lblStatusCd">承認<br/>依頼</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+<span class="imgover tooltip-over" data-tooltip="新規の承認依頼です。" id="newIcon"><img width="50" height="14" alt="新規" src="/web2/jp/images/ic-kaishu-01.gif"/></span>
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">ホワイトコーヒー缶</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/01/21</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">IM003</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="">カレーパックライト・仕様変更テスト</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業JIN</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業jin</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	
+    <span class="bt bt-gre02 mb5 imgover tooltip-over ml5" id="syouninn" data-tooltip="自動転送に設定されているため、操作できません。"><span class="bt-label-gre02 w140 halign-c" id="syouninnChild">承認へ</span></span>
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi"></span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+<a class="mr5" href="javascript:void(0)" id="lnkDisplay" onclick="DispWindowPB(&#039;/kikaku/kikakudispdetaillite.page?addKbn=1&amp;bCustomerCd=3917&amp;ckdflg=1&amp;companyCd=3284&amp;companyCd2=&amp;itemCd=410902&amp;itemNum2=&amp;itemNumber=G0003917-32DEA40F-3A382159-003918-003917-003284&amp;pbCheckFlg=1&amp;pblcflg=&amp;procKbn=&amp;seqNum=&amp;torihikisaki_cd=3918&amp;unConfirmedFlg=0&#039;,&#039;G0003917-32DEA40F-3A382159-003918-003917-003284&#039;);return false;">
+	<span class="" id="lblDisplay">規格書表示</span>
+	
+</a>
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="410902-2" name="grdContainer:grdDetail:14:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:14:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:14:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="410902-2" name="grdContainer:grdDetail:14:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">15</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">あああ-1</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/09/26</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span><input type="checkbox" class="pd-checkbox" name="grdContainer:grdDetail:15:chkDetailCon:chkDetail" id="chkDetail_14" edit_ID="408264-1"/></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName"></span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｅ（開発検証用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:15:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="408264-1" name="grdContainer:grdDetail:15:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:15:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:15:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="408264-1" name="grdContainer:grdDetail:15:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">16</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">中華春巻</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/07/06</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Q</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">（株）インフォフーズ【売】</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:16:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="405292-2" name="grdContainer:grdDetail:16:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:16:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:16:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="405292-2" name="grdContainer:grdDetail:16:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">17</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">ななんなんあ</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/06/01</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">1</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName">サンプルA</span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｊ</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">（株）インフォフーズ【売】</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:17:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="405291-2" name="grdContainer:grdDetail:17:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:17:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:17:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="405291-2" name="grdContainer:grdDetail:17:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">18</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">中華春巻</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/06/01</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">2</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName">サンプルB</span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｊ</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">（株）インフォフーズ【売】</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:18:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買い手　連携テスト用ユーザー</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="391901-2" name="grdContainer:grdDetail:18:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:18:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:18:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="391901-2" name="grdContainer:grdDetail:18:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">19</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+
+
+<span class="icbt-blue imgover tooltip-over" data-tooltip="規格書ベーシックの規格書です。" id="kikakuKbnB"><span class="bt-label-icblu">規Ｂ</span><br/></span>
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">一括連携テスト（デモ用）０４４</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/05/15</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd">22222</span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｖ(...(買い手企業Q)</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Q</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:19:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="379426-3" name="grdContainer:grdDetail:19:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:19:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:19:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="379426-3" name="grdContainer:grdDetail:19:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+						<tr>
+							<td rowspan="3" class="list-cell hdr-cell-03" id="td_NO">
+								<div><span class="center" id="panellblNO">20</span></div>
+							</td>
+							<td rowspan="3" class="list-cell status-bgcolor-cell-03" id="td_Status">
+							 <div><span id="lblStatusCd">新規<br/>回収</span>
+							 <BR/>
+							 <span id="icon7">
+<div class="center">
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell ic-status">
+								 <div><span id="icon1">
+
+
+
+
+
+
+</span></div>
+							</td>
+							<td rowspan="3" class="list-cell">
+								 <div><span id="icon2">
+<div class="center">
+
+
+
+
+
+<span class="icbt-gre04 imgover tooltip-over" data-tooltip="規格書プレミアムの規格書です。" id="kikakuKbnP"><span class="bt-label-icgre" >規Ｐ</span><br/></span>
+
+
+
+
+
+
+</div>
+</span></div>
+							</td>
+							<td class="list-cell word-break">
+							  <div><span id="lblDmyItemName">つぶあんぱん</span><span id="icon4">
+
+</span></div>
+							</td>
+							<td class="list-cell word-break "><div class="w100"><span id="lblspecInfo"></span></div></td>
+							<td class="list-cell word-break"><div class="w80"><span id="lblDeadlineDay">2012/08/31</span><span id="icon9">
+<span id="kiri"><img class="ml5" src="/web2/jp/images/ic-caution02.gif"></span>
+</span></div></td>
+							<td class="list-cell word-break"><div class="w90"><span id="lblBuyOwnCd"></span></div></td>
+							<td class="list-cell halign-l word-break"><div><span id="lblBuyProductName"></span>
+								</div>
+							</td>
+							<td class="list-cell edit-checkbox valign-m" id="chkDetailCon">
+								<div class="center"><span></span></div>
+							</td>
+						</tr>
+						<tr>
+                            <td class="list-cell"><div><span id="lblItemName" class="elem-disable">未設定</span><span id="icon3">
+
+
+
+
+
+
+</span></div></td>
+							<td class="list-cell" id="td_user"><div><span id="lblUserName">買い手企業Ｅ（...</span></div></td>
+							<td colspan="2" class="list-cell word-break" id="td_product_seller">
+							  <div class="w190"><span id="lblProductSellerName">売り手企業Ｅ（開発検証用）</span></div>
+							</td>
+							
+							<td class="list-cell nowrap">
+								<div class="center" id="ctr_button_oroshi">
+									<span id="productGroupDetailButtonPanel_oroshi">
+	<a class="bt" id="syousaiWoMiru" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;grdContainer:grdDetail:20:ctr_button_oroshi:productGroupDetailButtonPanel_oroshi:syousaiWoMiru&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label w140 halign-c">詳細を見る</span></a>
+    
+    
+    
+
+</span>
+								</div>
+								
+							</td>
+
+							<td class="list-cell nowrap" rowspan="2" id="lnkSokushinConTan">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="list-cell" id="td_memo"><div>
+								<div><span id="icon5">
+
+</span>
+								<span id="lblBuyMemo"></span><BR/></div></div>
+							</td>
+							<td class="list-cell word-break  valign-m" id="ctr_ChargeName_oroshi">
+							  <div><span id="lblChargeName_oroshi">卸買　開発テスト</span></div>
+							 </td>
+
+							<td class="list-cell nowrap" id="ctr_kikakudsp_oroshi">
+								<div   class="center">
+									<span id="icon6_oroshi">
+	
+</span>
+									<span id="kikakusyoDspLinkPanel_oroshi">
+
+</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="10" class="list-space" id="spaceDown"></td>
+						</tr>
+						<!-- Hidden item -->
+						<input type="hidden" id="hidPrimaryKey" value="369791-2" name="grdContainer:grdDetail:20:hidPrimaryKey"/>
+						<input type="hidden" id="certifyUserCd" value="" name="grdContainer:grdDetail:20:certifyUserCd"/>
+						<input type="hidden" id="certifyFlgIcon" value="1" name="grdContainer:grdDetail:20:certifyFlgIcon"/>
+						<input type="hidden" id="hidSeqAndSeqeda" value="369791-2" name="grdContainer:grdDetail:20:hidSeqAndSeqeda"/>
+						<!--<input type="hidden" wicket:id="hidModel" id="hidModel"/>-->
+
+					
+				</table>
+				
+			</div>
+
+			<table class="justify">
+				<tbody>
+					<tr>
+						<td class="justify-l">
+							<div>
+								<span id="pageMoveDown">
+<div class="paging">
+<span id="ken">件数：<span id="sum">88</span>件</span>
+<span class="prev"><span id="prev" class="inactive">‹ 前へ</span></span><span class="num"><span id="pageLink"><em class="current"><span id="pageNumber">1</span></em></span></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveDown:navigation:1:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">2</span></a></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveDown:navigation:2:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">3</span></a></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveDown:navigation:3:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">4</span></a></span><span class="num"><a href="javascript:void(0)" id="pageLink" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveDown:navigation:4:pageLink&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span id="pageNumber">5</span></a></span><span class="next"><a id="next" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;pageMoveDown:next&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">次へ ›</a></span>
+</div>
+</span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="mt10" id="kaisyuuStatusActionPanelDown">
+
+
+
+	<script language="JavaScript1.1">
+/*<![CDATA[*/
+
+		  var mstrSaveFieldValue;
+
+	function SaveFieldValue(pobjObject) {
+			 	mstrSaveFieldValue = pobjObject.value;
+			}
+
+	function CheckInputText(obj){
+   var nowyear = new Date;
+   var str = EmpTrim(obj.value);
+   obj.value = str;
+   if (str == '') return;
+   var y, m, d;
+   var new_y, new_m, new_d;
+   if (str.match(/^(([0-9]{4})\/|)([0-9]{1,2})\/([0-9]{1,2})$/)){
+       y = RegExp.$2;
+       m = RegExp.$3;
+       d = RegExp.$4;
+       if (y == ''){
+           y = nowyear.getFullYear();
+       }
+       if (IsDate(y, RegExp.$3, RegExp.$4)){
+           new_y = ('0000' + y); new_y = new_y.substring(new_y.length-4);
+           new_m = ('00' + m);   new_m = new_m.substring(new_m.length-2);
+           new_d = ('00' + d);   new_d = new_d.substring(new_d.length-2);
+           obj.value = new_y + '/' + new_m + '/' + new_d;
+           return;
+       }
+       else
+       {
+           obj.value = mstrSaveFieldValue;
+       }
+   }
+   else
+   {
+       obj.value = mstrSaveFieldValue;
+   }
+}
+
+function saiTeisyutuIrai(){
+		if( confirm('否決しますか？')) {
+            return true;
+        }else{
+            return false;
+		}
+}
+function finalRecognit(){
+		if( confirm('最終承認しますか？')) {
+            return true;
+        }else{
+            return false;
+		}
+}
+
+
+function syuRyouhi(val){
+
+			if(val.id == "txtEndDayTop"){
+				$("#txtEndDayDown").val($("#txtEndDayTop").val());
+				$("#txtEndDayDown").blur();
+			}
+
+			if(val.id == "txtEndDayDown"){
+				$("#txtEndDayTop").val($("#txtEndDayDown").val());
+				$("#txtEndDayTop").blur();
+			}
+	}
+
+
+
+/*]]>*/
+</script>
+</div>
+
+			<table class="justify-row" id="modoru">
+				<tr >
+					<td class="justify-l">
+                                            <!--#16325 2013/04/05 Mod Start by Kentaro Ichikawa
+                                            <a href="Javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+                                            #16325 2013/04/05 Mod Start by Kentaro Ichikawa-->
+                                        </td>
+				</tr>
+			</table>
+
+			</div>
+		<input type="hidden" name="frm_sf" id="frm_sf" /><input type="hidden" name="frm_se" id="frm_se" /></form>
+
+	<!--Contents End-->
+		<script language="javaScript">
+/*<![CDATA[*/
+
+
+	$("#txtDateOtherBegin").val($("#hidDateBegin").val());
+		$("#txtDateOtherEnd").val($("#hidDateEnd").val());
+
+	if ($("#sum").html() == "0") {
+		$("#lnkSentaku").attr("style", "text-align: left; cursor:default");
+	} else {
+		$("#lnkSentaku").attr("style", "text-align: left; cursor:hand");
+	}
+
+
+	
+/*]]>*/
+</script>
+</div>
+
+				<div id="footerhelp">
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p>
+<div class="ftr-hlp">
+<div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="http://www.infomart.co.jp/scripts/qa_op_redirect.asp?ShinraiFlg=ON&amp;user_cd=999989&amp;user_id=buyeee&amp;BS=O" class="ic ic-blu-faq" target="_blank"><span class="ic-label">教えてインフォマート</span></a></div>
+</div>
+</div>
+            </div>
+            <!--Contents End-->
+
+            <!--ftr Start-->
+            <div class="ftr" id="footer">
+    		<ul class="ftr-nv clr">
+            	<li><a href="/kikaku/kikakumypage.page">マイページ</a></li>
+            	<li><a href="/shinrai/kikaku/guide/guide.page?uid=obuybb">ご利用ガイド</a></li>
+            	<li><a href="/shinrai/kikaku/corporate/contact.asp?uid=obuybb">お問い合わせ</a></li>
+                <li>お客様番号：<span class="tx-b" id="lblFooterKyakuBangou"></span></li>
+        	</ul>
+        	<ul class="usrnv clr">
+            	<li><a href="/kikaku/kikakulogin.page">ログアウト</a></li>
+        	</ul>
+        	<div class="small">
+            	<p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+					Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            	<p class="number"><span id="lblHostName">s605373jp6vl16</span></p>
+        	</div>
+</div>
+            <!--ftr End-->
+        </div>
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+        (function($) {
+            $(function() {
+                $('a.open-dialog-modal').click(function(event){
+                    if($(this).is('a') && !($(this).attr("disabled") == "disabled" || $(this).attr("disabled"))) {
+                        var href = $(this).attr("href");
+                       if (href.indexOf('setmailflag') != -1) {
+                            openModalHalf($(this).attr("href"));
+                        } else {
+                            openModal($(this).attr("href"));
+                        }
+                    }
+                    event.stopImmediatePropagation();
+                    return false;
+                });
+            });
+        })(jQuery);
+        function masterWindow(){
+            return getPrePage();
+        }
+        $('.close-dialog-modal, .submit-dialog-modal, #accord ul.second > li > a').click(function(){
+            closeModalWindow();
+            return false;
+        });
+        
+/*]]>*/
+</script>
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1680872-41']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+/*]]>*/
+</script>
+    </body>
+</html>

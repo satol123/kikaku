@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<!-- ============================= 円グラフ描画 ============================ -->
+<!--[if IE]><script src="/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="/js/imgcanvas.js"></script>
+</head>
+<body class="page">
+<div class="oroshi">
+  <!--hdr Start-->
+  <div class="hdr">
+    <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a><a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+    <ul class="gnv clr" id="gnv">      <li id="gnv-myp"><a href="40010.html"><span>マイページ</span></a></li>
+      <li id="gnv-ksrch"><a href="40180.html"><span>規格書検索・出力</span></a></li>
+      <li id="gnv-match"><a href="40200.html"><span>取引先マッチング</span></a></li>
+      <li id="gnv-cus"><a href="40030.html"><span>提出状況管理</span></a></li>
+      <li id="gnv-sup"><a href="40170.html"><span>回収状況管理</span></a></li>
+      <li id="gnv-set"><a href="40220.html"><span>自社管理</span></a></li>
+      <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+</ul>
+    <div class="usrnv clr">
+      <h2>インフォ物産株式会社 中山明日香 様</h2>
+      <ul>
+        <li><a href="#">サイトマップ</a></li>
+        <li><a href="#">ログアウト</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--hdr End-->
+  <!--Contents Start-->
+  <div class="contents">
+    <form id="" name="" method="post" action="../dummy">
+      <div class="height-wrap">
+        <table class="hgrp">
+          <tbody>
+            <tr>
+              <th class="heading"><h1>自社管理メニュー</h1></th><td class="desc"><div>自社の情報を変更・修正できます。<br>
+                  メニューボタンをクリックしてください。</div></td>
+			<td class="nav"><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="perfection-level-img">
+          <div class="perfection-level-txt-bg left"><span class="total-articles">200</span><span class="done-articles">140</span></div>
+          <div class="perfection-level-btn left"><a class="bt wide04" href="#"><span class="bt-label">詳細レポート</span></a></div>
+          <div class="graph-regist-box left">
+            <div class="graph-regist">
+              <canvas id="imgcanvas" width="86" height="86"><p>canvas非対応ブラウザかJavaScriptが無効になっています。</p></canvas>
+            </div>
+            <div class="regist-percent"><p>70%</p></div>
+          </div>
+        </div>
+        <table class="hgrp-nv tab-liquid">
+          <tbody>
+            <tr>
+              <td><div class="tabs-link tab_ki_search">
+                  <ul>
+                    <li class="w180"><a href="40225.html"><span class="bg-tabs-link">登録</span></a></li>
+                    <li class="w180"><a href="40230.html"><span class="bg-tabs-link">活用</span></a></li>
+                    <li class="w180"><a href="40220.html"><span class="bg-tabs-link">回収</span></a></li>
+                    <li class="w180"><a class="current" href="40227.html"><span class="bg-tabs-link">設定</span></a></li>
+                  </ul>
+                </div></td>
+			<td class="nav"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="setting-commodity">
+          <tbody class="m-menu-o">
+<!--L1-->
+            <tr>
+	            <td><h3><a href="#" class="ic_03" ><img src="/web2/jp/images/ic-gre-edit03.gif" alt="ID管理" width="50" height="50"><span>ID管理</span></a></h3>
+	              <p>担当者IDの追加・変更、メール受信設定、権限設定、パスワード変更ができます。</p></td>
+						  <td><h3><a href="99980.html" class="ic_06"><img src="/web2/jp/images/ic-gre-edit03.gif" alt="自社管理項目追加" width="50" height="50"><span>自社管理項目追加</span></a></h3>
+						  <p>規格書に、自社で追加管理する項目を設定することができます。社内情報の一元管理としてご活用ください。</p></td>
+						  <td class="no-bd-r"><h3><a href="99980.html" class="ic_06"><img src="/web2/jp/images/ic-gre-browser-hotel.gif" alt="会社情報" width="50" height="50"><span>会社情報</span></a></h3>
+						  <p>会社情報の変更ができます。</p></td>
+            </tr>
+<!--L2-->
+            <tr>
+              <td><h3 class="mb10"><a href="#" class="ic_03" ><img src="/web2/jp/images/ic-gre-list03.gif" alt="担当者一括設定" width="50" height="50"><span>担当者一括設定</span></a></h3>
+                <p>提出依頼を検索し、担当者を一括で変更設定することができます。</p></td>
+
+              <td><div></div></td>
+
+              <td class="no-bd-r"><div></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+  </div>
+  <!--Contents End-->
+  <!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+    <ul class="usrnv clr">
+      <li><a href="#">ログアウト</a></li>
+    </ul>
+    <div class="small"><p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+        Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p><p class="number">S217739JP6EW17</p></div>
+  </div>
+  <!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>

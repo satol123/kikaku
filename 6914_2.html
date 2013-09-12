@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<style type="text/css">
+.head-space.cell-01{width:20px;}
+.head-space.cell-02{width:100px;}
+.head-space.cell-03{width:250px;}
+.head-space.cell-04{width:120px;}
+.head-space.cell-05{width:140px;}
+.head-space.cell-06{width:50px;}
+.lh-hdr {line-height:120%;}
+</style>
+</head>
+<body class="dialog-mdl dialog-mdl-popup">
+<div class="dialog-mdl-wrap">
+
+  <div class="dialog-mdl-hdr-wrap">
+    <div class="dialog-mdl-hdr">
+      <h1 class="logo"><a href="/"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"></a></h1>
+      <div class="usernv clr">
+        <ul>
+          <li><a href="#" class="ic ic-close"><span class="icon-label">閉じる</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+	<!--hdr Start-->
+<div class="dialog-mdl-hdr">
+    <h1>宛先一覧</h1>
+    <div class="usernv clr">
+        <ul>
+            <li><a href="#" class="ic ic-close close-dialog-modal"><span class="icon-label">閉じる</span></a></li>
+
+        </ul>
+    </div>
+</div>
+	<!--hdr End-->
+    <form id="dummy-04k-01_p01-01" name="dummy-04k-01_p01-01" method="post" action="dummy">
+  <div class="dialog-mdl-contents-wrapper">
+<a name="modaltop" id="modaltop">&nbsp;</a>
+    <div class="dialog-mdl-contents">
+
+		<p class="mb10">宛先を選択して、「選択する」をクリックしてください。</p>
+
+	<!--Contents Start-->
+
+        <div class="tbl-r-gry">
+          <table class="pop mb10">
+            <tbody>
+              <tr class="first-row last-row">
+                <th class="first-cell"><div>担当者</div></th>
+                <td class="last-cell"><div><select name="f1-03" id="f1-03" class="cstm-select w150"><option>全担当者</option><option>木村太郎</option><option>佐藤拓郎</option></select></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+<div class="tbl-r">
+              <table>
+                <tbody>
+                  <tr class="first-row">
+                    <th class="first-cell"><div>表示条件</div>
+                    </th>
+                    <td class="last-cell"><div><span class="cstm-checkbox"><span><input type="checkbox" name="01k-01-5" id="01k-01-5a"><label for="01k-01-5a">選択した取引先のみ表示する</label></span></span></div></td>
+                  </tr>
+                  <tr class="last-row">
+                    <th class="first-cell"><div class="tbl-r-ic">キーワード<img width="16" height="19" src="/web2/jp/images/ic-hlp.gif" alt="" class="imgover ml5"></div></th>
+                    <td class="last-cell" colspan="3"><div><span class="cstm-tx cstm-tx-box"><span class="cstm-tx-bg"><input type="text" class="has-placeholder w250" id="search-freeword" title="キーワードを入力" value="キーワードを入力"></span><a href="#" class="cancel"><img width="31" height="14" src="/web2/jp/images/srch-ic-clear.gif" alt="クリア"></a></span></div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="srch-panel-ftr"><a class="bt bt-srch" href="#"><span class="bt-label">検索する</span></a></div>
+            </div>
+
+<table class="justify">
+<tbody>
+<tr>
+<td class="justify-l"></td>
+<td class="justify-r valign-b"><div><span><a class="bt bt-gry03" href="6913_2.html"><span class="bt-label">キャンセル</span></a></span><a class="bt bt-gre03" href="6913_2.html"><span class="bt-label">選択する</span></a></div></td>
+</tr>
+</tbody>
+</table>
+
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：8件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r"><div class="serach-results-filter">
+	              <label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>取引先名(昇順)</option>
+	                <option>取引先名(降順)</option>
+                  </select>
+	              <label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option>20</option>
+	                <option>30</option>
+	                <option>40</option>
+	                <option>50</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+    <table class="m-tbl-050104">
+
+       <tr class="first-row last-row">
+        <td class="first-cell valign-m"><div class="lh-hdr">No.</div></td>
+        <td class="valign-m"><div>取引先コード</div></td>
+        <td class="valign-m"><div>取引先名</div></td>
+        <td class="valign-m"><div>自社担当者</div></td>
+        <td class="valign-m"><div>宛先担当者</div></td>
+        <td class="last-cell nowrap valign-m"><div class="center"><ul class="menu-pulldown-r"><li class="menu-pulldown-li01"><span><a href="#"><img width="31" height="24" style="text-align:left;" src="/web2/jp/images/bt-select.gif" alt="選択" class="bt-select"></a></span><ul style="display: none;"><li class="menu-pulldown-li02"><a href="#"><img width="17" height="13" src="/web2/jp/images/ic-search-all.gif">検索結果の全てを選択</a></li><li class="menu-pulldown-li02"><a href="#"><img width="17" height="13" src="/web2/jp/images/ic-search-del.gif">選択した全てを解除</a></li></ul></li></ul></div></td>
+       </tr>
+     <tr>
+        <td class="head-space cell-01 head-space-first"><div> </div></td>
+        <td class="head-space cell-02"><div> </div></td>
+        <td class="head-space cell-03"><div> </div></td>
+        <td class="head-space cell-04"><div> </div></td>
+        <td class="head-space cell-05"><div> </div></td>
+        <td class="head-space cell-06 head-space-last"><div> </div></td>
+      </tr>
+      <tr>
+        <td class="list-cell"><div class="center">1</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>(株)インフォフーズ</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>横田和夫</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">2</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>(株)アイリス・Ａ</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>木村健二</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">3</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>アオイ産業(株)</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>橋本弘</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">4</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>(株)青柳漆器店</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>中野雄二</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">5</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>(株)赤田本店</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>赤石隆</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">6</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>(株)アクワハーベスト</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>北田正志</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">7</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>アサイホルモン店</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>石橋幸雄</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+      <tr>
+        <td class="list-cell"><div class="center">8</div></td>
+        <td class="list-cell"><div> </div></td>
+        <td class="list-cell"><div>(株)麻生</div></td>
+        <td class="list-cell"><div>田中一郎</div></td>
+        <td class="list-cell valign-m"><div><a href="6915_2.html"><img src="/web2/jp/images/ic-list.gif" class="flt-r"></a>大橋勝</div></td>
+        <td class="list-cell valign-m"><div class="center"><input type="checkbox" name="f1-15" id="f1-15"></div></td>
+      </tr>
+      <tr>
+       <td class="list-space-none" colspan="7"><div> </div></td>
+      </tr>
+
+          </table>
+        </div>
+	      <table class="justify mt10">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：8件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+              </tr>
+            </tbody>
+          </table>
+<div class="halign-r mt20 mb5">
+      <a class="ic ic-arr-blu04" href="#modaltop"><span class="ic-label">ページトップへ</span></a>
+      </div>
+
+	<!--Contents End-->
+    </div>
+  </div>
+
+<div class="pr30">
+<table class="justify mt10">
+<tbody>
+<tr>
+<td class="justify-l>    <div class="usernv clr">
+        <ul>
+            <li><a href="#" class="ic ic-close close-dialog-modal"><span class="icon-label">閉じる</span></a></li>
+
+        </ul>
+    </div>
+</td>
+<td class="justify-r valign-b"><div><span><a class="bt bt-gry03" href="6913_2.html"><span class="bt-label">キャンセル</span></a></span><a class="bt bt-gre03" href="6913_2.html"><span class="bt-label">選択する</span></a></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+            </form>
+</div>
+</body>
+</html>

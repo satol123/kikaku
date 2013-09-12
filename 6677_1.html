@@ -1,0 +1,239 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+</head>
+<body class="dialog-mdl dialog-mdl-popup">
+<div class="dialog-mdl-wrap">
+
+  <div class="dialog-mdl-hdr-wrap">
+    <div class="dialog-mdl-hdr">
+      <h1 class="logo"><a href="/"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18"></a></h1>
+      <div class="usernv clr">
+        <ul>
+          <li><a href="#" class="ic ic-close"><span class="icon-label">閉じる</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+	<!--hdr Start-->
+<div class="dialog-mdl-hdr">
+    <h1>規格書一覧</h1>
+    <div class="usernv clr">
+        <ul>
+            <li><a href="#" class="ic ic-close close-dialog-modal"><span class="icon-label">閉じる</span></a></li>
+
+        </ul>
+    </div>
+</div>
+	<!--hdr End--> 
+<form id="dummy-04k-01_p01-01" name="dummy-04k-01_p01-01" method="post" action="dummy">
+  <div class="dialog-mdl-contents-wrapper">
+<a name="modaltop" id="modaltop">&nbsp;</a>
+    <div class="dialog-mdl-contents">
+
+			<!--<p class="mb10">テキストテキストテキストテキストテキストテキスト。</p>-->
+
+	<!--Contents Start-->
+<div class="tbl-r-gry mb10">
+<table class="pop">
+  <tbody><tr class="first-row">
+      <th class="first-cell w70"><div class="w70">規格書</div></th>
+      <td><div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" class="w200" id="f3-01" name="f3-01"></span></span></div></td>
+      <th class="w80"><div class="w80">他提出先</div></th>
+      <td class="last-cell"><div><span class="checked">全て<a href="#" class="bt bt-list"><span class="bt-label">一覧から選択</span></a></span></div></td>
+  </tr>
+  <tr>
+      <th class="first-cell w70">
+          <div class="w70">コード検索</div>
+      </th>
+      <td><div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-03" id="f1-03" size="20" class="w100 ime-dis"></span></span>
+          <span class="cstm-radio"><span><input type="radio" name="f1-03_2" id="f1-03_2e" checked="checked"><label for="f1-03_2e">自社商品</label></span><span><input type="radio" name="f1-03_2" id="f1-03_2b"><label for="f1-03_2b">JAN</label></span><span><input type="radio" name="f1-03_2" id="f1-03_2c"><label for="f1-03_2c">規格書</label></span></span>
+          </div>
+      </td>
+      <th class="w80"><div class="w80">規格書マスタ</div></th>
+      <td class="last-cell"><div><span class="cstm-radio"><span><input type="radio" name="f2-07" id="f2-07a" checked="checked"><label for="f2-07a">全て</label></span><span><input type="radio" name="f2-07" id="f2-07b"><label for="f2-07b">規格書マスタのみ</label></span></span></div></td>
+  </tr>
+  <tr class="last-row">
+      <th class="first-cell w70"><div class="w70">適用日</div></th>
+      <td class="last-cell nowrap" colspan="3"><div><span class="cstm-radio"><span><input type="radio" name="f2-06" id="f2-06a" checked="checked"><label for="f2-06a">全て</label></span><span><input type="radio" name="f2-06" id="f2-06b"><label for="f2-06b">期間指定</label><span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w80" id="f2-09" name="f2-09" disabled="disabled"></span></span>～<span class="cstm-tx elem-disable"><span class="cstm-tx-bg"><input type="text" class="w80" id="f2-10" name="f2-10" disabled="disabled"></span></span></span></span></div></td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging">件数：4件<span class="prev"><span class="inactive">&#8249; 前へ</span></span><span class="num"><em class="current">1</em></span><span class="next"><span class="inactive">次へ &#8250;</span></span></div></td>
+	            <td class="justify-r"><div class="serach-results-filter">
+	              <label for="f3-01">並び順</label>
+	              <select id="f3-01" name="f3-01" class="custom-select">
+	                <option>更新日(降順)</option>
+	                <option>更新日(昇順)</option>
+                  </select>
+	              <label for="f3-02">表示数</label>
+	              <select id="f3-02" name="f3-02" class="custom-select">
+	                <option>20</option>
+	                <option>30</option>
+	                <option>40</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+<div class="data-list">
+<table>
+  <tr>
+    <td rowspan="3" class="valign-m"><div>No.</div></td>
+    <td><div>規格書商品名</div></td>
+    <td><div>自社商品コード</div></td>
+    <td colspan="2"><div>規格</div></td>
+    <td rowspan="3"><div></div></td>
+  </tr>
+  <tr>
+    <td><div>規格書コード</div></td>
+    <td><div>JANコード</div></td>
+    <td width="11%"><div>適用日</div></td>
+    <td width="12%"><div>更新日</div></td>
+  </tr>
+  <tr>
+    <td><div>他提出先</div></td>
+    <td colspan="3"><div>備考</div></td>
+  </tr>
+  <tr>
+    <td class="head-space cell-01 head-space-first"><div> </div></td>
+    <td class="head-space cell-02"><div> </div></td>
+    <td class="head-space cell-03"><div> </div></td>
+    <td class="head-space cell-04"><div> </div></td>
+    <td class="head-space cell-05"><div> </div></td>
+    <td class="head-space cell-06 head-space-last"><div> </div></td>
+  </tr>
+  <tr>
+    <td rowspan="3" class="list-cell valign-m"><div class="center">1</div></td>
+    <td class="list-cell"><div>業務用冷凍</div></td>
+    <td class="list-cell"><div>200100</div></td>
+    <td class="list-cell" colspan="2"><div>10kg/PC</div></td>
+    <td class="list-cell nowrap valign-m" rowspan="3"><div class="center"><a onClick="javascript:window.showModalDialog('6678_1.html',this,'dialogWidth=800px; dialogHeight=700px;')" class="bt bt-org03"><span class="bt-label">登録する</span></a><br><a href="#">規格書表示</a></div></td>
+  </tr>
+  <tr>
+    <td class="list-cell"><div>G99971-32DF6C0E-37310A7</div></td>
+    <td class="list-cell"><div>1234567890123</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+  </tr>
+  <tr>
+    <td class="list-cell"><div>インフォダイニング</div></td>
+    <td class="list-cell" colspan="3"><div> </div></td>
+  </tr>
+  <tr>
+    <td class="list-space-none" colspan="6"><div> </div></td>
+  </tr>
+  <tr class="list-gry">
+    <td rowspan="3" class="list-cell valign-m"><div class="center">2</div></td>
+    <td class="list-cell"><div>業務用冷凍</div></td>
+    <td class="list-cell"><div>200101</div></td>
+    <td class="list-cell" colspan="2"><div>10kg/PC</div></td>
+    <td class="list-cell nowrap valign-m" rowspan="3"><div class="center"><a href="6678_1.html" class="bt bt-org03"><span class="bt-label">登録する</span></a><br><a href="#">規格書表示</a></div></td>
+  </tr>
+  <tr class="list-gry">
+    <td class="list-cell"><div>G99971-32DF6C0E-37310A8</div></td>
+    <td class="list-cell"><div>1234567890124</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+  </tr>
+  <tr class="list-gry">
+    <td class="list-cell"><div>インフォダイニング</div></td>
+    <td class="list-cell" colspan="3"><div> </div></td>
+  </tr>
+  <tr>
+    <td class="list-space-none" colspan="6"><div> </div></td>
+  </tr>
+  <tr>
+    <td rowspan="3" class="list-cell valign-m"><div class="center">3</div></td>
+    <td class="list-cell"><div>業務用冷凍</div></td>
+    <td class="list-cell"><div>200102</div></td>
+    <td class="list-cell" colspan="2"><div>10kg/PC</div></td>
+    <td class="list-cell nowrap valign-m" rowspan="3"><div class="center"><a href="6678_1.html" class="bt bt-org03"><span class="bt-label">登録する</span></a><br><a href="#">規格書表示</a></div></td>
+  </tr>
+  <tr>
+    <td class="list-cell"><div>G99971-32DF6C0E-37310A9</div></td>
+    <td class="list-cell"><div>1234567890125</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+  </tr>
+  <tr>
+    <td class="list-cell"><div>インフォダイニング</div></td>
+    <td class="list-cell" colspan="3"><div> </div></td>
+  </tr>
+  <tr>
+    <td class="list-space-none" colspan="6"><div> </div></td>
+  </tr>
+  <tr class="list-gry">
+    <td rowspan="3" class="list-cell valign-m"><div class="center">4</div></td>
+    <td class="list-cell"><div>業務用冷凍</div></td>
+    <td class="list-cell"><div>200103</div></td>
+    <td class="list-cell" colspan="2"><div>10kg/PC</div></td>
+    <td class="list-cell nowrap valign-m" rowspan="3"><div class="center"><a href="6678_1.html" class="bt bt-org03"><span class="bt-label">登録する</span></a><br><a href="#">規格書表示</a></div></td>
+  </tr>
+  <tr class="list-gry">
+    <td class="list-cell"><div>G99971-32DF6C0E-37310A0</div></td>
+    <td class="list-cell"><div>1234567890126</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+    <td class="list-cell"><div>2012/10/10</div></td>
+  </tr>
+  <tr class="list-gry">
+    <td class="list-cell"><div>インフォダイニング</div></td>
+    <td class="list-cell" colspan="3"><div> </div></td>
+  </tr>
+  <tr>
+    <td class="list-space" colspan="6"><div> </div></td>
+  </tr>
+</table>
+</div>
+<table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging">件数：4件<span class="prev"><span class="inactive">&#8249; 前へ</span></span><span class="num"><em class="current">1</em></span><span class="next"><span class="inactive">次へ &#8250;</span></span></div></td>
+	            <td class="justify-r"><div> </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+	<!--Contents End-->
+    </div>
+  </div>
+
+<div class="submit-bt-wrap clr pb10">
+    <div class="submit-bt">
+	<a href="#" class="bt bt-gry03"><span class="bt-label">キャンセル</span> </a>
+    </div>
+</div>
+            </form>
+  <div class="dialog-mdl-ftr-wrap">
+    <div class="dialog-mdl-ftr">
+      <div class="small">
+
+        <p class="credits"> Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. <a href="#" class="bt bt-close"> <span class="bt-label">閉じる</span> </a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

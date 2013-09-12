@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================ -->
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/js/jhc-sample-customcheck.js"></script>
+<script type="text/javascript" src="/web2/jp/js/lib/pulldown.js"></script>
+<style type="text/css">
+.head-space.cell-01{ width:30px; }
+.head-space.cell-02{ width:90px; }
+.head-space.cell-03{ width:200px; }
+.head-space.cell-04{ width:auto; }
+.head-space.cell-05{ width:140px; }
+.head-space.cell-06{ width:45px; }
+
+.tbl-r-step.step9_2 td.first-cell{width:5px;}
+.tbl-r-step.step9_2 td.first-cell div{padding-left:0;padding-right:0;}
+.tbl-r-step.step9_2 td.cell-02{width:460px;}
+.tbl-r-step.step9_2 td.cell-04{width:460px;} 
+.tbl-r-step.step9_2 td.cell-05{width:auto;}
+.tbl-r-step.step9_2 td.cell-06{width:310px;}
+
+</style>
+</head>
+<body class="page">
+
+<div class="urite">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+                <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0000.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="0200.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="0580.html"><span>取引先マッチング</span></a></li>
+            <li id="gnv-subm-status"><a href="0011.html"><span>提出状況管理</span></a></li>
+            <li id="gnv-mstr-manage"><a href="99904.html"><span>規格書マスタ管理</span></a></li>
+            <li id="gnv-set"><a href="99901_2.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォ食品株式会社 和田美咲 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+     <form id="" name="" method="post" action="../dummy">
+      <div class="height-wrap">
+
+     <table class="hgrp">
+       <tbody>
+		<tr>
+			<th class="heading"><h1>取引先マッチング</h1></th><td class="desc"><div>取引先のASP規格書システムご利用状況が確認できます。<br>
+ASP規格書システムを他社と利用中ですので、貴社との設定を依頼してください。
+</div>
+			</td>
+            <td class="halign-r">
+              <table class="ki-header-graph">
+                 <tbody><tr>
+                 <td><p>提出率(合計：300件　提出：195件　未提出：105件)</p>
+                   <div class="graph-collect"><p class="percent">70%</p><p class="collected"><span></span></p></div></td>
+                </tr>
+               </tbody>
+             </table>
+           </td>
+			<td class="nav">
+				<a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="ki_company_list">
+
+		<div class="ki_company_list_right">
+        
+                <div>
+                    <div><img src="/web2/jp/images/accordion-header-no-arrow.png" alt="閉じる" width="210" height="17"><!--<img src="http://192.168.100.105:5020/images/bg-accordion-handle.png" alt="閉じる" width="210" height="17"> --></div>
+
+                    <div class="partner-list-head">
+                      <table class="justify mb0">
+                       <tr>
+                       <td class="justify-l"><div class="partner-list-ti">取引先からの取引設定依頼</div><div class="x-small">現在取引がある場合は <input type="checkbox">にチェックを入れて「承認する」を押してください。</div>
+						<div class="sitenav-mini clr">
+							<ul class="clr tananv">
+								<li class="sitenav-mini-hdr nowrap"><a class="current" href="#">非表示なし</a></li>
+								<li class="nowrap last-child"><a href="#">非表示のみ</a></li>
+							</ul>
+						</div>
+                       </td>
+                       </tr>
+                      </table>
+                    </div>
+
+
+                    <div class="partner-list-middle">
+                        <div class="partner-list-middle_scrl">
+
+                            <ul>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-04" id="f0-04"><label for="f0-04"><a href="#">(株)北海道フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-01" id="f0-01"><label for="f0-01"><a href="#">(株)岩手フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-02" id="f0-02"><label for="f0-02"><a href="#">(株)秋田フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-13" id="f0-13"><label for="f0-13"><a href="#">(株)東京フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-03" id="f0-03"><label for="f0-03"><a href="#">(株)名古屋フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-12" id="f0-12"><label for="f0-12"><a href="#">(株)大阪フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-05" id="f0-05"><label for="f0-05"><a href="#">(株)京都フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-06" id="f0-06"><label for="f0-06"><a href="#">(株)兵庫フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-07" id="f0-07"><label for="f0-07"><a href="#">(株)広島フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-08" id="f0-08"><label for="f0-08"><a href="#">(株)香川フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-09" id="f0-09"><label for="f0-09"><a href="#">(株)高知フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-10" id="f0-10"><label for="f0-10"><a href="#">(株)福岡フードサービス</a></label></span></span></li>
+                                <li><span class="cstm-checkbox"><span><input type="checkbox" name="f0-11" id="f0-11"><label for="f0-11"><a href="#">(株)沖縄フードサービス</a></label></span></span></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+ <div class="partner-list-bottom">
+                            <table class="justify">
+                             <tr>
+                             <td class="justify-l valign-m"><a class="bt" href="#"><span class="bt-label">非表示にする</span></a></td>
+                             <td class="justify-r pr5 valign-m"><a class="bt bt-org03" href="#"><span class="bt-label">承認する</span></a></td></tr>
+                            </table></div> 
+</div>
+
+</div>
+
+
+<div class="order-index-main">
+
+	 <table class="hgrp-nv color-nv color-green">
+	  <tbody>
+        <tr>
+         <td class="partner-cell01"><div class="partner-div02 partner-div02-cur w340">システム利用中</div></td>
+        </tr>
+		<tr>
+		  <td colspan="2">
+			<div class="tabs-link w730">
+			  <ul>
+				<li class="tab-05 w175"><a href="0580.html"><span class="bg-tabs-link">設定済 取引先(3社)</span></a></li>
+				<li class="tab-05 w170"><a class="current" href="0590.html"><span class="bg-tabs-link">他社と利用中(3社)</span></a></li>
+				<li class="tab-03 w160"><a href="0600.html"><span class="bg-tabs-link">未利用企業(3社)</span></a></li>
+                <li class="tab-arrow"><img src="/web2/jp/images/arrow_single_green.gif" width="14" height="13" class="icon"></li>
+				<li class="tab-04 w185"><a href="0610.html"><span class="bg-tabs-link">取引先追加登録(3社)</span></a></li>
+			  </ul>
+			</div></td>
+			<td class="nav"></td>
+		</tr>
+	  </tbody>
+	</table>
+
+	<table class="tbl-r single-line03 col-two mt10 sch_0580">
+		<tbody><tr class="first-row last-row">
+			<th class="cell-01 first-cell nowrap"><div class="ic-bg">キーワード <img src="http://192.168.100.105:5055/images/ic-hlp.gif"></div></th>
+			<td colspan="3" class="cell-02 last-cell">
+			  <div class="single-line-div"><span class="cstm-tx cstm-tx-box"><span class="cstm-tx-bg"><input type="text" class="has-placeholder ime-actv w250 ime-actv" id="search-freeword" title="キーワードを入力" value="キーワードを入力"></span><a href="#" class="cancel"><img src="http://192.168.100.105:5055/images/srch-ic-clear.gif" alt="クリア" width="31" height="14"></a></span>
+			  <a class="bt bt-srch03" href="#"><span class="bt-label">検索する</span></a>
+			  </div>
+			</td>
+                </tr>
+	      </tbody>
+	</table>
+
+		<table class="justify">
+			<tr>
+                <td class="justify-l"><div><p>
+			<span class="eye-catch tx-att-ora">下のリスト以外に取引先がある場合は、取引先追加登録から登録いただくか、<br>&nbsp;&nbsp;&nbsp;インフォマートへお問い合わせください。</span></p></div></td>
+				<td class="justify-r">
+				<div>
+					<a href="0604.html" class="bt bt-gre-large"><span class="bt-label">取引先依頼へ</span></a>
+				</div>
+				</td>
+			</tr>
+		</table>
+
+	      <table class="justify">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：3件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r">
+	              <div class="serach-results-filter"><label for="f3-01">並び順</label>
+	              <select class="custom-select" name="f3-01" id="f3-01">
+	                <option>依頼日（降順）</option>
+	                <option>依頼日（昇順）</option>
+	                <option>取引先（降順）</option>
+	                <option>取引先（昇順）</option>
+                  </select><label for="f3-02">表示数</label>
+	              <select class="custom-select" name="f3-02" id="f3-02">
+	                <option>10</option>
+	                <option selected="selected">20</option>
+	                <option>40</option>
+	                <option>80</option>
+	                <option>100</option>
+                  </select>
+	              </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+<div class="data-list">
+  <table class="tbl9_2">
+      <tr class="first-row last-row">
+        <td rowspan="2" class="first-cell nowrap valign-m"><div class="center">No.</div></td>
+        <td rowspan="2" class="valign-m"><div>取引先コード</div></td>
+        <td rowspan="2" class="valign-m"><div>取引先</div></td>
+        <td class="valign-m"><div>取引先担当者</div></td>
+        <td rowspan="2" class="nowrap valign-m"><div>依頼日</div></td>
+        <td rowspan="2" class="last-cell valign-m"><div class="center"><ul class="menu-pulldown-r">
+<li class="menu-pulldown-li01"><span><a href="#"><img width="31" height="24" class="bt-select" alt="選択" src="/web2/jp/images/bt-select.gif" style="text-align:left;"></a></span>
+<ul style="display: none;">
+<li class="menu-pulldown-li02"><a href="#"><img width="17" height="13" src="/web2/jp/images/ic-page-all.gif">表示中の一覧を全て選択</a></li>
+<li class="menu-pulldown-li02"><a href="#"><img width="17" height="13" src="/web2/jp/images/ic-search-all.gif">検索結果の全てを選択</a></li>
+<li class="menu-pulldown-li02"><a href="#"><img width="17" height="13" src="/web2/jp/images/ic-search-del.gif">選択した全てを解除</a></li>
+<li class="menu-pulldown-li02"><a href="#"><img width="17" height="13" src="/web2/jp/images/ic-search-off.gif">表示中の選択を全て解除</a></li>
+</ul>
+</li>
+</ul></div></td>
+      </tr>
+      <tr>
+        <td class="valign-m"><div>メールアドレス</div></td>
+      </tr>
+    <tr>
+      <td class="head-space cell-01 head-space-first"><div> </div></td>
+      <td class="head-space cell-02"><div> </div></td>
+      <td class="head-space cell-03"><div> </div></td>
+      <td class="head-space cell-04"><div> </div></td>
+      <td class="head-space cell-05"><div> </div></td>
+      <td class="head-space cell-06 head-space-last"><div> </div></td>
+    </tr>
+      <tr class="selected">
+        <td rowspan="2" class="list-cell valign-m halign-c"><div>1</div></td>
+        <td rowspan="2" class="list-cell nowrap valign-m"><div>200010</div></td>
+        <td rowspan="2" class="list-cell valign-m"><div><a href="0591.html" class="no-line">IMフーズ(株)</a></div></td>
+        <td class="list-cell nowrap"><div>水野克己</div></td>
+        <td rowspan="2" class="list-cell nowrap valign-m"><div>2012/10/10(水)</div></td>
+        <td rowspan="2" class="list-cell edit-checkbox valign-m"><div class="center"><span><input type="checkbox" name="f2-03" id="f2-03"></span></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>mizuno@imfoods.co.jp</div></td>
+      </tr>
+
+    <tr>
+      <td colspan="6" class="list-space"><div> </div></td>
+    </tr>
+      <tr class="selected">
+        <td rowspan="2" class="list-cell valign-m halign-c"><div>2</div></td>
+        <td rowspan="2" class="list-cell nowrap valign-m"><div>200020</div></td>
+        <td rowspan="2" class="list-cell valign-m"><div><a href="0591.html" class="no-line">インフォ水産</a></div></td>
+        <td class="list-cell nowrap"><div>徳山洋平</div></td>
+        <td rowspan="2" class="list-cell highlight nowrap valign-m"><div>依頼を行ってください。</div></td>
+        <td rowspan="2" class="list-cell highlight edit-checkbox valign-m"><div class="center"><span><input type="checkbox" name="f2-03" id="f2-03" checked="checked"></span></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>tokuyama@info-sp.cp.jp</div></td>
+      </tr>
+
+    <tr>
+      <td colspan="6" class="list-space"><div> </div></td>
+    </tr>
+      <tr class="selected">
+        <td rowspan="2" class="list-cell valign-m halign-c"><div>3</div></td>
+        <td rowspan="2" class="list-cell nowrap valign-m"><div>200030</div></td>
+        <td rowspan="2" class="list-cell valign-m"><div><a href="0591.html" class="no-line">インフォフルーツ</a></div></td>
+        <td class="list-cell nowrap"><div>大村芳雄</div></td>
+        <td rowspan="2" class="list-cell highlight nowrap valign-m"><div>依頼を行ってください。</div></td>
+        <td rowspan="2" class="list-cell highlight edit-checkbox valign-m"><div class="center"><span><input type="checkbox" name="f2-03" id="f2-03" checked="checked"></span></div></td>
+      </tr>
+      <tr>
+        <td class="list-cell valign-m"><div>ohmura@infofruits.com</div></td>
+      </tr>
+
+    <tr>
+      <td colspan="6" class="list-space"><div> </div></td>
+    </tr>
+      <tr class="selected">
+        <td class="list-cell valign-m halign-c"><div>4</div></td>
+        <td class="list-cell nowrap valign-m"><div>200040</div></td>
+        <td class="list-cell valign-m"><div><a href="0591.html" class="no-line">インフォやさい館</a></div></td>
+        <td class="list-cell edited nowrap valign-m"><div class="pt15 pb15"><a href="0591.html" class="no-line">登録してください。</a></div></td>
+        <td class="list-cell highlight nowrap valign-m"><div>依頼を行ってください。</div></td>
+        <td class="list-cell highlight edit-checkbox valign-m"><div class="center"><span><input type="checkbox" name="f2-03" id="f2-03" checked="checked"></span></div></td>
+      </tr>
+
+    <tr>
+      <td colspan="6" class="list-space"><div> </div></td>
+    </tr>
+</table>
+</div>
+
+	      <table class="justify mt5">
+	        <tbody>
+	          <tr>
+	            <td class="justify-l"><div class="paging"> 件数：3件 <span class="prev"><span class="inactive">&#8249; 前へ</span></span> <span class="num"><em class="current">1</em></span> <span class="next"><span class="inactive">次へ &#8250;</span></span> </div></td>
+	            <td class="justify-r">
+	              <div> </div></td>
+              </tr>
+            </tbody>
+          </table>
+
+      <table class="justify">
+            <tbody>
+              <tr>
+                <td>
+				<td class="justify-r">
+				<div>
+					<a href="0604.html" class="bt bt-gre-large"><span class="bt-label">取引先依頼へ</span></a>
+				</div>
+				</td>
+			</tr>
+           </tbody>
+		</table>
+
+
+	<!--/ki_company_list_l--></div>
+<!--/ki_company_list--></div>
+
+          </div>
+
+
+
+      <table class="justify-row">
+            <tbody>
+              <tr>
+                <td class="justify-l"><div><a href="javascript:history.back();" class="bt bt-back"><span class="bt-label">戻る</span></a></div></td>
+			</tr>
+           </tbody>
+		</table>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>
+	</div>
+
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+    <script type="text/javascript" src="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/web2/jp/js/parts_html_render.js"></script>
+</body>
+</html>

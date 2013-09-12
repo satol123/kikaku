@@ -1,0 +1,1635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>フーズインフォマートＡＳＰ規格書システム</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+    
+<style type="text/css" id="jp-co-infomart-kikaku-standard-make-web-page-basicinformationedit-KikakuBasicInformationEditPage-1-0">
+/*<![CDATA[*/
+
+/*.webentry_panel01 th{width:200px;}
+.webentry_panel01 th div{width:200px;}*/
+
+.tbl-bd-wide-02-prod-reg-02 .c1,.tbl-kikaku-info01 .c1{width:230px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck7,.tbl-kikaku-info01 .ck7{width:55px;}
+.tbl-bd-wide-02-prod-reg-02 .ck8,.tbl-kikaku-info01 .ck8{width:80px;}
+.tbl-bd-wide-02-prod-reg-02 .ck9,.tbl-kikaku-info01 .ck9{width:auto;}
+.tbl-bd-wide-02-prod-reg-02 .ck10,.tbl-kikaku-info01 .ck10{width:70px;}
+.tbl-bd-wide-02-prod-reg-02 .ck11,.tbl-kikaku-info01 .ck11{width:175px;}
+.tbl-bd-wide-02-prod-reg-02 .ck12,.tbl-kikaku-info01 .ck12{width:140px;}
+
+.tbl-bd-wide-02-prod-reg-02 .ck-b1,.tbl-kikaku-info01 .ck-b1{width:230px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b2,.tbl-kikaku-info01 .ck-b2{width:245px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b3,.tbl-kikaku-info01 .ck-b3{width:180px;}
+.tbl-bd-wide-02-prod-reg-02 .ck-b4,.tbl-kikaku-info01 .ck-b4{width:295px;}
+
+.tp-ic-side{padding-bottom:3px;}
+
+table tr td.no-left-line {border-left:0px;}
+table tr td.no-right-line {border-right:0px;}
+
+/*]]>*/
+</style>
+<script type="text/javascript" src="/web2/jp/kikaku/js/KikakuBasicInformationEditPage.js?492"></script>
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/sub.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/controls.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/mypage_kikaku.css?492" />
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.css?492" />
+<input type="hidden" id="memberRole" value=""/><script type="text/javascript" src="/web2/jp/js/jquery-1.7.1.min.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery.bgiframe.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery.mousewheel.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/jquery-ui-1.8.18/jquery-ui.min.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/modal.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/projectCommonJs.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/hcommon.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/controls_common.js?492"></script>
+<script type="text/javascript" src="/web2/jp/js/kikaku_check.js?492"></script>
+</head>
+    
+    <span id="jsArea"></span>
+    
+	<a name="pagetop"></a>
+    <body class="popup" id="body" onload="frmOnLoad()">
+		<!--規格書B票 #15813
+		<table id="waitTable" width="950" border="0" cellspacing="0" cellpadding="0" style="display: none;">
+        <tr>
+            <td>
+                <div class="loading-page"></div>
+                <p class="loading-tx">処理中です。しばらくお待ちください。...</p>
+            </td>
+        </tr>
+		</table>-->
+		<div class="contents" style="display: none;" id="waitTable">
+			<div class="loading-page"></div>
+			<p class="loading-tx">読込み中です。しばらくお待ち下さい。</p>
+		</div>
+        <div class="urite" id="baseTable">
+          <!--hdr Start-->
+            <div class="hdr" id="header">
+    <!--hdr Start-->
+    <div class="logo w300"><img src="/web2/jp/images/logo-130x18.gif" alt="FOODS Info Mart" width="130" height="18"><img src="/web2/jp/images/logo-k-130.gif" alt="ASP規格書システム" width="130" height="18" class="ml10"></div>
+    <div class="usrnv clr">
+        <h2 id="conHeaderUserName"><span id="lblHeaderUserName">関口メ（管理者） 関口メ（管理者） 様</span></h2>
+        
+    </div>
+    <!--hdr End-->
+</div>
+            <!--hdr End-->
+
+            <!--Contents Start-->
+            
+     <div id="BasicInformationEditPanel">
+<style type="text/css">
+/*<![CDATA[*/
+
+table tr td.spec_begin_left{
+ border-left-width:0px;
+ valign:middle;
+}
+table tr td.spec_begin_right{
+ border-right-width:0px;
+}
+
+/*]]>*/
+</style>
+<!--Contents Start-->
+<div class="contents">
+    <form style="MARGIN: 0px" id="frm" method="post" action="kikakubasicinformationedit.page?17-8.IFormSubmitListener-body-bodyContainer-BasicInformationEditPanel-frm&amp;am1=1&amp;am2=99904&amp;common_item_cd&amp;fdb_flg&amp;item_kbn=0&amp;item_number=G0004062-332AD210-1F2A0F11&amp;join_day&amp;maker_cd&amp;maker_private_cd&amp;self_item_code&amp;session_clear_flg&amp;torihikisaki_cd&amp;torihikisaki_name&amp;upd_kbn=UPD&amp;kikaku_kbn=UPD" onsubmit="return validatorSubmit()" onkeydown="if (event.keyCode == 13) return true;"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="frm_hf_0" id="frm_hf_0" /></div>
+		<!--規格書作成のボタンタイプ -->
+        <input type="hidden" value="" id="hidBtnType" name="hidBtnType"/>
+        <!--機能番号-->
+        <input type="hidden" value="1" id="actMode" name="actMode"/>
+        <!--遷移元画面番号-->
+        <input type="hidden" value="99904" id="hidAm2" name="hidAm2"/>
+        <!--本画面番号-->
+        <input type="hidden" value="1000100" id="hidAm3" name="hidAm3"/>
+        <!--遷移先画面番号-->
+        <input type="hidden" value="" id="hidAm4" name="hidAm4"/>
+        <!--新規/更新区分-->
+        <input type="hidden" value="UPD" id="hidUpdKbn" name="hidUpdKbn"/>
+        <!--FDB連携フラグ-->
+        <input type="hidden" value="" id="hidFdbFlg" name="hidFdbFlg"/>
+        <!--取引先コード-->
+        <input type="hidden" value="" id="hidTorihikisakiCd" name="hidTorihikisakiCd"/>
+        <!--会社コード-->
+        <input type="hidden" value="4062" id="hidUserCd" name="hidUserCd"/>
+        <!--会社名-->
+        <input type="hidden" value="関口メ（管理者）" id="hidUserName" name="hidUserName"/>
+        <!--仕様書コード-->
+        <input type="hidden" value="G0004062-332AD210-1F2A0F11" id="hidItemNumber" name="hidItemNumber"/>
+		<!--アレルギー物質反映メッセージ-->
+        <input type="hidden" value="" id="hidAllergyMsg" name="hidAllergyMsg"/>
+        <!--マスタフラグ-->
+        <input type="hidden" value="0" id="hidMasterFlg" name="hidMasterFlg"/>
+        <!--マスタ設定の表示フラグ-->
+        <input type="hidden" value="0" id="hidOptKikakuMst" name="hidOptKikakuMst"/>
+        <!--自社管理用項目利用数-->
+        <input type="hidden" value="5" id="hidOptAddSpecEntry" name="hidOptAddSpecEntry"/>
+        <!--FDBメーカーコード-->
+        <input type="hidden" value="" id="hidMakerCd" name="hidMakerCd"/>
+        <!--FDB独自コード-->
+        <input type="hidden" value="" id="hidMakerPrivateCd" name="hidMakerPrivateCd"/>
+        <!--FDB商品コード-->
+        <input type="hidden" value="" id="hidCommonItemCd" name="hidCommonItemCd"/>
+        <!--FDB連携日-->
+        <input type="hidden" value="" id="hidJoinDay" name="hidJoinDay"/>
+        <!--卸自社管理コードフラグ-->
+        <input type="hidden" value="0" id="hidFoodsOwnCdFlg" name="hidFoodsOwnCdFlg"/>
+        <!--精査状態フラグ-->
+        <input type="hidden" id="hidCertificationFlg" value="0" name="hidCertificationFlg"/>
+        <!--精査機関登録コード-->
+        <input type="hidden" id="hidCertifyEntryCd" value="" name="hidCertifyEntryCd"/>
+        <!--JICFS分類-->
+        <input type="hidden" value="" id="hidJicfsStatusList" name="hidJicfsStatusList"/>
+        <!--隠す仕様書適用日-->
+        <input type="hidden" id="hidSpecBegin" value="" name="hidSpecBegin"/>
+        <!--確認メッセージ-->
+        <input type="hidden" id="hidConfirmMsg" value="" name="hidConfirmMsg"/>
+        <!--JICFS分類コード-->
+        <input type="hidden" id="hidJicfsCode" value="" name="hidJicfsCode"/>
+		<!--コピー用仕様書コード-->
+        <input type="hidden" id="hidCopyItemNumber" value="" name="hidCopyItemNumber"/>
+		<!--一時保存フォーカス設定用-->
+        <input type="hidden" id="hidTempSaveFocus" value="" name="hidTempSaveFocus"/>
+        <!--自社商品フラグ-->
+        <input type="hidden" id="hidSelfItemFlg" value="1" name="hidSelfItemFlg"/>
+        <!--編集区分-->
+        <input type="hidden" id="hidItemStatusKBN" value="0" name="hidItemStatusKBN"/>
+		<!--セッションデータ不具合のエラーメッセージ-->
+        <input type="hidden" id="hidSessionErr" value="" name="hidSessionErr"/>
+        <div class="height-wrap">
+            <table class="hgrp">
+                <tbody>
+                    <tr>
+                        <th class="heading"> <h1>規格書登録</h1></th>
+                        <td class="desc"><div>規格書プレミアムの作成・編集を行ってください。「登録して提出へ」は規格書登録完了保存、「保存する」は規格書作成中保存となります。規格書登録完了時は、ベーシックが同時作成されます。</div></td>
+                        <td class="nav"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="hgrp-nv">
+                <tbody>
+                    <tr>
+                        <td><div class="tabs-link" id="sakuseiTabMenu">
+<!--Contents Start-->
+                    <ul>
+                        <li id="tdKikakusyoRaito"><a id="lnkKikakusyoRaito" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000800&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sakuseiTabMenu:tdKikakusyoRaito:lnkKikakusyoRaito&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}" class=""><span class="bg-tabs-link">規格書ベーシック</span></a></li>
+                        <li id="tdKikakusyoSutanndado"><a id="lnkKikakusyoSutanndado" class="current" disabled="disabled"><span class="bg-tabs-link">規格書プレミアム</span></a></li>
+                        <li id="tdTorihikiSakiTuikaKoumoku"><a id="lnkTorihikiSakiTuikaKoumoku" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;0068&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sakuseiTabMenu:tdTorihikiSakiTuikaKoumoku:lnkTorihikiSakiTuikaKoumoku&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}" class=""><span class="bg-tabs-link">取引先追加項目</span></a></li>
+                        <li id="tdJisyaKannriKoumoku"><a id="lnkJisyaKannriKoumoku" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000700&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sakuseiTabMenu:tdJisyaKannriKoumoku:lnkJisyaKannriKoumoku&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}" class=""><span class="bg-tabs-link">自社管理項目</span></a></li>
+                        
+                    </ul>
+<!--Contents End-->
+</div></td>
+                        <td class="nav"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="sitesnav clr" id="sutanndadoTabMenuHead">
+<!--Contents Start-->
+							<ul class="clr tananv">
+                                <li class="sitesnav-hdr nowrap" id="tdKihonnJouhou"><a class="current w70" a="" id="lnkKihonnJouhou" disabled="disabled">基本情報</a></li>
+                                <li class="nowrap" id="tdGenZairyouJouhou"><a class="" id="lnkGenZairyouJouhou" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000400&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sutanndadoTabMenuHead:tdGenZairyouJouhou:lnkGenZairyouJouhou&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">原材料情報</a></li>
+                                <li class="nowrap" id="tdTutumiZaiJouhou"><a class="" id="lnkTutumiZaiJouhou" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000200&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sutanndadoTabMenuHead:tdTutumiZaiJouhou:lnkTutumiZaiJouhou&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">包材情報</a></li>
+                                <li class="last-child nowrap" id="tdSeihinnQuality"><a class="" id="lnkSeihinnQuality" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000300&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sutanndadoTabMenuHead:tdSeihinnQuality:lnkSeihinnQuality&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">製造品質</a></li>
+							</ul>
+<!--Contents End-->
+</div>
+            <table class="justify mb0">
+                <tbody>
+                    <tr>
+                        <td class="justify-l valign-b"><div class="mb10" id="kikakuCopyContainer"><span id="lblKikakuSenntakuKbn">登録済み規格書で仕様変更上書きする。</span><span><a class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkKikakuCopy" href="/kikaku/kikakukikakusyolist.page?am2=1000100&amp;itemnumid=hidCopyItemNumber&amp;function_id=refreshParentPage2&amp;kikaku_kbn=UPD" target="_blank"><span class="bt-label">一覧から選択</span></a></span></div></td>
+                        <td class="justify-r valign-b kikaku-webentry-btnarea">
+            				<div id="headBtnLinkPaenl">
+<!--Contents Start-->
+                        <span>
+                             <a class="ic ic-caution02" href="javascript:showMachineDependentCharacters();"><span class="ic-label">入力時のご注意</span></a>
+                             <a class="ic ic-caution02" href="javascript:showSaveAttention();"><span class="ic-label">各種保存ボタンのご注意</span></a>
+                        </span>
+						<span id="tdSubmitbtn1"><a class="bt bt-tmp-save" id="submitbtn1" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;&#039;,&#039;1&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;headBtnLinkPaenl:tdSubmitbtn1:submitbtn1&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">一時保存</span></a></span>
+                        <span id="tdSubmitbtn2"><a class="bt bt-save" id="submitbtn2" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;99904&#039;,&#039;2&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;headBtnLinkPaenl:tdSubmitbtn2:submitbtn2&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">保存する</span></a></span>
+						<span id="tdSubmitbtn3"><a class="bt bt-gre-large" id="submitbtn3" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;99904&#039;,&#039;3&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;headBtnLinkPaenl:tdSubmitbtn3:submitbtn3&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">登録する</span></a></span>
+                        
+						
+						
+<!--Contents End-->
+</div>
+            			</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="justify">
+                <tbody>
+                    <tr>
+                        <td class="justify-l valign-b">
+            				<div><a class="bt bt-preview" id="lnkFurebyu" href="javascript:void(0)" onclick="setWaitDspWin();var m=openFurebyuPage(&#039;/kikaku/kikakudispdetail.page?addKbn=0&amp;buysell_flg=0&amp;ckdflg=0&amp;companyCd=4062&amp;itemCd=&amp;itemNumber=G0004062-332AD210-1F2A0F11&amp;pbCheckFlg=0&amp;procKbn=&amp;torihikisaki_cd=&amp;unConfirmedFlg=0&#039;,&#039;G0004062-332AD210-1F2A0F11&#039;,&#039;更新前の情報は表示されませんがよろしいですか？&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;lnkFurebyu&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">プレビュー表示</span></a></div>
+            			</td>
+                        <td class="justify-r valign-b">
+            				<div style="display:none"><a id="hidTabSubmitLnk" href="javascript:void(0)" onclick="setWaitDspWin();var m=submitClick();;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;hidTabSubmitLnk&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">タブ・ボタン押下用共通リンク</a></div>
+							<div style="display:none"><a id="hidCopySubmitLnk" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;hidCopySubmitLnk&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">規格書コピー用リンク</a></div>
+							<div style="display:none"><a id="hidAllergySendSubmitLnk" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;hidAllergySendSubmitLnk&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">アレルギー物質反映後、再遷移</a></div>
+							<div style="display:none"><a id="hidReturnPageSubmitLnk" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;hidReturnPageSubmitLnk&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">戻る確認メッセージ、再遷移</a></div>
+            			</td>
+                    </tr>
+                </tbody>
+            </table>
+			<div id="errorMessageTop">
+    
+    
+
+    
+    
+</div>
+			<div class="">
+                <div class="">
+                    
+
+                    
+
+    				
+                    <div class="form-intro pt5 mb10 form-intro pt5 mb10" id="lblGuide">
+                        <p>
+                            <img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"> の項目は必ず入力してください。&nbsp;&nbsp;
+                            <img src="/web2/jp/images/img_input_pink.gif" width="20" height="10" class="" alt="取引必須項目">&nbsp;は取引先必須項目です。&nbsp;
+                            <img src="/web2/jp/images/img_input_green.gif" width="20" height="10" class="" alt="条件付き必須項目">&nbsp;は条件付き必須項目です。&nbsp;項目名にカーソルをあわせると、説明が表示されます。
+                        </p>
+    			    </div>
+                    
+
+                    <p class="sub-ti mb5">規格書管理項目</p>
+                    <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02" id="kikakusyoKannriKoumoku">
+                        <tbody>
+                            <tr>
+                    			<th class="w190 tbl-bd-wide-02-ic"><div class="w220"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p>
+                    			<label class="tooltip-over" data-tooltip="自社商品コードを入力してください。なお、登録済み規格書の場合は、編集不能となります。"  for="c1-64">自社商品コード</label></div></th>
+                                <td class="w230 no-right-line emphasis" >
+    								<div class="w220">
+    									<span class="cstm-tx">
+    										<span class="cstm-tx-bg">
+    											<input type="text" class="w140 ime-dis" maxlength="20" id="txtSelfItemCode" value="" name="kikakusyoKannriKoumoku:txtSelfItemCode" disabled="disabled" onkeydown="if (event.keyCode == 13) return false;"/>
+    								        </span>
+    									</span>
+										<span class="cstm-checkbox">
+				                			<span class="halign-r">
+				                				<input type="checkbox" class="c1-105" id="chkSelfItemFlg" checked="checked" onclick="setWaitDspWin();document.getElementById(&#039;frm_hf_0&#039;).value=&#039;kikakubasicinformationedit.page?17-8.IOnChangeListener-body-bodyContainer-BasicInformationEditPanel-frm-kikakusyoKannriKoumoku-chkSelfItemFlg&amp;am1=1&amp;am2=99904&amp;common_item_cd&amp;fdb_flg&amp;item_kbn=0&amp;item_number=G0004062-332AD210-1F2A0F11&amp;join_day&amp;maker_cd&amp;maker_private_cd&amp;self_item_code&amp;session_clear_flg&amp;torihikisaki_cd&amp;torihikisaki_name&amp;upd_kbn=UPD&amp;kikaku_kbn=UPD&#039;;document.getElementById(&#039;frm&#039;).submit();" name="kikakusyoKannriKoumoku:chkSelfItemFlg"/>
+				                				<label for="chkSelfItemFlg">コード無</label>
+				                   			</span>
+			                		    </span>
+    									<div id="chkErrSelfItemCode">
+    
+</div>
+    								</div>
+    							</td>
+                                <th class="w190"><div class="w220"><label class="tooltip-over" data-tooltip="規格書商品名が自動表示されます。" for="c1-62">規格書商品名</label></div></th>
+                                <td class="w230"><div class="w220" id="lblItemName">規格書帳票超過テスト一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</div></td>
+                            </tr>
+                            <tr>
+                                <th><div><label class="tooltip-over" data-tooltip="規格書をシステム上管理するコードです。システム上自動採番されます。" for="c1-63">規格書コード</label></div></th>
+                                <td><div id="lblItemNumber">G0004062-332AD210-1F2A0F11</div></td>
+                                <th class="tbl-bd-wide-02-ic small-w-row"><div><label class="tooltip-over" data-tooltip="規格書のJICFS分類を選択してください。">JICFS分類</label></div></th>
+                                <td id="tdJicfsCode">
+                    				<div>
+                    					<span class="checked">
+                    						<label id="lblJicfsStatusList" class=""></label>
+                    						<a id="lnkJicfsList" href="/kikaku/kikakujicfslist.page?cd=hidJicfsCode&amp;name=hidJicfsStatusList&amp;parent_method=setJicfsStatus" class="open-dialog-modal" target="_blank"><img src="/web2/jp/images/ic-list.gif"></a>
+    										<span id="jicfsClearContainer"><a class="ic ic-arr-blu" id="lnkJicfsClear" href="javascript:void(0)" onclick="setWaitDspWin();var m=true;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;kikakusyoKannriKoumoku:tdJicfsCode:lnkJicfsClear&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="ic-label">解除</span></a></span>
+                    					</span>
+                    				</div>
+                    			</td>
+                            </tr>
+                            <tr>
+                                <th><div><label class="tooltip-over" data-tooltip="規格書管理のための備考欄です。取引先には公開されません。">備考</label></div></th>
+                                <td colspan="3">
+    								<div><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" id="txtMemo" maxlength="30" rel="全角30文字以内" class="w400 noticeTip ime-actv" value="" name="kikakusyoKannriKoumoku:txtMemo" onkeydown="if (event.keyCode == 13) return false;"></span></span></div>
+        							<div id="chkErrMemo">
+    
+</div>
+    							</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="sub-ti mb5">規格書基本情報</p>
+                    <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb5" id="kihonnjyouhou1">
+    				    <colgroup>
+    				        <col class="c1"></col>
+    				        <col class="c2"></col>
+    			        </colgroup>
+                    	<tbody>
+                    		<tr>
+                    			<th colspan="3" class="bg-wht"><span class="tx-b">商品情報</span></th>
+                    		</tr>
+                    		<tr>
+                    			<th class="w170 ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="規格書の有効日付を入力してください。" for="c1-100">適用日</label></th>
+                    			<td id="tdSpecBegin" class="">
+                    				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="10" id="txtSpecBegin" name="kihonnjyouhou1:tdSpecBegin:txtSpecBegin" class="w100 date-unit ime-dis" value="2013/05/14" onkeydown="if (event.keyCode == 13) return false;" url="/kikaku/kikakuselcalendar.page?fnm=frm&amp;inm=txtSpecBegin"></span></span>
+                    				<div id="chkErrSpecBegin">
+    
+</div>
+                                </td>
+                                
+                    		</tr>
+                    		<tr>
+                    			<th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="通常品またはアソート品の区分を選択してください。" for="c1-5">通常アソート品区分</label></th>
+                    			<td colspan="2" id="tdTuujyouAsotohinnKbn" class="">
+                    				<span class="cstm-radio">
+    									<span id="rdoTuujyouAsotohinnKbn" class=""><span><input name="kihonnjyouhou1:tdTuujyouAsotohinnKbn:rdoTuujyouAsotohinnKbn" type="radio" checked="checked" value="通常" id="rdoTuujyouAsotohinnKbn-通常"/><label for="rdoTuujyouAsotohinnKbn-通常">&nbsp;通常</label></span><span class="txt-separate ml10">|</span><span><input name="kihonnjyouhou1:tdTuujyouAsotohinnKbn:rdoTuujyouAsotohinnKbn" type="radio" value="アソート品" id="rdoTuujyouAsotohinnKbn-アソート品"/><label for="rdoTuujyouAsotohinnKbn-アソート品">&nbsp;アソート品</label></span></span>
+    								</span>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="商品名を入力してください。">規格書商品名</label><div class="letter-control">(全角100文字以内)</div></th>
+                    			<td colspan="2" id="tdSyouhinnMei" class="">
+                    				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" rel="全角100文字以内" class="w400 noticeTip ime-actv" maxlength="200" id="txtSyouhinnMei" value="規格書帳票超過テスト一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十" name="kihonnjyouhou1:tdSyouhinnMei:txtSyouhinnMei" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<div id="chkErrSyouhinnMei">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="商品名を半角カナで入力してください。尚、「全角カナ・ひらがな」は「半角カナ」に、「全角英数・記号」は「半角英数・記号」に自動変換されます。">規格書商品名フリガナ</label><div class="letter-control">(半角カナ200文字以内)</div></th>
+                    			<td colspan="2" id="tdFurikana" class="">
+                    				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" rel="半角カナ200文字以内" class="w400 noticeTip ime-actv" maxlength="200" id="txtFurikana" value="" name="kihonnjyouhou1:tdFurikana:txtFurikana" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<div id="chkErrFurikana">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="ic-hlp"><p class="disp-ic mr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="ブランド名を入力して下さい。（例）「食の安全シリーズ」など">ブランド名</label><div class="letter-control">(全角50文字以内)</div></th>
+                    			<td colspan="2" id="tdBurannkuMei" class="">
+                    				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" rel="全角50文字以内" class="w400 noticeTip ime-actv" maxlength="100" id="txtBurannkuMei" value="" name="kihonnjyouhou1:tdBurannkuMei:txtBurannkuMei" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<span><a target="_blank" id="lnkBurannkuMei" class="open-dialog-modal bt bt-list open-dialog-mdl" href="/kikaku/kikakuinputsupportingeditm.page?am1=0&amp;spec_id=8&amp;input_supporting_title=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E5%90%8D%E9%81%B8%E6%8A%9E%E7%94%BB%E9%9D%A2&amp;input_supporting_message=%E3%80%8C%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E5%90%8D%E3%80%8D%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E8%A9%B2%E5%BD%93%E3%81%8C%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3CBR%3E%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E9%A0%85%E7%9B%AE%E3%81%AF%E3%83%9E%E3%82%B9%E3%82%BF%E3%81%A8%E3%81%97%E3%81%A6%E4%B8%80%E8%A6%A7%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82&amp;input_supporting_field=%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E5%90%8D&amp;input_supporting_maxlength=50&amp;input_supporting_width=400&amp;input_supporting_zokusei=%E5%85%A8%E8%A7%92%EF%BC%95%EF%BC%90%E6%96%87%E5%AD%97&amp;input_supporting_condition&amp;parent_input_name=txtBurannkuMei"><span class="bt-label">一覧から選択</span></a></span>
+                    				<div id="chkErrBurannkuMei">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="ブランド区分を設定してください。ナショナルブランド「NB」、プライベートブランド「PB」を設定してください。">ブランド区分</label></th>
+                    			<td colspan="2" id="tdBurannkuKbn" class="">
+                    				<select class="cstm-select" id="selBurannkuKbn" name="kihonnjyouhou1:tdBurannkuKbn:selBurannkuKbn">
+<option value=""></option>
+<option selected="selected" value="NB">NB</option>
+<option value="PB">PB</option>
+<option value="インストア商品">インストア商品</option>
+<option value="アウトパック商品">アウトパック商品</option>
+<option value="原材料">原材料</option>
+<option value="添加物">添加物</option>
+</select>
+                    				<div id="errBurannkuKbn">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+    								<div id="chkErrBurannkuKbn">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="商品の規格を入力してください。例：１５６ｇ×６尾、１５６ｇ／６尾">規格</label><div class="letter-control">(全角20文字以内)</div></th>
+                    			<td colspan="2" id="tdKikaku" class="">
+                    				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" rel="全角20文字以内" class="w300 noticeTip ime-actv" maxlength="40" id="txtKikaku" value="" name="kihonnjyouhou1:tdKikaku:txtKikaku" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<span><a target="_blank" id="lnkKikaku" class="open-dialog-modal bt bt-list open-dialog-mdl" href="/kikaku/kikakuinputsupportingeditm.page?am1=0&amp;spec_id=9&amp;input_supporting_title=%E8%A6%8F%E6%A0%BC%E9%81%B8%E6%8A%9E%E7%94%BB%E9%9D%A2&amp;input_supporting_message=%E3%80%8C%E8%A6%8F%E6%A0%BC%E3%80%8D%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E8%A9%B2%E5%BD%93%E3%81%8C%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3CBR%3E%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E9%A0%85%E7%9B%AE%E3%81%AF%E3%83%9E%E3%82%B9%E3%82%BF%E3%81%A8%E3%81%97%E3%81%A6%E4%B8%80%E8%A6%A7%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82&amp;input_supporting_field=%E8%A6%8F%E6%A0%BC&amp;input_supporting_maxlength=20&amp;input_supporting_width=250&amp;input_supporting_zokusei=%E5%85%A8%E8%A7%92%EF%BC%92%EF%BC%90%E6%96%87%E5%AD%97&amp;input_supporting_condition&amp;parent_input_name=txtKikaku"><span class="bt-label">一覧から選択</span></a></span>
+                    				<div id="errKikaku">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrKikaku">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="ic-hlp"><label class="tooltip-over" data-tooltip="規格名を半角で入力してください。なお、「全角カナ・ひらがな」は「半角カナ」に、「全角英数」は「半角英数」に自動変換されます。">規格半角</label><div class="letter-control">(半角40文字以内)</div></th>
+                    			<td colspan="2" id="tdKikakuHannkaku" class="">
+                    				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" rel="半角40文字以内" class="w300 noticeTip ime-actv" maxlength="40" id="txtKikakuHannkaku" value="" name="kihonnjyouhou1:tdKikakuHannkaku:txtKikakuHannkaku" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<span><a target="_blank" id="lnkKikakuHannkaku" class="open-dialog-modal bt bt-list open-dialog-mdl" href="/kikaku/kikakuinputsupportingeditm.page?am1=0&amp;spec_id=11&amp;input_supporting_title=%E8%A6%8F%E6%A0%BC%EF%BC%9A%E5%8D%8A%E8%A7%92%E9%81%B8%E6%8A%9E%E7%94%BB%E9%9D%A2&amp;input_supporting_message=%E3%80%8C%E8%A6%8F%E6%A0%BC%EF%BC%9A%E5%8D%8A%E8%A7%92%E3%80%8D%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E8%A9%B2%E5%BD%93%E3%81%8C%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3CBR%3E%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E9%A0%85%E7%9B%AE%E3%81%AF%E3%83%9E%E3%82%B9%E3%82%BF%E3%81%A8%E3%81%97%E3%81%A6%E4%B8%80%E8%A6%A7%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82&amp;input_supporting_field=%E8%A6%8F%E6%A0%BC%EF%BC%9A%E5%8D%8A%E8%A7%92&amp;input_supporting_maxlength=40&amp;input_supporting_width=350&amp;input_supporting_zokusei=%E5%8D%8A%E8%A7%92%EF%BC%94%EF%BC%90%E6%96%87%E5%AD%97&amp;input_supporting_condition&amp;parent_input_name=txtKikakuHannkaku"><span class="bt-label">一覧から選択</span></a></span>
+                    				<div id="errKikakuHannkaku">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrKikakuHannkaku">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="商品の規格単位を選択してください。例：156g×6尾の場合の規格単位はgになります。">規格単位</label></th>
+                    			<td colspan="2" id="tdKikakuTannyi" class="">
+                    				<select class="cstm-select" id="selKikakuTannyi" name="kihonnjyouhou1:tdKikakuTannyi:selKikakuTannyi">
+<option value=""></option>
+<option value="C/S">C/S</option>
+<option value="cc">cc</option>
+<option value="cm">cm</option>
+<option value="mm">mm</option>
+<option value="g">g</option>
+<option selected="selected" value="kg">kg</option>
+<option value="kl">kl</option>
+<option value="l">l</option>
+<option value="ｍ">ｍ</option>
+<option value="mg">mg</option>
+<option value="ml">ml</option>
+<option value="PC">PC</option>
+<option value="ｔ">ｔ</option>
+<option value="カートン">カートン</option>
+<option value="カゴ">カゴ</option>
+<option value="ガロン">ガロン</option>
+<option value="個">個</option>
+<option value="セット">セット</option>
+<option value="ダース">ダース</option>
+<option value="タル">タル</option>
+<option value="ドラム">ドラム</option>
+<option value="トレー">トレー</option>
+<option value="ネット">ネット</option>
+<option value="パット">パット</option>
+<option value="ピース">ピース</option>
+<option value="ブロック">ブロック</option>
+<option value="ホール">ホール</option>
+<option value="ボール">ボール</option>
+<option value="ボトル">ボトル</option>
+<option value="ポンド">ポンド</option>
+<option value="メ">メ</option>
+<option value="ロット">ロット</option>
+<option value="桶">桶</option>
+<option value="株">株</option>
+<option value="巻">巻</option>
+<option value="缶">缶</option>
+<option value="貫目">貫目</option>
+<option value="玉">玉</option>
+<option value="斤">斤</option>
+<option value="串">串</option>
+<option value="合">合</option>
+<option value="式">式</option>
+<option value="升">升</option>
+<option value="食">食</option>
+<option value="人前">人前</option>
+<option value="切">切</option>
+<option value="折">折</option>
+<option value="節">節</option>
+<option value="組">組</option>
+<option value="束">束</option>
+<option value="足">足</option>
+<option value="対">対</option>
+<option value="袋">袋</option>
+<option value="丁">丁</option>
+<option value="壷">壷</option>
+<option value="斗">斗</option>
+<option value="頭">頭</option>
+<option value="羽">羽</option>
+<option value="把">把</option>
+<option value="杯">杯</option>
+<option value="函">函</option>
+<option value="箱">箱</option>
+<option value="鉢">鉢</option>
+<option value="尾">尾</option>
+<option value="匹">匹</option>
+<option value="瓶">瓶</option>
+<option value="部">部</option>
+<option value="腹">腹</option>
+<option value="片">片</option>
+<option value="包">包</option>
+<option value="房">房</option>
+<option value="粒">粒</option>
+<option value="本">本</option>
+<option value="枚">枚</option>
+<option value="連">連</option>
+<option value="平方m">平方m</option>
+<option value="平方cm">平方cm</option>
+</select>
+                    				<div id="errKikakuTannyi">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="未開封の賞味・消費区分を選択してください。賞味期限（消費期限等）日数を製造日を含めて入力してください。「日」単位での入力となります。">賞味・消費区分・製造日含め</label><div class="letter-control">(半角数字4桁以内)</div></th>
+                    			<td colspan="2" id="tdSyoumiSyouhiKbn" class="">
+                    				<select class="cstm-select" id="selSyoumiSyouhiKbn" name="kihonnjyouhou1:tdSyoumiSyouhiKbn:selSyoumiSyouhiKbn">
+<option value=""></option>
+<option value="賞味期限">賞味期限</option>
+<option value="消費期限">消費期限</option>
+<option selected="selected" value="品質保証期限">品質保証期限</option>
+<option value="期限設定無し">期限設定無し</option>
+</select>
+                    				<span class="cstm-tx num ml10">製造日含め <span class="cstm-tx-bg"><input type="text" maxlength="4" class="w40 noticeTip ime-dis" id="txtSeizoubiFukume" value="" name="kihonnjyouhou1:tdSyoumiSyouhiKbn:txtSeizoubiFukume" onkeydown="if (event.keyCode == 13) return false;"></span></span>日
+                    				<div id="errSyoumiSyouhiKbn">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="errSeizoubiFukume">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+    								<div id="chkErrSyoumiSyouhiKbn">
+    
+    
+
+    
+    
+</div>
+                    				<div id="chkErrSeizoubiFukume">
+    
+</div>
+                      			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="包材に賞味・消費期限が表示されているかの有無を選択してください。包材に書かれた期限表示を例にして入力してください。例：賞味期限　０９年０９月１４日、賞味期限　０９/０９/１４">期限表示有無・表示例</label><div class="letter-control">(全角64文字以内)</div></th>
+                    			<td colspan="2" id="tdKigennHyoujiYumu" class="">
+                    				<select class="cstm-select" id="selKigennHyoujiYumu" name="kihonnjyouhou1:tdKigennHyoujiYumu:selKigennHyoujiYumu">
+<option value=""></option>
+<option selected="selected" value="有">有</option>
+<option value="無">無</option>
+</select>
+                    				<span class="cstm-tx ml10"><span class="cstm-tx-bg"><input type="text" maxlength="128" rel="全角64文字以内" class="w150 noticeTip ime-actv" id="txtKigennHyoujiRei" value="" name="kihonnjyouhou1:tdKigennHyoujiYumu:txtKigennHyoujiRei" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<span><a target="_blank" class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkKigennHyoujiRei" href="/kikaku/kikakuinputsupportingeditm.page?am1=0&amp;spec_id=16&amp;input_supporting_title=%E6%9C%9F%E9%99%90%E8%A1%A8%E7%A4%BA%E4%BE%8B%E9%81%B8%E6%8A%9E%E7%94%BB%E9%9D%A2&amp;input_supporting_message=%E3%80%8C%E6%9C%9F%E9%99%90%E8%A1%A8%E7%A4%BA%E4%BE%8B%E3%80%8D%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E8%A9%B2%E5%BD%93%E3%81%8C%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3CBR%3E%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E9%A0%85%E7%9B%AE%E3%81%AF%E3%83%9E%E3%82%B9%E3%82%BF%E3%81%A8%E3%81%97%E3%81%A6%E4%B8%80%E8%A6%A7%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82&amp;input_supporting_field=%E6%9C%9F%E9%99%90%E8%A1%A8%E7%A4%BA%E4%BE%8B&amp;input_supporting_maxlength=64&amp;input_supporting_width=540&amp;input_supporting_zokusei=%E5%85%A8%E8%A7%92%EF%BC%96%EF%BC%94%E6%96%87%E5%AD%97&amp;input_supporting_condition&amp;parent_input_name=txtKigennHyoujiRei"><span class="bt-label">一覧から選択</span></a></span>
+                    				<div id="errKigennHyoujiYumu">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="errKigennHyoujiRei">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrKigennHyoujiRei">
+    
+</div>
+                      			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="包材に書かれた製造日表示を例にして入力ください。例：製造日　０９年０９月１４日、製造日　０９/０９/１４">製造日表示有無・表示例</label><div class="letter-control">(全角25文字以内)</div></th>
+                    			<td colspan="2" id="tdSeizoubiHyoujiYumu" class="">
+                    				<select class="cstm-select" id="selSeizoubiHyoujiYumu" name="kihonnjyouhou1:tdSeizoubiHyoujiYumu:selSeizoubiHyoujiYumu">
+<option value=""></option>
+<option selected="selected" value="有">有</option>
+<option value="無">無</option>
+</select>
+                    				<span class="cstm-tx ml10"><span class="cstm-tx-bg"><input type="text" maxlength="50" rel="全角25文字以内" class="w150 noticeTip ime-actv" id="txtSeizoubiHyoujiRei" value="" name="kihonnjyouhou1:tdSeizoubiHyoujiYumu:txtSeizoubiHyoujiRei" onkeydown="if (event.keyCode == 13) return false;"></span></span>
+                    				<span><a target="_blank" class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkSeizoubiHyoujiRei" href="/kikaku/kikakuinputsupportingeditm.page?am1=0&amp;spec_id=23&amp;input_supporting_title=%E8%A3%BD%E9%80%A0%E6%97%A5%E8%A1%A8%E7%A4%BA%E4%BE%8B%E9%81%B8%E6%8A%9E%E7%94%BB%E9%9D%A2&amp;input_supporting_message=%E3%80%8C%E8%A3%BD%E9%80%A0%E6%97%A5%E8%A1%A8%E7%A4%BA%E4%BE%8B%E3%80%8D%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%E8%A9%B2%E5%BD%93%E3%81%8C%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3CBR%3E%E6%96%B0%E8%A6%8F%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E9%A0%85%E7%9B%AE%E3%81%AF%E3%83%9E%E3%82%B9%E3%82%BF%E3%81%A8%E3%81%97%E3%81%A6%E4%B8%80%E8%A6%A7%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82&amp;input_supporting_field=%E8%A3%BD%E9%80%A0%E6%97%A5%E8%A1%A8%E7%A4%BA%E4%BE%8B&amp;input_supporting_maxlength=25&amp;input_supporting_width=250&amp;input_supporting_zokusei=%E5%85%A8%E8%A7%92%EF%BC%92%EF%BC%95%E6%96%87%E5%AD%97&amp;input_supporting_condition&amp;parent_input_name=txtSeizoubiHyoujiRei"><span class="bt-label">一覧から選択</span></a></span>
+                    				<div id="errSeizoubiHyoujiYumu">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrSeizoubiHyoujiRei">
+    
+</div>
+                      			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="w170 tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="基本発注単位を選択してください。">発注単位</label></th>
+                    			<td colspan="2" id="tdHattyuuTannyi" class="">
+                    				<select class="cstm-select" id="selHattyuuTannyi" name="kihonnjyouhou1:tdHattyuuTannyi:selHattyuuTannyi">
+<option selected="selected" value=""></option>
+<option value="ピース">ピース</option>
+<option value="パック">パック</option>
+<option value="ボール">ボール</option>
+<option value="ケース">ケース</option>
+<option value="甲">甲</option>
+</select>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="未開封の保存温度帯を選択してください。">保存温度帯</label></th>
+                    			<td colspan="2" id="tdHozonnOnndoTai" class="">
+                    				<select class="cstm-select" id="selHozonnOnndoTai" name="kihonnjyouhou1:tdHozonnOnndoTai:selHozonnOnndoTai">
+<option selected="selected" value=""></option>
+<option value="常温">常温</option>
+<option value="冷蔵">冷蔵</option>
+<option value="冷凍">冷凍</option>
+<option value="常温（28℃以下）">常温（28℃以下）</option>
+<option value="冷蔵（10℃以下）">冷蔵（10℃以下）</option>
+<option value="冷蔵（4℃以下）">冷蔵（4℃以下）</option>
+<option value="冷蔵（-5℃以下）">冷蔵（-5℃以下）</option>
+<option value="冷凍（-15℃以下）">冷凍（-15℃以下）</option>
+<option value="冷凍（-18℃以下）">冷凍（-18℃以下）</option>
+</select>
+                    				<div id="errHozonnOnndoTai">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+    								<div id="chkErrHozonnOnndoTai">
+    
+</div>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="一定期間、賞味期限（消費期限等）日数が変わる商品の場合、一定期間の開始月日と終了月日を選択ください。賞味期限（消費期限等）日数を製造日を含めて入力してください。「日」単位での入力となります。">例外日付管理設定・（例外）製造日含め</label><div class="letter-control halign-r">(半角数字4桁以内)</div></th>
+                    			<td colspan="2" id="tdReigaiHidukeKanri" class="">
+                        			<select class="cstm-select" id="selOuttimeBeginMonth" name="kihonnjyouhou1:tdReigaiHidukeKanri:selOuttimeBeginMonth">
+<option selected="selected" value=""></option>
+<option value="1月">1月</option>
+<option value="2月">2月</option>
+<option value="3月">3月</option>
+<option value="4月">4月</option>
+<option value="5月">5月</option>
+<option value="6月">6月</option>
+<option value="7月">7月</option>
+<option value="8月">8月</option>
+<option value="9月">9月</option>
+<option value="10月">10月</option>
+<option value="11月">11月</option>
+<option value="12月">12月</option>
+</select>
+                        			<select class="cstm-select" id="selOuttimeBeginDay" name="kihonnjyouhou1:tdReigaiHidukeKanri:selOuttimeBeginDay">
+<option selected="selected" value=""></option>
+<option value="1日">1日</option>
+<option value="2日">2日</option>
+<option value="3日">3日</option>
+<option value="4日">4日</option>
+<option value="5日">5日</option>
+<option value="6日">6日</option>
+<option value="7日">7日</option>
+<option value="8日">8日</option>
+<option value="9日">9日</option>
+<option value="10日">10日</option>
+<option value="11日">11日</option>
+<option value="12日">12日</option>
+<option value="13日">13日</option>
+<option value="14日">14日</option>
+<option value="15日">15日</option>
+<option value="16日">16日</option>
+<option value="17日">17日</option>
+<option value="18日">18日</option>
+<option value="19日">19日</option>
+<option value="20日">20日</option>
+<option value="21日">21日</option>
+<option value="22日">22日</option>
+<option value="23日">23日</option>
+<option value="24日">24日</option>
+<option value="25日">25日</option>
+<option value="26日">26日</option>
+<option value="27日">27日</option>
+<option value="28日">28日</option>
+<option value="29日">29日</option>
+<option value="30日">30日</option>
+<option value="31日">31日</option>
+</select>
+                        			<span class="elem-disable">～</span>
+                        			<select class="cstm-select" id="selOuttimeEndMonth" name="kihonnjyouhou1:tdReigaiHidukeKanri:selOuttimeEndMonth">
+<option selected="selected" value=""></option>
+<option value="1月">1月</option>
+<option value="2月">2月</option>
+<option value="3月">3月</option>
+<option value="4月">4月</option>
+<option value="5月">5月</option>
+<option value="6月">6月</option>
+<option value="7月">7月</option>
+<option value="8月">8月</option>
+<option value="9月">9月</option>
+<option value="10月">10月</option>
+<option value="11月">11月</option>
+<option value="12月">12月</option>
+</select>
+                        			<select class="cstm-select" id="selOuttimeEndDay" name="kihonnjyouhou1:tdReigaiHidukeKanri:selOuttimeEndDay">
+<option selected="selected" value=""></option>
+<option value="1日">1日</option>
+<option value="2日">2日</option>
+<option value="3日">3日</option>
+<option value="4日">4日</option>
+<option value="5日">5日</option>
+<option value="6日">6日</option>
+<option value="7日">7日</option>
+<option value="8日">8日</option>
+<option value="9日">9日</option>
+<option value="10日">10日</option>
+<option value="11日">11日</option>
+<option value="12日">12日</option>
+<option value="13日">13日</option>
+<option value="14日">14日</option>
+<option value="15日">15日</option>
+<option value="16日">16日</option>
+<option value="17日">17日</option>
+<option value="18日">18日</option>
+<option value="19日">19日</option>
+<option value="20日">20日</option>
+<option value="21日">21日</option>
+<option value="22日">22日</option>
+<option value="23日">23日</option>
+<option value="24日">24日</option>
+<option value="25日">25日</option>
+<option value="26日">26日</option>
+<option value="27日">27日</option>
+<option value="28日">28日</option>
+<option value="29日">29日</option>
+<option value="30日">30日</option>
+<option value="31日">31日</option>
+</select>
+                    				<span class="cstm-tx num ml10">（例外）製造日含め <span class="cstm-tx-bg"><input type="text" maxlength="4" class="w40 noticeTip ime-dis" id="txtReigaiSeizoubiFukume" value="" name="kihonnjyouhou1:tdReigaiHidukeKanri:txtReigaiSeizoubiFukume" onkeydown="if (event.keyCode == 13) return false;"></span></span>日
+                    				<div id="errReigaiSeizoubiFukume">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrOuttimeBegin">
+    
+    
+
+    
+    
+</div>
+                    				<div id="chkErrReigaiSeizoubiFukume">
+    
+</div>
+                      			</td>
+                    		</tr>
+                    	</tbody>
+                    </table>
+
+                    <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb5" id="kihonnjyouhou4">
+    				    <colgroup>
+    				        <col class="ck7"></col>
+    				        <col class="ck8"></col>
+    				        <col class="ck8"></col>
+    				        <col class="ck8"></col>
+    				        <col class="ck9"></col>
+    				        <col class="ck10"></col>
+    				        <col class="ck11"></col>
+    				        <col class="ck12"></col>
+    				        <col class="ck12"></col>
+    			        </colgroup>
+                    	<thead>
+                            <tr>
+                                <th colspan="4"><label>商品形態（風袋込み）</label></th>
+                                <th class="nowrap" id="tdIndefiniteConsistent">
+                    				<span class="cstm-checkbox">
+    									<span>
+        								    <input type="checkbox" class="c1-105" id="chkIndefiniteConsistent" name="kihonnjyouhou4:tdIndefiniteConsistent:chkIndefiniteConsistent"/>
+        							        <label class="tooltip-over" data-tooltip="規格が一定でない「不定貫」商品（例：マグロ1本、玉葱５ｋｇ等）の設定です。" for="chkIndefiniteConsistent">不定貫</label>
+    									</span>
+                                    </span>
+                    				<div id="errIndefiniteConsistent">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    			</th>
+                                <th>&nbsp;</th>
+                                <th class="nowrap" id="tdJancodeFlg">
+                					<p class="disp-ic"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>
+    								<span class="cstm-checkbox">
+    									<span>
+        									<input type="checkbox" class="c1-105" id="chkJancodeFlg" onclick="CFJanCode(this,&#039;1&#039;);" name="kihonnjyouhou4:tdJancodeFlg:chkJancodeFlg">
+        									<label class="tooltip-over" data-tooltip="JANコードが無い商品の設定です。ピースJANコードの必須が解除されます。" for="chkJancodeFlg">JANコード無</label>
+    								    </span>
+    								</span>
+                    			</th>
+                                <th colspan="2"></th>
+                            </tr>
+                            <tr>
+                                <th class="solo-w50">&nbsp;</th>
+                                <th><label class="tooltip-over" data-tooltip="幅/長辺を「mm」単位で入力してください。">幅/長辺</label></th>
+                                <th><label class="tooltip-over" data-tooltip="奥/短辺を「mm」単位で入力してください。">奥/短辺</label></th>
+                                <th><label class="tooltip-over" data-tooltip="高さを「mm」単位で入力してください。">高さ</label></th>
+                                <th><label class="tooltip-over" data-tooltip="重量を「g」単位で入力してください。">重量</label></th>
+                                <th><label class="tooltip-over" data-tooltip="ピース単位の入数を入力してください。">入数</label></th>
+                                <th class="tbl-bd-wide-02-ic nowrap"><label class="tooltip-over" data-tooltip="JANコードを入力してください。チェックデジットが不正の場合、エラーとなります。">JANコード</label><div class="letter-control">(半角数字13桁)</div></th>
+                                <th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="ITFコードを入力してください。チェックデジットが不正の場合、エラーとなります。">ITFコード</label><div class="letter-control">(半角数字16桁)</div></th>
+                                <th class="tbl-bd-wide-02-ic"><label class="tooltip-over" data-tooltip="GTINコードを入力してください。チェックデジットが不正の場合、エラーとなります。">GTINコード</label><div class="letter-control">(半角数字14桁)</div></th>
+                            </tr>
+                    	</thead>
+                        <tbody>
+                            <tr>
+                                <th class="nowrap ic-hlp"><label class="tooltip-over" data-tooltip="ピース単位のサイズ等を入力してください。ピースの入数は必ず「1」となります。（類義語：個包装・単品・バラ商品・最小取引単位）">ピース</label></th>
+                                <td id="tdPieceLength" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtPieceLength" value="" name="kihonnjyouhou4:tdPieceLength:txtPieceLength" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errPieceLength">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrPieceLength">
+    
+</div></td>
+                                <td id="tdPieceWidth" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtPieceWidth" value="" name="kihonnjyouhou4:tdPieceWidth:txtPieceWidth" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errPieceWidth">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrPieceWidth">
+    
+</div></td>
+                                <td id="tdPieceHeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtPieceHeight" value="" name="kihonnjyouhou4:tdPieceHeight:txtPieceHeight" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errPieceHeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrPieceHeight">
+    
+</div></td>
+                                <td id="tdPieceWeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="txtPieceWeight" value="" name="kihonnjyouhou4:tdPieceWeight:txtPieceWeight" onkeydown="if (event.keyCode == 13) return false;"/> g</span></span><div id="errPieceWeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrPieceWeight">
+    
+</div></td>
+                                <td id="tdPieceNum" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="txtPieceNum" value="1" name="kihonnjyouhou4:tdPieceNum:txtPieceNum" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrPieceNum">
+    
+</div></td>
+                                <td class="disp-ic" id="tdPieceJanCode"><div class="clr"><p class="flt-l"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="txtPieceJanCode" value="" name="kihonnjyouhou4:tdPieceJanCode:txtPieceJanCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span></p><p class="flt-r"><span class="icbt-blue mt5 ml5"><span class="bt-label">規Ｂ</span></span><span class="ml5"><img height="13" width="23" class="ic-required tp-ic-side" alt="必須" src="/web2/jp/images/ic-must.gif"></span></p></div><div id="chkErrPieceJanCode">
+    
+</div></td>
+                                <td>&nbsp;</td>
+                                <td id="tdPieceGtinCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="txtPieceGtinCode" value="" name="kihonnjyouhou4:tdPieceGtinCode:txtPieceGtinCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrPieceGtinCode">
+    
+</div></td>
+                            </tr>
+                            <tr>
+                                <th class="nowrap ic-hlp"><label class="tooltip-over" data-tooltip="パック単位のサイズ等を入力してください。（類義語：バンドル商品、ケースの内袋）">パック</label></th>
+                                <td id="tdBagLength" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtBagLength" value="" name="kihonnjyouhou4:tdBagLength:txtBagLength" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errBagLength">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrBagLength">
+    
+</div></td>
+                                <td id="tdBagWidth" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtBagWidth" value="" name="kihonnjyouhou4:tdBagWidth:txtBagWidth" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errBagWidth">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrBagWidth">
+    
+</div></td>
+                                <td id="tdBagHeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtBagHeight" value="" name="kihonnjyouhou4:tdBagHeight:txtBagHeight" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errBagHeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrBagHeight">
+    
+</div></td>
+                                <td id="tdBagWeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="txtBagWeight" value="" name="kihonnjyouhou4:tdBagWeight:txtBagWeight" onkeydown="if (event.keyCode == 13) return false;"/> g</span></span><div id="errBagWeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrBagWeight">
+    
+</div></td>
+                                <td id="tdBagNum" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="txtBagNum" value="" name="kihonnjyouhou4:tdBagNum:txtBagNum" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBagNum">
+    
+</div></td>
+                                <td class="disp-ic" id="tdBagJanCode"><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="txtBagJanCode" value="" name="kihonnjyouhou4:tdBagJanCode:txtBagJanCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBagJanCode">
+    
+</div></td>
+                                <td>&nbsp;</td>
+                                <td id="tdBagGtinCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="txtBagGtinCode" value="" name="kihonnjyouhou4:tdBagGtinCode:txtBagGtinCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBagGtinCode">
+    
+</div></td>
+                            </tr>
+                            <tr>
+                                <th class="nowrap ic-hlp"><label class="tooltip-over" data-tooltip="ボール単位のサイズ等を入力してください。（類義語：ケースの内箱）ボール単位のサイズ等を入力してください。（類義語：ケースの内箱）">ボール</label></th>
+                                <td id="tdBallLength" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtBallLength" value="" name="kihonnjyouhou4:tdBallLength:txtBallLength" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="chkErrBallLength">
+    
+</div></td>
+                                <td id="tdBallWidth" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtBallWidth" value="" name="kihonnjyouhou4:tdBallWidth:txtBallWidth" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="chkErrBallWidth">
+    
+</div></td>
+                                <td id="tdBallHeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtBallHeight" value="" name="kihonnjyouhou4:tdBallHeight:txtBallHeight" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="chkErrBallHeight">
+    
+</div></td>
+                                <td id="tdBallWeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="txtBallWeight" value="" name="kihonnjyouhou4:tdBallWeight:txtBallWeight" onkeydown="if (event.keyCode == 13) return false;"/> g</span></span><div id="chkErrBallWeight">
+    
+</div></td>
+                                <td id="tdBallNum" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="txtBallNum" value="" name="kihonnjyouhou4:tdBallNum:txtBallNum" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBallNum">
+    
+</div></td>
+                                <td id="tdBallJanCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="txtBallJanCode" value="" name="kihonnjyouhou4:tdBallJanCode:txtBallJanCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBallJanCode">
+    
+</div></td>
+                                <td id="tdBallItfCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="16" class="w95 noticeTip ime-dis" id="txtBallItfCode" value="" name="kihonnjyouhou4:tdBallItfCode:txtBallItfCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBallItfCode">
+    
+</div></td>
+                                <td id="tdBallGtinCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="txtBallGtinCode" value="" name="kihonnjyouhou4:tdBallGtinCode:txtBallGtinCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrBallGtinCode">
+    
+</div></td>
+                            </tr>
+                            <tr>
+                                <th class="nowrap ic-hlp"><label class="tooltip-over" data-tooltip="ケース単位のサイズ等を入力してください。（類義語：外箱）">ケース</label></th>
+                                <td id="tdCaseLength" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtCaseLength" value="" name="kihonnjyouhou4:tdCaseLength:txtCaseLength" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errCaseLength">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrCaseLength">
+    
+</div></td>
+                                <td id="tdCaseWidth" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtCaseWidth" value="" name="kihonnjyouhou4:tdCaseWidth:txtCaseWidth" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errCaseWidth">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrCaseWidth">
+    
+</div></td>
+                                <td id="tdCaseHeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtCaseHeight" value="" name="kihonnjyouhou4:tdCaseHeight:txtCaseHeight" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errCaseHeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrCaseHeight">
+    
+</div></td>
+                                <td id="tdCaseWeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="txtCaseWeight" value="" name="kihonnjyouhou4:tdCaseWeight:txtCaseWeight" onkeydown="if (event.keyCode == 13) return false;"/> g</span></span><div id="errCaseWeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrCaseWeight">
+    
+</div></td>
+                                <td id="tdCaseNum" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="txtCaseNum" value="" name="kihonnjyouhou4:tdCaseNum:txtCaseNum" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrCaseNum">
+    
+</div></td>
+                                <td id="tdCaseJanCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="txtCaseJanCode" value="" name="kihonnjyouhou4:tdCaseJanCode:txtCaseJanCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrCaseJanCode">
+    
+</div></td>
+                                <td id="tdCaseItfCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="16" class="w95 noticeTip  ime-dis" id="txtCaseItfCode" value="" name="kihonnjyouhou4:tdCaseItfCode:txtCaseItfCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrCaseItfCode">
+    
+</div></td>
+                                <td id="tdCaseGtinCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip  ime-dis" id="txtCaseGtinCode" value="" name="kihonnjyouhou4:tdCaseGtinCode:txtCaseGtinCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrCaseGtinCode">
+    
+</div></td>
+                            </tr>
+                            <tr>
+                                <th class="nowrap ic-hlp"><label class="tooltip-over" data-tooltip="甲単位のサイズ等を入力してください。（類義語：～合（二合等）・ケースをバンドルした形態）">甲</label></th>
+                                <td id="tdKouLength" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtKouLength" value="" name="kihonnjyouhou4:tdKouLength:txtKouLength" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errKouLength">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrKouLength">
+    
+</div></td>
+                                <td id="tdKouWidth" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtKouWidth" value="" name="kihonnjyouhou4:tdKouWidth:txtKouWidth" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errKouWidth">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrKouWidth">
+    
+</div></td>
+                                <td id="tdKouHeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" class="w45 noticeTip ime-dis" id="txtKouHeight" value="" name="kihonnjyouhou4:tdKouHeight:txtKouHeight" onkeydown="if (event.keyCode == 13) return false;"/> mm</span></span><div id="errKouHeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrKouHeight">
+    
+</div></td>
+                                <td id="tdKouWeight" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="11" class="w65 noticeTip ime-dis" id="txtKouWeight" value="" name="kihonnjyouhou4:tdKouWeight:txtKouWeight" onkeydown="if (event.keyCode == 13) return false;"/> g</span></span><div id="errKouWeight">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div><div id="chkErrKouWeight">
+    
+</div></td>
+                                <td id="tdKouNum" class=""><span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="4" class="w30 noticeTip ime-dis" id="txtKouNum" value="" name="kihonnjyouhou4:tdKouNum:txtKouNum" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrKouNum">
+    
+</div></td>
+                                <td id="tdKouJanCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="13" class="w80 noticeTip ime-dis" id="txtKouJanCode" value="" name="kihonnjyouhou4:tdKouJanCode:txtKouJanCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrKouJanCode">
+    
+</div></td>
+                                <td id="tdKouItfCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="16" class="w95 noticeTip ime-dis" id="txtKouItfCode" value="" name="kihonnjyouhou4:tdKouItfCode:txtKouItfCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrKouItfCode">
+    
+</div></td>
+                                <td id="tdKouGtinCode" class=""><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="14" class="w95 noticeTip ime-dis" id="txtKouGtinCode" value="" name="kihonnjyouhou4:tdKouGtinCode:txtKouGtinCode" onkeydown="if (event.keyCode == 13) return false;"/></span></span><div id="chkErrKouGtinCode">
+    
+</div></td>
+                            </tr>
+                    	</tbody>
+                    </table>
+
+                    <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02" id="kihonnjyouhou5">
+    		            <colgroup>
+    				        <col class="c1"></col>
+    				        <col class="c2"></col>
+    			        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="w170 tbl-bd-wide-02-ic"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="商品特徴、キャッチコピー、開発動機等の商品説明文を入力してください。">商品特徴</label><div class="letter-control">(全角250文字以内(改行含む))</div></th>
+                                <td id="tdProductInfo" class="">
+                                    <div class="cstm-txarea charcount">
+                        				<span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+                                        <textarea cols="200" rows="5" class="w525 autogrow set-limit noticeTip ime-actv" id="traProductInfo" maxlength="500" name="kihonnjyouhou5:tdProductInfo:traProductInfo"></textarea>
+                                        </span></span></span></span>
+                                        <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">250</span>文字</span></p>
+                                    </div>
+                    				<div id="errProductInfo">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrProductInfo">
+    
+</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="商品の包材にある「利用方法」や「召し上がり方」などを参照し、召し上がり方・利用方法を入力してください。">召し上がり方・利用方法</label><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+                                <td id="tdUsingInfo" class="">
+                                    <div class="cstm-txarea charcount">
+                    					<span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+                                        <textarea cols="200" rows="5" class="w525 autogrow set-limit noticeTip ime-actv" id="traUsingInfo" maxlength="860" name="kihonnjyouhou5:tdUsingInfo:traUsingInfo"></textarea>
+                                        </span></span></span></span>
+                                        <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">430</span>文字</span></p>
+                                    </div>
+                    				<div id="errUsingInfo">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrUsingInfo">
+    
+</div>
+                    			</td>
+                            </tr>
+                            <tr>
+                                <th><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="商品の包材にある「使用上の注意」や「保管上の注意」などを参照し、使用・保管・廃棄上の注意を入力してください。">使用・保管・廃棄上の注意</label><div class="letter-control">(全角430文字以内(改行含む))</div></th>
+                                <td id="tdFamilyInfo" class="">
+                                    <div class="cstm-txarea charcount">
+                    					<span class="cstm-txarea-bg-tl"><span class="cstm-txarea-bg-tr"><span class="cstm-txarea-bg-br"><span class="cstm-txarea-bg-bl">
+                                        <textarea cols="200" rows="5" class="w525 autogrow set-limit noticeTip ime-actv" id="traFamilyInfo" maxlength="860" name="kihonnjyouhou5:tdFamilyInfo:traFamilyInfo"></textarea>
+                                        </span></span></span></span>
+                                        <p class="grp-txt-trailer grp-charcount"><span class="counter-wrap"><span class="counter">0</span>／<span class="max-length">430</span>文字</span></p>
+                                    </div>
+                    				<div id="errFamilyInfo">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    				<div id="chkErrFamilyInfo">
+    
+</div>
+                        		</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="justify">
+                    	<tbody>
+                            <tr>
+                    			<td class="justify-r valign-b kikaku-webentry-btnarea"><div id="tempSubmit">
+<!--Contents Start-->
+<a class="bt bt-tmp-save" id="tempSubmitBtn" href="javascript:void(0)" onclick="setWaitDspWin();var m=tempSaveLnkOnClick(&#039;1&#039;,&#039;1000100&#039;,&#039;1&#039;,&#039;tempSubmit&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;tempSubmit:tempSubmitBtn&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">一時保存</span></a>
+<!--Contents End-->
+</div></td>
+                            </tr>
+                    	</tbody>
+                    </table>
+
+                    <p class="sub-ti mb5">企業情報</p>
+                    <table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb10">
+    			        <colgroup>
+    				        <col class="c1"></col>
+    				        <col class="c2"></col>
+    			        </colgroup>
+                    	<tbody>
+                    		<div id="sellerContainer">
+                                <tr>
+                                <th colspan="2" class="bg-wht"><span class="tx-b">販売者</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;販売者は貴社となりますので、貴社情報を入力してください。</span></th>
+                                </tr>
+                                <tr>
+                        			<th class="w170 ic-hlp">
+                        				<p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="販売会社名を入力してください。">企業名</label><div class="letter-control">(全角50文字以内)</div>
+                                	</th>
+                        			<td id="tdSellerName" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w300 noticeTip ime-actv" id="txtSellerName" value="企業名四五六七八九十一二三四五六七八九十一二三四五六七八" name="sellerContainer:tdSellerName:txtSellerName" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                        				<span><a target="_blank" class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkSellerName" href="/kikaku/kikakudistributorlist.page?am1=0&amp;id_86=txtSellerName&amp;id_87=txtSellerAdd&amp;id_90=txtSellerContact&amp;id_88=txtSellerTel&amp;id_89=txtSellerFax&amp;id_91=selSellerPlFlg"><span class="bt-label">一覧から選択</span></a></span>
+                    					<div id="errSellerName">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrSellerName">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><label class="tooltip-over" data-tooltip="販売会社担当者名を入力してください。">担当者名</label><div class="letter-control">(全角20文字以内)</div></th>
+                        			<td id="tdSellerContact" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class="w300 noticeTip ime-actv" id="txtSellerContact" value="" name="sellerContainer:tdSellerContact:txtSellerContact" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="errSellerContact">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrSellerContact">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp">
+                        				<p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="販売会社住所を入力してください。">住所</label><div class="letter-control">(全角50文字以内)</div>
+                        			</th>
+                        			<td id="tdSellerAdd" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtSellerAdd" value="住所三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十" name="sellerContainer:tdSellerAdd:txtSellerAdd" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="errSellerAdd">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrSellerAdd">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="販売会社電話番号を入力してください。">TEL</label><div class="letter-control">(半角15文字以内)</div></th>
+                        			<td id="tdSellerTel" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtSellerTel" value="000-0000-0000" name="sellerContainer:tdSellerTel:txtSellerTel" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrSellerTel">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><p class="disp-ic mr30"></p><label class="tooltip-over" data-tooltip="販売会社ファックス番号を入力してください。">FAX</label><div class="letter-control">(半角15文字以内)</div></th>
+                        			<td id="tdSellerFax" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtSellerFax" value="111-1111-1111" name="sellerContainer:tdSellerFax:txtSellerFax" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrSellerFax">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="tbl-bd-wide-02-ic"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="販売会社でのPL保険加入の有無を選択してください。">PL加入有無</label></th>
+                        			<td id="tdSellerPlFlg" class="">
+                        				<select class="cstm-select" id="selSellerPlFlg" name="sellerContainer:tdSellerPlFlg:selSellerPlFlg">
+<option selected="selected" value=""></option>
+<option value="有">有</option>
+<option value="無">無</option>
+</select>
+                    					<div id="errSellerPlFlg">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+    									<div id="chkErrSellerPlFlg">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><label class="tooltip-over" data-tooltip="販売会社でのISOやHACCP取得など特記事項があれば入力してください。">備考</label><div class="letter-control">(全角50文字以内)</div></th>
+                        			<td id="tdSellerMemo" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtSellerMemo" value="" name="sellerContainer:tdSellerMemo:txtSellerMemo" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrSellerMemo">
+    
+</div>
+                        			</td>
+                                </tr>
+                    		</div>
+                    		<div id="makerContainer">
+                                <tr>
+                        			<th colspan="2" class="bg-wht"><span class="tx-b">製造者</span></th>
+                                </tr>
+                                <tr>
+                        			<th class="w170 ic-hlp">
+                        				<p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p>
+    									<p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p>
+    									<label class="tooltip-over" data-tooltip="製造会社名を入力してください。">企業名</label>
+    									<div class="letter-control">(全角50文字以内)</div>
+
+                        			</th>
+                        			<td id="tdMakerName" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w300 noticeTip ime-actv" id="txtMakerName" value="企業名四五六七八九十一二三四五六七八九十一二三四五六七八" name="makerContainer:tdMakerName:txtMakerName" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                        				<span><a target="_blank" class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkMakerName" href="/kikaku/kikakumanufacturelist.page?am1=0&amp;id_67=txtMakerName&amp;id_68=txtMakerAdd&amp;id_71=txtMakerContact&amp;id_69=txtMakerTel&amp;id_70=txtMakerFax&amp;id_72=selMakerPlFlg"><span class="bt-label">一覧から選択</span></a></span>
+                    					<div id="chkErrMakerName">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造会社担当者名を入力してください。">担当者名</label><div class="letter-control">(全角20文字以内)</div></th>
+                        			<td id="tdMakerContact" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class="w300 noticeTip ime-actv" id="txtMakerContact" value="" name="makerContainer:tdMakerContact:txtMakerContact" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrMakerContact">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp">
+                        				<p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="製造会社住所を入力してください。">住所</label><div class="letter-control">(全角50文字以内)</div>
+                        			</th>
+                        			<td id="tdMakerAdd" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtMakerAdd" value="住所三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十" name="makerContainer:tdMakerAdd:txtMakerAdd" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="errMakerAdd">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrMakerAdd">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="製造会社電話番号を入力してください。">TEL</label><div class="letter-control">(半角15文字以内)</div>
+                        			</th>
+                        			<td id="tdMakerTel" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtMakerTel" value="000-0000-0000" name="makerContainer:tdMakerTel:txtMakerTel" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrMakerTel">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造会社ファックス番号を入力してください。">FAX</label><div class="letter-control">(半角15文字以内)</div></th>
+                        			<td id="tdMakerFax" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtMakerFax" value="111-1111-1111" name="makerContainer:tdMakerFax:txtMakerFax" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrMakerFax">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="tbl-bd-wide-02-ic">
+                        				<p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p><p class="disp-ic mr5"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="製造会社でのPL保険加入の有無を選択してください。">PL加入有無</label>
+                        			</th>
+                        			<td id="tdMakerPlFlg" class="">
+                        				<select class="cstm-select" id="selMakerPlFlg" name="makerContainer:tdMakerPlFlg:selMakerPlFlg">
+<option value=""></option>
+<option value="－">－</option>
+<option selected="selected" value="有">有</option>
+<option value="無">無</option>
+</select>
+                    					<div id="errMakerPlFlg">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+    									<div id="chkErrMakerPlFlg">
+    
+</div>
+                        			</td>
+                                </tr>
+                                <tr>
+                        			<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造会社でのISOやHACCP取得など特記事項があれば入力してください。">備考</label><div class="letter-control">(全角50文字以内)</div></th>
+                        			<td id="tdMakerMemo" class="">
+                        				<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtMakerMemo" value="" name="makerContainer:tdMakerMemo:txtMakerMemo" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrMakerMemo">
+    
+</div>
+                        			</td>
+                                </tr>
+                    		</div>
+                    		<div id="factoryContainer">
+                                <tr>
+                    				<th colspan="2" class="bg-wht"><span class="tx-b">工場</span></th>
+                                </tr>
+                                <tr>
+                    				<th class="w170 ic-hlp"><label class="tooltip-over" data-tooltip="製造工場名を入力してください。" for="c1-100">企業名</label><div class="letter-control">(全角50文字以内)</div></th>
+                    				<td id="tdFactoryName" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角30文字以内" class="w300 noticeTip ime-actv" id="txtFactoryName" value="企業名四五六七八九十一二三四五六七八九十一二三四五六七八" name="factoryContainer:tdFactoryName:txtFactoryName" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<span><a target="_blank" class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkFactoryName" href="/kikaku/kikakufactorylist.page?am1=0&amp;id_75=txtFactoryName&amp;id_76=txtFactoryAdd&amp;id_79=txtFactoryContact&amp;id_77=txtFactoryTel&amp;id_78=txtFactoryFax"><span class="bt-label">一覧から選択</span></a></span>
+                    					<div id="errFactoryName">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrFactoryName">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造工場担当者名を入力してください。">担当者名</label><div class="letter-control">(全角20文字以内)</div></th>
+                    				<td id="tdFactoryContact" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class="w300 noticeTip ime-actv" id="txtFactoryContact" value="" name="factoryContainer:tdFactoryContact:txtFactoryContact" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrFactoryContact">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造工場住所を入力してください。">住所</label><div class="letter-control">(全角50文字以内)</div></th>
+                    				<td id="tdFactoryAdd" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtFactoryAdd" value="住所三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十" name="factoryContainer:tdFactoryAdd:txtFactoryAdd" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="errFactoryAdd">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrFactoryAdd">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造工場電話番号を入力してください。">TEL</label><div class="letter-control">(半角15文字以内)</div></th>
+                    				<td id="tdFactoryTel" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtFactoryTel" value="" name="factoryContainer:tdFactoryTel:txtFactoryTel" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrFactoryTel">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造工場ファックス番号を入力してください。">FAX</label><div class="letter-control">(半角15文字以内)</div></th>
+                    				<td id="tdFactoryFax" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtFactoryFax" value="" name="factoryContainer:tdFactoryFax:txtFactoryFax" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrFactoryFax">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造工場でのISOやHACCP取得など特記事項があれば入力してください。">備考</label><div class="letter-control">(全角50文字以内)</div></th>
+                    				<td id="tdFactoryMemo" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtFactoryMemo" value="" name="factoryContainer:tdFactoryMemo:txtFactoryMemo" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrFactoryMemo">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="w170 ic-hlp"><label class="tooltip-over" data-tooltip="原料仕込から製品仕上げまでの所有日数を入力してください。日付と時間の値の後には必ず「日」、「時間」を設定してください。例：5日12時間">原料仕込みから製品仕上げまでの<br>所有日数・時間</label><div class="letter-control">(半角数字3桁以内)</div></th>
+                    				<td id="tdMakingMemoperiodDay" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="3" rel="半角数字3桁以内" class="w50 noticeTip ime-dis" id="txtMakingMemoperiodDay" value="" name="factoryContainer:tdMakingMemoperiodDay:txtMakingMemoperiodDay" onkeydown="if (event.keyCode == 13) return false;"/></span></span>日
+                                        <span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="3" rel="半角数字3桁以内" class="w50 noticeTip ime-dis" id="txtMakingPeriodHour" value="" name="factoryContainer:tdMakingMemoperiodDay:txtMakingPeriodHour" onkeydown="if (event.keyCode == 13) return false;"/></span></span>時間
+                    					<div id="chkErrMakingMemoperiodDay">
+    
+    
+
+    
+    
+</div>
+                    					<div id="chkErrMakingPeriodHour">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="製造ロット数を入力してください。「ケース」単位での入力となります。">製造ロット(CS)</label><div class="letter-control">(半角数字6桁以内)</div></th>
+                    				<td id="tdLotNum" class="">
+                    					<span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="6" rel="半角数字6桁以内" class="w50 noticeTip ime-dis" id="txtLotNum" value="" name="factoryContainer:tdLotNum:txtLotNum" onkeydown="if (event.keyCode == 13) return false;"/></span></span>CS
+                    					<div id="chkErrLotNum">
+    
+</div>
+                                	</td>
+                                </tr>
+                                <tr>
+                    				<th class="w170 ic-hlp"><label class="tooltip-over" data-tooltip="1日の稼動生産量を入力してください。「ケース」単位での入力となります。">1日（8時間）稼働生産量 (CS)</label><div class="letter-control">(半角数字7桁以内)</div></th>
+                    				<td id="tdLotDailyYield" class="">
+                    					<span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" rel="半角数字7桁以内" class="w50 noticeTip ime-dis" id="txtLotDailyYield" value="" name="factoryContainer:tdLotDailyYield:txtLotDailyYield" onkeydown="if (event.keyCode == 13) return false;"/></span></span>CS
+                    					<div id="chkErrLotDailyYield">
+    
+</div>
+                                	</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="受注可能最小ロット数を入力してください。「ケース」単位での入力となります。">受注可能最小生産量(CS)</label><div class="letter-control">(半角数字7桁以内)</div></th>
+                    				<td id="tdAwardMinLotnum" class="">
+                    					<span class="cstm-tx num"><span class="cstm-tx-bg"><input type="text" maxlength="7" rel="半角数字7桁以内" class="w50 noticeTip ime-dis" id="txtAwardMinLotnum" value="" name="factoryContainer:tdAwardMinLotnum:txtAwardMinLotnum" onkeydown="if (event.keyCode == 13) return false;"/></span></span>CS
+                    					<div id="chkErrAwardMinLotnum">
+    
+</div>
+                                	</td>
+                                </tr>
+                    		</div>
+                    		<div id="importerContainer">
+                                <tr>
+                    				<th colspan="2" class="bg-wht"><span class="tx-b">輸入者</span></th>
+                                </tr>
+                                <tr>
+                    				<th class="w170 ic-hlp"><p class="disp-ic mr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="輸入会社名を入力してください。" for="c1-100">企業名</label><div class="letter-control">(全角50文字以内)</div></th>
+                    				<td id="tdImporterName" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w300 noticeTip ime-actv" id="txtImporterName" value="企業名四五六七八九十一二三四五六七八九十一二三四五六七八" name="importerContainer:tdImporterName:txtImporterName" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<span><a target="_blank" class="open-dialog-modal bt bt-list open-dialog-mdl" id="lnkImporterName" href="/kikaku/kikakuimporterlist.page?am1=0&amp;id_93=txtImporterName&amp;id_94=txtImporterAdd&amp;id_97=txtImporterContact&amp;id_95=txtImporterTel&amp;id_96=txtImporterFax&amp;id_98=selImporterPlFlg"><span class="bt-label">一覧から選択</span></a></span>
+                    					<div id="errImporterName">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrImporterName">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><label class="tooltip-over" data-tooltip="輸入会社担当者名を入力してください。">担当者名</label><div class="letter-control">(全角20文字以内)</div></th>
+                    				<td id="tdImporterContact" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="40" rel="全角20文字以内" class="w300 noticeTip ime-actv" id="txtImporterContact" value="" name="importerContainer:tdImporterContact:txtImporterContact" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="errImporterContact">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrImporterContact">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><p class="disp-ic mr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="輸入会社住所を入力してください。">住所</label><div class="letter-control">(全角50文字以内)</div></th>
+                    				<td id="tdImporterAdd" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtImporterAdd" value="住所三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十" name="importerContainer:tdImporterAdd:txtImporterAdd" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="errImporterAdd">
+    <div width = "100%">
+        <p><font color="red" size=-2><span id="fdbErrMsg"></span></font></p>
+    </div>
+</div>
+                    					<div id="chkErrImporterAdd">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><p class="disp-ic mr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="輸入会社電話番号を入力してください。">TEL</label><div class="letter-control">(半角15文字以内)</div></th>
+                    				<td id="tdImporterTel" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="半角15文字以内" class="w150 noticeTip ime-dis" id="txtImporterTel" value="000-0000-0000" name="importerContainer:tdImporterTel:txtImporterTel" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrImporterTel">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><p class="disp-ic mr30"></p><label class="tooltip-over" data-tooltip="輸入会社ファックス番号を入力してください。">FAX</label><div class="letter-control">(半角15文字以内)</div></th>
+                    				<td id="tdImporterFax" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="15" rel="全角15文字以内" class="w150 noticeTip ime-dis" id="txtImporterFax" value="111-1111-1111" name="importerContainer:tdImporterFax:txtImporterFax" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrImporterFax">
+    
+</div>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="tbl-bd-wide-02-ic"><p class="disp-ic mr30"><span class="icbt-blue"><span class="bt-label">規Ｂ</span></span></p><label class="tooltip-over" data-tooltip="輸入会社でのPL保険加入の有無を選択してください。">PL加入有無</label></th>
+                    				<td id="tdImporterPlFlg" class="">
+                    					<select class="cstm-select" id="selImporterPlFlg" name="importerContainer:tdImporterPlFlg:selImporterPlFlg">
+<option value=""></option>
+<option selected="selected" value="有">有</option>
+<option value="無">無</option>
+</select>
+                    				</td>
+                                </tr>
+                                <tr>
+                    				<th class="ic-hlp"><p class="disp-ic mr30"></p><label class="tooltip-over" data-tooltip="輸入会社でのISOやHACCP取得など特記事項があれば入力してください。">備考</label><div class="letter-control">(全角50文字以内)</div></th>
+                    				<td id="tdImporterMemo" class="">
+                    					<span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" maxlength="100" rel="全角50文字以内" class="w400 noticeTip ime-actv" id="txtImporterMemo" value="" name="importerContainer:tdImporterMemo:txtImporterMemo" onkeydown="if (event.keyCode == 13) return false;"/></span></span>
+                    					<div id="chkErrImporterMemo">
+    
+</div>
+                    				</td>
+                                </tr>
+                    		</div>
+                    	</tbody>
+                    </table>
+                </div>
+			</div>
+            <table class="justify-row">
+                <tbody>
+                 <tr>
+                    <td class="justify-l">
+            			<div>
+                            <div class="sitesnav clr" id="sutanndadoTabMenuFoot">
+<!--Contents Start-->
+							<ul class="clr tananv">
+                                <li class="sitesnav-hdr nowrap" id="tdKihonnJouhou"><a class="current w70" a="" id="lnkKihonnJouhou" disabled="disabled">基本情報</a></li>
+                                <li class="nowrap" id="tdGenZairyouJouhou"><a class="" id="lnkGenZairyouJouhou" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000400&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sutanndadoTabMenuFoot:tdGenZairyouJouhou:lnkGenZairyouJouhou&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">原材料情報</a></li>
+                                <li class="nowrap" id="tdTutumiZaiJouhou"><a class="" id="lnkTutumiZaiJouhou" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000200&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sutanndadoTabMenuFoot:tdTutumiZaiJouhou:lnkTutumiZaiJouhou&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">包材情報</a></li>
+                                <li class="last-child nowrap" id="tdSeihinnQuality"><a class="" id="lnkSeihinnQuality" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;1000300&#039;,&#039;7&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;sutanndadoTabMenuFoot:tdSeihinnQuality:lnkSeihinnQuality&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}">製造品質</a></li>
+							</ul>
+<!--Contents End-->
+</div>
+            			</div>
+            		</td>
+                    <td class="justify-r valign-t kikaku-webentry-btnarea">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="justify-row">
+                <tbody>
+                    <tr>
+                    <td class="justify-l"><div></div></td>
+                    <td class="justify-r">
+            			<div id="footBtnLinkPaenl">
+<!--Contents Start-->
+                        <span>
+                             <a class="ic ic-caution02" href="javascript:showMachineDependentCharacters();"><span class="ic-label">入力時のご注意</span></a>
+                             <a class="ic ic-caution02" href="javascript:showSaveAttention();"><span class="ic-label">各種保存ボタンのご注意</span></a>
+                        </span>
+						<span id="tdSubmitbtn1"><a class="bt bt-tmp-save" id="submitbtn1" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;&#039;,&#039;1&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;footBtnLinkPaenl:tdSubmitbtn1:submitbtn1&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">一時保存</span></a></span>
+                        <span id="tdSubmitbtn2"><a class="bt bt-save" id="submitbtn2" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;99904&#039;,&#039;2&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;footBtnLinkPaenl:tdSubmitbtn2:submitbtn2&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">保存する</span></a></span>
+						<span id="tdSubmitbtn3"><a class="bt bt-gre-large" id="submitbtn3" href="javascript:void(0)" onclick="setWaitDspWin();var m=panelLnkOnClick(&#039;1&#039;,&#039;99904&#039;,&#039;3&#039;);;if(m){var e=document.getElementById(&#039;frm_hf_0&#039;); e.name=&#039;footBtnLinkPaenl:tdSubmitbtn3:submitbtn3&#039;; e.value=&#039;x&#039;;var f=document.getElementById(&#039;frm&#039;);var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value=&#039;&#039;;e.name=&#039;frm_hf_0&#039;; return false;}"><span class="bt-label">登録する</span></a></span>
+                        
+						
+						
+<!--Contents End-->
+</div>
+            		</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#"><span class="ic-label">ページトップへ</span></a></p>
+
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+            var arrMsg = new Array();
+        	arrMsg[0]="大分類、中分類、小分類、細分類";
+        	arrMsg[1]="#cccccc";
+        	arrMsg[2]="solid 1px #999999";
+        	arrMsg[3]="#ffffff";
+        	arrMsg[4]="ピースの縦幅を入力してください。「mm」単位での入力となります。（ピースの同義語：単品、バラ商品。）<br/>ピースの横幅を入力してください。「mm」単位での入力となります。（ピースの同義語：単品、バラ商品。）<br/>ピースの高さを入力してください。「mm」単位での入力となります。（ピースの同義語：単品、バラ商品。）<br/>ピースの重量を入力してください。「g」単位での入力となります。（ピースの同義語：単品、バラ商品。）<br/>ピース入数は必ず「1」となります。（ピースの同義語：単品、バラ商品。）<br/>ピースJANコードを入力してください。（ピースの同義語：単品、バラ商品。）また、<br/>ピースJANコードが未記入の場合は、「JANコード無し」を設定してください。<br/>ピースのGTINコードを入力してください。（ピースの同義語：単品、バラ商品。）<br>パックの縦幅を入力してください。「mm」単位での入力となります。（パックの同義語：ピースのバンドル商品。）<br>パックの横幅を入力してください。「mm」単位での入力となります。（パックの同義語：ピースのバンドル商品。）<br>パックの高さを入力してください。「mm」単位での入力となります。（パックの同義語：ピースのバンドル商品。）<br>パックの重量を入力してください。「g」単位での入力となります。（パックの同義語：ピースのバンドル商品。）<br>パックへのピース数量を入力してください。（パックの同義語：ピースのバンドル商品。）<br>パックのJANコードを入力してください。（パックの同義語：ピースのバンドル商品。）<br>パックのGTINコードを入力してください。（パックの同義語：ピースのバンドル商品。）<br>ボールの縦幅を入力してください。「mm」単位での入力となります。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールの横幅を入力してください。「mm」単位での入力となります。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールの高さを入力してください。「mm」単位での入力となります。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールの重量を入力してください。「g」単位での入力となります。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールへのピース数量を入力してください。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールのJANコードを入力してください。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールのITFコードを入力してください。（ボールの同義語：内箱。ケース内にある内箱。）<br>ボールのGTINコードを入力してください。（ボールの同義語：内箱。ケース内にある内箱。）<br>ケースの縦幅を入力してください。「mm」単位での入力となります。（ケースの同義語：外箱。ダンボール１箱。）<br>ケースの横幅を入力してください。「mm」単位での入力となります。（ケースの同義語：外箱。ダンボール１箱。）<br>ケースの高さを入力してください。「mm」単位での入力となります。（ケースの同義語：外箱。ダンボール１箱。）<br>ケースの重量を入力してください。「g」単位での入力となります。（ケースの同義語：外箱。ダンボール１箱。）<br>ケースへのピース数量を入力してください。（ケースの同義語：外箱。ダンボール１箱。）<br>ケースのJANコードを入力してください。（ケースの同義語：外箱。ダンボール１箱。）<br> ケースのITFコードを入力してください。（ケースの同義語：外箱。ダンボール１箱。）<br> ケースのGTINコードを入力してください。（ケースの同義語：外箱。ダンボール１箱。）<br>甲の縦幅を入力してください。「mm」単位での入力となります。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br>甲の横幅を入力してください。「mm」単位での入力となります。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br> 甲の高さを入力してください。「mm」単位での入力となります。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br>甲の重量を入力してください。「g」単位での入力となります。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br>甲のピース数量を入力してください。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br>甲のJANコードを入力してください。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br>甲のITFコードを入力してください。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）<br>甲のGTINコードを入力してください。（甲の同義語：～合（二合など）。ケースをバンドルした形態。）";
+
+
+        	(function($) {
+                $(function() {
+                    $('a.open-dialog-modal').click(function(event){
+                        if($(this).is('a') && !($(this).attr("disabled") == "disabled" || $(this).attr("disabled"))) {
+							var href = $(this).attr("href");
+                            if (href.indexOf('setmailflag') != -1) {
+                                openModalHalf($(this).attr("href"));
+                            } else {
+                                openModal($(this).attr("href"));
+                            }
+                        }
+                        event.stopImmediatePropagation();
+                        return false;
+                    });
+                });
+            })(jQuery);
+
+        
+/*]]>*/
+</script>
+    <input type="hidden" name="frm_sf" id="frm_sf" /><input type="hidden" name="frm_se" id="frm_se" /></form>
+</div>
+<!--Contents End-->
+</div>
+
+            <!--Contents End-->
+
+            <!--ftr Start-->
+            <div class="ftr" id="footer">
+    <!--ftr Start-->
+    <div class="small">
+        <p class="credits"> Copyright(C) 1998 - 2013 Info Mart Corporation. All rights reserved. </p>
+        <p class="number"><span id="lblHostName">ip-10-132-103-7</span></p>
+    </div>
+    <!--ftr End-->
+</div>
+            <!--ftr End-->
+        </div>
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+        (function($) {
+            $(function() {
+                $('a.open-dialog-modal').click(function(event){
+                    if($(this).is('a') && !($(this).attr("disabled") == "disabled" || $(this).attr("disabled"))) {
+                        var href = $(this).attr("href");
+                        if (href.indexOf('setmailflag') != -1) {
+                            openModalHalf($(this).attr("href"));
+                        } else {
+                            openModal($(this).attr("href"));
+                        }
+                    }
+                    event.stopImmediatePropagation();
+                    return false;
+                });
+            });
+        })(jQuery);
+        function masterWindow(){
+            return getPrePage();
+        }
+        $('.close-dialog-modal, .submit-dialog-modal, #accord ul.second > li > a').click(function(){
+            closeModalWindow();
+            return false;
+        });
+        
+/*]]>*/
+</script>
+        <script type="text/javascript">
+/*<![CDATA[*/
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1680872-41']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+/*]]>*/
+</script>
+    </body>
+</html>

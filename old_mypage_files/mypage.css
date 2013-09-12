@@ -1,0 +1,48 @@
+
+/*PR部分　信頼ネット用　*/
+table.pr_s{
+	margin-top:10px;
+	background-image: url(/mypage_files/pr/bg.gif);
+	background-repeat: repeat;
+	padding:5px;
+	width:635px;
+	margin-bottom:20px;
+}
+
+table.pr_s table.base{
+	width:625px;
+	background-color:#ffffff;
+	border-top:1px solid #edd4cf;
+}
+
+table.pr_s table.base td.box_r{
+	width:86px;
+	text-align: right;
+	vertical-align: top;
+	background-color: #ffffff;
+	padding: 6px 6px 0px 0px;
+	border-right:1px solid #f2e1dd;
+}
+
+table.pr_s table.base td.box_l{
+	width: 539px;
+	vertical-align: top;
+	background-color: #ffffff;
+}
+
+table.pr_s table.base td.box_l td.pr_line{
+	background-image: url(/mypage_files/pr/dot_pink.gif);
+	background-repeat: repeat-x;
+}
+
+table.pr_s table.base td.box_l td.jirei_comment{
+	font-size: 8pt;
+	text-align: right;
+}
+
+td.pr_cm4_2 {
+	background-color:#FFFFFF;
+	width:400px;
+	background:url(/mypage_files/pr/arrow.gif) 10px center no-repeat;
+	padding:8px 0 3px 19px;
+}

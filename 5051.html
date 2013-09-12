@@ -1,0 +1,805 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FOODS Info Mart Web Site</title>
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/common_kikaku.css" media="all">
+<link rel="stylesheet" type="text/css" href="/web2/jp/css/parts_kikaku.css" media="all">
+<!-- ============================= チェックボックス背景色 ============================
+（一時的に読み込みを停止しています） 
+<link rel="stylesheet" type="text/css" href="/web2/jp/js/jhc-sample-customcheck.css" media="all">
+<script type="text/javascript" src="/web2/jp/sample/js/lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/web2/jp/sample/js/jhc-sample-customcheck.js"></script>-->
+<style type="text/css">
+.bg-clr-gry{background-color:#E6E6E6;}
+.tbl-wdt-mk{table-layout:fixed;}
+.tbl-bd-wide-02-prod-reg-02 .ck01, .tbl-kikaku-info01 .ck01 {width: 550px;}
+.tbl-bd-wide-02-prod-reg-02 .ck02, .tbl-kikaku-info01 .ck02 {width: 200px;}
+</style>
+</head>
+<body class="page">
+<div class="kaite checked-non">
+	<!--hdr Start-->
+    <div class="hdr">
+        <div class="logo w350"><a href="#"><img src="/web2/jp/images/logo-169x24.gif" width="169" height="24" alt="FOODS Info Mart"></a> <a href="/"><img src="/web2/jp/images/logo-k.gif" alt="ASP規格書システム" width="150" height="24" class="ml10"></a></div>
+        <ul class="gnv clr" id="gnv">
+            <li id="gnv-myp"><a href="0820.html"><span>マイページ</span></a></li>
+            <li id="gnv-ksrch"><a href="http://192.168.100.105:5055/1020.html"><span>規格書検索・出力</span></a></li>
+            <li id="gnv-match"><a href="http://192.168.100.105:5055/0710.html"><span>取引先マッチング</span></a></li>
+            <li id="gnav-submit-req"><a href="http://192.168.100.105:5055/99808.html"><span>提出依頼管理</span></a></li>
+            <li id="gnv-pickup"><a href="http://192.168.100.105:5055/08301.html"><span>回収状況管理</span></a></li>
+            <li id="gnv-control"><a href="http://192.168.100.105:5055/99910.html"><span>自社管理</span></a></li>
+            <li id="gnv-guid"><a href="#"><span>ご利用ガイド</span></a></li>
+        </ul>        <div class="usrnv clr">
+            <h2>インフォダイニング 伊藤拓海 様</h2>
+            <ul>
+                <li><a href="#">サイトマップ</a></li>
+                <li><a href="#">ログアウト</a></li>
+            </ul>
+       </div>
+    </div>
+	<!--hdr End-->
+	<!--Contents Start-->
+	<div class="contents">
+		<form id="" name="" method="post" action="../dummy">
+          <div class="height-wrap">
+		  <table class="hgrp">
+		    <tbody>
+		      <tr>
+		        <th class="heading"><h1>新規レイアウト作成</h1></th><td class="desc"><div>レイアウト名を記入後、ダウンロードに必要な項目を選択の上、「確認画面へ」を押してください。</div></td>
+			<td class="nav">
+					<a href="#" class="bt bt-back" onclick="javascript:history.back();"><span class="bt-label">戻る</span></a>
+				</td>
+	          </tr>
+	        </tbody>
+	      </table>
+
+         <table class="justify">
+            <tbody>
+              <tr>
+                			<td class="justify-r">
+								<div><!--<a href="#" class="bt"><span class="bt-label">クリア</span></a>--><a href="6255.html" class="bt bt-gre-large"><span class="bt-label">確認画面へ</span></a></div>
+							</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+				<div class="form-intro pt5 mb10">
+				  <p>
+					<img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"> の項目は必ず入力してください。
+				  </p>
+				</div>
+
+<!--<div><span class="tx-b">レイアウト登録</span></div>-->
+
+					<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb20">
+				      <colgroup>
+				        <col class="c1">
+				        <col class="c2">
+			          </colgroup>
+				      <tbody>
+							 <tr>
+							  <th class="ic-hlp"><p class="disp-ic"><img height="13" width="23" class="ic-required" alt="必須" src="/web2/jp/images/ic-must.gif"></p>レイアウト名<img class="imgover ml5" height="19" width="16" src="/web2/jp/images/ic-hlp.gif" alt=""><div class="letter-control mt5">(全角25文字以内)</div>
+							  </th>
+							  <td><span class="cstm-tx"><span class="cstm-tx-bg"><input type="text" name="f1-01" id="f1-01" size="10" class="interlock-trigger w250" value=""></span></span></td>
+							</tr>
+			          </tbody>
+			        </table>
+
+<table class="hgrp-nv">
+	  <tbody>
+		<tr>
+
+		  <td>
+			<div class="tabs-link">
+			  <ul>
+				<li class="tab-01"><a href="5051.html" class="current"><span class="bg-tabs-link">ベーシック</span></a></li>
+				<li class="tab-02"><a href="5050-002.html"><span class="bg-tabs-link">プレミアム</span></a></li>
+			  </ul>
+			</div></td>
+			<td class="nav"></td>
+		</tr>
+	  </tbody>
+	</table>
+
+
+
+<div><span class="tx-b">レイアウト項目設定</span></div>
+				<table class="justify">
+					<tbody><tr>
+						  <td class="opt-nv"><div class="inner-gry">
+
+								<div class="tl"><div class="tr"><div class="br"><div class="bl pt5">
+								<table class="tbl-vertical tbl-approval-request mb5 w160">
+									<tbody><tr>
+										<th><span class="cstm-checkbox"><span class="checked"><input class="toggle-hidden-table" id="f0" name="f0" type="checkbox" checked="checked"><label for="f0" class="valign-t"><span class="tx-b">すべてを選択する</span></label></span></span></th>
+										<td class="nowrap valign-m" colspan="2"></td>
+
+									</tr>
+								</tbody></table>
+								</div></div></div></div>
+							</div>
+						</td>
+						<td class="justify-l w810 valign-m">
+                                        <span class="eye-catch">デフォルトはファイル以外の全項目が出力対象となります。</span><br>
+                                        <span class="eye-catch">チェックボタン押下時に、マシンスペックにより多少時間がかかります。</span></td>
+						</tr>
+					</tbody>
+				</table>
+
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb20">
+  <tbody>
+    <tr>
+      <td colspan="4"><span class="tx-b"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="f2-00" id="f2-00" checked="checked"><label for="f2-00">【提出情報】</label></span></span></span></td>
+    </tr>
+
+    <tr>
+      <th class="w175"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">取引先</label></span></span></th>
+      <td class="w250">株式会社インフォマート販売</td>
+      <th class="w175"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">商品システムコード</label></span></span></th>
+      <td>2492103</td>
+    </tr>
+
+    <tr>
+      <th class="w175"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">自社商品コード</label></span></span></th>
+      <td class="w250">Buyercode001</td>
+      <th class="w175"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">取引先商品コード</label></span></span></th>
+      <td>Suppliercode001</td>
+    </tr>
+
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">納品先コード</label></span></span></th>
+      <td>Nouhincode001</td>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">管理コードＡ</label></span></span></th>
+      <td>KanricodeA</td>
+    </tr>
+
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">管理コードＢ</label></span></span></th>
+      <td>KanricodeB</td>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">管理コードＣ</label></span></span></th>
+      <td>KanricodeC</td>
+    </tr>
+
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">取引先コード</label></span></span></th>
+      <td colspan="3">TorisakicodeB</td>
+    </tr>
+
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">一次承認者</label></span></span></th>
+      <td>購買太郎</td>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">一次承認日</label></span></span></th>
+      <td>2012/10/10</td>
+    </tr>
+
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">最終承認者</label></span></span></th>
+      <td>購買二郎</td>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">最終承認日</label></span></span></th>
+      <td>2012/10/12</td>
+    </tr>
+
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">メモ履歴</label></span></span></th>
+      <td colspan="3">未記入があるので、再提出ください。...</td>
+    </tr>
+
+    <tr>
+      <th class="w175"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">適用日</label></span></span></th>
+      <td class="w250">2012/10/10</td>
+      <th class="w175"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">登録日</label></span></span></th>
+      <td>2012/10/10</td>
+      </tr>
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">更新日</label></span></span></th>
+      <td colspan="3">2012/10/10</td>
+      </tr>
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">規格書コード</label></span></span></th>
+      <td colspan="3">G0000756-32DF7C0B-13392464</td>
+      </tr>
+    </tbody>
+</table>
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+  <tbody>
+    <tr>
+      <td colspan="4">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for=""><span class="tx-b">【規格書基本情報】</span></label></span></span></td>
+    </tr>
+    <tr>
+      <th class="w180"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">規格書商品名</label></span></span></th>
+      <td class="w295">レンジでチン！業務用冷凍ハンバーグ</td>
+      <th class="w150"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">規格書商品名フリガナ</label></span></span></th>
+      <td class="w315">レンジデチンギョウムヨウレイトウハンバーグ</td>
+      </tr>
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">規格</label></span></span></th>
+      <td colspan="3">1ｋｇ/10袋</td>
+      </tr>
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ブランド名</label></span></span></th>
+      <td>インフォ食品株式会社</td>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ブランド区分</label></span></span></th>
+      <td>NB</td>
+      </tr>
+    </tbody>
+</table>
+
+<div class="grid-row">
+
+	<div class="grid-unit right w470">
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+	    <tbody>
+	    <tr>
+	      <td colspan="2">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">一括表示設定</label></span></span></td>
+	    </tr>
+    <tr>
+      <th class="w150">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">名称</label></span></span></th>
+      <td class="w320">ハンバーグ（ソース入り）</td>
+      </tr>
+    <tr>
+      <th>
+       <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">原材料名</label></span></span></th>
+      <td>牛肉、たまねぎ、豚脂、鶏皮、つなぎ（パン粉、鶏卵）、粒状大豆たん白、食塩、砂糖、香辛料、加工でん粉、リン酸塩（Na）、調味料（アミノ酸）、pH調整剤、カラメル色素、グリシン、ソース（ぶどう糖果糖液糖、しょうゆ、醸造酢、でん粉、増粘剤（加工でん粉）、カラメル色素、調味料（アミノ酸）、甘味料（ステビア））、揚げ油（なたね油、パーム油）、（原材料の一部に乳成分を含む）</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">内容量</label></span></span></th>
+      <td>720グラム（固形量600グラム）</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">賞味期限</label></span></span></th>
+      <td>枠外上部に記載してあります</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">保存方法</label></span></span></th>
+      <td>-18℃以下で保存してください</td>
+      </tr>
+    <tr>
+      <th>
+       <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">販売者</label></span></span></th>
+      <td>インフォ食品株式会社　東京都港区大門1-1-1</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">製造者</label></span></span></th>
+      <td>インフォ食品製造株式会社　東京都港区大門1-1-1</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">輸入者</label></span></span></th>
+      <td>インフォ食品貿易株式会社　東京都港区浜松町1-1-1</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">加工者</label></span></span></th>
+      <td>インフォ食品加工株式会社　東京都港区大門1-1-1</td>
+      </tr>
+	    </tbody>
+	</table>
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+  <tbody>
+    <tr>
+      <td colspan="2"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">一括表示外</label></span></span></td>
+    </tr>
+    <tr>
+      <th class="w150">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">原産国</label></span></span></th>
+      <td class="w320">日本、アメリカ</td>
+      </tr>
+
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">でん粉含有量</label></span></span></th>
+      <td>でん粉含有量8.2g</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">調理方法</label></span></span></th>
+      <td>-18℃以下で保存してください。</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">使用上の注意</label></span></span></th>
+      <td>食肉配合割合：20%（仕込み時）※植物油脂で揚げてあります。※ソースを加えてあります。※いったん解けたものを再び凍らせると品質が変わることがありますのでご注意ください。※袋が鍋のふちにふれたりはみ出すと袋が溶けることがありますのでご注意ください。※温めすぎると調理不良の原因になりますのでご注意ください。※調理の際、火傷には十分ご注意ください。</td>
+      </tr>
+    <tr>
+      <th>
+       <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">使用方法</label></span></span></th>
+      <td>凍ったままの商品を沸騰したお湯に入れて約10分間温めてください。</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">殺菌方法</label></span></span></th>
+      <td>90℃以上にて5秒加熱してください。</td>
+    </tr>
+    <tr>
+      <th>
+       <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">固形量</label></span></span></th>
+      <td>700g</td>
+    </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">内容総量</label></span></span></th>
+      <td>720g</td>
+    </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">原料原産地</label></span></span></th>
+      <td>原料原産地の問合せ先ホームページ<br>
+http://info-syokuhin.co.jp/gensan</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">無脂乳固形分</label></span></span></th>
+      <td>0.20%</td>
+    </tr>
+    <tr>
+      <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">乳脂肪分</label></span></span></th>
+      <td>0.5%</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">凍結前加熱の有無</label></span></span></th>
+      <td>加熱してありません</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">加熱調理の必要性</label></span></span></th>
+      <td>加熱してお召し上がりください</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">アルコール分</label></span></span></th>
+      <td>醸造アルコール</td>
+      </tr>
+	    </tbody>
+	</table>
+
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+	    <tbody>
+    <tr>
+      <th class="w150">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">その他の表示項目</label></span></span></th>
+      <td class="w320"></td>
+      </tr>
+    </tbody>
+	</table>
+
+	</div>
+
+	<div class="grid-unit left w470">
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+	    <tbody>
+	    <tr>
+	      <td colspan="3">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">アレルギー情報</label></span></span></td>
+	    </tr>
+	    <tr>
+	      <th colspan="2">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">アレルギー物質</label></span></span></th>
+	      <td>鶏肉,豚肉,小麦,乳,大豆,卵</td>
+	      </tr>
+        <tr>
+          <th class="w100" rowspan="2">アレルギー物質コンタミの可能性</th>
+          <th class="w60"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">有／無</label></span></span></th>
+          <td class="valign-m w300">有</td>
+        </tr>
+        <tr>
+          <th class="small-w nowrap"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">備考</label></span></span><br>
+          （アレルギー<br>物質名）</th>
+          <td class="valign-m">コンタミ</td>
+	      </tr>
+	    </tbody>
+	</table>
+
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+	    <tbody>
+	    <tr>
+	      <td colspan="2">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">商品情報</label></span></span></td>
+	    </tr>
+	    <tr>
+	      <th class="w180">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">JANコード</label></span></span></th>
+	      <td class="w290">JANコード有</td>
+	      </tr>
+	    <tr>
+	    <tr>
+	      <th class="w180">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ピースJANコード</label></span></span></th>
+	      <td class="w290">1234567890123</td>
+	      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">賞味・消費区分</label></span></span></th>
+	      <td>賞味期限</td>
+      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">製造日含め</label></span></span></th>
+	      <td>120日</td>
+      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">保存温度帯</label></span></span></th>
+	      <td>冷凍（-18℃以下）</td>
+      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">米トレサ法対象区分</label></span></span></th>
+	      <td>対象（-18℃以下）</td>
+      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">商品特徴</label></span></span></th>
+	      <td>国産牛肉を使用し、豚脂を使ったハンバーグに、ソースを入れて食べやすくしてあります。</td>
+      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">召し上がり方・利用方法</label></span></span></th>
+	      <td>凍ったままの商品を沸騰したお湯に入れて約10分間温めてください。</td>
+      </tr>
+	    <tr>
+	      <th>
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">仕様・保管・廃棄上の注意</label></span></span></th>
+	      <td>いったん解けたものを再び凍らせると品質が変わることがありますのでご注意ください。<br>
+袋が鍋のふちにふれたりはみ出すと袋が溶けることがありますのでご注意ください。<br>
+温めすぎると調理不良の原因になりますのでご注意ください。<br>
+調理の際、火傷には十分ご注意ください。</td>
+      </tr>
+	    </tbody>
+	</table>
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">販売者</label></span></span></td>
+    </tr>
+    <tr>
+      <th class="w180"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">販売者名</label></span></span></th>
+      <td class="w290">株式会社インフォマート販売</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">住所</label></span></span></th>
+      <td>東京都港区浜松町1-1-1</td>
+    </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">TEL</label></span></span></th>
+      <td class="w180">03-0000-0000</td>
+    </tr>
+    <tr>
+      <th>
+       <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for=""> PL加入有無</label></span></span></th>
+      <td>有</td>
+      </tr>
+  </tbody>
+</table>
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">製造者</label></span></span></td>
+    </tr>
+    <tr>
+      <th class="w180">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">製造者名</label></span></span></th>
+      <td class="w290">株式会社インフォマート製造</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">住所</label></span></span></th>
+      <td>東京都港区浜松町1-1-1</td>
+    </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">TEL</label></span></span></th>
+      <td>03-0000-0000</td>
+    </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">PL加入有無</label></span></span></th>
+      <td>有</td>
+      </tr>
+  </tbody>
+</table>
+
+<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb20">
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">輸入者</label></span></span></td>
+    </tr>
+    <tr>
+      <th class="w180">
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">輸入者名</label></span></span></th>
+      <td class="w290">インフォ食品貿易(株)</td>
+      </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">住所</label></span></span></th>
+      <td>東京都港区浜松町1-1-1</td>
+    </tr>
+    <tr>
+      <th>
+       <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">TEL</label></span></span></th>
+      <td>03-0000-0000</td>
+    </tr>
+    <tr>
+      <th>
+        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">PL加入有無</label></span></span></th>
+      <td>有</td>
+      </tr>
+  </tbody>
+</table>
+
+	</div>
+
+</div><!--/.grid-row-->
+
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+	  <tbody>
+	    <tr>
+	      <td colspan="2">栄養成分表示</td>
+	    </tr>
+	    <tr>
+	      <th class="w460"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">栄養成分表示有無</label></span></span></th>
+	      
+	      <th class="w460"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">分析単位</label></span></span></th>
+	      </tr>
+	    <tr>
+	      <td>有</td>
+	      
+	      <td>100gあたり</td>
+	      </tr>
+	    <tr>
+	      <th colspan="2">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" checked="checked" id="" name=""><label for="">備考</label></span></span></th>
+	    </tr>
+	    <tr>
+	      <td colspan="2">五訂栄養成分にて表記</td>
+	      </tr>
+	  </tbody>
+	</table>
+
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02">
+        <colgroup>
+          <col class="ck6">
+          <col class="ck15">
+          <col class="ck6">
+          <col class="ck15">
+          <col class="ck6">
+          <col class="ck15">
+          <col class="ck6">
+          <col class="ck15">
+          <col class="ck6">
+          <col class="ck15">
+        </colgroup>
+        <tbody>
+	    <tr>
+	      <td colspan="10">
+	        <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">栄養成分情報</label></span></span></td>
+	    </tr>
+        <tr>
+          <th colspan="2"><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">分析単位</label></span></span></th>
+          <td colspan="8"><div>100gあたり</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">熱量(kcal)</label></span></span></th>
+          <td><div class="right">146</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">リン(mg)</label></span></span></th>
+          <td><div class="right">2</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">レチノール当量(μg)</label></span></span></th>
+          <td><div class="right">103</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンB6(mg)</label></span></span></th>
+          <td><div class="right">54</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">不溶性食物繊維(g)</label></span></span></th>
+          <td><div class="right">2.2</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">水分(g)</label></span></span></th>
+          <td><div class="right">22</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">鉄(mg)</label></span></span></th>
+          <td><div class="right">8.9</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンD(μg)</label></span></span></th>
+          <td><div class="right">59</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンB12(μg)</label></span></span></th>
+          <td><div class="right">9.7</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">食物繊維(g)</label></span></span></th>
+          <td><div class="right">5.3</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">たんぱく質(g)</label></span></span></th>
+          <td><div class="right">2.8</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">亜鉛(mg)</label></span></span></th>
+          <td><div class="right">0.2</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">αトコフェロール(mg)</label></span></span></th>
+          <td><div class="right">2.4</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">葉酸(μg)</label></span></span></th>
+          <td><div class="right">2.9</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">食塩相当量(g)</label></span></span></th>
+          <td><div class="right">2.31</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">脂質(g)</label></span></span></th>
+          <td><div class="right">3.3</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">銅(mg)</label></span></span></th>
+          <td><div class="right">2.6</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">βトコフェロール(mg)</label></span></span></th>
+          <td><div class="right">2.4</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">パントテン酸(mg)</label></span></span></th>
+          <td><div class="right">-</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">カロテン(μg)</label></span></span></th>
+          <td><div class="right">32</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">炭水化物(g)</label></span></span></th>
+          <td><div class="right">14.7</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">マンガン(mg)</label></span></span></th>
+          <td><div class="right">0.7</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">γトコフェロール(mg)</label></span></span></th>
+          <td><div class="right">2.4</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンC(mg)</label></span></span></th>
+          <td><div class="right">20</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンE(mg)</label></span></span></th>
+          <td><div class="right">0.04</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">灰分(g)</label></span></span></th>
+          <td><div class="right">1.7</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">レチノール(μg)</label></span></span></th>
+          <td><div class="right">93</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">δトコフェロール(mg)</label></span></span></th>
+          <td><div class="right">2.4</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">飽和脂肪酸(g)</label></span></span></th>
+          <td><div class="right">29</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">トランス脂肪酸(g)</label></span></span></th>
+          <td><div class="right">1.2</div></td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ナトリウム(mg)</label></span></span></th>
+          <td><div class="right">2.5</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">αカロテン(μg)</label></span></span></th>
+          <td><div class="right">2.3</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンK(μg)</label></span></span></th>
+          <td><div class="right">2.2</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">不飽和脂肪酸（一価）(g)</label></span></span></th>
+          <td><div class="right">1</div></td>
+          <th>&nbsp;</th>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">カリウム(mg)</label></span></span></th>
+          <td><div class="right">29</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">βカロテン(μg)</label></span></span></th>
+          <td><div class="right">2.3</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンB1(mg)</label></span></span></th>
+          <td><div class="right">0.3</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">不飽和脂肪酸（多価）(g)</label></span></span></th>
+          <td><div class="right">1.5</div></td>
+          <th>&nbsp;</th>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">カルシウム(mg)</label></span></span></th>
+          <td><div class="right">27</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">クリプトキサンチン(μg)</label></span></span></th>
+          <td><div class="right">2.4</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ビタミンB2(mg)</label></span></span></th>
+          <td><div class="right">10.1</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">コレステロール(mg)</label></span></span></th>
+          <td><div class="right">26</div></td>
+          <th>&nbsp;</th>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">マグネシウム(mg)</label></span></span></th>
+          <td><div class="right">8.2</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">βカロテン当量(μg)</label></span></span></th>
+          <td><div class="right">2.4</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">ナイアシン(mg)</label></span></span></th>
+          <td><div class="right">1.2</div></td>
+          <th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">水溶性食物繊維(g)</label></span></span></th>
+          <td><div class="right">2.1</div></td>
+          <th>&nbsp;</th>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <th colspan="10">
+            <span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for="">その他栄養成分</label></span></span></th>
+        </tr>
+        <tr>
+          <th colspan="5">
+            <label for="">名称</label></th>
+          <th colspan="5">
+            <label for="">値</label></th>
+        </tr>
+        <tr>
+          <td colspan="5">ビタミン</td>
+          <td colspan="5">32</td>
+        </tr>
+      </tbody>
+    </table>
+
+	<table class="tbl-bd-wide-02 tbl-bd-wide-02-prod-reg-02 mb20">
+		<tbody>
+			<tr>
+			<td colspan="2"><div><span class="cstm-checkbox"><span class="checked"><input type="checkbox" name="" id="" checked="checked"><label for=""><span class="tx-b">【添付ファイル】</span></label></span></span><!--<span class="eye-catch">商品画像／包材画像は包材情報、製造品質は製造・品質情報に存在します。</span>--></div></td>
+			</tr>
+			<tr>
+			<th><span class="cstm-checkbox"><span class="checked"><input type="checkbox" checked="checked" id="" name=""><label for="">商品画像</label></span></span></th>
+			</tr>
+		</tbody>
+	</table>
+
+
+         <table class="justify-row">
+            <tbody>
+              <tr>
+                			<td height="272" class="justify-l">
+								<div><a href="#" class="bt bt-back"><span class="bt-label">戻る</span></a></div>
+							</td>
+                			<td class="justify-r">
+							  <div><a href="6255.html" class="bt bt-gre-large"><span class="bt-label">確認画面へ</span></a></div>
+							</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          </div>
+
+		<!--Footer Help Start-->
+<p class="ftr-hlp-gotop"><a class="ic ic-arr-blu04" href="#pagetop"><span class="ic-label">ページトップへ</span></a></p><div class="ftr-hlp"><div class="inner"><span class="tx-hlp"><label for="s">ヘルプ</label></span><a href="#" class="ic ic-blu-faq"><span class="ic-label">教えてインフォマート</span></a></div></div>
+<!--Footer Help End-->
+            </form>                
+	</div>
+	<!--Contents End-->
+	<!--ftr Start-->
+    <div class="ftr">        <ul class="ftr-nv clr">
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">ご利用ガイド</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li>お客様番号：<span class="tx-b">564231897</span></li>
+        </ul>
+        <ul class="usrnv clr">
+            <li><a href="#">ログアウト</a></li>
+        </ul>
+        <div class="small">
+            <p class="credits"> 当サイトはJavaScriptおよびCookieを使用しています。<br>
+				Copyright(C) 1998 - 2012 Info Mart Corporation. All rights reserved. </p>
+            <p class="number">S217739JP6EW17</p>
+        </div>
+    </div>
+	<!--ftr End-->
+</div>
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/lib/plugins.js"></script>
+<script type="text/javascript" src="/js/lib/rollover.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.cluetip.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.example.min.js"></script>
+<script type="text/javascript" src="/js/lib/lib_common.js"></script>
+<script type="text/javascript" src="/js/flow-individual/flow-delivery-reservation.js"></script>
+<script type="text/javascript" src="/js/input.js"></script>
+<script type="text/javascript" src="/js/close-page.js"></script>
+</body>
+</html>
